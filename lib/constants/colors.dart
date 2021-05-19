@@ -17,3 +17,4 @@ const kProductButtonColor3 = Color(0xFFD77173);
 const kProductButtonColor4 = Color(0xFFAA88B5);
 const kDashboardIconColor = Color(0xFF6692B0);
 const kDisableTextColor = Color(0xFF6e767a);
+const kDrawerBackgroundColor = Color(0xFF242e34);

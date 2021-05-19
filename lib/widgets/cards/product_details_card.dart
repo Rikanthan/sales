@@ -48,6 +48,7 @@ class ProductDetailsCard extends StatelessWidget {
                               ),
                             ),
                                Expanded(
+                                   flex:2,
                                   child: Text(
                                     product,
                                     style: TextStyle(

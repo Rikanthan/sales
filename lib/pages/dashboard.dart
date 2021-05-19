@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
-import 'package:sales/widgets/buttons/greenbutton.dart';
 import 'package:sales/widgets/buttons/pay_green_button.dart';
 import 'package:sales/widgets/cards/icon_card.dart';
-import 'package:sales/widgets/cards/product_details_card.dart';
 import 'package:sales/widgets/cards/products_card.dart';
 import 'package:sales/widgets/drawer/dashboard_drawer.dart';
 import 'package:sales/widgets/listviews/product_items.dart';
@@ -99,25 +97,25 @@ class Dashboard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          children: [
-                            IconCard(
-                              iconData: Icons.reply_all, 
-                              iconText: 'Retrieve \n Sale', onTapEventHandler: (){}
-                              ),
-                              Padding(
-                                padding:  EdgeInsets.only(left:40.0,right: 40.0),
-                                child: IconCard(
-                                iconData: Icons.refresh_outlined, 
-                                iconText: 'Park \n Sale', onTapEventHandler: (){}
-                                ),
-                              ),
-                              IconCard(
-                              iconData: Icons.keyboard_arrow_down_rounded, 
-                              iconText: 'More  \nActions...', onTapEventHandler: (){}
-                              )
-                          ],
-                         ),
+                        // Row(
+                        //   children: [
+                        //     IconCard(
+                        //       iconData: Icons.reply_all, 
+                        //       iconText: 'Retrieve \n Sale', onTapEventHandler: (){}
+                        //       ),
+                        //       Padding(
+                        //         padding:  EdgeInsets.only(left:40.0,right: 40.0),
+                        //         child: IconCard(
+                        //         iconData: Icons.refresh_outlined, 
+                        //         iconText: 'Park \n Sale', onTapEventHandler: (){}
+                        //         ),
+                        //       ),
+                        //       IconCard(
+                        //       iconData: Icons.keyboard_arrow_down_rounded, 
+                        //       iconText: 'More  \nActions...', onTapEventHandler: (){}
+                        //       )
+                        //   ],
+                        //  ),
                          Container(
                            width: 438,
                            height:55,

@@ -8,6 +8,7 @@ class DashboardAppBars extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
+              flex: 1,
               child: Row(
                 children: [
                   Text(

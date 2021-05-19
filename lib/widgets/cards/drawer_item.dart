@@ -5,12 +5,14 @@ class DrawerItem extends StatelessWidget {
     @required this.buttonText,
     @required this.onPress,
     @required this.iconData,
-    @required this.iconColor
+    @required this.iconColor,
+    @required this.backgroundColor
   });
   final String buttonText;
   final Function onPress;
   final IconData iconData;
   final Color iconColor;
+  final Color backgroundColor;
   @override
 
   @override
@@ -18,27 +20,28 @@ class DrawerItem extends StatelessWidget {
     return InkWell(
       onTap: onPress,
       child: Container(
-                          height: 75,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(
-                                iconData,
-                                color: iconColor,
-                                size:20,
-                                ),
-                              Text(
-                                buttonText,
-                              style:TextStyle(
-                              color:kHelpTextColor,
-                              fontSize: 14,
-                              fontFamily: 'Lato',            
-                                )
-                              )
-                            ],
-                          ),
-                        ),
+        color:backgroundColor,
+          height: 75,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                iconData,
+                color: iconColor,
+                size:20,
+                ),
+              Text(
+                buttonText,
+              style:TextStyle(
+              color:kHelpTextColor,
+              fontSize: 14,
+              fontFamily: 'Lato',            
+                )
+              )
+            ],
+          ),
+        ),
     );
   }
 }

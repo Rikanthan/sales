@@ -21,6 +21,7 @@ class PayGreenButton extends StatelessWidget {
                           ),
                        ),
                         Expanded(
+                          flex:1,
                           child: Text(
                             '3 items',
                             style:TextStyle(

@@ -16,6 +16,7 @@ class AppBars extends StatelessWidget {
                   ),
             ),
             Expanded(
+              flex:1,
               child: Row(
                 children: [
                   Text(
