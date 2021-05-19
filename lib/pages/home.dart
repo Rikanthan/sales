@@ -5,12 +5,12 @@ import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/cards/home_bottom_card.dart';
 import 'package:sales/widgets/cards/home_top_card.dart';
-import 'package:sales/widgets/drawer/dashboard_drawer.dart';
+import 'package:sales/widgets/drawer/home_drawer.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: DashboardDrawer(),
+      drawer: HomeDrawer(),
       appBar: AppBar(
         backgroundColor: kDashboardAppBarColor,
         title:DashboardAppBars(),

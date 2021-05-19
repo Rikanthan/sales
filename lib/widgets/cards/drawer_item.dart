@@ -6,13 +6,15 @@ class DrawerItem extends StatelessWidget {
     @required this.onPress,
     @required this.iconData,
     @required this.iconColor,
-    @required this.backgroundColor
+    @required this.backgroundColor,
+    @required this.darkMode
   });
   final String buttonText;
   final Function onPress;
   final IconData iconData;
   final Color iconColor;
   final Color backgroundColor;
+  final bool darkMode;
   @override
 
   @override
@@ -34,7 +36,7 @@ class DrawerItem extends StatelessWidget {
               Text(
                 buttonText,
               style:TextStyle(
-              color:kHelpTextColor,
+              color:darkMode ? kHelpTextColor:kSignInTextColor,
               fontSize: 14,
               fontFamily: 'Lato',            
                 )

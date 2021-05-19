@@ -26,6 +26,7 @@ class DashboardDrawer extends StatelessWidget {
                         onPress: (){},
                         iconColor: Colors.purple,
                         backgroundColor: kSignInTextColor,
+                        darkMode: true,
                       ),   
                       DrawerItem(
                         buttonText: 'Sell',
@@ -33,6 +34,7 @@ class DashboardDrawer extends StatelessWidget {
                         onPress: (){},
                         iconColor: Colors.green,
                         backgroundColor: kDrawerBackgroundColor,
+                        darkMode: true,
                       ),
                       DrawerItem(
                         buttonText: 'Reporting',
@@ -40,6 +42,7 @@ class DashboardDrawer extends StatelessWidget {
                         onPress: (){},
                         iconColor: Colors.yellow,
                         backgroundColor: kSignInTextColor,
+                        darkMode: true,
                       ),
                       DrawerItem(
                         buttonText: 'Products',
@@ -47,6 +50,7 @@ class DashboardDrawer extends StatelessWidget {
                         onPress: (){},
                         iconColor: Colors.orange,
                         backgroundColor: kSignInTextColor,
+                        darkMode: true,
                       ),
                       DrawerItem(
                         buttonText: 'Customers',
@@ -54,6 +58,7 @@ class DashboardDrawer extends StatelessWidget {
                         onPress: (){},
                         iconColor: Colors.purple,
                         backgroundColor: kSignInTextColor,
+                        darkMode: true,
                       ),
                       DrawerItem(
                         buttonText: 'Setup',
@@ -61,6 +66,7 @@ class DashboardDrawer extends StatelessWidget {
                         onPress: (){},
                         iconColor: Colors.blueGrey,
                         backgroundColor: kSignInTextColor,
+                        darkMode: true,
                       ),
                     ],
                   ),
