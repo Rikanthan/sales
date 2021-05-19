@@ -36,16 +36,14 @@ class ProductCard extends StatelessWidget {
             color: topColor
             ),
           ),
-          Center(
-            child: Padding(
-              padding: EdgeInsets.only(left:4,right:4),
-              child: Text(
-                product,
-                style: TextStyle(
-                  fontFamily:'Lato',
-                  color:kHelpTextColor,
-                  fontSize: 14,
-                ),
+          Padding(
+            padding: EdgeInsets.only(top:30,left:4,right:4),
+            child: Text(
+              product,
+              style: TextStyle(
+                fontFamily:'Lato',
+                color:kHelpTextColor,
+                fontSize: 14,
               ),
             ),
           )

@@ -7,6 +7,7 @@ import 'package:sales/widgets/buttons/pay_green_button.dart';
 import 'package:sales/widgets/cards/icon_card.dart';
 import 'package:sales/widgets/cards/product_details_card.dart';
 import 'package:sales/widgets/cards/products_card.dart';
+import 'package:sales/widgets/drawer/dashboard_drawer.dart';
 import 'package:sales/widgets/listviews/product_items.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
@@ -19,6 +20,7 @@ class Dashboard extends StatelessWidget {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
+      drawer: DashboardDrawer(),
       body:Container(
         color:kDashboardColor,
         child: Column(
@@ -100,16 +102,19 @@ class Dashboard extends StatelessWidget {
                         Row(
                           children: [
                             IconCard(
-                              iconData: Icons.arrow_back, 
+                              iconData: Icons.reply_all, 
                               iconText: 'Retrieve \n Sale', onTapEventHandler: (){}
                               ),
-                              IconCard(
-                              iconData: Icons.arrow_back, 
-                              iconText: 'Park \n Sale', onTapEventHandler: (){}
+                              Padding(
+                                padding:  EdgeInsets.only(left:40.0,right: 40.0),
+                                child: IconCard(
+                                iconData: Icons.refresh_outlined, 
+                                iconText: 'Park \n Sale', onTapEventHandler: (){}
+                                ),
                               ),
                               IconCard(
-                              iconData: Icons.arrow_back, 
-                              iconText: 'More \n Actions...', onTapEventHandler: (){}
+                              iconData: Icons.keyboard_arrow_down_rounded, 
+                              iconText: 'More  \nActions...', onTapEventHandler: (){}
                               )
                           ],
                          ),

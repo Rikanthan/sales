@@ -7,16 +7,6 @@ class DashboardAppBars extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(right:8.0),
-              child: IconButton(
-                onPressed: (){},
-                icon: Icon(
-                  Icons.menu,
-                  size:24
-                  ),
-                )
-            ),
             Expanded(
               child: Row(
                 children: [
