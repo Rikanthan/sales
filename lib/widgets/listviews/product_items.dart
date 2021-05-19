@@ -83,6 +83,7 @@ class ProductItemsListView extends StatelessWidget {
                                       Padding(
                                         padding: const EdgeInsets.only(top:5.0),
                                         child: DashboardSearchBar(
+                                          darkMode: true,
                                           iconData: null,
                                           width: 356.2,
                                           iconText: 'Enter a note about this sale',

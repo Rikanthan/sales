@@ -6,13 +6,15 @@ class DashboardSearchBar extends StatelessWidget {
    @required this.iconData,
     @required this.iconText,
     @required this.width,
-    @required this.padding
+    @required this.padding,
+    @required this.darkMode
   }) : super(key: key);
 
   final IconData iconData;
   final String iconText;
   final double width;
   final double padding;
+  final bool darkMode;
   @override
   @override
   Widget build(BuildContext context) {
@@ -29,11 +31,11 @@ class DashboardSearchBar extends StatelessWidget {
                             hintStyle: TextStyle(
                               fontSize: 15,
                               fontStyle: FontStyle.normal,
-                              fontWeight: FontWeight.w300,
+                              fontWeight: FontWeight.w400,
                               fontFamily: 'Roboto',
                               color: kDashboardMidBarColor, 
                             ),
-                            fillColor: kDashboardSearchBarFillColor,
+                            fillColor: darkMode?kDashboardSearchBarFillColor:Colors.white,
                             filled: true,
                             prefixIcon: Padding(
                               padding: const EdgeInsets.only(
@@ -51,7 +53,7 @@ class DashboardSearchBar extends StatelessWidget {
                             ),      
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.all(Radius.circular(4)),
-                              borderSide: BorderSide(width:2.0, color: kAppBarColor),
+                              borderSide: BorderSide(width:2.0, color: kInputBorderColor),
                             ),
                           ),
                         ),

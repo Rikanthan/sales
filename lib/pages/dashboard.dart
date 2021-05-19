@@ -3,7 +3,6 @@ import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/pay_green_button.dart';
-import 'package:sales/widgets/cards/icon_card.dart';
 import 'package:sales/widgets/cards/products_card.dart';
 import 'package:sales/widgets/drawer/dashboard_drawer.dart';
 import 'package:sales/widgets/listviews/product_items.dart';
@@ -53,6 +52,7 @@ class Dashboard extends StatelessWidget {
                           iconText: 'Start typing or scanning...',
                           width:472,
                           padding:20,
+                          darkMode: true,
                         ),
                         Row(
                           children: [
@@ -133,7 +133,8 @@ class Dashboard extends StatelessWidget {
                                 iconData: Icons.person, 
                                 iconText: 'Add a customer', 
                                 width: 430, 
-                                padding: 0
+                                padding: 0,
+                                darkMode: true,
                                 ),
                             )
                          ),
