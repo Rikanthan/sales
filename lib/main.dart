@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/pages/dashboard.dart';
+import 'package:sales/pages/home.dart';
 import 'package:sales/pages/sign_in.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sales', 
       theme: ThemeData(),  
-      home: Dashboard(),
+      home: Home()
     );
   }
 }

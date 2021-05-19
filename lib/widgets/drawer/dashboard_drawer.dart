@@ -7,7 +7,7 @@ class DashboardDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width:280,
+      width:290,
       color:Colors.transparent,
       child: Row(
         children: [
