@@ -111,6 +111,8 @@ class Signin extends StatelessWidget {
                hideText: false,
                hintText:'Enter your username',
                paddingTop: 10,
+               height: 70,
+               width: 200,
                validate: (val) => val.length < 6 ? 'Please enter a username' : null,
                  onChange: (val) {
                  },
@@ -135,6 +137,8 @@ class Signin extends StatelessWidget {
              ),
              TextInputField(
                action: TextInputAction.go,
+               height: 70,
+               width: 200,
                hideText: true,
                hintText:'Please enter a password',
                paddingTop: 10,

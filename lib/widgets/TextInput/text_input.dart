@@ -8,7 +8,9 @@ class TextInputField extends StatelessWidget {
     @required this.hintText,
     @required this.action,
     @required this.paddingTop,
-    @required this.hideText
+    @required this.hideText,
+    @required this.height,
+    @required this.width
   }) : super(key: key);
   final Function validate;
   final Function onChange;
@@ -16,10 +18,13 @@ class TextInputField extends StatelessWidget {
   final TextInputAction action;
   final double paddingTop;
   final bool hideText;
+  final double height;
+  final double width;
   @override
   Widget build(BuildContext context) {
     return Container(
-                height: 70,
+                height: height,
+                width: width,
                 child: Center(
                 child: Padding(
                   padding: EdgeInsets.only(left: 34.0,right: 34.0,top:paddingTop),

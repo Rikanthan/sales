@@ -20,3 +20,4 @@ const kDisableTextColor = Color(0xFF6e767a);
 const kDrawerBackgroundColor = Color(0xFF242e34);
 const kHomeBackgroundColor = Color(0xFFf0f4f4);
 const kHomeDrawerCloseColor = Color(0xFFb6cbda);
+const kDropDownColor = Color(0xFF24a1f5);
