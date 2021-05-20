@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_calendar.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
-import 'package:sales/widgets/drawer/home_drawer.dart';
+import 'package:sales/widgets/drawer/customer_drawer.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
 class Customer extends StatefulWidget {
@@ -57,71 +59,21 @@ class _CustomerState extends State<Customer> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: HomeDrawer(),
+      drawer: CustomerDrawer(),
       body:Container(
         color:kInputBorderColor,
           child:Column(
             children: [
               DashboardMidBar(),
-              Container(
-                color:Colors.white,
-                child:Padding(
-                  padding:  EdgeInsets.only(top:24,bottom:24,left:48,right:48),
-                  child: Row(
-                    children: [
-                      Text(
-                        'Customers',
-                        style:TextStyle(
-                          fontFamily: 'Lato',
-                          fontSize: 32,
-                          color: kSignInTextColor,
-                          fontWeight: FontWeight.w700
-                        )
-                      ),
-                    ],
-                  ),
-                )
-              ),
-              Container(
-                color:kInputBorderColor,
-                child: Padding(
-                  padding: EdgeInsets.only(top:16,bottom:16,left:48.0,right: 48),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children:[
-                      Text(
-                        'Manage your customers and their balances, or segment them by demographics and spending \nhabits.',
-                        style:TextStyle(
-                            fontFamily: 'Lato',
-                            fontSize: 15,
-                            color: kSignInTextColor
-                          )
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CustomButton(
-                          buttonText: 'Import Customers',
-                          onPress: (){},
-                          buttonColor: kDashboardMidBarColor, 
-                          topPadding: 24, 
-                          leftPadding: 30,
-                          ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CustomButton(
-                          buttonText: 'Add Customer',
-                          onPress: (){},
-                          buttonColor: kSignInButtonColor, 
-                          topPadding: 24, 
-                          leftPadding: 30,
-                          ),
-                      )
-                    ]
-                  ),
-                ),
-              ),
+             CustomHeader(text: 'Customer'),
+             MidButtonBar(
+               text: 'Manage your customers and their balances, or segment them by demographics and spending \nhabits.',
+                addBlueButton: true,
+                 blueButtonText: 'Import Customers', 
+                 blueOnTap: (){},
+                greenButtonText: 'Add Customer',
+                 greenOnTap: (){}
+                 ),
               Container(
                 color:Colors.white,
                 child: Padding(
@@ -269,10 +221,10 @@ class _CustomerState extends State<Customer> {
                                         iconData: Icons.calendar_today,
                                         iconText: selectedDate? dateRange:'Choose date range...', 
                                         width: 293.3,
-                                        onPress: (){
-                                          _selectDateFrom(context);
-                                          _selectDateTo(context);
+                                        onPress: () {      
                                           setState(() {
+                                             _selectDateFrom(context);
+                                          _selectDateTo(context);
                                              selectedDate = true;
                                              selectedDate?dateRange = selectedDateFrom.toString().split(' ')[0] + ' - ' +
                                                           selectedDateTo.toString().split(' ')[0]

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sales/pages/customer.dart';
+import 'package:sales/pages/customer/customer.dart';
 
 
 void main() {
