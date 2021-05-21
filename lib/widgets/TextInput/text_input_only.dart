@@ -8,6 +8,7 @@ class TextInput extends StatelessWidget {
     @required this.paddingTop,
     @required this.hideText,
     @required this.height,
+    @required this.hintText,
     @required this.width
   }) : super(key: key);
   final Function validate;
@@ -16,6 +17,7 @@ class TextInput extends StatelessWidget {
   final bool hideText;
   final double height;
   final double width;
+  final String hintText;
   @override
   Widget build(BuildContext context) {
     return  Padding(
@@ -31,6 +33,12 @@ class TextInput extends StatelessWidget {
                         decoration: InputDecoration(
                         fillColor: Colors.white,
                         filled: true,
+                         hintText:hintText,
+                            hintStyle: TextStyle(
+                                  fontFamily: 'Lato',
+                                  color:Colors.blue[700].withOpacity(0.7),
+                                  fontSize: 15
+                                  ),
                         enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(2.0),
                       borderSide: BorderSide(

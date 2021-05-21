@@ -8,6 +8,7 @@ import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
+import 'package:sales/widgets/cards/show_products.dart';
 import 'package:sales/widgets/drawer/customer_drawer.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 import 'package:lite_rolling_switch/lite_rolling_switch.dart';
@@ -31,151 +32,73 @@ class _ProductsState extends State<Products> {
         toolbarHeight: 50.0,
       ),
       drawer: CustomerDrawer(),
-      body:Container(
-        color:kInputBorderColor,
-        child:Column(
-          children: [
-            DashboardMidBar(),
-            CustomHeader(text: 'Products'),
-            MidButtonBar(
-              text: 'Add, view and edit your products all in one place.                                                                                                                                ', 
-              addBlueButton: true,
-              blueButtonText: 'Import',
-              blueOnTap: (){}, 
-              greenButtonText: 'Add Product',
-              greenOnTap: (){}
-              ),
-            Container(
-              color:Colors.white,
-              child:
-                 Padding(
-                    padding: const EdgeInsets.only(left: 48,right: 48,top:24,bottom: 24),
-                   child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children:[
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                            Padding(
-                              padding: const EdgeInsets.only(bottom:4.0),
-                              child: Text(
-                                'Search for Products',
-                                style: kMediumTextStyle,
-                                ),
-                            ),
-                              DashboardSearchBar(
-                                iconData: Icons.search, 
-                                iconText: 'Enter name,SKU,handle or supplier code',
-                                width: 452,
-                                padding: 0,
-                                darkMode: false
-                                )
-                            ],
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 4.0),
-                              child: Text(
-                                'Product Type',
-                                style: kMediumTextStyle,
-                                ),
-                            ),
-                              DropDownInput(
-                                width: 214,
-                                onPressed: (String newValue) 
-                                                {
-                                                  setState(() {
-                                                  productType = newValue;
-                                                  }
-                                                );
-                                              },
-                                dropdownValue: productType,
-                                dropdownList: ['All Types','Fashion'],
-                              )
-                            ],
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                            Padding(
-                              padding: const EdgeInsets.only(bottom:4.0),
-                              child: Text(
-                                'Tags',
-                                style: kMediumTextStyle,
-                                ),
-                            ),
-                            TextInput(
-                              validate:(value){},
-                              onChange: (value){},
-                              paddingTop: 4,
-                              hideText: false,
-                              height: 42,
-                              width:210,
-                              hintText: 'Enter Tags',
-                              )  
-                            ],
-                          )
-                        ]
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top:12.0),
-                        child: Row(
+      body:SingleChildScrollView(
+        child: Container(
+          color:kInputBorderColor,
+          child:Column(
+            children: [
+              DashboardMidBar(),
+              CustomHeader(text: 'Products'),
+              MidButtonBar(
+                text: 'Add, view and edit your products all in one place.                                                                                                                                ', 
+                addBlueButton: true,
+                blueButtonText: 'Import',
+                blueOnTap: (){}, 
+                greenButtonText: 'Add Product',
+                greenOnTap: (){}
+                ),
+              Container(
+                color:Colors.white,
+                child:
+                   Padding(
+                      padding: const EdgeInsets.only(left: 48,right: 48,top:24,bottom:12),
+                     child: Column(
+                      children: [
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                             Column(
+                          children:[
+                            Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                               Padding(
                                 padding: const EdgeInsets.only(bottom:4.0),
                                 child: Text(
-                                  'Supplier',
+                                  'Search for Products',
                                   style: kMediumTextStyle,
                                   ),
                               ),
-                                DropDownInput(
-                                  width: 293.33,
-                                  onPressed: (String newValue) 
-                                                  {
-                                                    setState(() {
-                                                    supplies = newValue;
-                                                    }
-                                                  );
-                                                },
-                                  dropdownValue: supplies,
-                                  dropdownList: ['All Suppliers','Flo & Frankie'],
-                                )
+                                DashboardSearchBar(
+                                  iconData: Icons.search, 
+                                  iconText: 'Enter name,SKU,handle or supplier code',
+                                  width: 452,
+                                  padding: 0,
+                                  darkMode: false
+                                  )
                               ],
                             ),
-                             Column(
+                            Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                               Padding(
-                                padding: const EdgeInsets.only(bottom:4.0),
+                                padding: const EdgeInsets.only(bottom: 4.0),
                                 child: Text(
-                                  'Brand',
+                                  'Product Type',
                                   style: kMediumTextStyle,
                                   ),
                               ),
                                 DropDownInput(
-                                  width: 293.33,
+                                  width: 214,
                                   onPressed: (String newValue) 
                                                   {
                                                     setState(() {
-                                                    brands = newValue;
+                                                    productType = newValue;
                                                     }
                                                   );
                                                 },
-                                  dropdownValue: brands,
-                                  dropdownList: ['All Brands','Cluse','Lilya','Nude Lacy','Quay'],
+                                  dropdownValue: productType,
+                                  dropdownList: ['All Types','Fashion'],
                                 )
                               ],
                             ),
@@ -186,61 +109,146 @@ class _ProductsState extends State<Products> {
                               Padding(
                                 padding: const EdgeInsets.only(bottom:4.0),
                                 child: Text(
-                                  'Status',
+                                  'Tags',
                                   style: kMediumTextStyle,
                                   ),
                               ),
-                                DropDownInput(
-                                  width: 293.33,
-                                  onPressed: (String newValue) 
-                                                  {
-                                                    setState(() {
-                                                    status = newValue;
-                                                    }
-                                                  );
-                                                },
-                                  dropdownValue: status,
-                                  dropdownList: ['Active','Inactive','All Statuses'],
-                                )
+                              TextInput(
+                                validate:(value){},
+                                onChange: (value){},
+                                paddingTop: 4,
+                                hideText: false,
+                                height: 42,
+                                width:210,
+                                hintText: 'Enter Tags',
+                                )  
                               ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children:[
-                           LiteRollingSwitch(
-                              value: true,
-                              textOn: 'Yes',
-                              textOff: '',
-                              colorOn: Colors.cyan,
-                              colorOff: Colors.red[400],
-                              iconOn: Icons.check,
-                              iconOff: Icons.power_settings_new,
-                              animationDuration: Duration(milliseconds: 800),
-                              onChanged: (bool state) {
-                                print('turned ${(state) ? 'yes' : 'no'}');
-                              },
-                            ),
-                            CustomButton(
-                              buttonText: 'Search',
-                              onPress: (){},
-                              buttonColor: kDashboardMidBarColor, 
-                              topPadding: 24, 
-                              leftPadding: 30
-                              )
+                            )
                           ]
                         ),
-                      )
-                    ],
-              ),
-                 ),                
-                 )
-          ],
-        )
+                        Padding(
+                          padding: const EdgeInsets.only(top:12.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                               Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom:4.0),
+                                  child: Text(
+                                    'Supplier',
+                                    style: kMediumTextStyle,
+                                    ),
+                                ),
+                                  DropDownInput(
+                                    width: 293.33,
+                                    onPressed: (String newValue) 
+                                                    {
+                                                      setState(() {
+                                                      supplies = newValue;
+                                                      }
+                                                    );
+                                                  },
+                                    dropdownValue: supplies,
+                                    dropdownList: ['All Suppliers','Flo & Frankie'],
+                                  )
+                                ],
+                              ),
+                               Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom:4.0),
+                                  child: Text(
+                                    'Brand',
+                                    style: kMediumTextStyle,
+                                    ),
+                                ),
+                                  DropDownInput(
+                                    width: 293.33,
+                                    onPressed: (String newValue) 
+                                                    {
+                                                      setState(() {
+                                                      brands = newValue;
+                                                      }
+                                                    );
+                                                  },
+                                    dropdownValue: brands,
+                                    dropdownList: ['All Brands','Cluse','Lilya','Nude Lacy','Quay'],
+                                  )
+                                ],
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom:4.0),
+                                  child: Text(
+                                    'Status',
+                                    style: kMediumTextStyle,
+                                    ),
+                                ),
+                                  DropDownInput(
+                                    width: 293.33,
+                                    onPressed: (String newValue) 
+                                                    {
+                                                      setState(() {
+                                                      status = newValue;
+                                                      }
+                                                    );
+                                                  },
+                                    dropdownValue: status,
+                                    dropdownList: ['Active','Inactive','All Statuses'],
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children:[
+                            //  Container(
+                            //    height: 36,
+                            //    width:80,
+                            //    child: LiteRollingSwitch(
+                            //       value: true,
+                            //       textOn: '\u2714',
+                            //       textOff: '\u2716',
+                            //       colorOn: kSignInButtonColor,
+                            //       colorOff: kDashboardMidBarColor,
+                            //       iconOn: Icons.close_rounded,
+                            //       iconOff: Icons.circle,
+                            //       animationDuration: Duration(milliseconds: 400),
+                            //       onChanged: (bool state) {
+                            //        // print('turned ${(state) ? 'yes' : 'no'}');
+                            //       },
+                            //     ),
+                            //  ),
+                              CustomButton(
+                                buttonText: 'Search',
+                                onPress: (){},
+                                buttonColor: kDashboardMidBarColor, 
+                                topPadding: 24, 
+                                leftPadding: 30
+                                )
+                            ]
+                          ),
+                        )
+                      ],
+                    ),
+                   ),                
+                ),
+                ShowProducts()
+            ],
+          )
+        ),
       )
     );
   }

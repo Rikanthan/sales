@@ -59,6 +59,7 @@ class TextInputField extends StatelessWidget {
                 ),
                     hintText:hintText,
                    hintStyle: TextStyle(
+                     fontFamily: 'Lato',
                   color:Colors.blue[700].withOpacity(0.7),
                   fontSize: 15,
                         ),

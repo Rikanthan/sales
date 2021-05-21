@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_calendar.dart';
@@ -92,12 +93,7 @@ class _CustomerState extends State<Customer> {
                                       padding: const EdgeInsets.only(bottom:4.0),
                                       child: Text(
                                   'Search for Customers',
-                                  style:TextStyle(
-                                      fontFamily: 'Lato',
-                                      fontSize: 15,
-                                      color: kSignInTextColor,
-                                      fontWeight: FontWeight.w700
-                                  ),
+                                  style:kMediumTextStyle
                                 ),
                                     ),
                                 DashboardSearchBar(
@@ -120,12 +116,7 @@ class _CustomerState extends State<Customer> {
                                           children:[
                                              Text(
                                               'City',
-                                               style:TextStyle(
-                                              fontFamily: 'Lato',
-                                              fontSize: 15,
-                                              color: kSignInTextColor,
-                                              fontWeight: FontWeight.w700
-                                                ),
+                                               style:kMediumTextStyle
                                              ),
                                              TextInput(
                                                validate: (val) => val.length == 0 ? 'Enter the city' : null,
@@ -134,7 +125,8 @@ class _CustomerState extends State<Customer> {
                                                  paddingTop: 4, 
                                                  hideText: false, 
                                                  height: 46,
-                                                 width:293.33
+                                                 width:293.33,
+                                                 hintText: '',
                                                  )
                                           ]
                                         ),
@@ -148,15 +140,11 @@ class _CustomerState extends State<Customer> {
                                                  padding: const EdgeInsets.only(bottom:4.0),
                                                  child: Text(
                                                   'Country',
-                                                   style:TextStyle(
-                                                  fontFamily: 'Lato',
-                                                  fontSize: 15,
-                                                  color: kSignInTextColor,
-                                                  fontWeight: FontWeight.w700
-                                                    ),
+                                                   style: kMediumTextStyle
                                                  ),
                                                ),
                                                 DropDownInput(
+                                                  width: 293.33,
                                                   dropdownList: ['All','America','Australia'],
                                                   dropdownValue: dropDownCountryValue,
                                                   onPressed: (String newValue) {
@@ -182,15 +170,11 @@ class _CustomerState extends State<Customer> {
                                 padding: const EdgeInsets.only(bottom:4.0),
                                 child: Text(
                                     'Customer Group',
-                                    style:TextStyle(
-                                      fontFamily: 'Lato',
-                                      fontSize: 15,
-                                      color: kSignInTextColor,
-                                      fontWeight: FontWeight.w700
-                                    ),
+                                    style: kMediumTextStyle
                                   ),
                               ), 
                                 DropDownInput(
+                                  width: 293.33,
                                   dropdownList: ['All','All Customers'],
                                   dropdownValue: dropDownValue,
                                   onPressed: (String newValue) {
@@ -209,12 +193,7 @@ class _CustomerState extends State<Customer> {
                                         padding: const EdgeInsets.only(top:12.0,bottom:4),
                                         child: Text(
                                         'Date Created',
-                                          style:TextStyle(
-                                        fontFamily: 'Lato',
-                                        fontSize: 15,
-                                        color: kSignInTextColor,
-                                        fontWeight: FontWeight.w700
-                                          ),
+                                          style:kMediumTextStyle
                                         ),
                                       ), 
                                       InputCalender(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sales/pages/customer/customer.dart';
+import 'package:sales/pages/products/products.dart';
 
 
 void main() {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sales', 
       theme: ThemeData(),  
-      home: Customer()
+      home: Products()
     );
   }
 }

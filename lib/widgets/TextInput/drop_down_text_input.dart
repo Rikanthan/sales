@@ -5,9 +5,11 @@ class DropDownInput extends StatelessWidget {
     Key key,
    @required this.onPressed,
     @required this.dropdownValue,
-    @required this.dropdownList
+    @required this.dropdownList,
+    @required this.width
   }) : super(key: key);
 
+  final double width;
   final Function onPressed;
   final String dropdownValue;
   final List<String> dropdownList;
@@ -15,7 +17,7 @@ class DropDownInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return DropdownButtonHideUnderline(
               child: Container(
-                width:293.33,
+                width:width,
                 height:46,
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
