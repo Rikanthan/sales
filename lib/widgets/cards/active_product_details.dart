@@ -180,6 +180,7 @@ class _ActiveProductsState extends State<ActiveProducts> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('Outlet',style: kMediumTextStyle,),
+                          Expanded(child: Text('')),
                           if(_inventory)
                           Text('Current Inventory',style: kMediumTextStyle,),
                           if(_price)
@@ -217,6 +218,7 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                                     fontWeight: FontWeight.w400,
                                     )
                                   ),
+                                  Expanded(child: Text('')),
                                   if(_inventory)
                                 Text(
                                   '0',
@@ -236,13 +238,21 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                     )
                                   ),
                                   if(_price)
-                                  Text(
-                                  '\u20B9 0.00',
-                                  style: TextStyle(
-                                                    fontFamily: 'Lato',
-                                                    fontSize: 15,
-                                                    fontWeight: FontWeight.w400,
-                                    )
+                                  Container(
+                                    width: 108,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Text(
+                                        '\u20B9 0.00',
+                                        style: TextStyle(
+                                                          fontFamily: 'Lato',
+                                                          fontSize: 15,
+                                                          fontWeight: FontWeight.w400,
+                                          )
+                                        ),
+                                      ],
+                                    ),
                                   )
                               ],
                             ),
