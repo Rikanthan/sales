@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import 'package:sales/widgets/cards/active_product_details.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 class ShowProducts extends StatefulWidget {
   @override
   _ShowProductsState createState() => _ShowProductsState();
@@ -16,6 +16,7 @@ class _ShowProductsState extends State<ShowProducts> {
   bool _supplier = true;
   bool _retailPrice = true;
   bool _expansionTile = true;
+  bool isSwitch = true;
 
 
   @override
@@ -222,6 +223,7 @@ class _ShowProductsState extends State<ShowProducts> {
                                     color: _expansionTile? kInputBorderColor: Colors.white,
                                   ),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -314,7 +316,7 @@ class _ShowProductsState extends State<ShowProducts> {
                           child: Container(
                             height: 43,
                             width: 50,
-                            child: Text('-')
+                            child: Center(child: Text('-'))
                             )
                         ),
                         Padding(
@@ -322,7 +324,7 @@ class _ShowProductsState extends State<ShowProducts> {
                           child: Container(
                             height: 43,
                             width: 54,
-                            child: Text('-')
+                            child: Center(child: Text('-'))
                             )
                         ),
                         Padding(
@@ -331,7 +333,7 @@ class _ShowProductsState extends State<ShowProducts> {
                             height: 43,
                             width: 76,
                             child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 Text(
@@ -352,7 +354,7 @@ class _ShowProductsState extends State<ShowProducts> {
                             height: 43,
                             width: 89,
                             child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 Text(
@@ -372,19 +374,37 @@ class _ShowProductsState extends State<ShowProducts> {
                             child: Container(
                                         height: 43,
                                         width:76,
-                                        child: LiteRollingSwitch(
-                                            value: true,
-                                            textOn: '\u2714',
-                                            textOff: '\u2716',
-                                            colorOn: kSignInButtonColor,
-                                            colorOff: kDashboardMidBarColor,
-                                            iconOn: Icons.close_rounded,
-                                            iconOff: Icons.circle,
-                                            animationDuration: Duration(milliseconds: 400),
-                                            onChanged: (bool state) {
-                                            // print('turned ${(state) ? 'yes' : 'no'}');
-                                            },
-                                          ),
+                                        child : FlutterSwitch(
+                                          width: 68.0,
+                                          height: 35.0,
+                                          valueFontSize: 15.0,
+                                          toggleSize: 37.0,
+                                          value: isSwitch,
+                                          borderRadius: 30.0,
+                                          padding: 0.0,
+                                          activeText: ' \u2714',
+                                          inactiveText: '\u2716',
+                                          activeTextColor: Colors.white,
+                                          inactiveTextColor: kDashboardMidBarColor,
+                                          activeColor: kSignInButtonColor,
+                                          inactiveColor: Colors.white,
+                                          activeSwitchBorder: Border.all(
+                                              color: kDropDownColor,
+                                              width: 3.0,
+                                            ),
+                                          inactiveSwitchBorder: Border.all(
+                                              color: kDropDownColor,
+                                              width: 3.0,
+                                            ),
+                                          showOnOff: true,
+                                          toggleBorder: Border.all(color:kDropDownColor,width:1),
+                                          duration: Duration(milliseconds:100),
+                                          onToggle: (val) {
+                                            setState(() {
+                                              isSwitch = val;
+                                            });
+                                          },
+                                        ),
                                       ),
                           ),
                           Padding(
@@ -394,9 +414,16 @@ class _ShowProductsState extends State<ShowProducts> {
                             width: 114,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text('20 May 2021'),
+                                Text(
+                                  '20 May 2021',
+                                   style: TextStyle(
+                                              fontFamily: 'Lato',
+                                              fontSize: 15,
+                                              color: kAppBarColor,
+                                               ),
+                                          ),
                               ],
                             )
                           )
@@ -408,7 +435,7 @@ class _ShowProductsState extends State<ShowProducts> {
                             width: 40,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Icon(
                                   Icons.edit,
@@ -425,6 +452,7 @@ class _ShowProductsState extends State<ShowProducts> {
                     thickness:2.0,
                     color: kInputBorderColor,
                   ),
+                  if(!_expansionTile)
                   ActiveProducts()
                 ],
               ),
