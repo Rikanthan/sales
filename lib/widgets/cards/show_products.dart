@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
-import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
+import 'package:lite_rolling_switch/lite_rolling_switch.dart';
+import 'package:sales/widgets/cards/active_product_details.dart';
 class ShowProducts extends StatefulWidget {
   @override
   _ShowProductsState createState() => _ShowProductsState();
@@ -14,6 +15,9 @@ class _ShowProductsState extends State<ShowProducts> {
   bool _brand = true;
   bool _supplier = true;
   bool _retailPrice = true;
+  bool _expansionTile = true;
+
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -73,7 +77,6 @@ class _ShowProductsState extends State<ShowProducts> {
                   Padding(
                     padding: const EdgeInsets.only(left:8.0,right: 8.0),
                     child: Checkbox(
-                  
                     //  overlayColor: MaterialStateColor.resolveWith((states) => Colors.white),
                       activeColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
                      // hoverColor: MaterialStateColor.resolveWith((states) => Colors.white),
@@ -89,8 +92,8 @@ class _ShowProductsState extends State<ShowProducts> {
                   ),
                   ProductSubHeader(
                     text: 'Product',
-                    width: 215,
-                    expandedWidth: 231,
+                    width: 210,
+                    expandedWidth: 215,
                     isThisAscending: _isAssending,
                     isOtherClicked: _product,
                     isThisNumber: false,
@@ -198,13 +201,233 @@ class _ShowProductsState extends State<ShowProducts> {
                     isThisProduct: false,
                     onPress: (){
                       },
-                    ),  
+                    ), 
                 ],
               ),
             ),
             Divider(
               height:1,
               color:kAppBarColor
+            ),
+            Container(
+              //color: _expansionTile? kInputBorderColor: Colors.white,
+                decoration: 
+                      BoxDecoration(
+                                    border: Border(
+                                      left: BorderSide(
+                                        color: _expansionTile? kInputBorderColor: kSignInButtonColor,
+                                        width: _expansionTile? 0 :4.0,
+                                        )
+                                    ),
+                                    color: _expansionTile? kInputBorderColor: Colors.white,
+                                  ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left:8,right:0,top: 8,bottom: 8),
+                        child: InkWell(
+                          child: Icon(
+                            ! _expansionTile?Icons.keyboard_arrow_down :Icons.keyboard_arrow_right,
+                            size: 15,
+                            color: kDashboardMidBarColor,
+                            ),
+                           onTap: (){
+                             setState(() {
+                               if(_expansionTile)
+                               {
+                                 _expansionTile = false;
+                               }
+                               else if(!_expansionTile)
+                               {
+                                 _expansionTile = true;
+                               }
+                               
+                             });
+                           }
+                          ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(left:8.0,top:8.0,bottom:8.0,right: 8.0),
+                          child: Checkbox(
+                            activeColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
+                            focusColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
+                            value: _isSelected,
+                             onChanged: (newValue){
+                               setState(() {
+                                 _isSelected = newValue;
+                                 _product = true;
+                               });
+                             }
+                            ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            width:215,
+                            height:52,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.circle_notifications,
+                                  size: 50,
+                                  color: Colors.white,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left:8.0),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children:[
+                                        TextButton(
+                                          child: Text(
+                                            'dress12',
+                                            style: TextStyle(
+                                              fontFamily: 'Lato',
+                                              fontSize: 15,
+                                              color: kAppBarColor,
+                                              decoration: TextDecoration.underline
+                                               ),
+                                          ),
+                                          onPressed: (){}
+                                        ),
+                                        Text(
+                                          '10001',
+                                           style: TextStyle(
+                                              fontFamily: 'Lato',
+                                              fontSize: 15,
+                                              color: kAppBarColor,
+                                               ),
+                                          )
+                                      ]
+                                    ),
+                                  )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 43,
+                            width: 50,
+                            child: Text('-')
+                            )
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 43,
+                            width: 54,
+                            child: Text('-')
+                            )
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 43,
+                            width: 76,
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  '0',
+                                  style: TextStyle(
+                                              fontFamily: 'Lato',
+                                              fontSize: 15,
+                                              color: Colors.red,
+                                               ),
+                                          )
+                              ],
+                            )
+                          )
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 43,
+                            width: 89,
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  '\u20B9 0.00',
+                                  style: TextStyle(
+                                              fontFamily: 'Lato',
+                                              fontSize: 15,
+                                              color: kSignInTextColor,
+                                               ),
+                                          )
+                              ],
+                            )
+                          )
+                        ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                                        height: 43,
+                                        width:76,
+                                        child: LiteRollingSwitch(
+                                            value: true,
+                                            textOn: '\u2714',
+                                            textOff: '\u2716',
+                                            colorOn: kSignInButtonColor,
+                                            colorOff: kDashboardMidBarColor,
+                                            iconOn: Icons.close_rounded,
+                                            iconOff: Icons.circle,
+                                            animationDuration: Duration(milliseconds: 400),
+                                            onChanged: (bool state) {
+                                            // print('turned ${(state) ? 'yes' : 'no'}');
+                                            },
+                                          ),
+                                      ),
+                          ),
+                          Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 43,
+                            width: 114,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('20 May 2021'),
+                              ],
+                            )
+                          )
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 43,
+                            width: 40,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.edit,
+                                  color: kDropDownColor,
+                                  size:15
+                                  ),
+                              ],
+                            )
+                          )
+                        ),             
+                    ],
+                  ),
+                  Divider(
+                    thickness:2.0,
+                    color: kInputBorderColor,
+                  ),
+                  ActiveProducts()
+                ],
+              ),
             )
           ],
         ),

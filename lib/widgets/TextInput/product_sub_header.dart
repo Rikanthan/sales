@@ -37,20 +37,14 @@ class ProductSubHeader extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                             Text(
-                          isThisProduct && isSelected ? 'Choose an Action(1 Selected) \u2228 ':text,
+                          isThisProduct && isSelected ? 'Choose an Action(1 Selected) \u2228 ' : !isOtherClicked ? text+'\u2193':text,
                           style:TextStyle(
                           fontFamily: 'Lato',
                           fontSize: 15,
                           color: isThisProduct && isSelected ? kSignInButtonColor : kSignInTextColor,
                           fontWeight: FontWeight.w700
                           )
-                        ),
-                        if(!isOtherClicked)
-                        Icon(
-                            Icons.arrow_downward_sharp,
-                            size: 15,
-                            color: kSignInTextColor,
-                            ),                     
+                        ),                
                           if(!isOtherClicked)
                           Text(
                             isThisAscending && !isThisNumber?

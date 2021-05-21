@@ -11,7 +11,6 @@ import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/cards/show_products.dart';
 import 'package:sales/widgets/drawer/customer_drawer.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class Products extends StatefulWidget {
   @override
