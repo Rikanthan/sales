@@ -145,6 +145,8 @@ class _CustomerState extends State<Customer> {
                                                ),
                                                 DropDownInput(
                                                   width: 293.33,
+                                                  height: 46,
+                                                  paddingAll: 12,
                                                   dropdownList: ['All','America','Australia'],
                                                   dropdownValue: dropDownCountryValue,
                                                   onPressed: (String newValue) {
@@ -175,6 +177,8 @@ class _CustomerState extends State<Customer> {
                               ), 
                                 DropDownInput(
                                   width: 293.33,
+                                  height: 46,
+                                  paddingAll: 12,
                                   dropdownList: ['All','All Customers'],
                                   dropdownValue: dropDownValue,
                                   onPressed: (String newValue) {

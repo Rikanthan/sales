@@ -6,21 +6,25 @@ class DropDownInput extends StatelessWidget {
    @required this.onPressed,
     @required this.dropdownValue,
     @required this.dropdownList,
-    @required this.width
+    @required this.width,
+    @required this.height,
+    @required this.paddingAll
   }) : super(key: key);
 
   final double width;
   final Function onPressed;
   final String dropdownValue;
   final List<String> dropdownList;
+  final double paddingAll;
+  final double height;
   @override
   Widget build(BuildContext context) {
     return DropdownButtonHideUnderline(
               child: Container(
                 width:width,
-                height:46,
+                height:height,
                 child: Padding(
-                  padding: const EdgeInsets.all(12.0),
+                  padding:  EdgeInsets.all(paddingAll),
                   child: DropdownButton<String>(
             value: dropdownValue,
             icon: Icon(Icons.arrow_drop_down),

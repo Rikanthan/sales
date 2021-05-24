@@ -89,6 +89,8 @@ class _ProductsState extends State<Products> {
                               ),
                                 DropDownInput(
                                   width: 214,
+                                  height: 46,
+                                  paddingAll: 12,
                                   onPressed: (String newValue) 
                                                   {
                                                     setState(() {
@@ -143,6 +145,8 @@ class _ProductsState extends State<Products> {
                                 ),
                                   DropDownInput(
                                     width: 293.33,
+                                    height: 46,
+                                  paddingAll: 12,
                                     onPressed: (String newValue) 
                                                     {
                                                       setState(() {
@@ -168,6 +172,8 @@ class _ProductsState extends State<Products> {
                                 ),
                                   DropDownInput(
                                     width: 293.33,
+                                    height: 46,
+                                  paddingAll: 12,
                                     onPressed: (String newValue) 
                                                     {
                                                       setState(() {
@@ -193,6 +199,8 @@ class _ProductsState extends State<Products> {
                                 ),
                                   DropDownInput(
                                     width: 293.33,
+                                    height: 46,
+                                  paddingAll: 12,
                                     onPressed: (String newValue) 
                                                     {
                                                       setState(() {

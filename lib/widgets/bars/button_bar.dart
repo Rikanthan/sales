@@ -31,7 +31,6 @@ class MidButtonBar extends StatelessWidget {
                     children:[
                       Text(
                         text,
-                        // 'Manage your customers and their balances, or segment them by demographics and spending \nhabits.',
                         style:TextStyle(
                             fontFamily: 'Lato',
                             fontSize: 15,
