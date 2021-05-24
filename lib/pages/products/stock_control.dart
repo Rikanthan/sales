@@ -37,7 +37,7 @@ class _StockControlState extends State<StockControl> {
           child:Column(
             children: [
               DashboardMidBar(),
-              CustomHeader(text: 'Stock Control'),
+              CustomHeader(backgroundColor:Colors.white,text: 'Stock Control'),
               Container(
                 color:kInputBorderColor,
                 child: Padding(

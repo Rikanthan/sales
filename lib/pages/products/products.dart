@@ -37,7 +37,7 @@ class _ProductsState extends State<Products> {
           child:Column(
             children: [
               DashboardMidBar(),
-              CustomHeader(text: 'Products'),
+              CustomHeader(backgroundColor:Colors.white,text: 'Products'),
               MidButtonBar(
                 text: 'Add, view and edit your products all in one place.                                                                                                                                ', 
                 addBlueButton: true,

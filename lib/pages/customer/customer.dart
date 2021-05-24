@@ -66,7 +66,7 @@ class _CustomerState extends State<Customer> {
           child:Column(
             children: [
               DashboardMidBar(),
-             CustomHeader(text: 'Customer'),
+             CustomHeader(backgroundColor:Colors.white,text: 'Customer'),
              MidButtonBar(
                text: 'Manage your customers and their balances, or segment them by demographics and spending \nhabits.',
                 addBlueButton: true,
