@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/pages/products/products.dart';
-import 'package:sales/pages/products/stock_counts.dart';
+import 'package:sales/pages/products/promotions.dart';
 
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sales', 
       theme: ThemeData(),  
-      home: StockCount()
+      home: Promotions()
     );
   }
 }
