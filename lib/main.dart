@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sales/pages/products/brands.dart';
+import 'package:sales/pages/products/product_types.dart';
 import 'package:sales/pages/products/products.dart';
-import 'package:sales/pages/products/promotions.dart';
+import 'package:sales/pages/products/price_books.dart';
 
 
 void main() {
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sales', 
       theme: ThemeData(),  
-      home: Promotions()
+      home: Brands()
     );
   }
 }

@@ -221,23 +221,6 @@ class _ProductsState extends State<Products> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children:[
-                            //  Container(
-                            //    height: 36,
-                            //    width:80,
-                            //    child: LiteRollingSwitch(
-                            //       value: true,
-                            //       textOn: '\u2714',
-                            //       textOff: '\u2716',
-                            //       colorOn: kSignInButtonColor,
-                            //       colorOff: kDashboardMidBarColor,
-                            //       iconOn: Icons.close_rounded,
-                            //       iconOff: Icons.circle,
-                            //       animationDuration: Duration(milliseconds: 400),
-                            //       onChanged: (bool state) {
-                            //        // print('turned ${(state) ? 'yes' : 'no'}');
-                            //       },
-                            //     ),
-                            //  ),
                               CustomButton(
                                 buttonText: 'Search',
                                 onPress: (){},
