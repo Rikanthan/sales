@@ -21,14 +21,7 @@ class _ActiveProductsState extends State<ActiveProducts> {
                 children: [
                   Container(
                     width: 645,
-                    // decoration:BoxDecoration(
-                    //         border: Border(
-                    //           bottom: BorderSide(
-                    //             color: kInputBorderColor,
-                    //             width:2.0,
-                    //             )
-                    //         ),
-                    // ),
+                    height: _details?277:155,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
