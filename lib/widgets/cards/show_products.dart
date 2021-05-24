@@ -274,7 +274,7 @@ class _ShowProductsState extends State<ShowProducts> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Icon(
-                                  Icons.circle_notifications,
+                                  Icons.account_box_rounded,
                                   size: 50,
                                   color: Colors.white,
                                   ),

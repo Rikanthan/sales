@@ -21,14 +21,14 @@ class _ActiveProductsState extends State<ActiveProducts> {
                 children: [
                   Container(
                     width: 645,
-                    decoration:BoxDecoration(
-                            border: Border(
-                              bottom: BorderSide(
-                                color: kInputBorderColor,
-                                width:2.0,
-                                )
-                            ),
-                    ),
+                    // decoration:BoxDecoration(
+                    //         border: Border(
+                    //           bottom: BorderSide(
+                    //             color: kInputBorderColor,
+                    //             width:2.0,
+                    //             )
+                    //         ),
+                    // ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -164,6 +164,106 @@ class _ActiveProductsState extends State<ActiveProducts> {
                             ],
                           ),
                         ),
+                        if(_details)
+                        Container(           
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children:[
+                                  Container(
+                                    width: 335,
+                                    height: 180,
+                                    child:Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(top:24,bottom:4.0),
+                                          child: Text('Type',style: kMediumTextStyle,),
+                                        ),
+                                        Text('-',style: kMediumTextStyle,),
+                                        Padding(
+                                          padding: const EdgeInsets.only(top:16.0,bottom: 4.0),
+                                          child: Text('Description',style: kMediumTextStyle,),
+                                        ),
+                                        Text('-',style: kMediumTextStyle,),
+                                        Padding(
+                                          padding: const EdgeInsets.only(top:16.0,bottom: 4.0),
+                                          child: Text('Tags',style: kMediumTextStyle,),
+                                        ),
+                                        Text('-',style: kMediumTextStyle,),
+                                        ],
+                                      ) ,
+                                    ),
+                                  Container(
+                                    width: 310,
+                                    //height: 90,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(left:12.0,right: 12.0,bottom:12.0),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text('Supplier',style: kMediumTextStyle,),
+                                              Text('Supplier Price',style: kMediumTextStyle,),
+                                            ],
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(top:12.0,bottom: 12.0),
+                                            child: Divider(
+                                              thickness: 2.0,
+                                              color: kInputBorderColor
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(bottom:4.0),
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Text(
+                                                  '-',style: TextStyle(
+                                                    fontFamily: 'Lato',
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.w400,
+                                                      )
+                                                    ),
+                                                Text(
+                                                  '\u20B9 0.00',style: TextStyle(
+                                                    fontFamily: 'Lato',
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.w400,
+                                                    )
+                                                  ),
+                                              ],
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                '-',style: TextStyle(
+                                                    fontFamily: 'Lato',
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.w400,
+                                                  )
+                                                )                                         
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  )
+                                ]
+                              )
+                            ],
+                          ),
+                        ),
+                        if(_inventory || _price)
                         Container(
                               decoration:BoxDecoration(
                             border: Border(
@@ -199,7 +299,7 @@ class _ActiveProductsState extends State<ActiveProducts> {
                               Text('Retail Price',style: kMediumTextStyle,),
                             ],
                           ))
-                        ],
+                            ],
                                 ),
                               ),
                             ),
@@ -210,6 +310,7 @@ class _ActiveProductsState extends State<ActiveProducts> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
+                                if(!_details)
                                 Text(
                                   'Main Outlet',
                                   style: TextStyle(
