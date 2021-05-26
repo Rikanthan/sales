@@ -69,6 +69,7 @@ class _RetailTableState extends State<RetailTable> {
                       isOtherClicked: _revenue,
                       isThisAscending: _isAssending, 
                       rightBorder: true,
+                      bottomBorder: true,
                       onPress: (){
                         setState(() {
                           _revenue = false;
@@ -83,6 +84,7 @@ class _RetailTableState extends State<RetailTable> {
                       width: 202, 
                       expandedWidth: 215, 
                       rightBorder: false,
+                      bottomBorder: true,
                       isOtherClicked: _itemsSold,
                       isThisAscending: _isAssending, 
                       onPress: (){
@@ -108,7 +110,8 @@ class _RetailTableState extends State<RetailTable> {
                           _discounted = false;
                            _isAssending?_isAssending = false:_isAssending = true;
                         });
-                        }
+                        },
+                        bottomBorder: true,
                       ),
                      Container(
                        decoration: BoxDecoration(
@@ -198,6 +201,7 @@ class _RetailTableState extends State<RetailTable> {
                       isOtherClicked: _revenue,
                       isThisAscending: _isAssending, 
                       rightBorder: true,
+                      bottomBorder: true,
                       onPress: (){
                         setState(() {
                           _revenue = false;
@@ -211,6 +215,7 @@ class _RetailTableState extends State<RetailTable> {
                       text: 'Sale Count',
                       width:146, 
                       rightBorder: false,
+                      bottomBorder: true,
                       expandedWidth:146, 
                       isOtherClicked: _discounted,
                       isThisAscending: _isAssending, 
@@ -228,6 +233,7 @@ class _RetailTableState extends State<RetailTable> {
                       width: 141, 
                       expandedWidth: 141, 
                       rightBorder: false,
+                      bottomBorder: true,
                       isOtherClicked: _itemsSold,
                       isThisAscending: _isAssending, 
                       onPress: (){

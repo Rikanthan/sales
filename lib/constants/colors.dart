@@ -25,3 +25,5 @@ const kFooterColor = Color(0xFF7e7e7e);
 const kFilterTextColor = Color(0xFF058de9);
 const kTableHeaderColor = Color(0xFF4b4b4b);
 const kTableFooterColor = Color(0xFF696969);
+const kTableHeaderBackgroundColor = Color(0xFFd9d9d9);
+const kTableBorderColor = Color(0xFFd7d7d7);

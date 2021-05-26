@@ -11,7 +11,7 @@ class RetailTableHeader extends StatelessWidget {
    @required this.isThisAscending,
    @required this.onPress,
    @required this.rightBorder,
-  
+  @required this.bottomBorder
   }) : super(key: key);
 
   final String text;
@@ -21,13 +21,17 @@ class RetailTableHeader extends StatelessWidget {
   final bool isThisAscending;
   final Function onPress;
   final bool rightBorder;
+  final bool bottomBorder;
   @override
   Widget build(BuildContext context) {
     return  Container(
                 width: isOtherClicked ? width : expandedWidth,
                  decoration: BoxDecoration(
                               border: Border(
-                                bottom: BorderSide(color: kFooterColor),
+                                bottom:BorderSide(
+                                  color: rightBorder? kFooterColor : Colors.white,
+                                  width: rightBorder ? 1.0 :0.0 
+                                  ),
                                 right: BorderSide(
                                   color: rightBorder? kFooterColor : Colors.white,
                                   width: rightBorder ? 1.0 :0.0 
