@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
-import 'package:sales/widgets/TextInput/price_sub_header.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
-import 'package:sales/widgets/bars/product_bar.dart';
 import 'package:sales/widgets/drawer/customer_drawer.dart';
 
 class Suppliers extends StatefulWidget {
@@ -220,14 +218,17 @@ class _SuppliersState extends State<Suppliers> {
                                             ),
                                           )
                                         ),
-                                        IconButton(
-                                          icon: Icon(
-                                            Icons.edit,
-                                            size: 15,
-                                            color: kDropDownColor,
-                                            ),
-                                           onPressed: (){}
-                                           ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(left:16.0),
+                                          child: IconButton(
+                                            icon: Icon(
+                                              Icons.edit,
+                                              size: 15,
+                                              color: kDropDownColor,
+                                              ),
+                                             onPressed: (){}
+                                             ),
+                                        ),
                                         IconButton(
                                           icon: Icon(
                                             Icons.delete_outline,

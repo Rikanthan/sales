@@ -5,12 +5,9 @@ import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
-import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
-import 'package:sales/widgets/cards/show_products.dart';
 import 'package:sales/widgets/drawer/customer_drawer.dart';
-import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
 class StockControl extends StatefulWidget {
   @override

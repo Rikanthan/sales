@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
-import 'package:sales/widgets/TextInput/price_sub_header.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
