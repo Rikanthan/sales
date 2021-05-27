@@ -4,6 +4,7 @@ import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
+import 'package:sales/widgets/bars/tab_bar.dart';
 import 'package:sales/widgets/buttons/greenbutton.dart';
 import 'package:sales/widgets/drawer/customer_drawer.dart';
 
@@ -39,33 +40,11 @@ class _StockCountState extends State<StockCount> {
                 padding: const EdgeInsets.only(left:48.0,bottom: 20),
                 child: Row(
                   children: [
-                    Container(
-                                  width:57,
-                                  height: 48,
-                                  decoration:BoxDecoration(
-                                    border: Border(
-                                      bottom: BorderSide(
-                                        color: _due ? kSignInButtonColor : kInputBorderColor,
-                                        width:_due ?5.0 : 0.0,
-                                        )
-                                    ),
-                                   
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      TextButton(
-                                        child:Text(
-                                          'Due(0)',
-                                          style: TextStyle(
-                                                      fontFamily: 'Lato',
-                                                      fontSize: 18,
-                                                      fontWeight: FontWeight.w400,
-                                                      color: !_due ? kAppBarColor : kSignInButtonColor,
-                                                       ),
-                                          ),
-                                        onPressed: ()
-                                        {
+                            TabBarItem(
+                              width: 57, 
+                              height: 48,
+                              isClicked: _due,
+                              onClicked: (){
                                           setState(() {
                                             _due = true;
                                             _upcoming= false;
@@ -74,136 +53,66 @@ class _StockCountState extends State<StockCount> {
                                            showText = 'due';
                                           });
                                         },
-                                        ),
-                                    ],
-                                  ),
-                                ),
-                                 Padding(
+                              text: 'Due(0)'
+                              ),
+                              Padding(
                                    padding: const EdgeInsets.only(left:35.0,right: 35.0),
-                                   child: Container(
-                                    width:105,
-                                    height: 48,
-                                    decoration:BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          color: _upcoming? kSignInButtonColor : kInputBorderColor,
-                                          width:_upcoming ?5.0 : 0.0,
-                                          )
-                                      ),
-                                     
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        TextButton(
-                                          child:Text(
-                                            'Upcoming(0)',
-                                            style: TextStyle(
-                                                        fontFamily: 'Lato',
-                                                        fontSize: 18,
-                                                        fontWeight: FontWeight.w400,
-                                                        color: !_upcoming ? kAppBarColor : kSignInButtonColor,
-                                                         ),
-                                            ),
-                                          onPressed: ()
-                                          {
-                                            setState(() {
-                                              _due = false;
-                                              _upcoming= true;
-                                             _completed=false;
-                                             _cancelled = false;
-                                             showText = 'upcoming';
-                                            });
-                                          },
-                                          ),
-                                      ],
-                                    ),
+                                   child: TabBarItem(
+                              width: 105, 
+                              height: 48,
+                              isClicked: _upcoming,
+                              onClicked: (){
+                                          setState(() {
+                                            _due = false;
+                                            _upcoming= true;
+                                           _completed=false;
+                                           _cancelled = false;
+                                           showText = 'upcoming';
+                                          });
+                                        },
+                              text: 'Upcoming(0)'
                                 ),
-                                 ),
+                            ),
                                  Padding(
                                    padding: const EdgeInsets.only(right:35.0),
-                                   child: Container(
-                                    width:110,
-                                    height: 48,
-                                    decoration:BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          color: _completed ? kSignInButtonColor : kInputBorderColor,
-                                          width:_completed ?5.0 : 0.0,
-                                          )
-                                      ),
-                                     
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        TextButton(
-                                          child:Text(
-                                            'Completed(0)',
-                                            style: TextStyle(
-                                                        fontFamily: 'Lato',
-                                                        fontSize: 18,
-                                                        fontWeight: FontWeight.w400,
-                                                        color: !_completed ? kAppBarColor : kSignInButtonColor,
-                                                         ),
-                                            ),
-                                          onPressed: ()
-                                          {
-                                            setState(() {
-                                              _due = false;
-                                              _upcoming= false;
-                                             _completed=true;
-                                             _cancelled = false;
-                                             showText = 'completed';
-                                            });
-                                          },
-                                          ),
-                                      ],
-                                    ),
-                                ),
-                                 ),
+                                   child: TabBarItem(
+                              width: 110, 
+                              height: 48,
+                              isClicked: _due,
+                              onClicked: (){
+                                          setState(() {
+                                            _due = false;
+                                            _upcoming= false;
+                                           _completed=true;
+                                           _cancelled = false;
+                                           showText = 'completed';
+                                          });
+                                        },
+                              text: 'Completed'
+                              ),
+                            ),
                                  Padding(
                                    padding: const EdgeInsets.all(8.0),
-                                   child: Container(
-                                    width:80,
-                                    height: 48,
-                                    decoration:BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          color: _cancelled ? kSignInButtonColor : kInputBorderColor,
-                                          width:_cancelled ?5.0 : 0.0,
-                                          )
-                                      ),
-                                     
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        TextButton(
-                                          child:Text(
-                                            'Cancelled',
-                                            style: TextStyle(
-                                                        fontFamily: 'Lato',
-                                                        fontSize: 18,
-                                                        fontWeight: FontWeight.w400,
-                                                        color: !_cancelled ? kAppBarColor : kSignInButtonColor,
-                                                         ),
-                                            ),
-                                          onPressed: ()
-                                          {
-                                            setState(() {
-                                              _cancelled = true;
-                                              _upcoming= false;
-                                             _completed=false;
-                                             _due = false;
-                                             showText = 'cancelled';
-                                            });
-                                          },
-                                          ),
-                                      ],
-                                    ),
-                                ),
-                                 ),
+                                   child:TabBarItem(
+                              width: 80, 
+                              height: 48,
+                              isClicked: _cancelled,
+                              onClicked: (){
+                                          setState(() {
+                                            _due = false;
+                                            _upcoming= false;
+                                           _completed=false;
+                                           _cancelled = true;
+                                           showText = 'cancelled';
+                                          });
+                                        },
+                              text: 'Cancelled'
+                              ),
+                          ),
                   ]
                 ),
               ),
+            
               MidButtonBar(
                 text: 'Create,schedule and complete counts to keep track of your inventory',
                  addBlueButton: false, 

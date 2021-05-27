@@ -9,94 +9,94 @@ class SalesReportBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-                    children: [
-                      Container(
-                        width:153,
-                        height:45,
-                        decoration:BoxDecoration(
-                          color: Color(0xFFf8f8f8),
-                          border: Border(
-                            right:BorderSide( color: kTableBorderColor),
-                            bottom: BorderSide(color: kTableBorderColor)
-                            )
+              Row(
+                  children: [
+                    Container(
+                      width:153,
+                      height:45,
+                      decoration:BoxDecoration(
+                        color: Color(0xFFf8f8f8),
+                        border: Border(
+                          right:BorderSide( color: kTableBorderColor),
+                          bottom: BorderSide(color: kTableBorderColor)
+                          )
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20,top:1,bottom: 1,right: 1),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Totals',style: kMediumTextStyle,
+                                ),
+                            ],
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 20,top:1,bottom: 1,right: 1),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Totals',style: kMediumTextStyle,
-                                  ),
-                              ],
-                            ),
-                          ),
                         ),
+                      ),
+                      ReportTableCell(
+                        width: 75,
+                        paddingLeft: 15,
+                        text: 'Rs0.00', 
+                        paddingRight: 14, 
+                        rightBorder: false
+                      ),
                         ReportTableCell(
-                          width: 75,
-                          paddingLeft: 15,
-                          text: 'Rs0.00', 
-                          paddingRight: 14, 
-                          rightBorder: false
-                        ),
-                         ReportTableCell(
-                          width: 65,
-                          paddingLeft: 1, 
-                          paddingRight: 14,
-                          text: 'Rs0.00', 
-                          rightBorder: false
-                        ),
+                        width: 65,
+                        paddingLeft: 1, 
+                        paddingRight: 14,
+                        text: 'Rs0.00', 
+                        rightBorder: false
+                      ),
+                      ReportTableCell(
+                        width: 65,
+                        paddingLeft: 1, 
+                        paddingRight: 14,
+                        text: 'Rs0.00', 
+                        rightBorder: false
+                      ),
                         ReportTableCell(
-                          width: 65,
-                          paddingLeft: 1, 
-                          paddingRight: 14,
-                          text: 'Rs0.00', 
-                          rightBorder: false
-                        ),
-                         ReportTableCell(
-                          width: 66,
-                          paddingLeft: 1,
-                          text: 'Rs0.00', 
-                          paddingRight: 15, 
-                          rightBorder: true
-                        ),
+                        width: 66,
+                        paddingLeft: 1,
+                        text: 'Rs0.00', 
+                        paddingRight: 15, 
+                        rightBorder: true
+                      ),
+                      ReportTableCell(
+                        width: 105,
+                        paddingLeft: 1,
+                        text: 'Rs0.00', 
+                        paddingRight: 14, 
+                        rightBorder: true
+                      ),
+                      ReportTableCell(
+                        width: 115,
+                        paddingLeft: 1, 
+                        paddingRight: 14,
+                        text: 'Rs0.00', 
+                        rightBorder: false
+                      ),
                         ReportTableCell(
-                          width: 105,
-                          paddingLeft: 1,
-                          text: 'Rs0.00', 
-                          paddingRight: 14, 
-                          rightBorder: true
-                        ),
-                        ReportTableCell(
-                          width: 115,
-                          paddingLeft: 1, 
-                          paddingRight: 14,
-                          text: 'Rs0.00', 
-                          rightBorder: false
-                        ),
-                         ReportTableCell(
-                          width: 84,
-                          paddingLeft: 1, 
-                          paddingRight: 15,
-                          text: 'Rs0.00', 
-                          rightBorder: true
-                        ),
-                        ReportTableCell(
-                          width: 79,
-                          paddingLeft: 1, 
-                          paddingRight: 15,
-                          text: '0%', 
-                          rightBorder: true
-                        ),
-                        ReportTableCell(
-                          width: 76,
-                          paddingLeft: 1, 
-                          paddingRight: 15,
-                          text: 'Rs0.00', 
-                          rightBorder: true
-                        ),
-                    ],
+                        width: 84,
+                        paddingLeft: 1, 
+                        paddingRight: 15,
+                        text: 'Rs0.00', 
+                        rightBorder: true
+                      ),
+                      ReportTableCell(
+                        width: 79,
+                        paddingLeft: 1, 
+                        paddingRight: 15,
+                        text: '0%', 
+                        rightBorder: true
+                      ),
+                      ReportTableCell(
+                        width: 76,
+                        paddingLeft: 1, 
+                        paddingRight: 15,
+                        text: 'Rs0.00', 
+                        rightBorder: true
+                      ),
+                  ],
                   ),
                   Row(
                     children: [

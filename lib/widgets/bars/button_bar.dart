@@ -24,7 +24,9 @@ class MidButtonBar extends StatelessWidget {
     return Container(
                 color:kInputBorderColor,
                 child: Padding(
-                  padding: EdgeInsets.only(top:16,bottom:16,left:48.0,right: 48),
+                  padding: EdgeInsets.only(
+                    top:greenButtonText.isNotEmpty ? 16:36,
+                    bottom:greenButtonText.isNotEmpty? 16:36,left:48.0,right: 48),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,6 +50,7 @@ class MidButtonBar extends StatelessWidget {
                           leftPadding: 30,
                           ),
                       ),
+                      if(greenButtonText.isNotEmpty)
                       Padding(
                         padding: const EdgeInsets.all(4.0),
                         child: CustomButton(
