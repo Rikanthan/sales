@@ -7,40 +7,30 @@ import 'package:sales/widgets/TextInput/text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/barchart/simple_bar_chart.dart';
-import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
-import 'package:sales/widgets/bars/tab_bar.dart';
 import 'package:sales/widgets/buttons/date_button.dart';
 import 'package:sales/widgets/buttons/date_range_button.dart';
-import 'package:sales/widgets/buttons/toggle_button.dart';
 import 'package:sales/widgets/drawer/customer_drawer.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
-import 'package:sales/widgets/tables/inventory_performance_table.dart';
-import 'package:sales/widgets/tables/inventory_replenishment_table.dart';
-import 'package:sales/widgets/tables/inventory_summary_table.dart';
+import 'package:sales/widgets/tables/payments_report_table.dart';
 import 'package:sales/widgets/tables/retail_dashboard_table.dart';
 import 'package:sales/widgets/tables/sales_report_table.dart';
 import '../../models/chart_model.dart';
 
-class InventoryReport extends StatefulWidget {
+class PaymentsReport extends StatefulWidget {
  
   @override
-  _InventoryReportState createState() => _InventoryReportState();
+  _PaymentsReportState createState() => _PaymentsReportState();
 }
 
-class _InventoryReportState extends State<InventoryReport> {
-   List<charts.Series> seriesList;
-   bool animate;
-    bool _summary = false;
-   bool _replenishment = false;
-   bool _performance = true;
-   String reportType = "Product";
-   String measure = 'On-hand Inventory';
+class _PaymentsReportState extends State<PaymentsReport> {
+  
+   String reportType = "Payment type";
+   String measure = 'Amount';
    String filter = 'Exclude';
-   String dateRange = 'All Time';
-   String midBarText = 'Get an overview of inventory and its performance over time';
+   String comparision = 'No comparision';
    bool lessFilters = false;
-    bool isSwitch = true;
+  
   @override
   Widget build(BuildContext context) {
     
@@ -56,84 +46,11 @@ class _InventoryReportState extends State<InventoryReport> {
           color:kHomeBackgroundColor,
           child:Column(
             children: [
-              //DashboardMidBar(),
+              DashboardMidBar(),
               CustomHeader(
                 backgroundColor:kHomeBackgroundColor,
-                 text: 'Inventory Report'
+                 text: 'Payments Report'
                  ),
-              Padding(
-                padding: const EdgeInsets.only(left:48.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                            TabBarItem(
-                              width: 75, 
-                              height: 48,
-                              isClicked: _summary,
-                              onClicked: (){
-                                          setState(() {
-                                            _summary = true;
-                                            _replenishment = false;
-                                           _performance = false;
-                                           reportType = 'Product';
-                                           measure = 'On-hand Inventory';
-                                            dateRange = 'All time';
-                                            midBarText = 'Get an overview of inventory and its performance over time';
-                                          });
-                                        },
-                              text: 'Summary'
-                              ),
-                              Padding(
-                                   padding: const EdgeInsets.only(left:35.0,right: 35.0),
-                                   child: TabBarItem(
-                              width: 119, 
-                              height: 48,
-                              isClicked: _replenishment,
-                              onClicked: (){
-                                          setState(() {
-                                          _summary = false;
-                                          _replenishment = true;
-                                          _performance = false;
-                                          reportType = 'SKU Name';
-                                           measure = 'All Inventory';
-                                            dateRange = '29th Apr 2021-27th May\n2021';
-                                            midBarText = 'A starting point to help you decide what to order and how much of it';
-                                          });
-                                        },
-                              text: 'Replenishment'
-                                ),
-                            ),
-                                 Padding(
-                                   padding: const EdgeInsets.only(right:35.0),
-                                   child: TabBarItem(
-                              width: 103, 
-                              height: 48,
-                              isClicked: _performance,
-                              onClicked: (){
-                                          setState(() {
-                                            _summary = false;
-                                            _replenishment = false;
-                                            _performance = true;
-                                             reportType = 'Product';
-                                           measure = 'All Inventory';
-                                            dateRange = 'All time';
-                                            midBarText = 'Track product performance and decide what to order';
-                                          });
-                                        },
-                              text: 'Performance'
-                              ),
-                            ),
-                  ]
-                ),
-              ),
-              MidButtonBar(
-                text: midBarText, 
-                addBlueButton: false,
-                blueButtonText: '', 
-                blueOnTap: (){}, 
-                greenButtonText: '', 
-                greenOnTap: (){}
-                ),  
               Container(
                 color: Colors.white,
                 child:Padding(
@@ -166,7 +83,7 @@ class _InventoryReportState extends State<InventoryReport> {
                                                 );
                                               },
                                 dropdownValue: reportType,
-                                dropdownList: ['Product','SKU Name','Brand','Outlet','Supplier','Product Type'],
+                                dropdownList: ['Payment type'],
                               ),
                             ]
                           ),
@@ -194,7 +111,7 @@ class _InventoryReportState extends State<InventoryReport> {
                                                 );
                                               },
                                 dropdownValue: measure,
-                                dropdownList: ['On-hand Inventory','Low Inventory','All Inventory'],
+                                dropdownList: ['Amount'],
                               ),
                               ]
                             ),
@@ -228,55 +145,73 @@ class _InventoryReportState extends State<InventoryReport> {
                                         ),
                                         child:  Padding(
                                           padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left:12.0,right: 12.0),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                dateRange,
-                                                  style: TextStyle(
-                                                  color: kAppBarColor,
-                                                  fontFamily: 'Lato',
-                                                  fontSize: 15
-                                                  )
-                                                ),
-                                                Icon(
-                                                  Icons.calendar_view_day_outlined,
-                                                  size:15,
-                                                  color: kDashboardMidBarColor,
-                                                  )
-                                            ],
-                                          ),
+                                          child: Text(
+                                            "3rd May 2021-26th May 2021",
+                                              style: TextStyle(
+                                              color: kAppBarColor,
+                                              fontFamily: 'Lato',
+                                              fontSize: 15
+                                              )
+                                            ),
                                         ),
                                       ),
                                 ),
                               ],
                             ),
                           ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Comparision',
+                                style: kMediumTextStyle,
+                              ),
+                              SizedBox(
+                                height:5,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  DropDownInput(
+                                        width: 220,
+                                        height: 42,
+                                      paddingAll: 4,
+                                        onPressed: (String newValue) 
+                                                        {
+                                                          setState(() {
+                                                          comparision= newValue;
+                                                          }
+                                                        );
+                                                      },
+                                        dropdownValue: comparision,
+                                        dropdownList: ['No comparision',''],
+                                      ),
+                                ],
+                              )
+                            ],
+                          ),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top:12.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                              if(!lessFilters)
-                                        TextButton(
-                                          onPressed: (){
-                                            setState(() {
-                                              lessFilters = true;
-                                            });
-                                          },
-                                          child: Text(
-                                            'More Filters',
-                                            style: TextStyle(
-                                              color: kFilterTextColor,
-                                              fontFamily: 'Lato',
-                                              fontSize: 15
-                                              ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                            if(!lessFilters)
+                                      TextButton(
+                                        onPressed: (){
+                                          setState(() {
+                                            lessFilters = true;
+                                          });
+                                        },
+                                        child: Text(
+                                          'More Filters',
+                                          style: TextStyle(
+                                            color: kFilterTextColor,
+                                            fontFamily: 'Lato',
+                                            fontSize: 15
                                             ),
-                                        )
-                          ],
-                        ),
+                                          ),
+                                      )
+                        ],
                       ),
                       if(lessFilters)
                       Padding(
@@ -320,56 +255,29 @@ class _InventoryReportState extends State<InventoryReport> {
                                 ],
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(top:12.0,bottom: 12.0),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    ToggleButton(
-                                      height: 28,
-                                      width: 63,
-                                      isSwitch: isSwitch,
-                                      onToggle: (val) {
-                                            setState(() {
-                                              isSwitch = val;
-                                            });
-                                          },
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(12.0),
-                                        child: Text(
-                                          'Show inactive inventory',
-                                          style: TextStyle(
-                                            color: kAppBarColor,
-                                            fontFamily: 'Lato',
-                                            fontSize: 15
-                                            ),
-                                          ),
-                                      )
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                height: 42,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children : [
-                                    TextButton(
-                                          onPressed: (){
-                                            setState(() {
-                                              lessFilters = false;
-                                            });
-                                          },
-                                          child: Text(
-                                            'Less Filters',
-                                            style: TextStyle(
-                                              color: kFilterTextColor,
-                                              fontFamily: 'Lato',
-                                              fontSize: 15
+                                padding: const EdgeInsets.only(top:12.0),
+                                child: Container(
+                                  height: 42,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children : [
+                                      TextButton(
+                                            onPressed: (){
+                                              setState(() {
+                                                lessFilters = false;
+                                              });
+                                            },
+                                            child: Text(
+                                              'Less Filters',
+                                              style: TextStyle(
+                                                color: kFilterTextColor,
+                                                fontFamily: 'Lato',
+                                                fontSize: 15
+                                                ),
                                               ),
-                                            ),
-                                        ),
-                                  ]
+                                          ),
+                                    ]
+                                  ),
                                 ),
                               )
                           ]
@@ -422,12 +330,7 @@ class _InventoryReportState extends State<InventoryReport> {
                   ],
                 ),
               ),
-              if(_summary)
-              InventorySummaryTable(),
-              if(_replenishment)
-              InventoryReplenishmentTable(),
-              if(_performance)
-              InventoryPerformanceTable()
+              PaymentReportTable()
             ],
           )
         ),
