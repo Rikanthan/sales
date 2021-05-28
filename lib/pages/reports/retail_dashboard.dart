@@ -3,7 +3,6 @@ import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
-import 'package:sales/widgets/TextInput/text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/barchart/simple_bar_chart.dart';

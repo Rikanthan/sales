@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
-import 'package:sales/constants/styles.dart';
+
 class ReportTableSideCell extends StatelessWidget {
   ReportTableSideCell({
     @required this.width,

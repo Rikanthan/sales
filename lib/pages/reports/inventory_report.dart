@@ -3,24 +3,16 @@ import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
-import 'package:sales/widgets/TextInput/text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
-import 'package:sales/widgets/barchart/simple_bar_chart.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
-import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/bars/tab_bar.dart';
-import 'package:sales/widgets/buttons/date_button.dart';
-import 'package:sales/widgets/buttons/date_range_button.dart';
 import 'package:sales/widgets/buttons/toggle_button.dart';
 import 'package:sales/widgets/drawer/customer_drawer.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:sales/widgets/tables/inventory_performance_table.dart';
 import 'package:sales/widgets/tables/inventory_replenishment_table.dart';
 import 'package:sales/widgets/tables/inventory_summary_table.dart';
-import 'package:sales/widgets/tables/retail_dashboard_table.dart';
-import 'package:sales/widgets/tables/sales_report_table.dart';
-import '../../models/chart_model.dart';
 
 class InventoryReport extends StatefulWidget {
  

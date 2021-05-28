@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
-import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
 import 'package:sales/widgets/TextInput/retail_table_header.dart';
-import 'package:sales/widgets/tables/sales_report_table_body.dart';
+
 class InventorySummaryTable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

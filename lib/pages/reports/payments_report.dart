@@ -3,19 +3,11 @@ import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
-import 'package:sales/widgets/TextInput/text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
-import 'package:sales/widgets/barchart/simple_bar_chart.dart';
 import 'package:sales/widgets/bars/midbar.dart';
-import 'package:sales/widgets/buttons/date_button.dart';
-import 'package:sales/widgets/buttons/date_range_button.dart';
 import 'package:sales/widgets/drawer/customer_drawer.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:sales/widgets/tables/payments_report_table.dart';
-import 'package:sales/widgets/tables/retail_dashboard_table.dart';
-import 'package:sales/widgets/tables/sales_report_table.dart';
-import '../../models/chart_model.dart';
 
 class PaymentsReport extends StatefulWidget {
  
