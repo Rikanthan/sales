@@ -4,25 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
-import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
-import 'package:sales/widgets/TextInput/gredient_text_header.dart';
-import 'package:sales/widgets/TextInput/register_table_cell.dart';
-import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
-import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/drawer/customer_drawer.dart';
-import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
-class GiftCardReport extends StatefulWidget {
+class StoreCreditReport extends StatefulWidget {
  
   @override
-  _GiftCardReportState createState() => _GiftCardReportState();
+  _StoreCreditReportState createState() => _StoreCreditReportState();
 }
 
-class _GiftCardReportState extends State<GiftCardReport> {
-   String filter = 'All Registers';
-   bool lessFilters = false;
+class _StoreCreditReportState extends State<StoreCreditReport> {
   
   @override
   Widget build(BuildContext context) {
@@ -42,46 +34,8 @@ class _GiftCardReportState extends State<GiftCardReport> {
               DashboardMidBar(),
               CustomHeader(
                 backgroundColor:kHomeBackgroundColor,
-                 text: 'Gift Card Report'
+                 text: 'Store Credit Report'
                  ),
-              Container(
-                color:Colors.white,
-                child: Padding(
-                  padding: const EdgeInsets.only(top:24,bottom: 24,left: 48,right: 48),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children : [
-                          Text('Gift card Number',style: kMediumTextStyle),
-                          SizedBox(height: 5,),
-                          DashboardSearchBar(
-                            iconData: Icons.search,
-                            iconText: 'Search for a gift card number',
-                            width: 400,
-                            padding: 12,
-                            darkMode: false
-                            )
-                        ]
-                      ),
-                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children : [
-                          CustomButton(
-                            buttonText: 'Apply Filter',
-                            onPress: (){}, 
-                            buttonColor: kSignInButtonColor, 
-                            topPadding: 18,
-                            leftPadding: 20
-                            )
-                        ]
-                      )
-                    ],
-                  ),
-                ),
-              ),
               Padding(
                 padding: const EdgeInsets.all(48),
                 child: Column(
@@ -91,28 +45,49 @@ class _GiftCardReportState extends State<GiftCardReport> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Container(
-                          width:147,
+                          width:267,
                           height:58,
                           child: Padding(
-                            padding: const EdgeInsets.only(top:20,bottom: 20,right: 40),
-                            child: Text(
-                              'Total Value Sold',style: kMediumTextStyle,
-                              ),
+                            padding: const EdgeInsets.only(top:20,bottom: 20,right: 20),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Total Value Issued',style: kMediumTextStyle,
+                                  ),
+                                Text(
+                                  'Rs0.00',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontFamily: 'Lato',
+                                    color: kAppBarColor
+                                    ),
+                                  )
+                              ],
+                            ),
                           )
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left:80.0),
                           child: Container(
-                            width:190,
+                            width:296,
                             height:58,
                             child: Padding(
-                              padding: const EdgeInsets.only(top:20,bottom: 20,right: 40),
+                              padding: const EdgeInsets.only(top:20,bottom: 20,left: 20),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     'Total Value Redeemed',style: kMediumTextStyle,
                                     ),
+                                    Text(
+                                  'Rs0.00',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontFamily: 'Lato',
+                                    color: kAppBarColor
+                                    ),
+                                  )
                                 ],
                               ),
                             )
@@ -124,32 +99,27 @@ class _GiftCardReportState extends State<GiftCardReport> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Container(
-                          width:181,
+                          width:267,
                           height:58,
                           child: Padding(
-                            padding: const EdgeInsets.only(top:20,bottom: 20,right: 40),
-                            child: Text(
-                              'Outstanding Balance',style: kMediumTextStyle,
-                              ),
-                          )
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left:80.0),
-                          child: Container(
-                            width:202,
-                            height:58,
-                            child: Padding(
-                              padding: const EdgeInsets.only(top:20,bottom: 20,right: 40),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Gift Cards in Circulation',style: kMediumTextStyle,
+                            padding: const EdgeInsets.only(top:20,bottom: 20),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Outstanding Balance',style: kMediumTextStyle,
+                                  ),
+                                   Text(
+                                  'Rs0.00',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontFamily: 'Lato',
+                                    color: kAppBarColor
                                     ),
-                                ],
-                              ),
-                            )
-                          ),
+                                  )
+                              ],
+                            ),
+                          )
                         ),
                       ],
                     )
@@ -161,14 +131,6 @@ class _GiftCardReportState extends State<GiftCardReport> {
                  child: Column(
                    crossAxisAlignment: CrossAxisAlignment.start,
                    children: [
-                     Text(
-                       'Showing 0 gift cards.',
-                       style: TextStyle(
-                         color:kDashboardMidBarColor,
-                         fontSize: 14,
-                         fontFamily: 'Lato'
-                        ),
-                       ),
                        Row(
                          children: [
                            Container(
@@ -181,7 +143,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                                  mainAxisAlignment: MainAxisAlignment.start,
                                  children: [
                                    Text(
-                                     'Gift card number',
+                                     'Customer',
                                      style: kMediumTextStyle,
                                      ),
                                  ],
@@ -198,7 +160,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                                  mainAxisAlignment: MainAxisAlignment.end,
                                  children: [
                                    Text(
-                                     'Total sold',
+                                     'Total issued',
                                      style: kMediumTextStyle,
                                      ),
                                  ],
@@ -247,7 +209,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                            mainAxisAlignment: MainAxisAlignment.start,
                            children: [
                              Text(
-                               'No gift card data available',
+                               'No store credit card data available',
                                style: TextStyle(
                                  fontFamily: 'Lato',
                                  fontSize: 14,

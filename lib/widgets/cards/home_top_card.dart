@@ -111,7 +111,6 @@ class HomeTopCard extends StatelessWidget {
                               Container(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  //crossAxisAlignment: CrossAxisAlignment.center,
                                   children : [
                                     Image.asset(
                                       'assets/images/add-a-customer-v1.png',

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sales/pages/reports/Tax_report.dart';
-import 'package:sales/pages/reports/register_closures.dart';
+import 'package:sales/pages/reports/enable_gift_cards.dart';
+import 'package:sales/pages/reports/online_gift_card.dart';
+import 'package:sales/pages/reports/store_credit_report.dart';
 void main() {
   runApp(MyApp());
 }
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sales', 
       theme: ThemeData(),  
-      home: RegisterClosure()
+      home: OnlineGiftCard()
     );
   }
 }
