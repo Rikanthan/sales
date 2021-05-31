@@ -5,11 +5,13 @@ class CustomHeader extends StatelessWidget {
   const CustomHeader({
     Key key,
    @required this.text,
-   @required this.backgroundColor
+   @required this.backgroundColor,
+   @required this.isDarkMode,
   }) : super(key: key);
 
   final String text;
   final Color backgroundColor;
+  final bool isDarkMode;
   @override
   Widget build(BuildContext context) {
     return  Container(
@@ -23,7 +25,7 @@ class CustomHeader extends StatelessWidget {
                         style:TextStyle(
                           fontFamily: 'Lato',
                           fontSize: 32,
-                          color: kSignInTextColor,
+                          color: !isDarkMode ? kSignInTextColor : kHelpTextColor,
                           fontWeight: FontWeight.w700
                         )
                       ),

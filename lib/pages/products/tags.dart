@@ -33,7 +33,7 @@ class _TagsState extends State<Tags> {
             children: [
               DashboardMidBar(),
               CustomHeader(
-                backgroundColor:kHomeBackgroundColor, text: 'Product Tags'),
+                backgroundColor:kHomeBackgroundColor,isDarkMode: false, text: 'Product Tags'),
               MidButtonBar(
                 text: 'A list of all your Tags.',
                  addBlueButton: false, 

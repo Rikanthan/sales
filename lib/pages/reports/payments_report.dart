@@ -41,6 +41,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
               DashboardMidBar(),
               CustomHeader(
                 backgroundColor:kHomeBackgroundColor,
+                isDarkMode: false,
                  text: 'Payments Report'
                  ),
               Container(
@@ -64,6 +65,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
                                 height:5.0
                               ),
                               DropDownInput(
+                                isDarkMode: false,
                                 width: 220,
                                 height: 46,
                               paddingAll: 4,
@@ -92,6 +94,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
                                   height:5.0
                                 ),
                                 DropDownInput(
+                                  isDarkMode: false,
                                 width: 220,
                                 height: 46,
                               paddingAll: 4,
@@ -165,6 +168,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   DropDownInput(
+                                    isDarkMode: false,
                                         width: 220,
                                         height: 42,
                                       paddingAll: 4,
@@ -221,6 +225,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                    DropDownInput(
+                                     isDarkMode: false,
                                 width: 130,
                                 height: 42,
                               paddingAll: 4,
@@ -235,6 +240,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
                                 dropdownList: ['Exclude','Include'],
                               ),
                                   TextInput(
+                                        darkMode: false,
                                     validate:(value){},
                                     onChange: (value){},
                                     paddingTop: 0,

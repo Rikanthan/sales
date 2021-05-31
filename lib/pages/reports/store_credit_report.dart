@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
@@ -34,6 +32,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
               DashboardMidBar(),
               CustomHeader(
                 backgroundColor:kHomeBackgroundColor,
+                isDarkMode: false,
                  text: 'Store Credit Report'
                  ),
               Padding(

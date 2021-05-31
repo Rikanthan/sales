@@ -35,7 +35,10 @@ class _BrandsState extends State<Brands> {
             children: [
               DashboardMidBar(),
               CustomHeader(
-                backgroundColor:kHomeBackgroundColor, text: 'Brands'),
+                backgroundColor:kHomeBackgroundColor,
+                isDarkMode: false,
+                 text: 'Brands'
+                 ),
               MidButtonBar(
                 text: 'A list of all your brands.',
                  addBlueButton: false, 

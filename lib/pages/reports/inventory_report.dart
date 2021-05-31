@@ -51,7 +51,8 @@ class _InventoryReportState extends State<InventoryReport> {
               //DashboardMidBar(),
               CustomHeader(
                 backgroundColor:kHomeBackgroundColor,
-                 text: 'Inventory Report'
+                 text: 'Inventory Report',
+                 isDarkMode: false,
                  ),
               Padding(
                 padding: const EdgeInsets.only(left:48.0),
@@ -59,6 +60,7 @@ class _InventoryReportState extends State<InventoryReport> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                             TabBarItem(
+                              darkMode: false,
                               width: 75, 
                               height: 48,
                               isClicked: _summary,
@@ -78,6 +80,7 @@ class _InventoryReportState extends State<InventoryReport> {
                               Padding(
                                    padding: const EdgeInsets.only(left:35.0,right: 35.0),
                                    child: TabBarItem(
+                                     darkMode: false,
                               width: 119, 
                               height: 48,
                               isClicked: _replenishment,
@@ -98,6 +101,7 @@ class _InventoryReportState extends State<InventoryReport> {
                                  Padding(
                                    padding: const EdgeInsets.only(right:35.0),
                                    child: TabBarItem(
+                                     darkMode: false,
                               width: 103, 
                               height: 48,
                               isClicked: _performance,
@@ -147,6 +151,7 @@ class _InventoryReportState extends State<InventoryReport> {
                                 height:5.0
                               ),
                               DropDownInput(
+                                isDarkMode: false,
                                 width: 220,
                                 height: 46,
                               paddingAll: 4,
@@ -175,6 +180,7 @@ class _InventoryReportState extends State<InventoryReport> {
                                   height:5.0
                                 ),
                                 DropDownInput(
+                                  isDarkMode: false,
                                 width: 220,
                                 height: 46,
                               paddingAll: 4,
@@ -286,6 +292,7 @@ class _InventoryReportState extends State<InventoryReport> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                    DropDownInput(
+                                     isDarkMode: false,
                                 width: 130,
                                 height: 42,
                               paddingAll: 4,
@@ -300,6 +307,7 @@ class _InventoryReportState extends State<InventoryReport> {
                                 dropdownList: ['Exclude','Include'],
                               ),
                                   TextInput(
+                                        darkMode: false,
                                     validate:(value){},
                                     onChange: (value){},
                                     paddingTop: 0,

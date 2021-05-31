@@ -22,7 +22,11 @@ class CustomerGroups extends StatelessWidget {
         child:Column(
           children: [
             DashboardMidBar(),
-            CustomHeader(backgroundColor:Colors.white,text: 'Customer Groups'),
+            CustomHeader(
+              backgroundColor:Colors.white,
+              text: 'Customer Groups',
+              isDarkMode: false,
+              ),
             MidButtonBar(
               text: 'Group customers for reporting and providing targeted promotions or special offers.', 
               addBlueButton: false,

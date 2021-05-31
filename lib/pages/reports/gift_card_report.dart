@@ -1,13 +1,7 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
-import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
-import 'package:sales/widgets/TextInput/gredient_text_header.dart';
-import 'package:sales/widgets/TextInput/register_table_cell.dart';
-import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
@@ -42,6 +36,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
               DashboardMidBar(),
               CustomHeader(
                 backgroundColor:kHomeBackgroundColor,
+                isDarkMode: false,
                  text: 'Gift Card Report'
                  ),
               Container(

@@ -38,7 +38,7 @@ class _PriceBooksState extends State<PriceBooks> {
             children: [
               DashboardMidBar(),
               CustomHeader(
-                backgroundColor:kHomeBackgroundColor, text: 'Price Books'),
+                backgroundColor:kHomeBackgroundColor,isDarkMode: false, text: 'Price Books'),
               MidButtonBar(
                 text: 'A list of all your price books.',
                  addBlueButton: false, 

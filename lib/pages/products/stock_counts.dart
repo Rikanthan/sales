@@ -35,12 +35,13 @@ class _StockCountState extends State<StockCount> {
           child:Column(
             children: [
               DashboardMidBar(),
-              CustomHeader(backgroundColor:kHomeBackgroundColor, text: 'Inventory Counts'),
+              CustomHeader(backgroundColor:kHomeBackgroundColor,isDarkMode: false, text: 'Inventory Counts'),
               Padding(
                 padding: const EdgeInsets.only(left:48.0,bottom: 20),
                 child: Row(
                   children: [
                             TabBarItem(
+                              darkMode: false,
                               width: 57, 
                               height: 48,
                               isClicked: _due,
@@ -58,6 +59,7 @@ class _StockCountState extends State<StockCount> {
                               Padding(
                                    padding: const EdgeInsets.only(left:35.0,right: 35.0),
                                    child: TabBarItem(
+                                     darkMode: false,
                               width: 105, 
                               height: 48,
                               isClicked: _upcoming,
@@ -76,6 +78,7 @@ class _StockCountState extends State<StockCount> {
                                  Padding(
                                    padding: const EdgeInsets.only(right:35.0),
                                    child: TabBarItem(
+                                     darkMode: false,
                               width: 110, 
                               height: 48,
                               isClicked: _due,
@@ -94,6 +97,7 @@ class _StockCountState extends State<StockCount> {
                                  Padding(
                                    padding: const EdgeInsets.all(8.0),
                                    child:TabBarItem(
+                                     darkMode: false,
                               width: 80, 
                               height: 48,
                               isClicked: _cancelled,

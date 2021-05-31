@@ -43,6 +43,7 @@ class _SalesReportState extends State<SalesReport> {
               DashboardMidBar(),
               CustomHeader(
                 backgroundColor:kHomeBackgroundColor,
+                isDarkMode: false,
                  text: 'Sales Report'
                  ),
               Container(
@@ -65,7 +66,8 @@ class _SalesReportState extends State<SalesReport> {
                               SizedBox(
                                 height:5.0
                               ),
-                              DropDownInput(
+                               DropDownInput(
+                                isDarkMode: false,
                                 width: 220,
                                 height: 46,
                               paddingAll: 4,
@@ -93,7 +95,8 @@ class _SalesReportState extends State<SalesReport> {
                                 SizedBox(
                                   height:5.0
                                 ),
-                                DropDownInput(
+                                 DropDownInput(
+                                isDarkMode: false,
                                 width: 220,
                                 height: 46,
                               paddingAll: 4,
@@ -166,7 +169,8 @@ class _SalesReportState extends State<SalesReport> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  DropDownInput(
+                                   DropDownInput(
+                                isDarkMode: false,
                                         width: 220,
                                         height: 42,
                                       paddingAll: 4,
@@ -222,7 +226,8 @@ class _SalesReportState extends State<SalesReport> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                   DropDownInput(
+                                    DropDownInput(
+                                isDarkMode: false,
                                 width: 130,
                                 height: 42,
                               paddingAll: 4,
@@ -237,6 +242,7 @@ class _SalesReportState extends State<SalesReport> {
                                 dropdownList: ['Exclude','Include'],
                               ),
                                   TextInput(
+                                        darkMode: false,
                                     validate:(value){},
                                     onChange: (value){},
                                     paddingTop: 0,

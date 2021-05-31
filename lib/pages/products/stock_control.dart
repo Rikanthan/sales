@@ -34,7 +34,7 @@ class _StockControlState extends State<StockControl> {
           child:Column(
             children: [
               DashboardMidBar(),
-              CustomHeader(backgroundColor:Colors.white,text: 'Stock Control'),
+              CustomHeader(backgroundColor:Colors.white,isDarkMode: false,text: 'Stock Control'),
               Container(
                 color:kInputBorderColor,
                 child: Padding(
@@ -117,7 +117,8 @@ class _StockControlState extends State<StockControl> {
                                   style: kMediumTextStyle,
                                   ),
                               ),
-                                DropDownInput(
+                                 DropDownInput(
+                                  isDarkMode: false,
                                   width: 296,
                                   height: 30,
                                   paddingAll: 4,
@@ -147,6 +148,7 @@ class _StockControlState extends State<StockControl> {
                                     ),
                                 ),
                                 TextInput(
+                                  darkMode: false,
                                   validate:(value){},
                                   onChange: (value){},
                                   paddingTop: 4,
@@ -169,7 +171,8 @@ class _StockControlState extends State<StockControl> {
                                     style: kMediumTextStyle,
                                     ),
                                 ),
-                                  DropDownInput(
+                                   DropDownInput(
+                                    isDarkMode: false,
                                     width: 293.33,
                                     height: 30,
                                     paddingAll: 4,
@@ -205,6 +208,7 @@ class _StockControlState extends State<StockControl> {
                                   ),
                               ),
                               TextInput(
+                                 darkMode: false,
                                 validate:(value){},
                                 onChange: (value){},
                                 paddingTop: 4,
@@ -227,6 +231,7 @@ class _StockControlState extends State<StockControl> {
                                   ),
                               ),
                               TextInput(
+                                darkMode: false,
                                 validate:(value){},
                                 onChange: (value){},
                                 paddingTop: 4,
@@ -249,6 +254,7 @@ class _StockControlState extends State<StockControl> {
                                   ),
                               ),
                               TextInput(
+                                darkMode: false,
                                 validate:(value){},
                                 onChange: (value){},
                                 paddingTop: 4,
@@ -271,6 +277,7 @@ class _StockControlState extends State<StockControl> {
                                   ),
                               ),
                               TextInput(
+                                darkMode: false,
                                 validate:(value){},
                                 onChange: (value){},
                                 paddingTop: 4,
@@ -301,7 +308,8 @@ class _StockControlState extends State<StockControl> {
                                       style: kMediumTextStyle,
                                       ),
                                   ),
-                                    DropDownInput(
+                                     DropDownInput(
+                                isDarkMode: false,
                                       width: 188,
                                       height: 30,
                                       paddingAll: 4,

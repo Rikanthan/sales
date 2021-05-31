@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
-import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
@@ -32,6 +31,7 @@ class _OnlineGiftCardState extends State<OnlineGiftCard> {
               DashboardMidBar(),
               CustomHeader(
                 backgroundColor:kHomeBackgroundColor,
+                isDarkMode: false,
                  text: 'Gift Card Report'
                  ),
               Container(

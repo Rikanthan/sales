@@ -40,6 +40,7 @@ class _TaxReportState extends State<TaxReport> {
               DashboardMidBar(),
               CustomHeader(
                 backgroundColor:kHomeBackgroundColor,
+                isDarkMode: false,
                  text: 'Tax Report'
                  ),
               Container(
@@ -62,7 +63,8 @@ class _TaxReportState extends State<TaxReport> {
                               SizedBox(
                                 height:5.0
                               ),
-                              DropDownInput(
+                               DropDownInput(
+                                isDarkMode: false,
                                 width: 220,
                                 height: 46,
                               paddingAll: 4,
@@ -159,7 +161,8 @@ class _TaxReportState extends State<TaxReport> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                   DropDownInput(
+                                    DropDownInput(
+                                isDarkMode: false,
                                 width: 130,
                                 height: 42,
                               paddingAll: 4,
@@ -174,6 +177,7 @@ class _TaxReportState extends State<TaxReport> {
                                 dropdownList: ['Exclude','Include'],
                               ),
                                   TextInput(
+                                        darkMode: false,
                                     validate:(value){},
                                     onChange: (value){},
                                     paddingTop: 0,

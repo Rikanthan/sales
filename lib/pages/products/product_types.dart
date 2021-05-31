@@ -33,7 +33,7 @@ class _PriceTypesState extends State<PriceTypes> {
             children: [
               DashboardMidBar(),
               CustomHeader(
-                backgroundColor:kHomeBackgroundColor, text: 'Price Types'),
+                backgroundColor:kHomeBackgroundColor,isDarkMode: false, text: 'Price Types'),
               MidButtonBar(
                 text: 'A list of all your price types.',
                  addBlueButton: false, 

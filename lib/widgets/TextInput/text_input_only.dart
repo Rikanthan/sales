@@ -9,7 +9,8 @@ class TextInput extends StatelessWidget {
     @required this.hideText,
     @required this.height,
     @required this.hintText,
-    @required this.width
+    @required this.width,
+    @required this.darkMode
   }) : super(key: key);
   final Function validate;
   final Function onChange;
@@ -18,12 +19,13 @@ class TextInput extends StatelessWidget {
   final double height;
   final double width;
   final String hintText;
+  final bool darkMode;
   @override
   Widget build(BuildContext context) {
     return  Padding(
       padding:  EdgeInsets.only(top:paddingTop),
       child: Container(
-        color:Colors.white,
+        color: darkMode ? kDashboardSearchBarFillColor : Colors.white,
         height: height,
         width: width,
         child: TextFormField(
@@ -31,18 +33,18 @@ class TextInput extends StatelessWidget {
                         onChanged: onChange,
                         obscureText: hideText,
                         decoration: InputDecoration(
-                        fillColor: Colors.white,
+                        fillColor: darkMode ? kDashboardSearchBarFillColor : Colors.white,
                         filled: true,
                          hintText:hintText,
                             hintStyle: TextStyle(
                                   fontFamily: 'Lato',
-                                  color:Colors.blue[700].withOpacity(0.7),
+                                  color: darkMode ? kDashboardMidBarColor : Colors.blue[700].withOpacity(0.7),
                                   fontSize: 15
                                   ),
                         enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(2.0),
                       borderSide: BorderSide(
-                        color: kInputBorderColor,
+                        color: darkMode ? kDashboardMidBarColor : kInputBorderColor,
                         width: 2.0,
                       ),
                     ),

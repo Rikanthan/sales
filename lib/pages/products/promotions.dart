@@ -32,7 +32,7 @@ class _PromotionsState extends State<Promotions> {
           child:Column(
             children: [
               DashboardMidBar(),
-              CustomHeader(backgroundColor:kHomeBackgroundColor, text: 'Promotions'),
+              CustomHeader(backgroundColor:kHomeBackgroundColor,isDarkMode: false, text: 'Promotions'),
               Padding(
                 padding: const EdgeInsets.only(left:48.0),
                 child: Row(

@@ -37,7 +37,7 @@ class _SuppliersState extends State<Suppliers> {
             children: [
               DashboardMidBar(),
               CustomHeader(
-                backgroundColor:kHomeBackgroundColor, text: 'Suppliers'),
+                backgroundColor:kHomeBackgroundColor,isDarkMode: false, text: 'Suppliers'),
               SizedBox(
                 width: 1024,
                 child: MidButtonBar(

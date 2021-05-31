@@ -66,7 +66,11 @@ class _CustomerState extends State<Customer> {
           child:Column(
             children: [
               DashboardMidBar(),
-             CustomHeader(backgroundColor:Colors.white,text: 'Customer'),
+             CustomHeader(
+               backgroundColor:Colors.white,
+               text: 'Customer',
+               isDarkMode: false,
+               ),
              MidButtonBar(
                text: 'Manage your customers and their balances, or segment them by demographics and spending \nhabits.',
                 addBlueButton: true,
@@ -119,6 +123,7 @@ class _CustomerState extends State<Customer> {
                                                style:kMediumTextStyle
                                              ),
                                              TextInput(
+                                               darkMode: false,
                                                validate: (val) => val.length == 0 ? 'Enter the city' : null,
                                               onChange: (val) {
                                                         },
@@ -147,6 +152,7 @@ class _CustomerState extends State<Customer> {
                                                   width: 293.33,
                                                   height: 46,
                                                   paddingAll: 12,
+                                                  isDarkMode: false,
                                                   dropdownList: ['All','America','Australia'],
                                                   dropdownValue: dropDownCountryValue,
                                                   onPressed: (String newValue) {
@@ -176,6 +182,7 @@ class _CustomerState extends State<Customer> {
                                   ),
                               ), 
                                 DropDownInput(
+                                  isDarkMode: false,
                                   width: 293.33,
                                   height: 46,
                                   paddingAll: 12,

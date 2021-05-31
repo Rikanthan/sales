@@ -37,7 +37,7 @@ class _ProductsState extends State<Products> {
           child:Column(
             children: [
               DashboardMidBar(),
-              CustomHeader(backgroundColor:Colors.white,text: 'Products'),
+              CustomHeader(backgroundColor:Colors.white,isDarkMode: false,text: 'Products'),
               MidButtonBar(
                 text: 'Add, view and edit your products all in one place.                                                                                                                                ', 
                 addBlueButton: true,
@@ -88,6 +88,7 @@ class _ProductsState extends State<Products> {
                                   ),
                               ),
                                 DropDownInput(
+                                  isDarkMode: false,
                                   width: 214,
                                   height: 46,
                                   paddingAll: 12,
@@ -115,6 +116,7 @@ class _ProductsState extends State<Products> {
                                   ),
                               ),
                               TextInput(
+                                darkMode: true,
                                 validate:(value){},
                                 onChange: (value){},
                                 paddingTop: 4,
@@ -144,6 +146,7 @@ class _ProductsState extends State<Products> {
                                     ),
                                 ),
                                   DropDownInput(
+                                    isDarkMode: false,
                                     width: 293.33,
                                     height: 46,
                                   paddingAll: 12,
@@ -171,6 +174,7 @@ class _ProductsState extends State<Products> {
                                     ),
                                 ),
                                   DropDownInput(
+                                    isDarkMode: false,
                                     width: 293.33,
                                     height: 46,
                                   paddingAll: 12,
@@ -198,6 +202,7 @@ class _ProductsState extends State<Products> {
                                     ),
                                 ),
                                   DropDownInput(
+                                    isDarkMode: false,
                                     width: 293.33,
                                     height: 46,
                                   paddingAll: 12,

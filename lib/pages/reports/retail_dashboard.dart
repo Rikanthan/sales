@@ -62,6 +62,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
               DashboardMidBar(),
               CustomHeader(
                 backgroundColor:kHomeBackgroundColor,
+                isDarkMode: false,
                  text: 'Retail Dashboard'
                  ),
               Container(
@@ -149,6 +150,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   DropDownInput(
+                                    isDarkMode: false,
                                         width: 232,
                                         height: 42,
                                       paddingAll: 4,
@@ -203,6 +205,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   TextInput(
+                                        darkMode: false,
                                     validate:(value){},
                                     onChange: (value){},
                                     paddingTop: 12,

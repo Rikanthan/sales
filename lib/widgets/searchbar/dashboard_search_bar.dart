@@ -53,7 +53,7 @@ class DashboardSearchBar extends StatelessWidget {
                             ),      
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.all(Radius.circular(4)),
-                              borderSide: BorderSide(width:2.0, color: kInputBorderColor),
+                              borderSide: BorderSide(width:2.0, color: darkMode ? kDashboardMidBarColor : kInputBorderColor),
                             ),
                           ),
                         ),

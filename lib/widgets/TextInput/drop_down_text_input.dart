@@ -8,7 +8,8 @@ class DropDownInput extends StatelessWidget {
     @required this.dropdownList,
     @required this.width,
     @required this.height,
-    @required this.paddingAll
+    @required this.paddingAll,
+    @required this.isDarkMode
   }) : super(key: key);
 
   final double width;
@@ -17,6 +18,7 @@ class DropDownInput extends StatelessWidget {
   final List<String> dropdownList;
   final double paddingAll;
   final double height;
+  final bool isDarkMode;
   @override
   Widget build(BuildContext context) {
     return DropdownButtonHideUnderline(
@@ -34,9 +36,9 @@ class DropDownInput extends StatelessWidget {
                   fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'Lato',
-                  color: kSignInTextColor
+                  color: isDarkMode? kHelpTextColor: kSignInTextColor
               ),
-            focusColor: kDropDownColor,
+            focusColor: !isDarkMode ? kDropDownColor : Color(0xFF275371),
             onChanged: onPressed,
             items: dropdownList
                     .map<DropdownMenuItem<String>>((String value) {
@@ -48,12 +50,12 @@ class DropDownInput extends StatelessWidget {
           ),
                 ),
           decoration: ShapeDecoration(
-            color:Colors.white,
+            color:isDarkMode? kDashboardSearchBarFillColor : Colors.white,
             shape: RoundedRectangleBorder(
             side: BorderSide(
               width: 2.0, 
               style: BorderStyle.solid,
-              color: kInputBorderColor
+              color: isDarkMode ? kDashboardMidBarColor : kInputBorderColor
               ),
              borderRadius: BorderRadius.all(Radius.circular(4.0)),
             ),
