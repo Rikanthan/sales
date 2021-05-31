@@ -38,13 +38,13 @@ class TextInput extends StatelessWidget {
                          hintText:hintText,
                             hintStyle: TextStyle(
                                   fontFamily: 'Lato',
-                                  color: darkMode ? kDashboardMidBarColor : Colors.blue[700].withOpacity(0.7),
+                                  color: darkMode ? kDashboardIconColor : Colors.blue[700].withOpacity(0.7),
                                   fontSize: 15
                                   ),
                         enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(2.0),
                       borderSide: BorderSide(
-                        color: darkMode ? kDashboardMidBarColor : kInputBorderColor,
+                        color: darkMode ? kDashboardIconColor : kInputBorderColor,
                         width: 2.0,
                       ),
                     ),
