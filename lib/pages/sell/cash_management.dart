@@ -64,12 +64,7 @@ class _CashManagementState extends State<CashManagement> {
                             children: [
                               Text(
                                 'Need help?',
-                                style: TextStyle(
-                                  fontFamily: 'Lato',
-                                  fontSize: 15,
-                                  decoration: TextDecoration.underline,
-                                  color: kHelpTextColor
-                                  )
+                                style: kMediumTextDarkStyle
                                 ),
                             ],
                           ),

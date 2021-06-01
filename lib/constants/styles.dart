@@ -14,3 +14,10 @@ const kMediumTextDarkStyle = TextStyle(
             color: kHelpTextColor,
             fontWeight: FontWeight.w700
               );
+
+const kMediumTextDarkNormalStyle = TextStyle(
+            fontFamily: 'Lato',
+            fontSize: 15,
+            color: kHelpTextColor,
+            fontWeight: FontWeight.normal
+              );

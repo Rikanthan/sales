@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
-import 'package:sales/widgets/bars/midbar.dart';
+
 class DashboardAppBars extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

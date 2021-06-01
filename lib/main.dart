@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sales/pages/reports/online_gift_card.dart';
-import 'package:sales/pages/sell/cash_management.dart';
-import 'package:sales/pages/sell/fulfillments.dart';
-import 'package:sales/pages/sell/sales_history.dart';
+import 'package:sales/pages/sell/close_register.dart';
+import 'package:sales/pages/sell/settings.dart';
 void main() {
   runApp(MyApp());
 }
@@ -14,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sales', 
       theme: ThemeData(),  
-      home: CashManagement()
+      home: CloseRegister()
     );
   }
 }
