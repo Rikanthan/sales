@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/pages/customer/customer.dart';
 import 'package:sales/pages/sell/close_register.dart';
 import 'package:sales/pages/sell/settings.dart';
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sales', 
       theme: ThemeData(),  
-      home: CloseRegister()
+      home: Customer()
     );
   }
 }

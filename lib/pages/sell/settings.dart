@@ -8,7 +8,7 @@ import 'package:sales/widgets/buttons/button_text.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/buttons/greenbutton.dart';
 import 'package:sales/widgets/buttons/toggle_button.dart';
-import 'package:sales/widgets/drawer/customer_drawer.dart';
+import 'package:sales/widgets/drawer/home_drawer.dart';
 
 class SellSettings extends StatefulWidget {
  
@@ -28,7 +28,7 @@ class _SellSettingsState extends State<SellSettings> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: CustomerDrawer(),
+      drawer: HomeDrawer(),
       body:SingleChildScrollView(
         child: Container(
           color:kDashboardColor,

@@ -1,10 +1,20 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/pages/customer/customer.dart';
 import 'package:sales/pages/customer/groups.dart';
 import 'package:sales/widgets/cards/drawer_item.dart';
 import 'package:sales/widgets/cards/drawer_menu_item.dart';
 
+enum Customers {
+  group,
+  customer
+}
 class CustomerDrawer extends StatelessWidget {
+ CustomerDrawer({
+   @required this.customerClicked
+ });
+ final Customers customerClicked;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,7 +34,10 @@ class CustomerDrawer extends StatelessWidget {
                       DrawerItem(
                         buttonText: 'Home',
                         iconData: Icons.home,
-                        onPress: (){},
+                        onPress: (){
+                            Navigator.of(context).
+                         pushNamed('/Home');
+                        },
                         iconColor: Colors.purple,
                         backgroundColor: kInputBorderColor,
                         darkMode: false,
@@ -32,7 +45,10 @@ class CustomerDrawer extends StatelessWidget {
                       DrawerItem(
                         buttonText: 'Sell',
                         iconData: Icons.satellite_sharp,
-                        onPress: (){},
+                        onPress: (){
+                          Navigator.of(context).
+                         pushNamed('/Dashboard');
+                        },
                         iconColor: Colors.green,
                         backgroundColor: kInputBorderColor,
                         darkMode: false,
@@ -40,7 +56,9 @@ class CustomerDrawer extends StatelessWidget {
                       DrawerItem(
                         buttonText: 'Reporting',
                         iconData: Icons.bar_chart,
-                        onPress: (){},
+                        onPress: (){
+
+                        },
                         iconColor: Colors.yellow,
                         backgroundColor: kInputBorderColor,
                         darkMode: false,
@@ -87,20 +105,16 @@ class CustomerDrawer extends StatelessWidget {
                       DrawerMenuItem(
                         buttonText: 'Customers',
                       onPress: (){
-                        Navigator.push(
-                          context,MaterialPageRoute(builder: (context) => CustomerGroups()
-                          ));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=> Customer()));
                       }, 
-                      textColor: kDashboardMidBarColor
+                      textColor: Customers.customer == customerClicked ? kDashboardMidBarColor : kAppBarColor
                       ),
                       DrawerMenuItem(
                         buttonText: 'Groups',
                       onPress: (){
-                        Navigator.push(
-                          context,MaterialPageRoute(builder: (context) => CustomerGroups()
-                          ));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=> CustomerGroups()));
                       }, 
-                      textColor: kAppBarColor
+                      textColor: Customers.group == customerClicked ? kDashboardMidBarColor : kAppBarColor
                       ),
                     ],
                   ),
@@ -143,11 +157,11 @@ class CustomerDrawer extends StatelessWidget {
                         fontFamily: 'Lato'            
                           ),
                       ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
           ],
           ),
             )

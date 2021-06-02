@@ -4,7 +4,7 @@ import 'package:sales/widgets/TextInput/text_input.dart';
 import 'package:sales/widgets/appbar/appbar.dart';
 import 'package:sales/widgets/buttons/greenbutton.dart';
 
-class Signin extends StatelessWidget {
+class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

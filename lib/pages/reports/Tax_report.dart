@@ -6,7 +6,7 @@ import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
-import 'package:sales/widgets/drawer/customer_drawer.dart';
+import 'package:sales/widgets/drawer/home_drawer.dart';
 import 'package:sales/widgets/tables/tax_report_table.dart';
 
 
@@ -31,7 +31,7 @@ class _TaxReportState extends State<TaxReport> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: CustomerDrawer(),
+      drawer: HomeDrawer(),
       body:SingleChildScrollView(
         child: Container(
           color:kHomeBackgroundColor,

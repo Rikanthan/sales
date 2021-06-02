@@ -6,7 +6,7 @@ import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
-import 'package:sales/widgets/drawer/customer_drawer.dart';
+import 'package:sales/widgets/drawer/home_drawer.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:sales/widgets/tables/sales_report_table.dart';
 
@@ -34,7 +34,7 @@ class _SalesReportState extends State<SalesReport> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: CustomerDrawer(),
+      drawer: HomeDrawer(),
       body:SingleChildScrollView(
         child: Container(
           color:kHomeBackgroundColor,

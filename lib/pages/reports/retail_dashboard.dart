@@ -9,7 +9,7 @@ import 'package:sales/widgets/barchart/simple_bar_chart.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/date_button.dart';
 import 'package:sales/widgets/buttons/date_range_button.dart';
-import 'package:sales/widgets/drawer/customer_drawer.dart';
+import 'package:sales/widgets/drawer/home_drawer.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:sales/widgets/tables/retail_dashboard_table.dart';
 import '../../models/chart_model.dart';
@@ -53,7 +53,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: CustomerDrawer(),
+      drawer: HomeDrawer(),
       body:SingleChildScrollView(
         child: Container(
           color:kHomeBackgroundColor,

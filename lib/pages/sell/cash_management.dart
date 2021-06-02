@@ -6,7 +6,7 @@ import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/greenbutton.dart';
-import 'package:sales/widgets/drawer/customer_drawer.dart';
+import 'package:sales/widgets/drawer/home_drawer.dart';
 
 class CashManagement extends StatefulWidget {
  
@@ -26,7 +26,7 @@ class _CashManagementState extends State<CashManagement> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: CustomerDrawer(),
+      drawer: HomeDrawer(),
       body:SingleChildScrollView(
         child: Container(
           color:kDashboardColor,

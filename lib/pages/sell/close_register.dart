@@ -8,7 +8,7 @@ import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/button_text.dart';
 import 'package:sales/widgets/cards/close_record_expansion_card.dart';
-import 'package:sales/widgets/drawer/customer_drawer.dart';
+import 'package:sales/widgets/drawer/home_drawer.dart';
 
 class CloseRegister extends StatefulWidget {
  
@@ -28,7 +28,7 @@ class _CloseRegisterState extends State<CloseRegister> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: CustomerDrawer(),
+      drawer: HomeDrawer(),
       body:SingleChildScrollView(
         child: Container(
           color:kDashboardColor,

@@ -7,6 +7,7 @@ import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/drawer/customer_drawer.dart';
 
+
 class CustomerGroups extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class CustomerGroups extends StatelessWidget {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: CustomerDrawer(),
+      drawer: CustomerDrawer(customerClicked: Customers.group),
       body:Container(
         color:Colors.white,
         child:Column(

@@ -9,7 +9,7 @@ import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/cards/show_products.dart';
-import 'package:sales/widgets/drawer/customer_drawer.dart';
+import 'package:sales/widgets/drawer/home_drawer.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
 class Products extends StatefulWidget {
@@ -30,7 +30,7 @@ class _ProductsState extends State<Products> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: CustomerDrawer(),
+      drawer: HomeDrawer(),
       body:SingleChildScrollView(
         child: Container(
           color:kInputBorderColor,

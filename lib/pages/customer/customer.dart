@@ -60,7 +60,7 @@ class _CustomerState extends State<Customer> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: CustomerDrawer(),
+      drawer: CustomerDrawer(customerClicked: Customers.customer,),
       body:Container(
         color:kInputBorderColor,
           child:Column(
