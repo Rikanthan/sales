@@ -8,7 +8,6 @@ import 'package:sales/widgets/buttons/button_text.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/buttons/greenbutton.dart';
 import 'package:sales/widgets/buttons/toggle_button.dart';
-import 'package:sales/widgets/drawer/home_drawer.dart';
 import 'package:sales/widgets/drawer/sell_drawer.dart';
 
 class SellSettings extends StatefulWidget {

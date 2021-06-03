@@ -6,7 +6,6 @@ import 'package:sales/widgets/TextInput/gredient_text_header.dart';
 import 'package:sales/widgets/TextInput/register_table_cell.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
-import 'package:sales/widgets/drawer/home_drawer.dart';
 import 'package:sales/widgets/drawer/report_drawer.dart';
 
 class RegisterClosure extends StatefulWidget {

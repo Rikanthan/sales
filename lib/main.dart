@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sales/pages/customer/customer.dart';
-import 'package:sales/pages/products/tags.dart';
+import 'package:sales/pages/setup/general.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sales', 
       theme: ThemeData(),  
-      home: Tags()
+      home: General()
     );
   }
 }

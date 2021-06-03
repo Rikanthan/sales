@@ -7,7 +7,6 @@ import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/bars/tab_bar.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
-import 'package:sales/widgets/drawer/home_drawer.dart';
 import 'package:sales/widgets/drawer/sell_drawer.dart';
 
 class Fullfillments extends StatefulWidget {

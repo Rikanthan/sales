@@ -8,7 +8,6 @@ import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/button_text.dart';
 import 'package:sales/widgets/cards/close_record_expansion_card.dart';
-import 'package:sales/widgets/drawer/home_drawer.dart';
 import 'package:sales/widgets/drawer/sell_drawer.dart';
 
 class CloseRegister extends StatefulWidget {
