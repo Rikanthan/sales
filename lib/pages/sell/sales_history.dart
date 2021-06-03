@@ -9,6 +9,7 @@ import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/bars/tab_bar.dart';
 import 'package:sales/widgets/buttons/greenbutton.dart';
 import 'package:sales/widgets/drawer/home_drawer.dart';
+import 'package:sales/widgets/drawer/sell_drawer.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
 class SalesHistory extends StatefulWidget {
@@ -38,7 +39,7 @@ class _SalesHistoryState extends State<SalesHistory> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: HomeDrawer(),
+      drawer: SellDrawer(salesClicked: SalesClicked.salesHistory,),
       body:SingleChildScrollView(
         child: Container(
           color:kDashboardColor,

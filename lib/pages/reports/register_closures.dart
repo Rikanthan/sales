@@ -7,6 +7,7 @@ import 'package:sales/widgets/TextInput/register_table_cell.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/drawer/home_drawer.dart';
+import 'package:sales/widgets/drawer/report_drawer.dart';
 
 class RegisterClosure extends StatefulWidget {
  
@@ -27,7 +28,7 @@ class _RegisterClosureState extends State<RegisterClosure> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: HomeDrawer(),
+      drawer: ReportDrawer(reportsClicked:ReportsClicked.registerClosure ),
       body:SingleChildScrollView(
         child: Container(
           color:kHomeBackgroundColor,

@@ -1,9 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
-import 'package:sales/widgets/cards/drawer_item.dart';
+import 'package:sales/widgets/buttons/esc_button.dart';
 import 'package:sales/widgets/cards/drawer_menu_item.dart';
+import 'package:sales/widgets/drawer/main_drawer.dart';
 
-class DashboardDrawer extends StatelessWidget {
+enum SalesClicked {
+  sell,
+  open,
+  salesHistory,
+  fulfillments,
+  cashManagement,
+  status,
+  settings
+}
+Color _clickColor(SalesClicked salesClicked,SalesClicked itemClick)
+{
+ Color clickedColor;
+    salesClicked == itemClick  ? clickedColor =  kDashboardMidBarColor :
+    clickedColor = kHelpTextColor;
+    return clickedColor;
+}
+
+class SellDrawer extends StatelessWidget {
+SellDrawer({@required this.salesClicked});
+final SalesClicked salesClicked;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -11,69 +31,7 @@ class DashboardDrawer extends StatelessWidget {
       color:Colors.transparent,
       child: Row(
         children: [
-          Container(
-            width: 85,
-            color: kSignInTextColor,
-            child: Column(
-              children: <Widget>[
-                Expanded(
-                  child: ListView(
-                    padding: EdgeInsets.zero,
-                    children: <Widget>[
-                      DrawerItem(
-                        buttonText: 'Home',
-                        iconData: Icons.home,
-                        onPress: (){},
-                        iconColor: Colors.purple,
-                        backgroundColor: kSignInTextColor,
-                        darkMode: true,
-                      ),   
-                      DrawerItem(
-                        buttonText: 'Sell',
-                        iconData: Icons.satellite_sharp,
-                        onPress: (){},
-                        iconColor: Colors.green,
-                        backgroundColor: kDrawerBackgroundColor,
-                        darkMode: true,
-                      ),
-                      DrawerItem(
-                        buttonText: 'Reporting',
-                        iconData: Icons.bar_chart,
-                        onPress: (){},
-                        iconColor: Colors.yellow,
-                        backgroundColor: kSignInTextColor,
-                        darkMode: true,
-                      ),
-                      DrawerItem(
-                        buttonText: 'Products',
-                        iconData: Icons.local_offer_rounded,
-                        onPress: (){},
-                        iconColor: Colors.orange,
-                        backgroundColor: kSignInTextColor,
-                        darkMode: true,
-                      ),
-                      DrawerItem(
-                        buttonText: 'Customers',
-                        iconData: Icons.person_search_outlined,
-                        onPress: (){},
-                        iconColor: Colors.purple,
-                        backgroundColor: kSignInTextColor,
-                        darkMode: true,
-                      ),
-                      DrawerItem(
-                        buttonText: 'Setup',
-                        iconData: Icons.settings,
-                        onPress: (){},
-                        iconColor: Colors.blueGrey,
-                        backgroundColor: kSignInTextColor,
-                        darkMode: true,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
+         MainDrawer(isDarkMode: true, mainDrawerClick: MainDrawerClick.sell),
           Container(
             width:145,
             color: kDrawerBackgroundColor,
@@ -148,37 +106,37 @@ class DashboardDrawer extends StatelessWidget {
                       DrawerMenuItem(
                         buttonText: 'Sell',
                       onPress: (){}, 
-                      textColor: kDashboardIconColor
+                      textColor: _clickColor(salesClicked, SalesClicked.sell)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Open/Close',
                       onPress: (){}, 
-                      textColor: kHelpTextColor
+                      textColor: _clickColor(salesClicked, SalesClicked.open)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Sales History',
                       onPress: (){}, 
-                      textColor: kHelpTextColor
+                      textColor: _clickColor(salesClicked, SalesClicked.salesHistory)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Fulfillments',
                       onPress: (){}, 
-                      textColor: kHelpTextColor
+                      textColor: _clickColor(salesClicked, SalesClicked.fulfillments)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Cash Management',
                       onPress: (){}, 
-                      textColor: kHelpTextColor
+                      textColor: _clickColor(salesClicked, SalesClicked.cashManagement)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Status',
                       onPress: (){}, 
-                      textColor: kHelpTextColor
+                      textColor: _clickColor(salesClicked, SalesClicked.status)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Settings',
                       onPress: (){}, 
-                      textColor: kHelpTextColor
+                      textColor: _clickColor(salesClicked, SalesClicked.settings)
                       )
                     ],
                   ),
@@ -186,48 +144,10 @@ class DashboardDrawer extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            width: 50,
-            color: Colors.transparent,
-            child: Stack(
-            children: [
-              Positioned(
-              top:10.0,
-              right:-10.0,
-              child: GestureDetector(
-              onTap: (){
-                  Navigator.of(context).pop();
-              },
-              child: Column(
-                children: [
-                  Align(
-                      alignment: Alignment.topRight,
-                      child: CircleAvatar(
-                      radius: 25.0,
-                      backgroundColor: kDrawerBackgroundColor,
-                      child: Icon(
-                        Icons.close,
-                        color: kSignInTextColor
-                        ),
-                      ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top:5.0),
-                    child: Text(
-                      'ESC',
-                        style:TextStyle(
-                        color:kHelpTextColor,
-                        fontSize: 14,
-                        fontFamily: 'Lato'            
-                          ),
-                      ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          ],
-          ),
+          EscButton(
+            isDarkMode: true, 
+            positionedRight: -10.0, 
+            width: 50.0
             )
         ],
       ),

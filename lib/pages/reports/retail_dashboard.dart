@@ -11,6 +11,7 @@ import 'package:sales/widgets/buttons/date_button.dart';
 import 'package:sales/widgets/buttons/date_range_button.dart';
 import 'package:sales/widgets/drawer/home_drawer.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:sales/widgets/drawer/report_drawer.dart';
 import 'package:sales/widgets/tables/retail_dashboard_table.dart';
 import '../../models/chart_model.dart';
 
@@ -53,7 +54,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: HomeDrawer(),
+      drawer: ReportDrawer(reportsClicked: ReportsClicked.dashboard),
       body:SingleChildScrollView(
         child: Container(
           color:kHomeBackgroundColor,

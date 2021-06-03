@@ -6,7 +6,7 @@ import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/bars/product_bar.dart';
-import 'package:sales/widgets/drawer/home_drawer.dart';
+import 'package:sales/widgets/drawer/products_drawer.dart';
 
 class Brands extends StatefulWidget {
   @override
@@ -27,7 +27,7 @@ class _BrandsState extends State<Brands> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: HomeDrawer(),
+      drawer: ProductDrawer(productsClicked: ProductsClicked.brands,),
       body:SingleChildScrollView(
         child: Container(
           color:kHomeBackgroundColor,

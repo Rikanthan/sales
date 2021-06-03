@@ -4,7 +4,7 @@ import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
-import 'package:sales/widgets/drawer/home_drawer.dart';
+import 'package:sales/widgets/drawer/sell_drawer.dart';
 
 class SellStatus extends StatefulWidget {
  
@@ -13,8 +13,7 @@ class SellStatus extends StatefulWidget {
 }
 
 class _SellStatusState extends State<SellStatus> {
-  
-  @override
+
  @override
   Widget build(BuildContext context) {
     
@@ -24,7 +23,7 @@ class _SellStatusState extends State<SellStatus> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: HomeDrawer(),
+      drawer: SellDrawer(salesClicked: SalesClicked.status,),
       body:SingleChildScrollView(
         child: Container(
           color:kDashboardColor,

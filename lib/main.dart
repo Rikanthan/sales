@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/pages/customer/customer.dart';
-import 'package:sales/pages/sell/close_register.dart';
-import 'package:sales/pages/sell/settings.dart';
+import 'package:sales/pages/products/tags.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sales', 
       theme: ThemeData(),  
-      home: Customer()
+      home: Tags()
     );
   }
 }

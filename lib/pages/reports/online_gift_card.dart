@@ -4,6 +4,7 @@ import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/drawer/home_drawer.dart';
+import 'package:sales/widgets/drawer/report_drawer.dart';
 
 class OnlineGiftCard extends StatefulWidget {
  
@@ -22,7 +23,7 @@ class _OnlineGiftCardState extends State<OnlineGiftCard> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: HomeDrawer(),
+      drawer: ReportDrawer(reportsClicked:ReportsClicked.giftcardReports ),
       body:SingleChildScrollView(
         child: Container(
           color:kHomeBackgroundColor,

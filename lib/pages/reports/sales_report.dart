@@ -8,6 +8,7 @@ import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/drawer/home_drawer.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:sales/widgets/drawer/report_drawer.dart';
 import 'package:sales/widgets/tables/sales_report_table.dart';
 
 class SalesReport extends StatefulWidget {
@@ -34,7 +35,7 @@ class _SalesReportState extends State<SalesReport> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: HomeDrawer(),
+      drawer: ReportDrawer(reportsClicked: ReportsClicked.salesReports ),
       body:SingleChildScrollView(
         child: Container(
           color:kHomeBackgroundColor,

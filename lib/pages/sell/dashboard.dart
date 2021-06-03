@@ -4,7 +4,7 @@ import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/pay_green_button.dart';
 import 'package:sales/widgets/cards/products_card.dart';
-import 'package:sales/widgets/drawer/dashboard_drawer.dart';
+import 'package:sales/widgets/drawer/sell_drawer.dart';
 import 'package:sales/widgets/listviews/product_items.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
@@ -17,7 +17,7 @@ class Dashboard extends StatelessWidget {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: DashboardDrawer(),
+      drawer: SellDrawer(salesClicked: SalesClicked.sell,),
       body:Container(
         color:kDashboardColor,
         child: Column(

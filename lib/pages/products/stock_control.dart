@@ -7,7 +7,7 @@ import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
-import 'package:sales/widgets/drawer/home_drawer.dart';
+import 'package:sales/widgets/drawer/products_drawer.dart';
 
 class StockControl extends StatefulWidget {
   @override
@@ -27,7 +27,7 @@ class _StockControlState extends State<StockControl> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: HomeDrawer(),
+      drawer: ProductDrawer(productsClicked: ProductsClicked.stockControl),
       body:SingleChildScrollView(
         child: Container(
           color:kInputBorderColor,
