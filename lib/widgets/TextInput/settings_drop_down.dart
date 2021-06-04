@@ -27,14 +27,14 @@ class SettingDropDown extends StatelessWidget {
                   padding:  EdgeInsets.all(paddingAll),
                   child: DropdownButton<String>(
             value: dropdownValue,
-            icon: Icon(Icons.keyboard_arrow_down),
-            iconSize: 14,
+            // icon: Icon(Icons.keyboard_arrow_down),
+            // iconSize: 14,
             style: TextStyle(
               fontSize: 14,
                   fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'Lato',
-                  color: kSignInTextColor
+                  color: kSignInTextColor,
               ),
             focusColor: Colors.orange,
             onChanged: onPressed,
@@ -46,7 +46,7 @@ class SettingDropDown extends StatelessWidget {
                   );
             }).toList(),   
           ),
-                ),
+        ),
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(

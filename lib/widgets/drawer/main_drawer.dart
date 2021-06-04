@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:sales/pages/customer/customer.dart';
+import 'package:sales/pages/home.dart';
+import 'package:sales/pages/products/products.dart';
+import 'package:sales/pages/reports/online_gift_card.dart';
+import 'package:sales/pages/sell/dashboard.dart';
+import 'package:sales/pages/setup/general.dart';
 import 'package:sales/widgets/cards/drawer_item.dart';
 import '../../constants/colors.dart';
 
@@ -43,7 +49,9 @@ class MainDrawer extends StatelessWidget {
                       DrawerItem(
                         buttonText: 'Home',
                         iconData: Icons.home,
-                        onPress: (){},
+                        onPress: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=> Home()));
+                        },
                         iconColor: Colors.purple,
                         backgroundColor: _selectedColor(MainDrawerClick.home),
                         darkMode: isDarkMode,
@@ -51,7 +59,9 @@ class MainDrawer extends StatelessWidget {
                       DrawerItem(
                         buttonText: 'Sell',
                         iconData: Icons.satellite_sharp,
-                        onPress: (){},
+                        onPress: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=> Dashboard()));
+                        },
                         iconColor: Colors.green,
                         backgroundColor:  _selectedColor(MainDrawerClick.sell),
                         darkMode: isDarkMode,
@@ -59,7 +69,9 @@ class MainDrawer extends StatelessWidget {
                       DrawerItem(
                         buttonText: 'Reporting',
                         iconData: Icons.bar_chart,
-                        onPress: (){},
+                        onPress: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=> OnlineGiftCard()));
+                        },
                         iconColor: Colors.yellow,
                         backgroundColor:  _selectedColor(MainDrawerClick.reports),
                         darkMode: isDarkMode,
@@ -67,7 +79,9 @@ class MainDrawer extends StatelessWidget {
                       DrawerItem(
                         buttonText: 'Products',
                         iconData: Icons.local_offer_rounded,
-                        onPress: (){},
+                        onPress: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=> Products()));
+                        },
                         iconColor: Colors.orange,
                         backgroundColor:  _selectedColor(MainDrawerClick.products),
                         darkMode: isDarkMode,
@@ -75,7 +89,9 @@ class MainDrawer extends StatelessWidget {
                       DrawerItem(
                         buttonText: 'Customers',
                         iconData: Icons.person_search_outlined,
-                        onPress: (){},
+                        onPress: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=> Customer()));
+                        },
                         iconColor: Colors.purple,
                         backgroundColor:  _selectedColor(MainDrawerClick.customer),
                         darkMode: isDarkMode,
@@ -83,7 +99,9 @@ class MainDrawer extends StatelessWidget {
                       DrawerItem(
                         buttonText: 'Setup',
                         iconData: Icons.settings,
-                        onPress: (){},
+                        onPress: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=> General()));
+                        },
                         iconColor: Colors.blueGrey,
                         backgroundColor:  _selectedColor(MainDrawerClick.setup),
                         darkMode: isDarkMode,

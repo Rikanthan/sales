@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
 class SettingsGredientHeader extends StatelessWidget {
-  const SettingsGredientHeader({Key key}) : super(key: key);
+  const SettingsGredientHeader({
+    @required this.text
+  });
 
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,7 +28,7 @@ class SettingsGredientHeader extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(left:12.0,top:7,bottom:7),
                         child: Text(
-                          'Store Settings',
+                          text,
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontFamily: 'Lato',

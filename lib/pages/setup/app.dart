@@ -4,7 +4,7 @@ import 'package:sales/widgets/TextInput/home_text_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/cards/app_card.dart';
-import 'package:sales/widgets/drawer/report_drawer.dart';
+import 'package:sales/widgets/drawer/setup_drawer.dart';
 
 class App extends StatefulWidget {
  
@@ -23,7 +23,7 @@ class _AppState extends State<App> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: ReportDrawer(reportsClicked:ReportsClicked.giftcardReports ),
+      drawer: SetupDrawer(setupClicked:SetupClicked.apps ),
       body:SingleChildScrollView(
         child: Container(
           color:kHomeBackgroundColor,

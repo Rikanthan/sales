@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/pages/setup/app.dart';
+import 'package:sales/pages/setup/general.dart';
 import 'package:sales/widgets/buttons/esc_button.dart';
 import 'package:sales/widgets/cards/drawer_menu_item.dart';
 import 'package:sales/widgets/drawer/main_drawer.dart';
@@ -50,7 +52,7 @@ class SetupDrawer extends StatelessWidget {
                       DrawerMenuItem(
                         buttonText: 'General',
                       onPress: (){
-                        //Navigator.push(context, MaterialPageRoute(builder: (_)=> Products()));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=> General()));
                       }, 
                       textColor: _clickColor(setupClicked, SetupClicked.general)
                       ),
@@ -99,7 +101,7 @@ class SetupDrawer extends StatelessWidget {
                       DrawerMenuItem(
                         buttonText: 'Apps',
                       onPress: (){
-                        //Navigator.push(context, MaterialPageRoute(builder: (_)=> Brands()));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=> App()));
                       }, 
                       textColor: _clickColor(setupClicked, SetupClicked.apps)
                       ),
