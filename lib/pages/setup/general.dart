@@ -106,7 +106,7 @@ class _GeneralState extends State<General> {
                         ),
                       ),
                     ),
-                    SettingsGredientHeader(text: 'Store Settings',),
+                    SettingsGredientHeader(cellType: CellType.both ,width: 964 ,text: 'Store Settings',),
                     Row(
                       children: [
                         Container(

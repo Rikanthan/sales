@@ -5,13 +5,15 @@ class OutletButton extends StatelessWidget {
     @required this.onPress,
     @required this.topPadding,
     @required this.leftPadding,
-    @required this.width
+    @required this.width,
+    @required this.isButtonDisable
   });
   final String buttonText;
   final Function onPress;
   final double topPadding;
   final double leftPadding;
   final double width;
+  final bool isButtonDisable;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,7 +28,7 @@ class OutletButton extends StatelessWidget {
                                 ),
                               
         gradient: LinearGradient(
-                        colors: [Color(0xFFFAFAFA) , Color(0xFFCECECE) ],
+                        colors: isButtonDisable ? [Color(0xFFFAFAFA) , Color(0xFFdddddd) ] : [Color(0xFFFAFAFA) , Color(0xFFCECECE) ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
                     ),
@@ -35,7 +37,7 @@ class OutletButton extends StatelessWidget {
      child: Text(
         buttonText,
         style:TextStyle(
-          color: Color(0xFF686868),
+          color: isButtonDisable ? Color(0xFF686868).withOpacity(0.8) : Color(0xFF686868),
           fontFamily: 'Lato',
           fontSize: 14,
           fontWeight: FontWeight.w700

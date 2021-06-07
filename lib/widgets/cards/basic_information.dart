@@ -14,7 +14,7 @@ class BasicInformation extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SettingsGredientHeader(text: 'Basic Information',),
+          SettingsGredientHeader(cellType: CellType.both ,width: 964 ,text: 'Basic Information',),
                     Row(
                       children: [
                         Container(

@@ -1,19 +1,30 @@
 import 'package:flutter/material.dart';
 
+enum CellType{
+  left,middle, right , both
+}
 class SettingsGredientHeader extends StatelessWidget {
   const SettingsGredientHeader({
-    @required this.text
+    @required this.text,
+    @required this.width,
+    @required this.cellType,
   });
 
   final String text;
+  final double width;
+  final CellType cellType;
   @override
   Widget build(BuildContext context) {
     return Container(
-                      width:960,
+                      //width:960,
+                      width: width,
                       height: 34,
                       decoration: BoxDecoration(
-                    border: Border.all(
-                      color:Color(0xFFCCCCCC), width: 1, style: BorderStyle.solid
+                    border: Border(
+                        left: BorderSide( color:Color(0xFFCCCCCC), width: CellType.middle == cellType ? 0.7 : 0.7, style: BorderStyle.solid),
+                        right: BorderSide( color:Color(0xFFCCCCCC), width: CellType.middle == cellType ? 0.7 : 0.7, style: BorderStyle.solid),
+                        top: BorderSide( color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid),
+                        bottom: BorderSide( color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid)
                       ),
                     gradient: LinearGradient(
                         colors: [Color(0xFFF6F6F6) , Color(0xFFECECEC) ],
@@ -21,8 +32,8 @@ class SettingsGredientHeader extends StatelessWidget {
                         end: const FractionalOffset(0.0, 1.0),
                     ),
                     borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(5),
-                          topRight: Radius.circular(5)
+                          topLeft: CellType.left == cellType || CellType.both == cellType ? Radius.circular(5) :  Radius.circular(0.2),
+                          topRight: CellType.right == cellType || CellType.both == cellType? Radius.circular(5) : Radius.circular(0.2)
                         )
                       ),
                       child: Padding(

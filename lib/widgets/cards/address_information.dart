@@ -21,7 +21,7 @@ class _AddressInformationState extends State<AddressInformation> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SettingsGredientHeader(text: 'Address',),
+          SettingsGredientHeader(cellType: CellType.both ,width: 964 , text: 'Address',),
           Row(
             children: [
               Container(

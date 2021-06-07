@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/pages/setup/app.dart';
 import 'package:sales/pages/setup/general.dart';
+import 'package:sales/pages/setup/loyalty.dart';
+import 'package:sales/pages/setup/outlet_registers.dart';
+import 'package:sales/pages/setup/payment_types.dart';
+import 'package:sales/pages/setup/sales_tax.dart';
+import 'package:sales/pages/setup/user.dart';
 import 'package:sales/widgets/buttons/esc_button.dart';
 import 'package:sales/widgets/cards/drawer_menu_item.dart';
 import 'package:sales/widgets/drawer/main_drawer.dart';
@@ -66,35 +71,35 @@ class SetupDrawer extends StatelessWidget {
                       DrawerMenuItem(
                         buttonText: 'Outlets and Registers',
                       onPress: (){
-                        //Navigator.push(context, MaterialPageRoute(builder: (_)=> StockCount()));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=> OutletRegisters()));
                       }, 
                       textColor: _clickColor(setupClicked, SetupClicked.outlets)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Payment Types',
                       onPress: (){
-                        //Navigator.push(context, MaterialPageRoute(builder: (_)=> Promotions()));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=> PaymentTypes()));
                       }, 
                       textColor: _clickColor(setupClicked, SetupClicked.payment)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Sales Taxes',
                       onPress: (){
-                        //Navigator.push(context, MaterialPageRoute(builder: (_)=> PriceBooks()));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=> SalesTax()));
                       }, 
                       textColor: _clickColor(setupClicked, SetupClicked.sales)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Loyalty',
                       onPress: (){
-                        //Navigator.push(context, MaterialPageRoute(builder: (_)=> PriceTypes()));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=> Loyalty()));
                       }, 
                       textColor: _clickColor(setupClicked, SetupClicked.loyalty)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Users',
                       onPress: (){
-                        //Navigator.push(context, MaterialPageRoute(builder: (_)=> Suppliers()));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=> Users()));
                       }, 
                       textColor: _clickColor(setupClicked, SetupClicked.users)
                       ),

@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/TextInput/gredient_text_header.dart';
-import 'package:sales/widgets/TextInput/setting_input_text.dart';
-import 'package:sales/widgets/TextInput/settings_cell.dart';
-import 'package:sales/widgets/TextInput/settings_drop_down.dart';
-import 'package:sales/widgets/TextInput/settings_gredient.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/outlet_gredient_button.dart';
-import 'package:sales/widgets/buttons/settings_button.dart';
-import 'package:sales/widgets/cards/address_information.dart';
-import 'package:sales/widgets/cards/basic_information.dart';
 import 'package:sales/widgets/drawer/setup_drawer.dart';
 
 enum Answer{
@@ -114,6 +107,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                               topPadding: 3,
                               leftPadding: 10,
                               width: 93.55,
+                              isButtonDisable: false,
                               ),
                               SizedBox(width:4),
                               OutletButton(
@@ -122,6 +116,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                               topPadding: 3,
                               leftPadding: 10,
                               width: 168,
+                              isButtonDisable: false,
                               ),
                           ],
                         ),
