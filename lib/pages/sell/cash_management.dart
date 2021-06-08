@@ -4,6 +4,7 @@ import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
+import 'package:sales/widgets/bars/help_text_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/greenbutton.dart';
 import 'package:sales/widgets/drawer/sell_drawer.dart';
@@ -39,40 +40,7 @@ class _CashManagementState extends State<CashManagement> {
                  text: 'Cash Management',
                  isDarkMode: true,
                  ),
-              Container(
-                color: kAppBarColor,
-                height: 77,
-               child: Padding(
-                 padding: const EdgeInsets.only(left:48.0),
-                 child: Row(
-                   mainAxisAlignment: MainAxisAlignment.start,
-                   crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Set opening cash drawer amount.',
-                        style: TextStyle(
-                          color: kHelpTextColor,
-                          fontSize: 15,
-                          fontFamily: 'Lato', 
-                          fontWeight: FontWeight.w700
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: (){},
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Need help?',
-                                style: kMediumTextDarkStyle
-                                ),
-                            ],
-                          ),
-                        )
-                    ],
-                  ),
-               )
-              ),
+                 HelpTextBar(height: 77, isDarkMode: true, text: 'Set opening cash drawer amount.'),
              Container(
                 color: kDashboardSearchBarFillColor,
                 child:Padding(

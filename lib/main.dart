@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sales/pages/setup/general.dart';
-import 'package:sales/pages/setup/outlet_registers.dart';
-import 'package:sales/pages/setup/personal_tokens.dart';
-import 'package:sales/pages/setup/user.dart';
-import 'package:sales/widgets/check.dart';
+import 'package:sales/pages/setup/billing.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sales', 
       theme: ThemeData(),  
-      home: Users()
+      home: Billing()
     );
   }
 }

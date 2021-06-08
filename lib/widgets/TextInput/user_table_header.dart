@@ -5,16 +5,18 @@ UserHeader({
 @required this.text,
 @required this.padding,
 @required this.width,
-@required this.alignment
+@required this.alignment,
+@required this.height
 });
 final String text;
 final double padding;
 final double width;
 final MainAxisAlignment alignment;
+final double height;
   @override
   Widget build(BuildContext context) {
     return Container(
-                    height: 70.5,
+                    height: height,
                     width: width,
                     child:Padding(
                       padding:  EdgeInsets.only(left:padding, right: padding),

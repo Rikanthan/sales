@@ -2,11 +2,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/pages/setup/app.dart';
+import 'package:sales/pages/setup/billing.dart';
 import 'package:sales/pages/setup/general.dart';
 import 'package:sales/pages/setup/loyalty.dart';
 import 'package:sales/pages/setup/outlet_registers.dart';
 import 'package:sales/pages/setup/payment_types.dart';
+import 'package:sales/pages/setup/personal_tokens.dart';
 import 'package:sales/pages/setup/sales_tax.dart';
+import 'package:sales/pages/setup/store_credit.dart';
 import 'package:sales/pages/setup/user.dart';
 import 'package:sales/widgets/buttons/esc_button.dart';
 import 'package:sales/widgets/cards/drawer_menu_item.dart';
@@ -22,7 +25,6 @@ enum SetupClicked {
   users,
   apps,
   personal,
-  gift,
   store
 }
 Color _clickColor(SetupClicked setupClicked,SetupClicked itemClick)
@@ -64,7 +66,7 @@ class SetupDrawer extends StatelessWidget {
                       DrawerMenuItem(
                         buttonText: 'Billing',
                       onPress: (){
-                        //Navigator.push(context, MaterialPageRoute(builder: (_)=> StockControl()));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=> Billing()));
                       }, 
                       textColor: _clickColor(setupClicked, SetupClicked.billing)
                       ),
@@ -113,21 +115,14 @@ class SetupDrawer extends StatelessWidget {
                       DrawerMenuItem(
                         buttonText: 'Personal Tokens',
                       onPress: (){
-                        //Navigator.push(context, MaterialPageRoute(builder: (_)=> Tags()));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=> PersonalTokens()));
                       }, 
                       textColor: _clickColor(setupClicked, SetupClicked.personal)
                       ),
                       DrawerMenuItem(
-                        buttonText: 'Gift Cards',
-                      onPress: (){
-                        //Navigator.push(context, MaterialPageRoute(builder: (_)=> Tags()));
-                      }, 
-                      textColor: _clickColor(setupClicked, SetupClicked.gift)
-                      ),
-                      DrawerMenuItem(
                         buttonText: 'Store Credit',
                       onPress: (){
-                        //Navigator.push(context, MaterialPageRoute(builder: (_)=> Tags()));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=> StoreCredit()));
                       }, 
                       textColor: _clickColor(setupClicked, SetupClicked.store)
                       ),

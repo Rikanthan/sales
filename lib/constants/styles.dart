@@ -28,3 +28,10 @@ const kMediumTextNormalStyle = TextStyle(
             color: kSignInTextColor,
             fontWeight: FontWeight.normal
               );
+
+const kSubHeaderTextStyle = TextStyle(
+            fontFamily: 'Lato',
+            fontSize: 18,
+            color: kSignInTextColor,
+            fontWeight: FontWeight.w700
+              );

@@ -17,92 +17,104 @@ class Roles extends StatelessWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 UserHeader(
-                              text: 'Name',
-                              padding: 0, 
-                              width: 403.92,
-                              alignment: MainAxisAlignment.start
-                              ),
+                  text: 'Name',
+                  padding: 0, 
+                  width: 403.92,
+                  height: 51.5,
+                  alignment: MainAxisAlignment.start
+                  ),
                 UserHeader(
-                              text: 'Last Saved',
-                              padding: 8, 
-                              width: 403.92,
-                              alignment: MainAxisAlignment.start
-                              ),
+                  text: 'Last Saved',
+                  padding: 8, 
+                  width: 403.92,
+                  height: 51.5,
+                  alignment: MainAxisAlignment.start
+                  ),
               ],
             ),
             Divider(
               thickness: 1,
-              color:Colors.black
+              color:kFooterColor
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                    width:403.92,
-                    height: 59,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                       GestureDetector(
-                         onTap: (){},
-                          child: Text(
-                            'Cashier',
-                            style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: kAppBarColor,
-                                fontSize: 15 
-                              ),
-                            ),
-                        ),
-                      ],
+            Padding(
+              padding: const EdgeInsets.only(top:10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                      width:403.92,
+                      child: GestureDetector(
+                        onTap: (){},
+                         child: Text(
+                           'Cashier',
+                           style: TextStyle(
+                               decoration: TextDecoration.underline,
+                               color: kAppBarColor,
+                               fontSize: 15,
+                               fontFamily: 'Lato'
+                             ),
+                           ),
+                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('7 days ago',style: kMediumTextNormalStyle,),
-                  ),
-              ],
+                    Padding(
+                      padding: const EdgeInsets.only(left:8.0),
+                      child: Text(
+                            '7 days ago', 
+                             style: TextStyle(
+                                  color: kAppBarColor,
+                                  fontSize: 14,
+                                  fontFamily: 'Lato'
+                                ),
+                            ),
+                    ),
+                ],
+              ),
             ),
             Divider(
               thickness: 0.5,
-              color:Colors.black,
+              color:kInputBorderColor,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                    width:403.92,
-                    height: 59,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        GestureDetector(
-                          onTap: (){},
-                          child: Text(
-                            'Manager',
-                            style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: kAppBarColor,
-                                fontSize: 15 
-                              ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20,bottom: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                      width:403.92,
+                      child: GestureDetector(
+                        onTap: (){},
+                        child: Text(
+                          'Manager',
+                          style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: kAppBarColor,
+                              fontSize: 15 
                             ),
-                        ),
-                      ],
+                          ),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('7 days ago',style: kMediumTextNormalStyle),
-                  ),
-              ],
+                    Padding(
+                      padding: const EdgeInsets.only(left:8.0),
+                      child: Text(
+                            '7 days ago', 
+                             style: TextStyle(
+                                  color: kAppBarColor,
+                                  fontSize: 14,
+                                  fontFamily: 'Lato'
+                                ),
+                      )
+                    ),
+                ],
+              ),
             ),
             Divider(
               thickness: 0.5,
-              color:Colors.black,
+              color:kInputBorderColor,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -110,33 +122,27 @@ class Roles extends StatelessWidget {
               children: [
                 Container(
                     width:403.92,
-                    height: 59,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        GestureDetector(
-                          onTap: (){},
-                          child: Text(
-                            'Admin',
-                            style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: kAppBarColor,
-                                fontSize: 15 
-                              ),
-                            ),
+                    child: GestureDetector(
+                      onTap: (){},
+                      child: Text(
+                        'Admin',
+                        style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            color: kAppBarColor,
+                            fontSize: 15 
+                          ),
                         ),
-                      ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(left:8.0),
                     child: Text('-'),
                   ),
               ],
             ),
             Divider(
               thickness: 0.5,
-              color:Colors.black,
+              color:kInputBorderColor,
             )
           ],
         ),

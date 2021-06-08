@@ -10,6 +10,7 @@ import 'package:sales/widgets/cards/user_roles.dart';
 import 'package:sales/widgets/drawer/products_drawer.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
+import 'package:sales/widgets/drawer/setup_drawer.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
 enum UsersTabBar
@@ -35,7 +36,7 @@ class _UsersState extends State<Users> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: ProductDrawer(productsClicked: ProductsClicked.promotions),
+      drawer: SetupDrawer(setupClicked:SetupClicked.users ),
       body:SingleChildScrollView(
         child: Container(
           color:kHomeBackgroundColor,
@@ -263,42 +264,49 @@ class _UsersState extends State<Users> {
                       Row(
                         children: [
                           UserHeader(
+                            height: 70.5,
                             text: 'Name',
                             padding: 0, 
                             width: 208,
                             alignment: MainAxisAlignment.start
                             ),
                           UserHeader(
+                            height: 70.5,
                             text: 'Role',
                             padding: 8, 
                             width: 86,
                             alignment: MainAxisAlignment.start
                             ),
                           UserHeader(
+                            height: 70.5,
                             text: 'Outlet',
                             padding: 8, 
                             width: 186,
                             alignment: MainAxisAlignment.start
                             ),
                            UserHeader(
+                            height: 70.5,
                             text: 'Daily Target',
                             padding: 8, 
                             width: 116,
                             alignment: MainAxisAlignment.end
                             ),
                           UserHeader(
+                            height: 70.5,
                             text: 'Weekly Target',
                             padding: 8, 
                             width: 116,
                             alignment: MainAxisAlignment.end
                             ),
                           UserHeader(
+                            height: 70.5,
                             text: 'Monthly\nTarget',
                             padding: 8, 
                             width: 116,
                             alignment: MainAxisAlignment.end
                             ),
                           UserHeader(
+                            height: 70.5,
                             text: 'Last Active',
                             padding: 8, 
                             width: 100,
@@ -313,6 +321,7 @@ class _UsersState extends State<Users> {
                     ],
                   ),
                 ),
+                if(usersTabBar == UsersTabBar.users)
                 Padding(
                         padding: const EdgeInsets.only( left:48,top:20),
                         child: Row(
@@ -439,15 +448,13 @@ class _UsersState extends State<Users> {
                                   ),
                               ),
                             ),
-                            Spacer(),
+                           // Spacer(),
                             Icon(
                               Icons.check_sharp,
                               color: kAppBarColor,
                               size: 15,
                             ),
-                            SizedBox(
-                              width: 24,
-                            )
+                            
                           ],
                         ),
                       )
