@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
-import 'package:sales/widgets/TextInput/text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
+import 'package:sales/widgets/cards/lite_plan_card.dart';
 
 class LicenseCard extends StatelessWidget {
   const LicenseCard({
     Key key,
+    @required this.planType
   }) : super(key: key);
-
+  final PlanType planType;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,10 +18,14 @@ class LicenseCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 width: 139.19,
-                height: 34.5,
+                height: 35,
+                decoration: BoxDecoration(
+                  border: Border(bottom: BorderSide(color: kTableBorderColor, width: 1,))
+                  ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,7 +39,10 @@ class LicenseCard extends StatelessWidget {
               ),
               Container(
                 width: 147.42,
-                height: 34.5,
+                height: 35,
+                decoration: BoxDecoration(
+                  border: Border(bottom: BorderSide(color: kTableBorderColor, width: 1,))
+                  ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,11 +56,17 @@ class LicenseCard extends StatelessWidget {
               ),
               Container(
                 width: 215.67,
-                height: 34.5,
+                height: 35,
+                decoration: BoxDecoration(
+                  border: Border(bottom: BorderSide(color: kTableBorderColor, width: 1,))
+                  ),
               ),
               Container(
                 width: 143.72,
-                height: 34.5,
+                height: 35,
+                decoration: BoxDecoration(
+                  border: Border(bottom: BorderSide(color: kTableBorderColor, width: 1,))
+                  ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -63,27 +77,37 @@ class LicenseCard extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
+              Container(
+                width: 50,
+                height: 35,
+                decoration: BoxDecoration(
+                  border: Border(bottom: BorderSide(color: kTableBorderColor, width: 1,))
+                  ),
+              ),
             ],
           ),
           Divider(),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 width: 139.19,
                 height: 79,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Outlets',style: kMediumTextNormalStyle,),
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.only(top:16.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Outlets',style: kMediumTextNormalStyle,),
+                    ],
+                  ),
                 ),
               ),
               Container(
                 color:Colors.transparent,
-                width: 147.42,
-                height: 79,
+                width: 111.42,
                 child: TextInput(
                   darkMode: false,
                   validate: (val) => val.length == 0 ? 'Enter the Number' : null,
@@ -96,6 +120,7 @@ class LicenseCard extends StatelessWidget {
                     hintText: '1',
                     )
               ),
+              SizedBox(width: 36,),
               Container(
                 width: 215.67,
                 height: 34.5,
@@ -104,8 +129,8 @@ class LicenseCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text('1@\$129/mo (Pro Plan)',style: kMediumTextNormalStyle,),
+                      padding: const EdgeInsets.only(left:8.0,top: 16,),
+                      child: Text(planType == PlanType.pro ? '1@\$129/mo (Pro Plan)' : '1@\$99/mo (Lite Plan)' ,style: kMediumTextNormalStyle,),
                     )
                   ],
                 ),
@@ -122,7 +147,7 @@ class LicenseCard extends StatelessWidget {
                         Text('\$',style: kSubHeaderTextStyle,),
                       ],
                     ),
-                    Text('129',style: TextStyle(
+                    Text(planType == PlanType.pro ? '129' :'99',style: TextStyle(
                       fontFamily:'Lato',
                       fontSize: 32,
                       fontWeight: FontWeight.w700,
@@ -144,22 +169,25 @@ class LicenseCard extends StatelessWidget {
             ],
           ),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 width: 139.19,
                 height: 79,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Registers',style: kMediumTextNormalStyle,),
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.only(top:16.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Registers',style: kMediumTextNormalStyle,),
+                    ],
+                  ),
                 ),
               ),
               Container(
                 color:Colors.transparent,
-                width: 147.42,
-                height: 79,
+                width: 111.42,
                 child: TextInput(
                   darkMode: false,
                   validate: (val) => val.length == 0 ? 'Enter the Number' : null,
@@ -172,6 +200,7 @@ class LicenseCard extends StatelessWidget {
                     hintText: '1',
                     )
               ),
+              SizedBox(width: 36,),
               Container(
                 width: 215.67,
                 height: 34.5,
@@ -180,7 +209,7 @@ class LicenseCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.only(left:8.0, top: 16),
                       child: Text('1 free Register',style: kMediumTextNormalStyle,),
                     )
                   ],

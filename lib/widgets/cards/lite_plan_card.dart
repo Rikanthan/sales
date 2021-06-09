@@ -3,15 +3,25 @@ import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
 
+enum PlanType{
+  lite,
+  pro
+}
 class LitePlan extends StatelessWidget {
+  LitePlan({
+    @required this.width,
+    @required this.planType
+  });
+  final double width;
+  final PlanType planType;
   @override
   Widget build(BuildContext context) {
     return Column(
                 children: [
-                  SizedBox(height:60),
+                  SizedBox(height: planType == PlanType.lite ? 0 : 60),
                   Container(
                     color: kAppBarColor,
-                      width: 232,
+                      width: width,
                       height: 115,
                       child: Padding(
                         padding: const EdgeInsets.only(top:20.0,bottom: 20,left: 10, right: 10),
@@ -38,7 +48,7 @@ class LitePlan extends StatelessWidget {
                     ),
                     Container(
                         color: Colors.white,
-                        width: 232,
+                        width: width,
                         height: 288,
                         child: Padding(
                           padding: const EdgeInsets.only(top: 20,left: 20,right: 20,bottom: 10),
@@ -97,9 +107,9 @@ class LitePlan extends StatelessWidget {
                         ),
                       ),
                     Container(
-                      color: kPlanCardBottomColor,
-                      width: 232,
-                      height: 198,
+                      color:PlanType.lite == planType ? kInputBorderColor : kPlanCardBottomColor,
+                      width: width,
+                      height: planType == PlanType.lite ? 198 + 254 : 198,
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: Column(
@@ -146,12 +156,131 @@ class LitePlan extends StatelessWidget {
                                   ),
                                 ),
                             ),
+                            planType != PlanType.lite ?
                             CustomButton(
                               buttonText: 'Select Plan', 
                               onPress: (){}, 
                               buttonColor: kDashboardMidBarColor, 
                               topPadding: 20,
                               leftPadding: 60
+                              )
+                              :
+                              Container(
+                                color: Colors.transparent,
+                                child: Column(
+                                  children: [
+                                          Padding(
+                                      padding: const EdgeInsets.all(12.0),
+                                      child: Row(
+                                        children: [
+                                        Icon(
+                                          Icons.check,
+                                          size: 18.0,
+                                          color:kSignInButtonColor
+                                          ),
+                                          Text(
+                                          ' Plan Selected',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            color: kSignInButtonColor,
+                                            fontSize: 18,
+                                            fontFamily: 'Lato'
+                                            ),
+                                          ), 
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(20.0),
+                                      child: Text(
+                                        "You won't get:",style: kMediumTextStyle,
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.close_sharp,
+                                          size: 15,
+                                          color:kAppBarColor
+                                          ),
+                                        Text(' Advanced Reporting',style: kMediumTextNormalStyle,)
+                                      ],
+                                    ),
+                                    SizedBox(height:3),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.close,
+                                          size: 15,
+                                          color:kAppBarColor
+                                          ),
+                                        Text(' Advanced Promotions',style: kMediumTextNormalStyle,)
+                                      ],
+                                    ),
+                                     SizedBox(height:3),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.close,
+                                          size: 15,
+                                          color:kAppBarColor
+                                          ),
+                                        Text(' Gift Cards & Loyalty',style: kMediumTextNormalStyle,)
+                                      ],
+                                    ),
+                                     SizedBox(height:3),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.close,
+                                          size: 15,
+                                          color:kAppBarColor
+                                          ),
+                                        Text(' Customizable User\nPermissions',style: kMediumTextNormalStyle,)
+                                      ],
+                                    ),
+                                     SizedBox(height:3),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.close,
+                                          size: 15,
+                                          color:kAppBarColor
+                                          ),
+                                        Text(' Other Add-ons',style: kMediumTextNormalStyle,)
+                                      ],
+                                    ),
+                                     SizedBox(height:3),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.close,
+                                          size: 15,
+                                          color:kAppBarColor
+                                          ),
+                                        Text(' Ecommerce Channels',style: kMediumTextNormalStyle,)
+                                      ],
+                                    ),
+                                     SizedBox(height:3),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.close,
+                                          size: 15,
+                                          color:kAppBarColor
+                                          ),
+                                        Text(' API Access',style: kMediumTextNormalStyle,)
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               )
                           ],
                         ),

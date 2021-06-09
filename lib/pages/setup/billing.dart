@@ -5,14 +5,23 @@ import 'package:sales/widgets/TextInput/home_text_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/help_text_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
+import 'package:sales/widgets/buttons/button_text.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/cards/Enterprise_plan.dart';
+import 'package:sales/widgets/cards/billing_card.dart';
 import 'package:sales/widgets/cards/license_card.dart';
 import 'package:sales/widgets/cards/lite_plan_card.dart';
 import 'package:sales/widgets/cards/pro_plan_card.dart';
+import 'package:sales/widgets/divider/custom_divider.dart';
 import 'package:sales/widgets/drawer/setup_drawer.dart';
 
-class Billing extends StatelessWidget {
+class Billing extends StatefulWidget {
+  @override
+  _BillingState createState() => _BillingState();
+}
+
+class _BillingState extends State<Billing> {
+  PlanType _planType = PlanType.pro;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -95,8 +104,54 @@ class Billing extends StatelessWidget {
                           width: 226,
                           child: Text('Select a plan',style: kSubHeaderTextStyle,),
                         ),
-                        LitePlan(),
-                        ProPlan(),
+                        _planType == PlanType.lite ?
+                        Padding(
+                          padding: const EdgeInsets.only(top:20),
+                          child: Container(
+                                 decoration: BoxDecoration(
+                              border: Border.all(width: 3,color: kSignInButtonColor ),
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(5),
+                                  topRight: Radius.circular(5)
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: kSignInButtonColor.withOpacity(0.5),
+                                    spreadRadius: 2,
+                                    blurRadius: 4,
+                                    offset: Offset(0, 3), // changes position of shadow
+                                  ),
+                                ]
+                              ),
+                            child: LitePlan(width: 226, planType: _planType,)
+                            ),
+                        ) :
+                        GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              _planType = PlanType.lite;
+                              print(_planType);
+                            });
+                          },
+                          child: Container(
+                            child: LitePlan(
+                              width: 232, 
+                              planType: _planType,
+                              )
+                            )
+                          ),
+                        GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              _planType = PlanType.pro;
+                              print(_planType);
+                            });
+                          },
+                          child: Padding(
+                            padding:  EdgeInsets.only(top: _planType == PlanType.pro ? 0.0 :20.0),
+                            child: ProPlan(planType: _planType,),
+                          )
+                          ),
                         EnterprisePlan()
                       ],
                     ),
@@ -123,7 +178,7 @@ class Billing extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Buy licenses for Outlets and\nRegisters to be able to set them up.\nListed prices are exclusive \nof tax. ',style: kMediumTextNormalStyle,),
+                              Text('Buy licenses for Outlets and\nRegisters to be able to set\nthem up.\nListed prices are exclusive \nof tax. ',style: kMediumTextNormalStyle,),
                               Text(
                                 'What are Outlets and',
                                     style: TextStyle(
@@ -152,7 +207,7 @@ class Billing extends StatelessWidget {
                                 ),
                             ],
                           ),
-                          LicenseCard()
+                          LicenseCard(planType: _planType,)
                       ],
                     ),
                     Padding(
@@ -163,14 +218,39 @@ class Billing extends StatelessWidget {
                       ),
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Billing',style: kSubHeaderTextStyle,)
+                        Text('Billing',style: kSubHeaderTextStyle,),
+                        BillingCard(planType: _planType,)
                       ],
                     ),
                   ],
                 ),
               ),
+              CustomDivider(
+                topPadding: 48,
+                 width: 1024, 
+                 bottomPadding: 0
+                 ),
+                Padding(
+                  padding: const EdgeInsets.only(left:48.0,top: 48,bottom: 24),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      ButtonText(
+                        buttonText: 'Enter Credit Card Details',
+                         onPress: (){}, 
+                         topPadding: 25,
+                         leftPadding: 40,
+                         buttonColor: kSignInButtonColor,
+                         buttonTextColor: kHelpTextColor,
+                         fontSize: 18,
+                         ),
+                    ],
+                  ),
+                )
             ],
           ),
         ),

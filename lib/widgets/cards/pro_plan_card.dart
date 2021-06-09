@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/widgets/buttons/custom_button.dart';
+import 'package:sales/widgets/cards/lite_plan_card.dart';
 
 class ProPlan extends StatelessWidget {
+  ProPlan({
+    @required this.planType
+  });
+  final PlanType planType;
   @override
   Widget build(BuildContext context) {
     return Container(
-          decoration: BoxDecoration(
+          decoration: planType== PlanType.pro ? BoxDecoration(
             border: Border.all(width: 3,color: kSignInButtonColor ),
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(5),
@@ -20,7 +26,8 @@ class ProPlan extends StatelessWidget {
                   offset: Offset(0, 3), // changes position of shadow
                 ),
                ]
-            ),
+            ):
+            BoxDecoration(),
           child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -143,7 +150,7 @@ class ProPlan extends StatelessWidget {
                           ),
                         ),
                       Container(
-                        color: kPlanCardBottomColor,
+                        color: PlanType.pro == planType ? kInputBorderColor : kPlanCardBottomColor,
                         width: 232,
                         height: 220,
                         child: Padding(
@@ -198,6 +205,7 @@ class ProPlan extends StatelessWidget {
                                     ),
                                   ),
                               ),
+                              PlanType.lite != planType ?
                               Padding(
                                 padding: const EdgeInsets.all(12.0),
                                 child: Row(
@@ -218,6 +226,13 @@ class ProPlan extends StatelessWidget {
                                     ), 
                                   ],
                                 ),
+                              ):
+                              CustomButton(
+                              buttonText: 'Select Plan', 
+                              onPress: (){}, 
+                              buttonColor: kSignInButtonColor, 
+                              topPadding: 20,
+                              leftPadding: 60
                               )
                             ],
                           ),
