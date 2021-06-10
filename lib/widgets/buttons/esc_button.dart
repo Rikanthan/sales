@@ -4,11 +4,13 @@ class EscButton extends StatelessWidget {
   const EscButton({
     @required this.isDarkMode,
     @required this.positionedRight,
-    @required this.width
+    @required this.width,
+    @required this.positionedTop
     });
   final bool isDarkMode;
   final double positionedRight;
   final double width;
+  final double positionedTop;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +19,7 @@ class EscButton extends StatelessWidget {
             child: Stack(
             children: [
               Positioned(
-              top:10.0,
+              top:positionedTop,
               right: positionedRight,
               child: GestureDetector(
               onTap: (){

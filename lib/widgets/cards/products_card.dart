@@ -14,40 +14,66 @@ class ProductCard extends StatelessWidget {
   final Function onTapEventHandler;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width:87.2,
-      height:90,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(4),
-        shape: BoxShape.rectangle,
-        color: kDashboardSearchBarFillColor
-      ),
-      child: Column(
-        children: [
-          Container(
-          width:87.2,
-          height:8.1,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(4),
-              topLeft: Radius.circular(4)
-              ),
-            shape: BoxShape.rectangle,
-            color: topColor
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(top:30,left:4,right:4),
-            child: Text(
-              product,
-              style: TextStyle(
-                fontFamily:'Lato',
-                color:kHelpTextColor,
-                fontSize: 14,
+    return GestureDetector(
+      onTap:onTapEventHandler,
+      child: Container(
+        width:87.2,
+        height:90,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(4),
+          color: kDashboardSearchBarFillColor,    
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+            width:87.2,
+            height:8.1,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(4),
+                topLeft: Radius.circular(4)
+                ),
+              shape: BoxShape.rectangle,
+              color: topColor
               ),
             ),
-          )
-        ],
+            Container(
+              width: 87.2,
+              height: 81.8,
+              decoration: BoxDecoration(
+                //borderRadius: BorderRadius.circular(4),
+                color: kDashboardSearchBarFillColor,
+                border: Border(
+                  left: BorderSide(
+                    color: topColor,
+                    width: 0.2,
+                    ),
+                  right: BorderSide(
+                    color: topColor,
+                    width: 0.1,
+                    )
+                  ),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    product,
+                    style: TextStyle(
+                      fontFamily:'Lato',
+                      color:kHelpTextColor,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

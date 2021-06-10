@@ -56,7 +56,8 @@ class CustomerDrawer extends StatelessWidget {
          EscButton(
            isDarkMode: false, 
            positionedRight: 0.0,
-            width: 70
+            width: 70,
+            positionedTop: 10.0,
             )
         ],
       ),

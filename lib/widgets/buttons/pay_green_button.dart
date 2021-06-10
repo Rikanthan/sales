@@ -6,7 +6,7 @@ class PayGreenButton extends StatelessWidget {
     return Center(
                   child:TextButton(
                    child: Row(
-                     crossAxisAlignment: CrossAxisAlignment.center,
+                     crossAxisAlignment: CrossAxisAlignment.end,
                      children: [
                        Padding(
                          padding: const EdgeInsets.only(right:10.0),
@@ -20,18 +20,16 @@ class PayGreenButton extends StatelessWidget {
                             )
                           ),
                        ),
-                        Expanded(
-                          flex:1,
-                          child: Text(
-                            '3 items',
-                            style:TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Lato',
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold
-                            )
-                          ),
+                        Text(
+                          '3 items',
+                          style:TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Lato',
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold
+                          )
                         ),
+                        Spacer(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [

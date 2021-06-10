@@ -11,7 +11,7 @@ class HomeDrawer extends StatelessWidget {
       child: Row(
         children: [
           MainDrawer(isDarkMode: false, mainDrawerClick: MainDrawerClick.home),
-          EscButton(isDarkMode: false, positionedRight: 0.0, width: 70.0)
+          EscButton(isDarkMode: false, positionedRight: 0.0,positionedTop: 10.0, width: 70.0)
         ],
       ),
     );

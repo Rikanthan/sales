@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/widgets/cards/popup_cards/add_discount.dart';
 import 'package:sales/widgets/cards/product_details_card.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
@@ -139,12 +140,20 @@ class ProductItemsListView extends StatelessWidget {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Text(
-                                        'Discount', style: TextStyle(
-                                            fontFamily: 'Lato',
-                                            fontSize: 15,
-                                            color: Colors.blue
-                                            ),
+                                      GestureDetector(
+                                        onTap: (){
+                                                      showDialog(
+                                              context: context,
+                                              builder: (BuildContext context) => AddDiscount(),
+                                            );
+                                        },
+                                        child: Text(
+                                          'Discount', style: TextStyle(
+                                              fontFamily: 'Lato',
+                                              fontSize: 15,
+                                              color: kDropDownColor
+                                              ),
+                                        ),
                                       ),
                                       Expanded(
                                         child: Text(''),

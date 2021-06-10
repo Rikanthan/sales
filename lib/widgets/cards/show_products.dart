@@ -238,15 +238,7 @@ class _ShowProductsState extends State<ShowProducts> {
                             ),
                            onTap: (){
                              setState(() {
-                               if(_expansionTile)
-                               {
-                                 _expansionTile = false;
-                               }
-                               else if(!_expansionTile)
-                               {
-                                 _expansionTile = true;
-                               }
-                               
+                               _expansionTile = !_expansionTile;
                              });
                            }
                           ),

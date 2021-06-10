@@ -28,3 +28,4 @@ const kTableFooterColor = Color(0xFF696969);
 const kTableHeaderBackgroundColor = Color(0xFFd9d9d9);
 const kTableBorderColor = Color(0xFFd7d7d7);
 const kPlanCardBottomColor = Color(0xFFe3e8eb);
+const kPopUpBackGroundColor = Color(0xFF2a353c);

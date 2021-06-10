@@ -1,16 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:popup_menu/popup_menu.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/pay_green_button.dart';
+import 'package:sales/widgets/cards/icon_card.dart';
+import 'package:sales/widgets/cards/popup_cards/park_sale.dart';
+import 'package:sales/widgets/cards/popup_cards/product_item1_clicks.dart';
+import 'package:sales/widgets/cards/popup_cards/product_item2_clicks.dart';
+import 'package:sales/widgets/cards/popup_cards/product_item4_clicks.dart';
+import 'package:sales/widgets/cards/popup_cards/retrieve_sale.dart';
 import 'package:sales/widgets/cards/products_card.dart';
 import 'package:sales/widgets/drawer/sell_drawer.dart';
 import 'package:sales/widgets/listviews/product_items.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
-class Dashboard extends StatelessWidget {
+class Dashboard extends StatefulWidget {
+  @override
+  _DashboardState createState() => _DashboardState();
+}
+
+class _DashboardState extends State<Dashboard> {
+   GlobalKey btnKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
+    PopupMenu.context = context;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kDashboardAppBarColor,
@@ -43,7 +57,8 @@ class Dashboard extends StatelessWidget {
                              style:TextStyle(
                               color: kHelpTextColor,
                               fontFamily: 'Lato',
-                              fontSize: 15
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700
                               )
                             ),
                         ),
@@ -59,27 +74,42 @@ class Dashboard extends StatelessWidget {
                             ProductCard(
                               topColor: kProductButtonColor1,
                               product: 'Nala Dress',
-                              onTapEventHandler: (){},
+                              onTapEventHandler: (){
+                                showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) => ProductsItem1Popup(),
+                                );
+                              },
                               ),
                               Padding(
                                 padding: EdgeInsets.only(left: 8,right: 8),
                                 child: ProductCard(
                                 topColor: kProductButtonColor2,
                                 product: 'Audhild Tee',
-                                onTapEventHandler: (){},
+                                onTapEventHandler: (){
+                                  showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) => ProductsItem2Popup(),
+                                );
+                                  },
                                 ),
                               ),
                               ProductCard(
                               topColor: kProductButtonColor3,
-                              product: 'My Girl Sunglasses',
+                              product: '    My Girl\nSunglasses',
                               onTapEventHandler: (){},
                               ),
                                Padding(
                                 padding: EdgeInsets.only(left: 8,right: 8),
                                 child: ProductCard(
                                 topColor: kProductButtonColor4,
-                                product: 'LaBoheme Mesh Strap Watch',
-                                onTapEventHandler: (){},
+                                product: '  LaBoheme\nMesh Strap\n      Watch',
+                                onTapEventHandler: (){
+                                  showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) => ProductsItem4Popup(),
+                                );
+                                },
                                 ),
                               ),
                             ],
@@ -97,25 +127,38 @@ class Dashboard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Row(
-                        //   children: [
-                        //     IconCard(
-                        //       iconData: Icons.reply_all, 
-                        //       iconText: 'Retrieve \n Sale', onTapEventHandler: (){}
-                        //       ),
-                        //       Padding(
-                        //         padding:  EdgeInsets.only(left:40.0,right: 40.0),
-                        //         child: IconCard(
-                        //         iconData: Icons.refresh_outlined, 
-                        //         iconText: 'Park \n Sale', onTapEventHandler: (){}
-                        //         ),
-                        //       ),
-                        //       IconCard(
-                        //       iconData: Icons.keyboard_arrow_down_rounded, 
-                        //       iconText: 'More  \nActions...', onTapEventHandler: (){}
-                        //       )
-                        //   ],
-                        //  ),
+                        Row(
+                          children: [
+                            IconCard(
+                              iconData: Icons.reply, 
+                              iconText: 'Retrieve \n Sale',
+                              width: 147.44,
+                              onTapEventHandler: (){
+                               showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) => RetrieveSale(),
+                                );
+                              }
+                              ),
+                              IconCard(
+                              iconData: Icons.restore, 
+                              iconText: 'Park \n Sale',
+                              width: 121.77,
+                              onTapEventHandler: (){
+                                showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) => ParkSalePopup(),
+                                );
+                                }
+                              ),
+                              IconCard(
+                              iconData: Icons.arrow_drop_down, 
+                              iconText: 'More  \nActions...',
+                              width: 154.8,
+                              onTapEventHandler: (){}
+                              )
+                          ],
+                         ),
                          Container(
                            width: 438,
                            height:55,

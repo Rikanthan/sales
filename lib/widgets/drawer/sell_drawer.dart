@@ -147,6 +147,7 @@ final SalesClicked salesClicked;
           EscButton(
             isDarkMode: true, 
             positionedRight: -10.0, 
+            positionedTop: 10.0,
             width: 50.0
             )
         ],

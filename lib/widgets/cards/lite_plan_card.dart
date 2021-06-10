@@ -113,7 +113,6 @@ class LitePlan extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: Column(
-                          //crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Row(
@@ -234,6 +233,7 @@ class LitePlan extends StatelessWidget {
                                      SizedBox(height:3),
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Icon(
                                           Icons.close,
