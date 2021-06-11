@@ -243,12 +243,7 @@ class _CustomerState extends State<Customer> {
                             },
                              child: Text(
                                lessFilters?'More filters':'Less filters',
-                                style: TextStyle(
-                                              fontSize:15,
-                                              fontFamily: 'Lato',
-                                              color: Colors.blue,
-                                              fontWeight: FontWeight.w400
-                                            ),
+                                style: kMediumBlueTextStyle
                                )
                              ),
                               Padding(
@@ -276,24 +271,14 @@ class _CustomerState extends State<Customer> {
                         padding: const EdgeInsets.only(top:48.0),
                         child: Text(
                           'Add customers so you know who is buying from you, how often,',
-                          style:TextStyle(
-                              fontFamily: 'Lato',
-                              fontSize: 15,
-                              height: 1.5,
-                              color: kSignInTextColor
-                            )
+                          style: kMediumHeightTextStyle
                         ),
                       ),
                     ),
                     Text(
                       'and how to keep in touch with them',
-                      style:TextStyle(
-                              fontFamily: 'Lato',
-                              fontSize: 15,
-                              height: 1.5,
-                              color: kSignInTextColor
-                            )
-                     ),       
+                      style:kMediumHeightTextStyle
+                    )
                   ],
                 ),
               ),

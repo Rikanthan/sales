@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sales/constants/colors.dart';
+import 'package:sales/constants/styles.dart';
 class AppBars extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,12 +21,8 @@ class AppBars extends StatelessWidget {
                 children: [
                   Text(
                     'Sign in',
-                    style: TextStyle(
-                      fontFamily: 'Lato',
-                      color: kAppBarTextColor,
-                      fontSize: 16.0
-                    ),
-                  ),
+                    style: kMediumTextStyle2
+                  )
                 ],
               ),
             ),
@@ -36,10 +32,7 @@ class AppBars extends StatelessWidget {
               children: [
                 Text(
                   'Help',
-                  style: TextStyle(
-                    color: kAppBarTextColor,
-                    fontSize: 14.0
-                  ),
+                  style: kMediumTextStyle3
                 ),
               ],
             ),

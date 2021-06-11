@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
@@ -110,20 +111,11 @@ class _PriceTypesState extends State<PriceTypes> {
                                     TextButton(
                                       onPressed: (){},
                                       child: Text("Fashion",
-                                        style: TextStyle(
-                                          decoration: TextDecoration.underline,
-                                          fontFamily: 'Lato',
-                                          fontSize: 15,
-                                          color: kAppBarColor
-                                          ),
+                                        style: k15Underline
                                         )
                                       ),
                                       Text("14",
-                                        style: TextStyle(
-                                          fontFamily: 'Lato',
-                                          fontSize: 15,
-                                          color: kAppBarColor
-                                          ),
+                                        style: kMediumTextNormalStyle
                                         )                      
                                   ],
                                 ),
@@ -138,12 +130,7 @@ class _PriceTypesState extends State<PriceTypes> {
                                     TextButton(
                                         onPressed: (){},
                                         child: Text("View Products",
-                                          style: TextStyle(
-                                            decoration: TextDecoration.underline,
-                                            fontFamily: 'Lato',
-                                            fontSize: 15,
-                                            color: kAppBarColor
-                                            ),
+                                          style: k15Underline
                                           )
                                         ),
                                         IconButton(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/price_sub_header.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
@@ -70,25 +71,15 @@ class _PriceBooksState extends State<PriceBooks> {
                                           padding: const EdgeInsets.only(bottom: 12.0),
                                           child: Text(
                                             "Introducing Vend's discounting tools",
-                                              style: TextStyle(
-                                              fontSize:24,
-                                              fontFamily: 'Lato',
-                                              color: kSignInTextColor,
-                                              fontWeight: FontWeight.w700
-                                            ),
+                                              style: kLargeHeaderStyle2
                                           ),
                                         ),
                                     Padding(
                                           padding: const EdgeInsets.only(bottom: 12.0),
                                           child: Text(
                                             'Bring in new customers with no spreadsheets required. With Vend’s easy new discounting tools you can run\noffers by time or date range, target specific customers and outlets, and runindividual or blanket product\npromotions. Save time, enhance brand loyalty and boost revenue, now.',
-                                              style: TextStyle(
-                                              fontSize:15,
-                                              fontFamily: 'Lato',
-                                              color: kSignInTextColor,
-                                              height: 1.5
-                                            ),
-                                          ),
+                                              style: kMediumHeightTextStyle
+                                          )
                                         ),
                                         Row(
                                           mainAxisAlignment: MainAxisAlignment.end,
@@ -96,11 +87,7 @@ class _PriceBooksState extends State<PriceBooks> {
                                             TextButton(
                                               child:Text(
                                                 'Try Promotons >',
-                                              style: TextStyle(
-                                              fontSize:15,
-                                              fontFamily: 'Lato',
-                                              color: kDropDownColor,
-                                              ),
+                                              style: kMediumBlueTextStyle3
                                             ),
                                               onPressed: (){},
                                               ),
@@ -271,12 +258,7 @@ class _PriceBooksState extends State<PriceBooks> {
                                     TextButton(
                                       onPressed: (){},
                                       child: Text("General Price Book(All Products)",
-                                        style: TextStyle(
-                                          decoration: TextDecoration.underline,
-                                          fontFamily: 'Lato',
-                                          fontSize: 14,
-                                          color: kAppBarColor
-                                          ),
+                                        style: kMediumTextUnderline
                                         )
                                       ),     
                                   ],

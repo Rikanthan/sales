@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/gredient_text_header.dart';
@@ -64,12 +65,7 @@ class _RegisterClosureState extends State<RegisterClosure> {
                                   children: [
                                     Text(
                                       'Register',
-                                      style: TextStyle(
-                                        color: Color(0xFF333333),
-                                        fontSize:  14,
-                                        fontWeight: FontWeight.w400,
-                                        fontFamily: 'Roboto'
-                                        ),
+                                      style: k14BlackDark
                                       ),
                                       Container(
                                          decoration: BoxDecoration(
@@ -110,11 +106,7 @@ class _RegisterClosureState extends State<RegisterClosure> {
                                       padding: const EdgeInsets.only(top:9,bottom:9,left: 24,right: 24),
                                       child: Text(
                                         'Update',
-                                        style:TextStyle(
-                                          fontFamily: 'Roboto',
-                                          fontSize: 14,
-                                          color: Color(0xFF686868)
-                                          )
+                                        style:k14Grey2
                                         ),
                                     ),
                                      style:ButtonStyle(

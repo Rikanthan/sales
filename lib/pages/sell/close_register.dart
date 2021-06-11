@@ -8,6 +8,7 @@ import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/button_text.dart';
 import 'package:sales/widgets/cards/close_record_expansion_card.dart';
+import 'package:sales/widgets/cards/popup_cards/close_register.dart';
 import 'package:sales/widgets/drawer/sell_drawer.dart';
 
 class CloseRegister extends StatefulWidget {
@@ -126,12 +127,7 @@ class _CloseRegisterState extends State<CloseRegister> {
                     children:[
                       Text(
                         'Payments Summary',
-                        style:TextStyle(
-                          fontSize: 18,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w700,
-                          color: kHelpTextColor, 
-                          )
+                        style: k18White
                         ),
                         SizedBox(height: 20,),
                         Row(
@@ -140,13 +136,7 @@ class _CloseRegisterState extends State<CloseRegister> {
                           children: [
                             Text(
                             'Balance your register by\nentering the amount counted\nfrom the till and other\npayment terminals into the\nempty fields here.',
-                             style: TextStyle(
-                              color: kHelpTextColor,
-                              fontSize: 15,
-                              fontFamily: 'Lato',
-                              height: 1.4,
-                              fontWeight: FontWeight.w400
-                              )
+                             style: k15WhiteHeight
                             ),
                             SizedBox(
                               width:40,
@@ -257,12 +247,7 @@ class _CloseRegisterState extends State<CloseRegister> {
                                                             ),
                                                           Text(
                                                             'NO',
-                                                            style: TextStyle(
-                                                              color: kHelpTextColor,
-                                                              fontFamily: 'Lato',
-                                                              fontSize: 14,
-                                                              fontWeight: FontWeight.w900
-                                                              ),
+                                                            style: k14WhiteDark
                                                             )
                                                         ],
                                                       ),
@@ -455,7 +440,12 @@ class _CloseRegisterState extends State<CloseRegister> {
                             ),
                        ButtonText(
                           buttonText: 'Close Register',
-                          onPress: (){},
+                          onPress: (){
+                            showDialog(
+                                context: context,
+                                builder: (BuildContext context) => CloseRegisterPopup(),
+                              );
+                          },
                           buttonColor: kSignInButtonColor,
                           topPadding: 28,
                           leftPadding: 112,

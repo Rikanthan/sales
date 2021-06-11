@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
@@ -148,24 +149,14 @@ class _StockCountState extends State<StockCount> {
                                           padding: const EdgeInsets.only(bottom: 12.0),
                                           child: Text(
                                             'Get the job done faster with our free iOS app,Scanner',
-                                              style: TextStyle(
-                                              fontSize:24,
-                                              fontFamily: 'Lato',
-                                              color: kSignInTextColor,
-                                              fontWeight: FontWeight.w700
-                                            ),
+                                              style: kLargeHeaderStyle
                                           ),
                                         ),
                                     Padding(
                                           padding: const EdgeInsets.only(bottom: 12.0),
                                           child: Text(
                                             'Perform on-the-go inventory counts using an iPhone, iPad or iPod touch - no additional hardware needed! \nScanner and Vend work seamlessly together to sync stock levels and product details, saving time and \nreducing manual mistakes.',
-                                              style: TextStyle(
-                                              fontSize:15,
-                                              fontFamily: 'Lato',
-                                              color: kSignInTextColor,
-                                              height: 1.5
-                                            ),
+                                              style: kMediumHeightTextStyle
                                           ),
                                         ),
                                         Row(
@@ -174,11 +165,7 @@ class _StockCountState extends State<StockCount> {
                                             TextButton(
                                               child:Text(
                                                 'Find Out More',
-                                              style: TextStyle(
-                                              fontSize:15,
-                                              fontFamily: 'Lato',
-                                              color: kDropDownColor,
-                                              ),
+                                              style: kMediumBlueTextStyle3
                                             ),
                                               onPressed: (){},
                                               ),
@@ -186,12 +173,7 @@ class _StockCountState extends State<StockCount> {
                                               TextButton(
                                               child:Text(
                                                 'Got it thanks!',
-                                              style: TextStyle(
-                                              fontSize:15,
-                                              fontFamily: 'Lato',
-                                              color: kAppBarColor,
-                                              decoration: TextDecoration.underline
-                                              ),
+                                              style: k15Underline
                                             ),
                                               onPressed: (){},
 
@@ -219,11 +201,7 @@ class _StockCountState extends State<StockCount> {
                         padding: const EdgeInsets.all(12.0),
                         child: Text(
                           'You have no $showText inventory counts',
-                          style:TextStyle(
-                              fontFamily: 'Lato',
-                              fontSize: 15,
-                              color: kSignInTextColor
-                            )
+                          style:kMediumTextNormalStyle
                         ),
                       ),
                       GreenButton(
@@ -235,11 +213,7 @@ class _StockCountState extends State<StockCount> {
                         padding: const EdgeInsets.only(top: 80.0,bottom: 40),
                         child: Text(
                           "If you're experiencing problems with your product data.resync data to load it again.",
-                          style:TextStyle(
-                              fontFamily: 'Lato',
-                              fontSize: 14,
-                              color: kFooterColor
-                            )
+                          style:k14Grey
                         ),
                       ),
                     ]

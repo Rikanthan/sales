@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
@@ -44,30 +45,18 @@ class _OnlineGiftCardState extends State<OnlineGiftCard> {
                     children: [
                       Text(
                         'Looks like gift cards are not enabled for your store,click ',
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontFamily: 'Lato',
-                          color:kAppBarColor
-                        ),
+                        style: kMediumTextNormalStyle
                       ),
                       GestureDetector(
                         onTap: (){},
                         child: Text(
                           ' here',
-                          style: TextStyle(
-                            fontFamily: 'Lato',
-                            color: Color(0xFF058de9),
-                            fontSize: 15,
-                            ),
+                          style: k15Blue
                           ),
                         ),
                        Text(
                         ' to enable it.',
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontFamily: 'Lato',
-                          color:kAppBarColor
-                        ),
+                        style: kMediumTextNormalStyle
                       ), 
                     ],
                   ),

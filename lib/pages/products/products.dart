@@ -116,7 +116,7 @@ class _ProductsState extends State<Products> {
                                   ),
                               ),
                               TextInput(
-                                darkMode: true,
+                                darkMode: false,
                                 validate:(value){},
                                 onChange: (value){},
                                 paddingTop: 4,

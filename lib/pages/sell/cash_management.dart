@@ -84,11 +84,7 @@ class _CashManagementState extends State<CashManagement> {
                           padding: const EdgeInsets.only(top:3.0,bottom: 20.0),
                           child: Text(
                           'Max characters: 255',
-                          style:TextStyle(
-                            color: kDashboardIconColor,
-                            fontSize: 14,
-                            fontFamily:'Lato'
-                            )
+                          style: k14Blue2
                           ),
                         ),
                         Row(

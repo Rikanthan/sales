@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/widgets/TextInput/close_register_header.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
+import 'package:sales/widgets/cards/popup_cards/set_amount.dart';
 import '../../constants/colors.dart';
 import '../../constants/styles.dart';
 
@@ -149,7 +150,12 @@ class CloseRecordCard extends StatelessWidget {
                             ),
                           ),
                           TextButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) => SetAmountPopup(),
+                                );
+                            },
                              child:  Text(
                                 'Set now',
                                 style: TextStyle(

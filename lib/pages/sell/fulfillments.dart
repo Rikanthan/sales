@@ -147,12 +147,7 @@ class _FullfillmentsState extends State<Fullfillments> {
                     children: [
                       Text(
                         'View and manage fulfillments all in one place.',
-                        style: TextStyle(
-                          color: kHelpTextColor,
-                          fontSize: 15,
-                          fontFamily: 'Lato', 
-                          fontWeight: FontWeight.w700
-                          ),
+                        style: kMediumTextDarkStyle
                         ),
                         GestureDetector(
                           onTap: (){},
@@ -161,12 +156,7 @@ class _FullfillmentsState extends State<Fullfillments> {
                             children: [
                               Text(
                                 'Need help?',
-                                style: TextStyle(
-                                  fontFamily: 'Lato',
-                                  fontSize: 15,
-                                  decoration: TextDecoration.underline,
-                                  color: kHelpTextColor
-                                  )
+                                style: k15WhiteUnderline
                                 ),
                               Icon(
                                 Icons.exit_to_app,
@@ -307,11 +297,7 @@ class _FullfillmentsState extends State<Fullfillments> {
                   children: [
                     Text(
                       'No results.',
-                      style: TextStyle(
-                        fontFamily: 'Lato',
-                        fontSize: 15,
-                        color: kHelpTextColor,
-                        ),
+                      style: k15White
                       ),
                     SizedBox(
                       height: 12,

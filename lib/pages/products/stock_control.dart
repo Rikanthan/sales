@@ -341,12 +341,7 @@ class _StockControlState extends State<StockControl> {
                             },
                              child: Text(
                                lessFilters?'More filters Options':'Less filters Options',
-                                style: TextStyle(
-                                              fontSize:15,
-                                              fontFamily: 'Lato',
-                                              color: Colors.blue,
-                                              fontWeight: FontWeight.w400
-                                            ),
+                                style: kMediumBlueTextStyle
                                )
                              ),
                               CustomButton(
@@ -378,11 +373,7 @@ class _StockControlState extends State<StockControl> {
                        ),
                        Text(
                          'No results found.Try a different search or filer.',
-                         style: TextStyle(
-                           fontFamily: 'Lato',
-                           fontSize: 15,
-                           color: kAppBarColor 
-                           ),
+                         style: kMediumTextNormalStyle
                          )
                      ],
                    ),

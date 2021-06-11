@@ -8,6 +8,7 @@ import 'package:sales/widgets/buttons/button_text.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/buttons/greenbutton.dart';
 import 'package:sales/widgets/buttons/toggle_button.dart';
+import 'package:sales/widgets/cards/popup_cards/enable_training_mode.dart';
 import 'package:sales/widgets/drawer/sell_drawer.dart';
 
 class SellSettings extends StatefulWidget {
@@ -67,12 +68,7 @@ class _SellSettingsState extends State<SellSettings> {
                     children:[
                       Text(
                         'Training Mode',
-                        style:TextStyle(
-                          fontSize: 18,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w700,
-                          color: kHelpTextColor, 
-                          )
+                        style:k18WhiteDark
                         ),
                         SizedBox(height: 20,),
                         Row(
@@ -81,19 +77,19 @@ class _SellSettingsState extends State<SellSettings> {
                           children: [
                             Text(
                             'Enable Training Mode if\nyou’re new to Vend and want\nto learn the ropes. You’ll be\nselling like a pro in no time.',
-                            style: TextStyle(
-                              color: kHelpTextColor,
-                              fontSize: 15,
-                              fontFamily: 'Lato',
-                              height: 1.4
-                              )
+                            style: k15WhiteHeightNormal
                             ),
                             SizedBox(
                               width:40,
                             ),
                             GreenButton(
                               buttonText: 'Enable Training Mode',
-                              onPress: (){},
+                              onPress: (){
+                                 showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) => EnableTrainingMode(),
+                                );
+                              },
                               topPadding: 0
                               )
                           ],
@@ -119,12 +115,7 @@ class _SellSettingsState extends State<SellSettings> {
                     children:[
                       Text(
                         'Quick Keys',
-                        style:TextStyle(
-                          fontSize: 18,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w700,
-                          color: kHelpTextColor, 
-                          )
+                        style: k18WhiteDark
                         ),
                         SizedBox(height: 20,),
                         Row(
@@ -133,13 +124,7 @@ class _SellSettingsState extends State<SellSettings> {
                           children: [
                             Text(
                             'Assign products as\nQuick Keys to help process\nsales faster. Rename,\nreposition and recolor keys,\nor organize your buttons into\nfolders and pages.',
-                             style: TextStyle(
-                              color: kHelpTextColor,
-                              fontSize: 15,
-                              fontFamily: 'Lato',
-                              height: 1.4,
-                              fontWeight: FontWeight.w400
-                              )
+                             style:k15WhiteHeight
                             ),
                             SizedBox(
                               width:40,
@@ -175,12 +160,7 @@ class _SellSettingsState extends State<SellSettings> {
                                           ),
                                           Text(
                                             'Toggle the switch to enable your Quick Keys for your register. You can turn this back on at anytime\nwithout losing your settings.',
-                                            style:TextStyle(
-                                              fontSize: 14.0,
-                                              fontFamily: 'Lato',
-                                              color: kHelpTextColor,
-                                              height: 1.2
-                                              )
+                                            style:k14WhiteHeight
                                             )
                                         ],
                                       ),

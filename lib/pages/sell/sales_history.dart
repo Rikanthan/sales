@@ -119,12 +119,7 @@ class _SalesHistoryState extends State<SalesHistory> {
                     children: [
                       Text(
                         'Find all sales for a customer.',
-                        style: TextStyle(
-                          color: kHelpTextColor,
-                          fontSize: 15,
-                          fontFamily: 'Lato', 
-                          fontWeight: FontWeight.w700
-                          ),
+                        style: kMediumTextDarkStyle
                         ),
                         GestureDetector(
                           onTap: (){},
@@ -133,12 +128,7 @@ class _SalesHistoryState extends State<SalesHistory> {
                             children: [
                               Text(
                                 'Need help?',
-                                style: TextStyle(
-                                  fontFamily: 'Lato',
-                                  fontSize: 15,
-                                  decoration: TextDecoration.underline,
-                                  color: kHelpTextColor
-                                  )
+                                style: k15WhiteUnderline
                                 ),
                               Icon(
                                 Icons.exit_to_app,
@@ -331,11 +321,7 @@ class _SalesHistoryState extends State<SalesHistory> {
                                               ),
                                               Text(
                                                  "  choose date range...",
-                                                  style: TextStyle(
-                                                  color: kDashboardMidBarColor,
-                                                  fontFamily: 'Lato',
-                                                  fontSize: 15
-                                                  )
+                                                  style: k15Blue2
                                                 ),
                                             ],
                                           ),
@@ -373,11 +359,7 @@ class _SalesHistoryState extends State<SalesHistory> {
                                           },
                                           child: Text(
                                             !lessFilters ? 'Less Filters' : 'More Filters',
-                                            style: TextStyle(
-                                              color: kFilterTextColor,
-                                              fontFamily: 'Lato',
-                                              fontSize: 15
-                                              ),
+                                            style: k15Blue
                                             ),
                                         ),
                                         SizedBox(width:12),
@@ -404,11 +386,7 @@ class _SalesHistoryState extends State<SalesHistory> {
                   children: [
                     Text(
                       'No results.',
-                      style: TextStyle(
-                        fontFamily: 'Lato',
-                        fontSize: 15,
-                        color: kHelpTextColor,
-                        ),
+                      style: kMediumTextDarkNormalStyle
                       ),
                     SizedBox(
                       height: 12,

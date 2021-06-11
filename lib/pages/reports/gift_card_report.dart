@@ -158,11 +158,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                    children: [
                      Text(
                        'Showing 0 gift cards.',
-                       style: TextStyle(
-                         color:kDashboardMidBarColor,
-                         fontSize: 14,
-                         fontFamily: 'Lato'
-                        ),
+                       style: k14Blue
                        ),
                        Row(
                          children: [
@@ -243,11 +239,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                            children: [
                              Text(
                                'No gift card data available',
-                               style: TextStyle(
-                                 fontFamily: 'Lato',
-                                 fontSize: 14,
-                                 color:kAppBarColor
-                                 ),
+                               style: k14Black
                                 )
                           ],
                          ),

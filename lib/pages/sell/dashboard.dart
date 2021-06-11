@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:popup_menu/popup_menu.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/pay_green_button.dart';
@@ -54,12 +55,7 @@ class _DashboardState extends State<Dashboard> {
                           padding: EdgeInsets.only(bottom: 4),
                           child: Text(
                             'Search for products',
-                             style:TextStyle(
-                              color: kHelpTextColor,
-                              fontFamily: 'Lato',
-                              fontSize: 15,
-                              fontWeight: FontWeight.w700
-                              )
+                             style: kMediumTextDarkStyle
                             ),
                         ),
                         DashboardSearchBar(

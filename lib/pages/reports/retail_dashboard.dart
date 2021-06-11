@@ -176,11 +176,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
                                         },
                                         child: Text(
                                           'More Filters',
-                                          style: TextStyle(
-                                            color: kFilterTextColor,
-                                            fontFamily: 'Lato',
-                                            fontSize: 15
-                                            ),
+                                          style: k15Blue
                                           ),
                                       ),
                                 ],
@@ -222,11 +218,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
                                         },
                                         child: Text(
                                           'Less Filters',
-                                          style: TextStyle(
-                                            color: kFilterTextColor,
-                                            fontFamily: 'Lato',
-                                            fontSize: 15
-                                            ),
+                                          style: k15Blue,
                                           ),
                                       ),
                                 ],

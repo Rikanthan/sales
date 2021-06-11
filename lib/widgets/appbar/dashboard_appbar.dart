@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/constants/styles.dart';
 
 class DashboardAppBars extends StatelessWidget {
   @override
@@ -16,11 +17,7 @@ class DashboardAppBars extends StatelessWidget {
                     children: [
                       Text(
                         'Menu',
-                        style: TextStyle(
-                          fontFamily: 'Lato',
-                          color: kAppBarTextColor,
-                          fontSize: 16.0
-                        ),
+                        style: kMediumTextStyle2
                       ),
                     ],
                   ),
@@ -31,11 +28,7 @@ class DashboardAppBars extends StatelessWidget {
                   children: [
                     Text(
                       'Help',
-                      style: TextStyle(
-                        color: kAppBarTextColor,
-                        fontFamily: 'Lato',
-                        fontSize: 14.0
-                      ),
+                      style: kMediumTextStyle3
                     ),
                   ],
                 ),
@@ -59,11 +52,7 @@ class DashboardAppBars extends StatelessWidget {
                   children: [
                     Text(
                       'Nifras Ismail',
-                      style: TextStyle(
-                        color: kAppBarTextColor,
-                        fontFamily: 'Lato',
-                        fontSize: 14.0
-                      ),
+                      style: kMediumTextStyle3
                     ),
                   ],
                 ),        

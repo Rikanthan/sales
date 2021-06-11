@@ -144,11 +144,7 @@ class _SalesReportState extends State<SalesReport> {
                                           padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left:12.0,right: 12.0),
                                           child: Text(
                                             "3rd May 2021-26th May 2021",
-                                              style: TextStyle(
-                                              color: kAppBarColor,
-                                              fontFamily: 'Lato',
-                                              fontSize: 15
-                                              )
+                                              style: kMediumTextNormalStyle
                                             ),
                                         ),
                                       ),
@@ -202,11 +198,7 @@ class _SalesReportState extends State<SalesReport> {
                                         },
                                         child: Text(
                                           'More Filters',
-                                          style: TextStyle(
-                                            color: kFilterTextColor,
-                                            fontFamily: 'Lato',
-                                            fontSize: 15
-                                            ),
+                                          style: k15Blue
                                           ),
                                       )
                         ],
@@ -269,11 +261,7 @@ class _SalesReportState extends State<SalesReport> {
                                             },
                                             child: Text(
                                               'Less Filters',
-                                              style: TextStyle(
-                                                color: kFilterTextColor,
-                                                fontFamily: 'Lato',
-                                                fontSize: 15
-                                                ),
+                                              style: k15Blue
                                               ),
                                           ),
                                     ]
@@ -302,12 +290,7 @@ class _SalesReportState extends State<SalesReport> {
                       ), 
                       label: Text(
                         'Format Results',
-                        style: TextStyle(
-                          color: kDashboardMidBarColor,
-                          fontSize: 15,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w700
-                          ),
+                        style: k15BlueDark
                         )
                       ),
                       TextButton.icon(
@@ -319,12 +302,7 @@ class _SalesReportState extends State<SalesReport> {
                       ), 
                       label: Text(
                         'Export Report',
-                          style: TextStyle(
-                          color: kDashboardMidBarColor,
-                          fontSize: 15,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w700
-                          ),
+                          style:k15BlueDark
                         )
                       )
                   ],

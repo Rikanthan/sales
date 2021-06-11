@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
@@ -162,21 +163,12 @@ class _SuppliersState extends State<Suppliers> {
                                       onPressed: (){},
                                       child: Text(
                                         'Flo & Frankie',
-                                        style: TextStyle(
-                                          decoration: TextDecoration.underline,
-                                          fontFamily: 'Lato',
-                                          fontSize: 15,
-                                          color: kAppBarColor
-                                          ),
+                                        style: k15Underline
                                         )
                                       ),
                                       Text(
                                         '0%',
-                                        style: TextStyle(
-                                          fontFamily: 'Lato',
-                                          fontSize: 15,
-                                          color: kAppBarColor
-                                          ),
+                                        style: kMediumTextNormalStyle
                                         )                      
                                   ],
                                 ),
@@ -210,12 +202,7 @@ class _SuppliersState extends State<Suppliers> {
                                     TextButton(
                                         onPressed: (){},
                                         child: Text("View Products",
-                                          style: TextStyle(
-                                            decoration: TextDecoration.underline,
-                                            fontFamily: 'Lato',
-                                            fontSize: 15,
-                                            color: kAppBarColor
-                                            ),
+                                          style: k15Underline
                                           )
                                         ),
                                         Padding(

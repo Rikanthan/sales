@@ -56,11 +56,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                                   ),
                                 Text(
                                   'Rs0.00',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontFamily: 'Lato',
-                                    color: kAppBarColor
-                                    ),
+                                  style:kMediumTextNormalStyle
                                   )
                               ],
                             ),
@@ -81,11 +77,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                                     ),
                                     Text(
                                   'Rs0.00',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontFamily: 'Lato',
-                                    color: kAppBarColor
-                                    ),
+                                  style: kMediumTextNormalStyle
                                   )
                                 ],
                               ),
@@ -110,11 +102,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                                   ),
                                    Text(
                                   'Rs0.00',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontFamily: 'Lato',
-                                    color: kAppBarColor
-                                    ),
+                                  style: kMediumTextNormalStyle
                                   )
                               ],
                             ),
@@ -209,11 +197,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                            children: [
                              Text(
                                'No store credit card data available',
-                               style: TextStyle(
-                                 fontFamily: 'Lato',
-                                 fontSize: 14,
-                                 color:kAppBarColor
-                                 ),
+                               style: k14Black
                                 )
                           ],
                          ),

@@ -231,11 +231,7 @@ class _InventoryReportState extends State<InventoryReport> {
                                             children: [
                                               Text(
                                                 dateRange,
-                                                  style: TextStyle(
-                                                  color: kAppBarColor,
-                                                  fontFamily: 'Lato',
-                                                  fontSize: 15
-                                                  )
+                                                  style: kMediumTextNormalStyle
                                                 ),
                                                 Icon(
                                                   Icons.calendar_view_day_outlined,
@@ -266,11 +262,7 @@ class _InventoryReportState extends State<InventoryReport> {
                                           },
                                           child: Text(
                                             'More Filters',
-                                            style: TextStyle(
-                                              color: kFilterTextColor,
-                                              fontFamily: 'Lato',
-                                              fontSize: 15
-                                              ),
+                                            style: k15Blue
                                             ),
                                         )
                           ],
@@ -339,11 +331,7 @@ class _InventoryReportState extends State<InventoryReport> {
                                         padding: const EdgeInsets.all(12.0),
                                         child: Text(
                                           'Show inactive inventory',
-                                          style: TextStyle(
-                                            color: kAppBarColor,
-                                            fontFamily: 'Lato',
-                                            fontSize: 15
-                                            ),
+                                          style: kMediumTextNormalStyle
                                           ),
                                       )
                                   ],
@@ -362,11 +350,7 @@ class _InventoryReportState extends State<InventoryReport> {
                                           },
                                           child: Text(
                                             'Less Filters',
-                                            style: TextStyle(
-                                              color: kFilterTextColor,
-                                              fontFamily: 'Lato',
-                                              fontSize: 15
-                                              ),
+                                            style: k15Blue
                                             ),
                                         ),
                                   ]
@@ -394,12 +378,7 @@ class _InventoryReportState extends State<InventoryReport> {
                       ), 
                       label: Text(
                         'Format Results',
-                        style: TextStyle(
-                          color: kDashboardMidBarColor,
-                          fontSize: 15,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w700
-                          ),
+                        style: k15BlueDark
                         )
                       ),
                       TextButton.icon(
@@ -411,12 +390,7 @@ class _InventoryReportState extends State<InventoryReport> {
                       ), 
                       label: Text(
                         'Export Report',
-                          style: TextStyle(
-                          color: kDashboardMidBarColor,
-                          fontSize: 15,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w700
-                          ),
+                          style: k15BlueDark
                         )
                       )
                   ],

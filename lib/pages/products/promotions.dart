@@ -55,12 +55,7 @@ class _PromotionsState extends State<Promotions> {
                                       TextButton(
                                         child:Text(
                                           'Current & Upcoming',
-                                          style: TextStyle(
-                                                      fontFamily: 'Lato',
-                                                      fontSize: 18,
-                                                      fontWeight: FontWeight.w400,
-                                                      color: !_current ? kAppBarColor : kSignInButtonColor,
-                                                       ),
+                                          style: !_current ? k18Black : k18Green,
                                           ),
                                         onPressed: ()
                                         {
@@ -94,12 +89,7 @@ class _PromotionsState extends State<Promotions> {
                                         TextButton(
                                           child:Text(
                                             'Past',
-                                            style: TextStyle(
-                                                        fontFamily: 'Lato',
-                                                        fontSize: 18,
-                                                        fontWeight: FontWeight.w400,
-                                                        color: !_past ? kAppBarColor : kSignInButtonColor,
-                                                         ),
+                                            style: !_past ? k18Black : k18Green,
                                             ),
                                           onPressed: ()
                                           {
@@ -134,12 +124,7 @@ class _PromotionsState extends State<Promotions> {
                                         TextButton(
                                           child:Text(
                                             'All',
-                                            style: TextStyle(
-                                                        fontFamily: 'Lato',
-                                                        fontSize: 18,
-                                                        fontWeight: FontWeight.w400,
-                                                        color: !_all ? kAppBarColor : kSignInButtonColor,
-                                                         ),
+                                            style: !_all ? k18Black : k18Green,
                                             ),
                                           onPressed: ()
                                           {

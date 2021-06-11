@@ -181,22 +181,14 @@ class _BillingState extends State<Billing> {
                               Text('Buy licenses for Outlets and\nRegisters to be able to set\nthem up.\nListed prices are exclusive \nof tax. ',style: kMediumTextNormalStyle,),
                               Text(
                                 'What are Outlets and',
-                                    style: TextStyle(
-                                      color: kFilterTextColor,
-                                      fontFamily: 'Lato',
-                                      fontSize: 15,
-                                    ),
+                                    style: k15Blue
                                   ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Text(
                                     'Registers?',
-                                        style: TextStyle(
-                                          color: kFilterTextColor,
-                                          fontFamily: 'Lato',
-                                          fontSize: 15,
-                                        ),
+                                        style: k15Blue
                                       ),
                                     Icon(
                                       Icons.exit_to_app,
