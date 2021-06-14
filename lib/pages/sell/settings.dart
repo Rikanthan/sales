@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/pages/sell/add_layout.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
@@ -169,7 +170,9 @@ class _SellSettingsState extends State<SellSettings> {
                                 SizedBox(height:40),
                                 GreenButton(
                                   buttonText: 'Add Layout',
-                                  onPress: (){},
+                                  onPress: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (_)=> NewLayout() ));
+                                  },
                                   topPadding: 0
                                   ),
                                 Padding(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sales/pages/sell/add_layout.dart';
+import 'package:sales/pages/sell/cash_management.dart';
 import 'package:sales/pages/sell/settings.dart';
 
 void main() {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sales', 
       theme: ThemeData(),  
-      home: SellSettings()
+      home: CashManagement()
     );
   }
 }

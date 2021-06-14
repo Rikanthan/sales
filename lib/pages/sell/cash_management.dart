@@ -4,10 +4,14 @@ import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
+import 'package:sales/widgets/bars/dark_button_bar.dart';
 import 'package:sales/widgets/bars/help_text_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/greenbutton.dart';
+import 'package:sales/widgets/cards/popup_cards/add_cash.dart';
+import 'package:sales/widgets/cards/popup_cards/calender_range.dart';
 import 'package:sales/widgets/drawer/sell_drawer.dart';
+import 'package:table_calendar/table_calendar.dart';
 
 class CashManagement extends StatefulWidget {
  
@@ -16,8 +20,7 @@ class CashManagement extends StatefulWidget {
 }
 
 class _CashManagementState extends State<CashManagement> {
-  
-  @override
+
  @override
   Widget build(BuildContext context) {
     
@@ -30,8 +33,8 @@ class _CashManagementState extends State<CashManagement> {
       drawer: SellDrawer(salesClicked: SalesClicked.cashManagement,),
       body:SingleChildScrollView(
         child: Container(
+          height: 720,
           color:kDashboardColor,
-          height: 718.0,
           child:Column(
             children: [
               DashboardMidBar(),
@@ -40,7 +43,25 @@ class _CashManagementState extends State<CashManagement> {
                  text: 'Cash Management',
                  isDarkMode: true,
                  ),
-                 HelpTextBar(height: 77, isDarkMode: true, text: 'Set opening cash drawer amount.'),
+                 //HelpTextBar(height: 77, isDarkMode: true, text: 'Set opening cash drawer amount.'),
+                 DarkMidButtonBar(
+                customButtonText: 'Remove Cash',
+                customButtonOnTap: (){
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) => CalenderRange(),
+                  );
+                },
+                customButtonColor: Color(0xFFe6643c),
+                text: 'Record your cash movements for the day.', 
+                greenButtonText: 'Add Cash', 
+                greenOnTap: (){
+                    showDialog(
+                    context: context,
+                    builder: (BuildContext context) => AddCash(),
+                  );
+                }
+                ),
              Container(
                 color: kDashboardSearchBarFillColor,
                 child:Padding(
@@ -97,7 +118,9 @@ class _CashManagementState extends State<CashManagement> {
                               topPadding: 0
                               ),
                           ],
-                        )
+                        ),
+                        
+                        
                     ]
                   ),
                 )

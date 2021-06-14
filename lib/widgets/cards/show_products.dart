@@ -78,9 +78,7 @@ class _ShowProductsState extends State<ShowProducts> {
                   Padding(
                     padding: const EdgeInsets.only(left:8.0,right: 8.0),
                     child: Checkbox(
-                    //  overlayColor: MaterialStateColor.resolveWith((states) => Colors.white),
                       activeColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
-                     // hoverColor: MaterialStateColor.resolveWith((states) => Colors.white),
                       focusColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
                       value: _isSelected,
                        onChanged: (newValue){
