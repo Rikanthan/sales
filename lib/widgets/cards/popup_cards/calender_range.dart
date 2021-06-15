@@ -21,6 +21,7 @@ class _CalenderRangeState extends State<CalenderRange> {
   CalendarController _controllerFrom;
 CalendarController _controllerTo;
  String dateFrom = 'e.g. 12 Mar 1991';
+ String dateTo = 'e.g. 12 Mar 1991';
 
   @override  
   void initState() {  
@@ -33,7 +34,7 @@ CalendarController _controllerTo;
       backgroundColor: Colors.transparent,
                 contentPadding: EdgeInsets.only(left: 348),
                 content:Align(
-                  alignment: Alignment(-15,0),
+                  alignment: Alignment(0,0),
                   child: Container(
                     color: Colors.transparent,
                     child: Column(
@@ -41,7 +42,7 @@ CalendarController _controllerTo;
                               Row(
                                 children: [
                                         Container(
-                                          width: 310,
+                                          width: 294,
                                           height: 370,
                                           color: Colors.white,
                                           child: Padding(
@@ -86,6 +87,10 @@ CalendarController _controllerTo;
                                                     print(date.toUtc());
                                                     setState(() {
                                                       dateFrom = date.toLocal().toIso8601String();
+                                                       if(dateFrom.length >10)
+                                                      {
+                                                        dateFrom = dateFrom.substring(0,10);
+                                                      }
                                                     });  
                                                     print(dateFrom);
                                                   },  
@@ -117,8 +122,8 @@ CalendarController _controllerTo;
                                             ),
                                           ),
                                         ),
-                                        Container(
-                                    width: 310,
+                                  Container(
+                                    width: 294,
                                     height: 370,
                                     color: Colors.white,
                                     child: Padding(
@@ -131,14 +136,14 @@ CalendarController _controllerTo;
                                            TextInput(
                                                   darkMode: false,
                                                   hideText: false,
-                                                  hintText:dateFrom,
+                                                  hintText:dateTo,
                                                   paddingTop: 5,
                                                   height: 46,
                                                   width: 245,
                                                   validate: (String val) => val.isEmpty? 'This field is required' : null,
                                                     onChange: (val) {
                                                       setState(() {
-                                                        val = dateFrom;
+                                                        val = dateTo;
                                                       });    
                                                     },
                                                   ),
@@ -162,7 +167,12 @@ CalendarController _controllerTo;
                                                 onDaySelected: (date, events, list) {  
                                                     print(date.toUtc());
                                                     setState(() {
-                                                      dateFrom = date.toLocal().toIso8601String();
+                                                      dateTo = date.toLocal().toIso8601String();
+                                                      if(dateTo.length >10)
+                                                      {
+                                                        dateTo = dateTo.substring(0,10);
+                                                      }
+
                                                     });  
                                                     print(dateFrom);
                                                   },  
@@ -188,7 +198,7 @@ CalendarController _controllerTo;
                                                             style: TextStyle(color: kFilterTextColor),  
                                                           )),  
                                                     ),  
-                                                  calendarController: _controllerFrom,  
+                                                  calendarController: _controllerTo,  
                                                 )  
                                               ],
                                             ),
@@ -211,6 +221,7 @@ CalendarController _controllerTo;
                                               onPress: (){
                                                 setState(() {
                                                   dateFrom = 'e.g. 12 Mar 1991';
+                                                  dateTo = 'e.g. 12 Mar 1991';
                                                 });
                                               }, 
                                               buttonColor: kDashboardIconColor, 
@@ -231,7 +242,7 @@ CalendarController _controllerTo;
                                     )
                                 ],
                               ),
-      ),
+                          ),
                 ),
   );
   }

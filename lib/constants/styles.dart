@@ -122,10 +122,18 @@ const k15Underline = TextStyle(
                               fontSize: 15,
                               color: kAppBarColor
                               );
+
+const k15Green = TextStyle(
+                          fontFamily: 'Lato',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w700,
+                          color:  kSignInButtonColor,
+                            );
+
 const k18Black = TextStyle(
                           fontFamily: 'Lato',
                           fontSize: 18,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w700,
                           color:  kAppBarColor ,
                             );
 const k18WhiteDark = TextStyle(
@@ -164,6 +172,27 @@ const k14Black = TextStyle(
                           fontFamily: 'Lato',
                           fontSize: 14,
                           color:kAppBarColor
+                          );
+
+const k14Black2 = TextStyle(
+                          fontFamily: 'Lato',
+                          fontSize: 14,
+                          color:Color(0xff333333)
+                          );
+
+const k32Black = TextStyle(
+                          fontFamily: 'Lato',
+                          fontSize: 32,
+                          color:kAppBarColor,
+                          fontWeight: FontWeight.w700
+                          );
+
+
+const k15BlackUnderline = TextStyle(
+                          fontFamily: 'Lato',
+                          fontSize: 15,
+                          color:kAppBarColor,
+                          decoration: TextDecoration.underline
                           );
 
 const k15Blue = TextStyle(
