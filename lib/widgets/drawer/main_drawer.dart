@@ -5,7 +5,7 @@ import 'package:sales/pages/products/products.dart';
 import 'package:sales/pages/reports/online_gift_card.dart';
 import 'package:sales/pages/sell/dashboard.dart';
 import 'package:sales/pages/setup/general.dart';
-import 'package:sales/widgets/cards/drawer_item.dart';
+import 'package:sales/widgets/cards/custom_cards/drawer_item.dart';
 import '../../constants/colors.dart';
 
 enum MainDrawerClick {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sales/widgets/cards/custom_cards/product_details_card.dart';
 import 'package:sales/widgets/cards/popup_cards/add_discount.dart';
-import 'package:sales/widgets/cards/product_details_card.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 class ProductItemsListView extends StatelessWidget {

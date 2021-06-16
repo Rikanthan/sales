@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
-import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/user_table_header.dart';
 
 class Roles extends StatelessWidget {

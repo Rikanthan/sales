@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/TextInput/setting_input_text.dart';
 import 'package:sales/widgets/TextInput/settings_cell.dart';
-import 'package:sales/widgets/TextInput/settings_drop_down.dart';
 import 'package:sales/widgets/TextInput/settings_gredient.dart';
 import 'package:sales/widgets/buttons/settings_button.dart';
 class BasicInformation extends StatelessWidget {

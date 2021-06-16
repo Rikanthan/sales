@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
-import 'package:sales/widgets/cards/active_product_details.dart';
+import 'package:sales/widgets/cards/custom_cards/active_product_details.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 class ShowProducts extends StatefulWidget {
   @override

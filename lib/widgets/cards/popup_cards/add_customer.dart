@@ -91,7 +91,7 @@ class AddCustomer extends StatelessWidget {
                       ],
                     ),
                   ),
-    ),
-  );
+      ),
+    );
   }
 }

@@ -31,3 +31,4 @@ const kPlanCardBottomColor = Color(0xFFe3e8eb);
 const kPopUpBackGroundColor = Color(0xFF2a353c);
 const kBlackOpacity = Color(0xFF333333);
 const kGrey = Color(0xFF686868);
+const kLightGreen = Color(0xFFd5ebd9);

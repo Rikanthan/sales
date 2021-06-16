@@ -7,7 +7,7 @@ import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/button_text.dart';
-import 'package:sales/widgets/cards/close_record_expansion_card.dart';
+import 'package:sales/widgets/cards/custom_cards/close_record_expansion_card.dart';
 import 'package:sales/widgets/cards/popup_cards/close_register.dart';
 import 'package:sales/widgets/drawer/sell_drawer.dart';
 

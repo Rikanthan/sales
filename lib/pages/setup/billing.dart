@@ -7,11 +7,11 @@ import 'package:sales/widgets/bars/help_text_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/button_text.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
-import 'package:sales/widgets/cards/Enterprise_plan.dart';
-import 'package:sales/widgets/cards/billing_card.dart';
-import 'package:sales/widgets/cards/license_card.dart';
-import 'package:sales/widgets/cards/lite_plan_card.dart';
-import 'package:sales/widgets/cards/pro_plan_card.dart';
+import 'package:sales/widgets/cards/custom_cards/Enterprise_plan.dart';
+import 'package:sales/widgets/cards/custom_cards/billing_card.dart';
+import 'package:sales/widgets/cards/custom_cards/license_card.dart';
+import 'package:sales/widgets/cards/custom_cards/lite_plan_card.dart';
+import 'package:sales/widgets/cards/custom_cards/pro_plan_card.dart';
 import 'package:sales/widgets/divider/custom_divider.dart';
 import 'package:sales/widgets/drawer/setup_drawer.dart';
 

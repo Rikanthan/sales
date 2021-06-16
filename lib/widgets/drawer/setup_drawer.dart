@@ -12,7 +12,7 @@ import 'package:sales/pages/setup/sales_tax.dart';
 import 'package:sales/pages/setup/store_credit.dart';
 import 'package:sales/pages/setup/user.dart';
 import 'package:sales/widgets/buttons/esc_button.dart';
-import 'package:sales/widgets/cards/drawer_menu_item.dart';
+import 'package:sales/widgets/cards/custom_cards/drawer_menu_item.dart';
 import 'package:sales/widgets/drawer/main_drawer.dart';
 
 enum SetupClicked {

@@ -5,7 +5,7 @@ import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/button_text.dart';
-import 'package:sales/widgets/cards/payment_received.dart';
+import 'package:sales/widgets/cards/custom_cards/payment_received.dart';
 import 'package:sales/widgets/cards/popup_cards/add_customer.dart';
 import 'package:sales/widgets/drawer/sell_drawer.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';

@@ -5,7 +5,6 @@ import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/buttons/esc_button.dart';
-import 'package:sales/widgets/buttons/popup_button.dart';
 
 class ParkSalePopup extends StatelessWidget {
   const ParkSalePopup({ Key key }) : super(key: key);

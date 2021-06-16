@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
-import 'package:sales/widgets/cards/lite_plan_card.dart';
+import 'package:sales/widgets/cards/custom_cards/lite_plan_card.dart';
 import 'package:sales/widgets/divider/custom_divider.dart';
 
 enum BillingType{

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:sales/constants/colors.dart';
+import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/close_register_header.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/cards/popup_cards/set_amount.dart';
-import '../../constants/colors.dart';
-import '../../constants/styles.dart';
+
 
 class CloseRecordCard extends StatelessWidget {
   CloseRecordCard({

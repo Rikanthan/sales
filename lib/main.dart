@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sales/pages/sell/add_layout.dart';
-import 'package:sales/pages/sell/cash_management.dart';
-import 'package:sales/pages/sell/settings.dart';
-import 'package:sales/widgets/cards/edit_product.dart';
+import 'package:sales/widgets/cards/custom_cards/edit_product.dart';
+//import 'package:sales/widgets/cards/edit_product.dart';
 
 void main() {
   runApp(MyApp());

@@ -7,8 +7,8 @@ import 'package:sales/widgets/TextInput/settings_gredient.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/settings_button.dart';
-import 'package:sales/widgets/cards/address_information.dart';
-import 'package:sales/widgets/cards/basic_information.dart';
+import 'package:sales/widgets/cards/custom_cards/address_information.dart';
+import 'package:sales/widgets/cards/custom_cards/basic_information.dart';
 import 'package:sales/widgets/drawer/setup_drawer.dart';
 
 enum Answer{

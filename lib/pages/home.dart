@@ -3,8 +3,8 @@ import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/TextInput/home_text_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
-import 'package:sales/widgets/cards/home_bottom_card.dart';
-import 'package:sales/widgets/cards/home_top_card.dart';
+import 'package:sales/widgets/cards/custom_cards/home_bottom_card.dart';
+import 'package:sales/widgets/cards/custom_cards/home_top_card.dart';
 import 'package:sales/widgets/drawer/home_drawer.dart';
 class Home extends StatelessWidget {
   @override

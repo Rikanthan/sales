@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
-import 'package:sales/widgets/cards/lite_plan_card.dart';
+import 'package:sales/widgets/cards/custom_cards/lite_plan_card.dart';
 
 class ProPlan extends StatelessWidget {
   ProPlan({
