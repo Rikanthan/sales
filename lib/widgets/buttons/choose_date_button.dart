@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/widgets/cards/popup_cards/choose_date.dart';
 
 class ChooseDate extends StatelessWidget {
   const ChooseDate({ Key key, @required this.width }) : super(key: key);
@@ -10,7 +11,12 @@ class ChooseDate extends StatelessWidget {
     return Container(
                                   width:width,
                                   child: TextButton(
-                                        onPressed: (){},
+                                        onPressed: (){
+                                           showDialog(
+                                              context: context,
+                                              builder: (BuildContext context) => ChooseDatePopUp(),
+                                            );
+                                        },
                                         style: ButtonStyle(
                                           shape: MaterialStateProperty.all(
                                             RoundedRectangleBorder(

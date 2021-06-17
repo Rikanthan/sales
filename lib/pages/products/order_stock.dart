@@ -8,10 +8,17 @@ import 'package:sales/widgets/TextInput/user_table_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/choose_date_button.dart';
+import 'package:sales/widgets/buttons/choose_file_button.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
+import 'package:sales/widgets/buttons/outlet_gredient_button.dart';
 import 'package:sales/widgets/drawer/products_drawer.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
+enum ProductClicked
+{
+  chooseProducts,
+  importViaCSV
+}
 class OrderStock extends StatefulWidget {
   @override
   _OrderStockState createState() => _OrderStockState();
@@ -24,6 +31,7 @@ class _OrderStockState extends State<OrderStock> {
   String tax = 'Default Tax for this Outlet';
   String size = 'Size';
   String color = 'Colour';
+  ProductClicked _productClicked = ProductClicked.chooseProducts;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -204,7 +212,22 @@ class _OrderStockState extends State<OrderStock> {
                         Text('20 characters max.',style: k15Blue2,),        
                       ],
                     ),
-                    SizedBox(width: 20,),
+                    Container(
+                      color: Colors.transparent,
+                      width: 20,
+                      height: 70,
+                      child: Column(
+                        children: [
+                          SizedBox(height: 35,),
+                          Icon(
+                            Icons.arrow_forward,
+                            size: 25,
+                            color:kGrey.withOpacity(0.4)
+                          ),
+                        ],
+                      ),
+                    ),
+                    //SizedBox(width: 20,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -314,7 +337,7 @@ class _OrderStockState extends State<OrderStock> {
                       GestureDetector(
                         onTap: (){
                           setState(() {
-                            isSwitch = !isSwitch;
+                            _productClicked = ProductClicked.chooseProducts;
                           });
                         },
                         child: Container(
@@ -323,7 +346,7 @@ class _OrderStockState extends State<OrderStock> {
                           decoration: BoxDecoration(
                             color: Colors.white,
                              border: Border.all(
-                               color: isSwitch ?  kSignInButtonColor : kInputBorderColor,
+                               color: _productClicked == ProductClicked.chooseProducts ?  kSignInButtonColor : kInputBorderColor,
                                width: 2,
                              ),
                             borderRadius: BorderRadius.only(
@@ -358,7 +381,7 @@ class _OrderStockState extends State<OrderStock> {
                       GestureDetector(
                         onTap: (){
                           setState(() {
-                            isSwitch =!isSwitch;
+                            _productClicked = ProductClicked.importViaCSV;
                           });
                         },
                         child: Container(
@@ -367,7 +390,7 @@ class _OrderStockState extends State<OrderStock> {
                           decoration: BoxDecoration(
                             color: Colors.white,
                              border: Border.all(
-                               color: !isSwitch ?  kSignInButtonColor : kInputBorderColor,
+                               color:  _productClicked == ProductClicked.importViaCSV ?  kSignInButtonColor : kInputBorderColor,
                                width: 2,
                              ),
                             borderRadius: BorderRadius.only(
@@ -402,6 +425,7 @@ class _OrderStockState extends State<OrderStock> {
                     ] 
                   )
                 ),
+                 _productClicked == ProductClicked.chooseProducts ?
                  Column(
                    children: [
                      Padding(
@@ -524,15 +548,40 @@ class _OrderStockState extends State<OrderStock> {
                  ),
                   SizedBox(
                     height: 72,
-                  )
+                  ),
                    ],
                  )
+                 :
+                 Padding(
+                   padding: const EdgeInsets.only(top:40.0,left: 280,bottom: 72),
+                   child: Row(
+                     crossAxisAlignment: CrossAxisAlignment.center,
+                     mainAxisAlignment: MainAxisAlignment.start,
+                     children: [
+                       ChooseFile(
+                          buttonText: 'Choose file',
+                          onPress: (){}, 
+                          topPadding: 3,
+                          leftPadding: 10,
+                          width: 86,
+                          isButtonDisable: false,
+                          ),
+                        SizedBox(
+                          width: 12,
+                        ),
+                        Text('No file chosen',style: kMediumTextNormalStyle,)
+                     ],
+                   ),
+                 )
                 ]
-              )       
-            ],
+              )
+            ]
           )
-        ),
+        )
       )
     );
   }
 }
+
+          
+  
