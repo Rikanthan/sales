@@ -6,6 +6,7 @@ import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/transparent_text_input.dart';
 import 'package:sales/widgets/TextInput/user_table_header.dart';
 import 'package:sales/widgets/buttons/delete_icon_button.dart';
+import 'package:sales/widgets/cards/popup_cards/edit_value_names.dart';
 import 'package:sales/widgets/listviews/variants_expansion_card.dart';
 
 class VariantsEditProduct extends StatelessWidget {
@@ -165,9 +166,9 @@ class VariantsEditProduct extends StatelessWidget {
                                       onChange: (val) { 
                                       }, 
                                     ),   
-                              ],
+                                ],
+                              ),
                             ),
-                      ),
                           ],
                         ),
                       SizedBox(
@@ -236,7 +237,12 @@ class VariantsEditProduct extends StatelessWidget {
                       Padding(
                           padding: const EdgeInsets.only(top:12.0,left: 20),
                           child: TextButton.icon(
-                            onPressed: (){},
+                            onPressed: (){
+                               showDialog(
+                                context: context,
+                                builder: (BuildContext context) => EditValueNamesPopup(),
+                              );
+                            },
                              icon: Icon(
                                Icons.edit,
                                size: 15,

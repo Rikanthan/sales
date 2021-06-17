@@ -194,6 +194,9 @@ class GeneralEditProduct extends StatelessWidget {
                             'Drag to rearrange. Drop an image outside of the upload area to delete.',
                             style:kMediumTextNormalStyle
                             ),
+                            SizedBox(
+                              height: 5,
+                            ),
                           ImageUpload(),
                   ],
                 ),

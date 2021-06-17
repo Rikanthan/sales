@@ -89,10 +89,6 @@ class _PromotionsState extends State<EditProduct> {
                       CustomButton(
                         buttonText: 'Save', 
                         onPress: (){
-                          showDialog(
-                              context: context,
-                              builder: (BuildContext context) => AddProductPopup(),
-                            );
                         },
                         buttonColor: kSignInButtonColor, 
                         topPadding: 20, 

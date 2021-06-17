@@ -5,7 +5,8 @@ import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/cards/popup_cards/add_product.dart';
 
 class ImageVarient extends StatelessWidget {
-  const ImageVarient({ Key key }) : super(key: key);
+  const ImageVarient({ Key key,@required this.text }) : super(key: key);
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class ImageVarient extends StatelessWidget {
                                     onTap: (){
                                       showDialog(
                                           context: context,
-                                          builder: (BuildContext context) => AddProductPopup(),
+                                          builder: (BuildContext context) => AddProductPopup(text: text,isVarient: true,),
                                         );
                                     },
                                     child: Text(
@@ -65,8 +66,8 @@ class ImageVarient extends StatelessWidget {
 
 
 class ImageVarientButton extends StatelessWidget {
-  const ImageVarientButton({Key key}) : super(key: key);
-
+  const ImageVarientButton({Key key, @required this.text}) : super(key: key);
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -87,7 +88,12 @@ class ImageVarientButton extends StatelessWidget {
             padding: const EdgeInsets.only(top:8.0,bottom: 8.0,right: 20.0),
             child: CustomButton(
               buttonText: 'Choose Variant Image',
-              onPress: (){}, 
+              onPress: (){
+                 showDialog(
+                    context: context,
+                    builder: (BuildContext context) => AddProductPopup(text: text,isVarient: true,),
+                  );
+              }, 
               buttonColor: kDashboardMidBarColor, 
               topPadding: 20, 
               leftPadding: 30

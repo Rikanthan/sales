@@ -258,13 +258,13 @@ class _VariantExpansionState extends State<VariantExpansion> {
                   if(_varientType == VarientType.price)
                   PriceVarient(),
                   if(_varientType == VarientType.image)
-                  ImageVarient()
+                  ImageVarient(text: widget.text,)
                 ],
               ),
             ),
           ),
           if(_varientType == VarientType.image)
-          ImageVarientButton()
+          ImageVarientButton(text: widget.text,)
         ],
       ),
     );

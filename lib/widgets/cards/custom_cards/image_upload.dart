@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
+import 'package:sales/widgets/cards/popup_cards/add_product.dart';
 
 class ImageUpload extends StatelessWidget {
   const ImageUpload({Key key}) : super(key: key);
@@ -91,7 +92,12 @@ class ImageUpload extends StatelessWidget {
                 Spacer(),
                  CustomButton(
                         buttonText: 'Choose Images', 
-                        onPress: (){},
+                        onPress: (){
+                           showDialog(
+                              context: context,
+                              builder: (BuildContext context) => AddProductPopup(text: 'Audhild Tee',isVarient: false,),
+                            );
+                        },
                         buttonColor: kSignInButtonColor, 
                         topPadding: 20, 
                         leftPadding: 30

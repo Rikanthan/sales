@@ -6,148 +6,175 @@ import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/buttons/esc_button.dart';
 
 class  AddProductPopup extends StatelessWidget {
-  const  AddProductPopup({ Key key }) : super(key: key);
-
+  const  AddProductPopup({ @required this.text, @required this.isVarient });
+  final String text;
+  final bool isVarient;
   @override
   Widget build(BuildContext context) {
+    String productType = isVarient ? 'variant' : 'product';
+    String addImage = isVarient ? 'a different image': 'more images';
     return  AlertDialog(
       backgroundColor: Colors.transparent,
     content: Container(
-      width:842,
+      width:844,
       height: 542,
       color: Colors.transparent,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(4))
-              ),
-            width: 782,
-            height: 471.0,
-            child: Padding(
-              padding: const EdgeInsets.all(32.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Choose an image for ',
-                    style: TextStyle(
-                      color: kAppBarColor,
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                      fontFamily: 'Lato' 
+          Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft:Radius.circular(4),
+                      topRight: Radius.circular(4)
                       )
-                    ),
-                  Padding(
-                    padding: const EdgeInsets.only(top:20.0),
-                    child: Text('The chosen image will apply to the variant. To add a different image, drag and drop anywhere, or',
-                    style: kMediumTextNormalStyle
-                    ),
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                width: 784,
+                height: 542.0 - 69.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(32.0),
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text('browse',style: k15BlackUnderline,),
-                      Text(' to upload.',style: kMediumTextNormalStyle,)
-                    ],
-                  ),
-                  Container(
-                    width:782,
-                    height: 265,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(4)),
-                      border: Border.all(
-                        color:kInputBorderColor,
-                        width: 2
-                        )
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Choose an image for "$text"',
+                        style: TextStyle(
+                          color: kAppBarColor,
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700,
+                          fontFamily: 'Lato' 
+                          )
+                        ),
+                      Padding(
+                        padding: const EdgeInsets.only(top:20.0),
+                        child: Text('The chosen image will apply to the $productType "$text". To add $addImage, drag and drop anywhere, or',
+                        style: kMediumTextNormalStyle
+                        ),
                       ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text('browse',style: k15BlackUnderline,),
+                          Text(' to upload.',style: kMediumTextNormalStyle,)
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Container(
+                        width:784,
+                        height: 281,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(4)),
+                          border: Border.all(
+                            color:kInputBorderColor,
+                            width: 2
+                            )
+                          ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Column(
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                  'assets/images/drag-and-upload-v2.png',
-                                  fit: BoxFit.cover,
-                                    width:94,
-                                    height: 60.0,
-                                    ),
-                                    SizedBox(height: 15,),
-                                  Text('Drag image here to upload',style: kMediumTextNormalStyle,),
-                                    ]
+                                  children: [
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                      'assets/images/drag-and-upload-v2.png',
+                                      fit: BoxFit.cover,
+                                        width:94,
+                                        height: 60.0,
+                                        ),
+                                        SizedBox(height: 15,),
+                                      Text('Drag image here to upload',style: kMediumTextNormalStyle,),
+                                        ]
+                                    )
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                      'assets/images/tap-to-select-v4.png',
+                                      fit: BoxFit.cover,
+                                        width:94,
+                                        height: 60.0,
+                                        ),
+                                        SizedBox(height: 15,),
+                                      Text('Tap images to select.',style: kMediumTextNormalStyle,),
+                                        ]
+                                    )
+                                  ],
                                 )
                               ],
                             ),
-                            Column(
-                              children: [
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                  'assets/images/tap-to-select-v4.png',
-                                  fit: BoxFit.cover,
-                                    width:94,
-                                    height: 60.0,
-                                    ),
-                                    SizedBox(height: 15,),
-                                  Text('Tap images to select.',style: kMediumTextNormalStyle,),
-                                    ]
-                                )
-                              ],
-                            )
                           ],
                         ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    height: 69,
-                    child:Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      CustomButton(
-                        buttonText: 'Apply',
-                        onPress: (){
-                          Navigator.pop(context);
-                        },
-                        buttonColor: kSignInButtonColor, 
-                        topPadding: 24, 
-                        leftPadding: 30
-                        ),
-                        SizedBox(width: 8,),
-                      CustomButton(
-                        buttonText: 'Cancel',
-                        onPress: (){
-                          Navigator.pop(context);
-                        },
-                        buttonColor: kDashboardIconColor, 
-                        topPadding: 24, 
-                        leftPadding: 30
-                        ),
-                        Text('No image chose for this variant.',style: kMediumTextNormalStyle,)
+                      ),
+                      
                     ],
-                  )
-                  )
-                ],
+                  ),
+                ),
               ),
-            ),
+              Container(
+                        height: 69,
+                        width: 784,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(4),
+                            bottomRight: Radius.circular(4)
+                            ),
+                            color: kInputBorderColor
+                          ),
+                        child:Padding(
+                          padding: const EdgeInsets.only(left:32.0,right: 32.0),
+                          child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text('No image chose for this $productType.',style: kMediumTextNormalStyle,),
+                            Spacer(),
+                            CustomButton(
+                              buttonText: 'Cancel',
+                              onPress: (){
+                                Navigator.pop(context);
+                              },
+                              buttonColor: kDashboardIconColor, 
+                              topPadding: 20, 
+                              leftPadding: 30
+                              ),
+                              SizedBox(width: 8,),
+                            CustomButton(
+                              buttonText: 'Apply',
+                              onPress: (){
+                                Navigator.pop(context);
+                              },
+                              buttonColor: kSignInButtonColor, 
+                              topPadding: 20, 
+                              leftPadding: 30
+                              ),
+                              
+                            ],
+                          ),
+                        )
+                      )
+            ],
           ),
           EscButton(
             isDarkMode: false,
