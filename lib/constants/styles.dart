@@ -271,6 +271,15 @@ const k14WhiteHeight = TextStyle(
                                 height: 1.2
                                 );
 
+const k14Height = TextStyle(
+                                fontSize: 14.0,
+                                fontFamily: 'Lato',
+                                color: kAppBarColor,
+                                fontWeight: FontWeight.w400,
+                                height: 1.5
+                                );
+
+
 const k15WhiteUnderline =     TextStyle(
                                   fontFamily: 'Lato',
                                   fontSize: 15,

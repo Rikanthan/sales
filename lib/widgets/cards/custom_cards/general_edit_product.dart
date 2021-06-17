@@ -75,6 +75,7 @@ class GeneralEditProduct extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text('Brand',style: kMediumTextStyle,),
+                        SizedBox(height: 5,),
                         DropDownInput(
                                   isDarkMode: false,
                                   width: 338,

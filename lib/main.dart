@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/pages/products/order_stock.dart';
 import 'package:sales/widgets/cards/custom_cards/edit_product.dart';
 //import 'package:sales/widgets/cards/edit_product.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sales', 
       theme: ThemeData(),  
-      home: EditProduct(),
+      home: OrderStock(),
     );
   }
 }
