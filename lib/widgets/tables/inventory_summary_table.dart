@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
 import 'package:sales/widgets/TextInput/retail_table_header.dart';
+import 'package:sales/widgets/cards/popup_cards/add_report.dart';
+import 'package:sales/widgets/cards/popup_cards/add_report_checkbox.dart';
 
 class InventorySummaryTable extends StatelessWidget {
   @override
@@ -95,11 +97,19 @@ class InventorySummaryTable extends StatelessWidget {
                         ),
                           Padding(
                             padding: const EdgeInsets.only(right:15.0),
-                            child: Icon(
-                              Icons.add,
-                              size: 18,
-                              color: kDashboardMidBarColor,
-                              ),
+                            child: GestureDetector(
+                              onTap:(){
+                                showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) => AddReportCheckboxPopup(),
+                                );
+                              },
+                              child: Icon(
+                                Icons.add,
+                                size: 18,
+                                color: kDashboardMidBarColor,
+                                ),
+                            ),
                           )
                       ],
                     )
@@ -108,8 +118,7 @@ class InventorySummaryTable extends StatelessWidget {
                   Container(
                     decoration: BoxDecoration(
                       color: Color(0xFFfbfbfb),
-                      border:Border(
-                       
+                      border:Border(           
                         right: BorderSide( color: kTableBorderColor),
                       )
                     ),
@@ -201,11 +210,19 @@ class InventorySummaryTable extends StatelessWidget {
                     width: 46,
                     child:Padding(
                             padding: const EdgeInsets.only(left:15,right:15.0),
-                            child: Icon(
-                              Icons.add,
-                              size: 18,
-                              color: kDashboardMidBarColor,
-                              ),
+                            child: GestureDetector(
+                              onTap:(){
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) => AddReportPopup(),
+                                  );
+                              },
+                              child: Icon(
+                                Icons.add,
+                                size: 18,
+                                color: kDashboardMidBarColor,
+                                ),
+                            ),
                           )
                       
                   ),

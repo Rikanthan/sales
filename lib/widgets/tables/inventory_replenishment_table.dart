@@ -3,6 +3,8 @@ import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
 import 'package:sales/widgets/TextInput/retail_table_header.dart';
+import 'package:sales/widgets/cards/popup_cards/add_report.dart';
+import 'package:sales/widgets/cards/popup_cards/add_report_checkbox.dart';
 
 class InventoryReplenishmentTable extends StatelessWidget {
   @override
@@ -96,11 +98,19 @@ class InventoryReplenishmentTable extends StatelessWidget {
                         ),
                           Padding(
                             padding: const EdgeInsets.only(right:15.0),
-                            child: Icon(
-                              Icons.add,
-                              size: 18,
-                              color: kDashboardMidBarColor,
-                              ),
+                            child: GestureDetector(
+                              onTap: (){
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) => AddReportCheckboxPopup(),
+                                  );
+                              },
+                              child: Icon(
+                                Icons.add,
+                                size: 18,
+                                color: kDashboardMidBarColor,
+                                ),
+                            ),
                           )
                       ],
                     )
@@ -213,11 +223,19 @@ class InventoryReplenishmentTable extends StatelessWidget {
                     width: 42,
                     child:Padding(
                             padding: const EdgeInsets.only(left:15,right:15.0),
-                            child: Icon(
-                              Icons.add,
-                              size: 18,
-                              color: kDashboardMidBarColor,
-                              ),
+                            child: GestureDetector(
+                              onTap: (){
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) => AddReportPopup(),
+                                  );
+                              },
+                              child: Icon(
+                                Icons.add,
+                                size: 18,
+                                color: kDashboardMidBarColor,
+                                ),
+                            ),
                           )
                       
                   ),

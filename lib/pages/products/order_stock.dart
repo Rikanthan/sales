@@ -11,6 +11,8 @@ import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/choose_date_button.dart';
 import 'package:sales/widgets/buttons/choose_file_button.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
+import 'package:sales/widgets/cards/popup_cards/add_report.dart';
+import 'package:sales/widgets/cards/popup_cards/add_report_checkbox.dart';
 import 'package:sales/widgets/drawer/products_drawer.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 

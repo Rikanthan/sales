@@ -37,7 +37,7 @@ class _ImportProductsState extends State<ImportProducts> {
                       child: Icon(
                         Icons.arrow_back,
                         size: 24,
-                        color: isSwitch ? kInputBorderColor : kSignInButtonColor,
+                        color: !isSwitch ? kInputBorderColor : kSignInButtonColor,
                         ), 
                       onTap: (){
                         setState(() {
@@ -46,7 +46,7 @@ class _ImportProductsState extends State<ImportProducts> {
                          Navigator.push(context, MaterialPageRoute(builder: (_)=> Products()));
                       }
                     ),
-                    Text('Import Products',style: k32Black,)
+                    Text(' Import Products',style: k32Black,)
                   ],
                 ),
               ),
@@ -70,7 +70,9 @@ class _ImportProductsState extends State<ImportProducts> {
                         Spacer(),
                       CustomButton(
                         buttonText: 'Back to Products', 
-                        onPress: (){},
+                        onPress: (){
+                           Navigator.push(context, MaterialPageRoute(builder: (_)=> Products()));
+                        },
                         buttonColor: kDashboardMidBarColor, 
                         topPadding: 20, 
                         leftPadding: 30
@@ -84,7 +86,8 @@ class _ImportProductsState extends State<ImportProducts> {
                   Padding(
                       padding: const EdgeInsets.only(top:24.0, left:48.0, right: 48.0,bottom: 24.0),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
                             color: Colors.white,
@@ -98,6 +101,7 @@ class _ImportProductsState extends State<ImportProducts> {
                                                 height: 144,
                                                 ),
                                     Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                children: [
                                  Padding(
                                    padding: const EdgeInsets.all(24.0),
@@ -147,7 +151,7 @@ class _ImportProductsState extends State<ImportProducts> {
                             height: 48.0,
                           ),
                            Icon(
-                              Icons.drive_folder_upload,
+                              Icons.cloud_upload,
                               size: 28,
                               color: kSignInButtonColor,
                               ),
