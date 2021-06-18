@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-class SettingsButton extends StatelessWidget {
-  const SettingsButton({
+class SaveButton extends StatelessWidget {
+  const SaveButton({
     @required this.buttonText,
     @required this.onPress,
     @required this.topPadding,
@@ -17,14 +17,14 @@ class SettingsButton extends StatelessWidget {
        height: 35,
        decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFb0b0b0), width: 0.7, style: BorderStyle.solid
+                              color:Color(0xFF004cba), width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.all(
                                  Radius.circular(5),
                                 ),
                               
         gradient: LinearGradient(
-                        colors: [Color(0xFFF6F6F6) , Color(0xFFdddddd) ],
+                        colors: [Color(0xFF50a9fc) , Color(0xFF0075de) ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
                     ),
@@ -33,7 +33,7 @@ class SettingsButton extends StatelessWidget {
      child: Text(
         buttonText,
         style:TextStyle(
-          color: Color(0xFF686868),
+          color: Colors.white,
           fontFamily: 'Lato',
           fontSize: 14,
           fontWeight: FontWeight.w700

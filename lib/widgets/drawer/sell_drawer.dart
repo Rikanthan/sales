@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/pages/sell/cash_management.dart';
+import 'package:sales/pages/sell/close_register.dart';
+import 'package:sales/pages/sell/dashboard.dart';
+import 'package:sales/pages/sell/fulfillments.dart';
+import 'package:sales/pages/sell/sales_history.dart';
+import 'package:sales/pages/sell/settings.dart';
+import 'package:sales/pages/sell/status.dart';
 import 'package:sales/widgets/buttons/esc_button.dart';
 import 'package:sales/widgets/cards/custom_cards/drawer_menu_item.dart';
 import 'package:sales/widgets/drawer/main_drawer.dart';
@@ -105,37 +112,51 @@ final SalesClicked salesClicked;
                       ),
                       DrawerMenuItem(
                         buttonText: 'Sell',
-                      onPress: (){}, 
+                      onPress: (){
+                         Navigator.push(context, MaterialPageRoute(builder: (_)=> Dashboard()));
+                      }, 
                       textColor: _clickColor(salesClicked, SalesClicked.sell)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Open/Close',
-                      onPress: (){}, 
+                      onPress: (){
+                         Navigator.push(context, MaterialPageRoute(builder: (_)=> CloseRegister()));
+                      }, 
                       textColor: _clickColor(salesClicked, SalesClicked.open)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Sales History',
-                      onPress: (){}, 
+                      onPress: (){
+                         Navigator.push(context, MaterialPageRoute(builder: (_)=> SalesHistory()));
+                      }, 
                       textColor: _clickColor(salesClicked, SalesClicked.salesHistory)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Fulfillments',
-                      onPress: (){}, 
+                      onPress: (){
+                         Navigator.push(context, MaterialPageRoute(builder: (_)=> Fullfillments()));
+                      }, 
                       textColor: _clickColor(salesClicked, SalesClicked.fulfillments)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Cash Management',
-                      onPress: (){}, 
+                      onPress: (){
+                         Navigator.push(context, MaterialPageRoute(builder: (_)=> CashManagement()));
+                      }, 
                       textColor: _clickColor(salesClicked, SalesClicked.cashManagement)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Status',
-                      onPress: (){}, 
+                      onPress: (){
+                         Navigator.push(context, MaterialPageRoute(builder: (_)=> SellStatus()));
+                      }, 
                       textColor: _clickColor(salesClicked, SalesClicked.status)
                       ),
                       DrawerMenuItem(
                         buttonText: 'Settings',
-                      onPress: (){}, 
+                      onPress: (){
+                         Navigator.push(context, MaterialPageRoute(builder: (_)=> SellSettings()));
+                      }, 
                       textColor: _clickColor(salesClicked, SalesClicked.settings)
                       )
                     ],

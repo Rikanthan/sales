@@ -9,29 +9,23 @@ import 'package:sales/widgets/TextInput/user_table_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/choose_date_button.dart';
-import 'package:sales/widgets/buttons/choose_file_button.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/drawer/products_drawer.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
-enum ProductClicked
-{
-  chooseProducts,
-  importViaCSV
-}
-class OrderStock extends StatefulWidget {
+class ReceiveStock extends StatefulWidget {
   @override
-  _OrderStockState createState() => _OrderStockState();
+  _ReceiveStockState createState() => _ReceiveStockState();
 }
 
-class _OrderStockState extends State<OrderStock> {
+class _ReceiveStockState extends State<ReceiveStock> {
   String deliverTo = 'Main Outlet';
   String supplier = 'Choose a supplier';
   bool isSwitch = true;
   String tax = 'Default Tax for this Outlet';
   String size = 'Size';
   String color = 'Colour';
-  ProductClicked _productClicked = ProductClicked.chooseProducts;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,16 +49,16 @@ class _OrderStockState extends State<OrderStock> {
                       child: Icon(
                         Icons.arrow_back,
                         size: 24,
-                        color: !isSwitch ? kSignInButtonColor: kInputBorderColor,
+                        color: isSwitch ? kInputBorderColor : kSignInButtonColor,
                         ), 
                       onTap: (){
                         setState(() {
                           isSwitch = false;
                         });
-                        Navigator.push(context, MaterialPageRoute(builder: (_)=> StockControl()));
+                         Navigator.push(context, MaterialPageRoute(builder: (_)=> StockControl()));
                       }
                     ),
-                    Text('New Purchase Order',style: k32Black,)
+                    Text('Receive Stock',style: k32Black,)
                   ],
                 ),
               ),
@@ -77,7 +71,8 @@ class _OrderStockState extends State<OrderStock> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('Add, products to this purchase order to keep track of inbound inventory.',style: kMediumTextNormalStyle,),
+                      Text('Count and receive products that have been delivered from your suppliers ',
+                      style: kMediumTextNormalStyle,),
                       GestureDetector(
                         child: Text(
                           'Need help?',
@@ -96,7 +91,7 @@ class _OrderStockState extends State<OrderStock> {
                         width: 16,
                         ),
                       CustomButton(
-                        buttonText: 'Save', 
+                        buttonText: 'Receive', 
                         onPress: (){
                         },
                         buttonColor: kSignInButtonColor, 
@@ -231,7 +226,6 @@ class _OrderStockState extends State<OrderStock> {
                         ],
                       ),
                     ),
-                    //SizedBox(width: 20,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -261,46 +255,6 @@ class _OrderStockState extends State<OrderStock> {
                         ),
                         SizedBox(height: 5,),
                         ChooseDate(width: 338),
-                        SizedBox(height: 20,),
-                        Text('Preview',style: kMediumTextStyle,),
-                        SizedBox(height: 5,),
-                        Container(
-                          height: 216,
-                          width:338,
-                          color:Colors.white,
-                          child: Padding(
-                            padding: const EdgeInsets.all(24.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Icon(
-                                      Icons.local_shipping,
-                                      color:kAppBarColor,
-                                      size: 15,
-                                      ),
-                                    Text('MAI-9\nLet us know when it\'s due so yur can see\nwhat\'s in-transit.'
-                                    ,style:k14Height)
-                                  ],
-                                ),
-                               Padding(
-                                 padding: const EdgeInsets.only(top:20.0,bottom: 20.0),
-                                 child: Divider(
-                                   height: 1,
-                                   color: kAppBarColor,
-                                   ),
-                               ),
-                               Text('This number and delivery date will be visible to\nyour cashiers and managers to help them\nidentify inbound inventory'
-                               ,style: k14Height,
-                                    )
-                                  ],
-                                ),
-                              ),
-                            )
                           ],
                         ),
                       ],
@@ -321,11 +275,12 @@ class _OrderStockState extends State<OrderStock> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text('Products',style: k18Black,)
+                    Text('Products',style: k18Black,),
+                    
                   ],
                 ),
               ),
-              Padding(
+                 Padding(
                 padding: const EdgeInsets.only(left:48.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -337,110 +292,18 @@ class _OrderStockState extends State<OrderStock> {
                         'Choose products to add to\nthis order, or choose a CSV\nfile of products to import.',
                         style: kMediumTextNormalStyle,
                         ),
-                      ), 
-                      GestureDetector(
-                        onTap: (){
-                          setState(() {
-                            _productClicked = ProductClicked.chooseProducts;
-                          });
-                        },
-                        child: Container(
-                          width: 348,
-                          height: 163,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                             border: Border.all(
-                               color: _productClicked == ProductClicked.chooseProducts ?  kSignInButtonColor : kInputBorderColor,
-                               width: 2,
-                             ),
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(4),
-                              bottomLeft: Radius.circular(4)
-                            ) 
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(20.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                SizedBox(
-                                  height: 4,
-                                ),
-                                Text('Choose Products',style: k18Black,),
-                                Padding(
-                                  padding: const EdgeInsets.only(top:20.0,bottom: 20.0),
-                                  child: Divider(
-                                    height: 1,
-                                    color: kAppBarColor,
-                                    ),
-                                ),
-                                Text('Search,scan, or use reorder points to add',style: kMediumTextNormalStyle,),
-                                Text('products',style: kMediumTextNormalStyle,),
-                              ],
-                            ),
-                          ),
-                        ),
                       ),
-                      GestureDetector(
-                        onTap: (){
-                          setState(() {
-                            _productClicked = ProductClicked.importViaCSV;
-                          });
-                        },
-                        child: Container(
-                          width: 348,
-                          height: 163,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                             border: Border.all(
-                               color:  _productClicked == ProductClicked.importViaCSV ?  kSignInButtonColor : kInputBorderColor,
-                               width: 2,
-                             ),
-                            borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(4),
-                              bottomRight: Radius.circular(4)
-                            ) 
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(20.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                SizedBox(
-                                  height: 4,
-                                ),
-                                Text('Import via CSV',style: k18Black,),
-                                Padding(
-                                  padding: const EdgeInsets.only(top:20.0,bottom: 20.0),
-                                  child: Divider(
-                                    height: 1,
-                                    color: kAppBarColor,
-                                    ),
-                                ),
-                                Text('Import products by uploading a CSV file.',style: kMediumTextNormalStyle,),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                     
-                    ] 
-                  )
-                ),
-                 _productClicked == ProductClicked.chooseProducts ?
-                 Column(
+                      Column(
                    children: [
                      Padding(
-                        padding: const EdgeInsets.only(left: 280,top:40.0,right: 48.0),
+                        padding: const EdgeInsets.only(right: 48.0),
                         child: Divider(
                           height: 1,
                           color: kAppBarColor,
                           ),
                         ),
                 Padding(
-                  padding: const EdgeInsets.only(left:280.0,right: 48),
+                  padding: const EdgeInsets.only(right: 48),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -484,14 +347,14 @@ class _OrderStockState extends State<OrderStock> {
                   ),
                 ),
                   Padding(
-                  padding: const EdgeInsets.only(left:280.0,right: 48),
+                  padding: const EdgeInsets.only(right: 48),
                   child: Divider(
                     height: 1,
                     color: kAppBarColor,
                     ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left:280.0,right: 48),
+                  padding: const EdgeInsets.only(right: 48),
                   child: Container(
                     color: Colors.white,
                     width: 696,
@@ -509,7 +372,7 @@ class _OrderStockState extends State<OrderStock> {
                    ),
                 ),
                  Padding(
-                   padding: const EdgeInsets.only(left:280.0,right: 48),
+                   padding: const EdgeInsets.only(right: 48),
                    child: Container(
                      color: kInputBorderColor,
                      width: 696,
@@ -534,7 +397,7 @@ class _OrderStockState extends State<OrderStock> {
                    ),
                  ),
                  Padding(
-                   padding: const EdgeInsets.only(top:24.0,bottom:24.0,right:68.0,left: 280),
+                   padding: const EdgeInsets.only(top:24.0,bottom:24.0),
                    child: Row(
                      crossAxisAlignment: CrossAxisAlignment.center,
                      mainAxisAlignment: MainAxisAlignment.end,
@@ -544,39 +407,20 @@ class _OrderStockState extends State<OrderStock> {
                    ),
                  ),
                  Padding(
-                   padding: const EdgeInsets.only(left:280.0,right: 48),
+                   padding: const EdgeInsets.only(right: 48),
                    child: Divider(
                     height: 1,
                     color: kAppBarColor,
                     ),
                  ),
-                  SizedBox(
-                    height: 72,
-                  ),
+                    SizedBox(
+                      height: 72,
+                    ),
                    ],
-                 )
-                 :
-                 Padding(
-                   padding: const EdgeInsets.only(top:40.0,left: 280,bottom: 72),
-                   child: Row(
-                     crossAxisAlignment: CrossAxisAlignment.center,
-                     mainAxisAlignment: MainAxisAlignment.start,
-                     children: [
-                       ChooseFile(
-                          buttonText: 'Choose file',
-                          onPress: (){}, 
-                          topPadding: 3,
-                          leftPadding: 10,
-                          width: 86,
-                          isButtonDisable: false,
-                          ),
-                        SizedBox(
-                          width: 12,
-                        ),
-                        Text('No file chosen',style: kMediumTextNormalStyle,)
-                     ],
-                   ),
-                 )
+                 ) 
+                    ] 
+                  )
+                ),
                 ]
               )
             ]

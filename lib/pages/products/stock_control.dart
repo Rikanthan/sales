@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/pages/products/order_stock.dart';
+import 'package:sales/pages/products/receive_stock.dart';
+import 'package:sales/pages/products/return_stock.dart';
+import 'package:sales/pages/products/transfer_stock.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
@@ -56,7 +60,9 @@ class _StockControlState extends State<StockControl> {
                         padding: const EdgeInsets.all(4.0),
                         child: CustomButton(
                           buttonText: 'Order Stock',
-                          onPress: (){},
+                          onPress: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (_)=> OrderStock()));
+                          },
                           buttonColor: kDashboardMidBarColor, 
                           topPadding: 24, 
                           leftPadding: 30,
@@ -66,7 +72,9 @@ class _StockControlState extends State<StockControl> {
                         padding: const EdgeInsets.all(4.0),
                         child: CustomButton(
                           buttonText: 'Receive Stock',
-                          onPress: (){},
+                          onPress: (){
+                             Navigator.push(context, MaterialPageRoute(builder: (_)=> ReceiveStock()));
+                          },
                           buttonColor: kDashboardMidBarColor, 
                           topPadding: 24, 
                           leftPadding: 30,
@@ -76,7 +84,9 @@ class _StockControlState extends State<StockControl> {
                         padding: const EdgeInsets.all(4.0),
                         child: CustomButton(
                           buttonText: 'Return Stock',
-                          onPress: (){},
+                          onPress: (){
+                             Navigator.push(context, MaterialPageRoute(builder: (_)=> ReturnStock()));
+                          },
                           buttonColor: kDashboardMidBarColor, 
                           topPadding: 24, 
                           leftPadding: 30,
@@ -86,7 +96,9 @@ class _StockControlState extends State<StockControl> {
                         padding: const EdgeInsets.all(4.0),
                         child: CustomButton(
                           buttonText: 'Transfer Stock',
-                          onPress: (){},
+                          onPress: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (_)=> NewStockTransfer()));
+                          },
                           buttonColor: kDashboardMidBarColor, 
                           topPadding: 24, 
                           leftPadding: 30,
