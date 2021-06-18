@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/pages/products/import_products.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
@@ -42,7 +43,11 @@ class _ProductsState extends State<Products> {
                 text: 'Add, view and edit your products all in one place.                                                                                                                                ', 
                 addBlueButton: true,
                 blueButtonText: 'Import',
-                blueOnTap: (){}, 
+                blueOnTap: (){
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(builder: (_)=> ImportProducts()));
+                }, 
                 greenButtonText: 'Add Product',
                 greenOnTap: (){}
                 ),
