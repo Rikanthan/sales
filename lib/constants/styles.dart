@@ -292,4 +292,11 @@ const k15White = TextStyle(
                         fontSize: 15,
                         color: kHelpTextColor,
                         );
+const k24Black =   TextStyle(
+                              color: kAppBarColor,
+                              fontFamily: 'Lato',
+                              fontSize: 24,
+                              fontWeight: FontWeight.w700
+);
+                             
  //const k       
