@@ -9,6 +9,7 @@ import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/tab_bar.dart';
 import 'package:sales/widgets/buttons/toggle_button.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:sales/widgets/cards/popup_cards/calender_range.dart';
 import 'package:sales/widgets/drawer/report_drawer.dart';
 import 'package:sales/widgets/tables/inventory_performance_table.dart';
 import 'package:sales/widgets/tables/inventory_replenishment_table.dart';
@@ -212,7 +213,12 @@ class _InventoryReportState extends State<InventoryReport> {
                                 Container(
                                   width:232,
                                   child: TextButton(
-                                        onPressed: (){},
+                                        onPressed: (){
+                                         showDialog(
+                                           context: context, 
+                                         builder: (_)=> CalenderRange()
+                                         );
+                                        },
                                         style: ButtonStyle(
                                           shape: MaterialStateProperty.all(
                                             RoundedRectangleBorder(
@@ -400,8 +406,8 @@ class _InventoryReportState extends State<InventoryReport> {
               InventorySummaryTable(),
               if(_replenishment)
               InventoryReplenishmentTable(),
-              if(_performance)
-              InventoryPerformanceTable()
+              //if(_performance)
+              //InventoryPerformanceTable()
             ],
           )
         ),

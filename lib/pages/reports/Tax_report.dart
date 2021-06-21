@@ -6,6 +6,7 @@ import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
+import 'package:sales/widgets/cards/popup_cards/calender_range.dart';
 import 'package:sales/widgets/drawer/report_drawer.dart';
 import 'package:sales/widgets/tables/tax_report_table.dart';
 
@@ -95,7 +96,12 @@ class _TaxReportState extends State<TaxReport> {
                                 Container(
                                   width:232,
                                   child: TextButton(
-                                        onPressed: (){},
+                                        onPressed: (){
+                                           showDialog(
+                                           context: context, 
+                                         builder: (_)=> CalenderRange()
+                                         );
+                                        },
                                         style: ButtonStyle(
                                           shape: MaterialStateProperty.all(
                                             RoundedRectangleBorder(

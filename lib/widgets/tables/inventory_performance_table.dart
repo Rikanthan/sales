@@ -64,7 +64,7 @@ class InventoryPerformanceTable extends StatelessWidget {
                         )
                       ),
                       height: 30,
-                      width: 741
+                      width: 973
                     ),
                   ],
                 ),
@@ -101,7 +101,7 @@ class InventoryPerformanceTable extends StatelessWidget {
                               padding: const EdgeInsets.only(right:15.0),
                               child: Icon(
                                 Icons.add,
-                                size: 18,
+                                size: 15,
                                 color: kDashboardMidBarColor,
                                 ),
                             )
@@ -121,7 +121,7 @@ class InventoryPerformanceTable extends StatelessWidget {
                       width: 95,
                       child:
                         RetailTableHeader(
-                          text: 'Closing Inventory', 
+                          text: 'Closing\nInventory', 
                           width: 95,
                           expandedWidth: 79,
                           isOtherClicked: true,

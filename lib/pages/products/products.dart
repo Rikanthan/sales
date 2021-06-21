@@ -10,6 +10,7 @@ import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/cards/custom_cards/show_products.dart';
+import 'package:sales/widgets/cards/popup_cards/add_products.dart';
 import 'package:sales/widgets/drawer/products_drawer.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
@@ -49,7 +50,9 @@ class _ProductsState extends State<Products> {
                     MaterialPageRoute(builder: (_)=> ImportProducts()));
                 }, 
                 greenButtonText: 'Add Product',
-                greenOnTap: (){}
+                greenOnTap: (){
+                  showDialog(context: context, builder: (_)=>AddProductsPopup());
+                }
                 ),
               Container(
                 color:Colors.white,

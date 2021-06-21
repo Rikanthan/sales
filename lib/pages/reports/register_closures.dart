@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/pages/reports/register_closure_transactions.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/gredient_text_header.dart';
@@ -231,13 +232,19 @@ class _RegisterClosureState extends State<RegisterClosure> {
                             isTextBold: false
                           ),
 
-                          RegisterCell(
-                            alignment: MainAxisAlignment.start,
-                            width: 225,
-                            text: '17 May 21 9.03 am',
-                            isLeftBorder: false,
-                            isTextBlue: true,
-                            isTextBold: false
+                          GestureDetector(
+                            onTap: (){
+                                Navigator.push(
+                                  context, MaterialPageRoute(builder: (_)=> RegisterClosureSummary()));          
+                            },
+                            child: RegisterCell(
+                              alignment: MainAxisAlignment.start,
+                              width: 225,
+                              text: '17 May 21 9.03 am',
+                              isLeftBorder: false,
+                              isTextBlue: true,
+                              isTextBold: false
+                            ),
                           ),
 
                           RegisterCell(

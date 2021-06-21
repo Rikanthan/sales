@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sales/constants/colors.dart';
-import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/check_box_container.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
 import 'package:sales/widgets/buttons/esc_button.dart';
