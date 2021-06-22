@@ -5,6 +5,7 @@ import 'package:sales/widgets/TextInput/custom_sub_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
+import 'package:sales/widgets/cards/popup_cards/add_common.dart';
 import 'package:sales/widgets/drawer/customer_drawer.dart';
 
 
@@ -34,7 +35,16 @@ class CustomerGroups extends StatelessWidget {
               blueButtonText: '',
               blueOnTap: (){}, 
               greenButtonText: 'Add Group',
-              greenOnTap: (){}
+              greenOnTap: (){
+                showDialog(
+                  context: context, 
+                  builder: (_)=> AddCommon(
+                    header: 'Add Group', 
+                    item: '',
+                    subHeader: 'Group'
+                    )
+                  );
+              }
               ),
               Padding(
                 padding: const EdgeInsets.only(left:48.0,right: 48.0, top:24.0, bottom: 24.0),
