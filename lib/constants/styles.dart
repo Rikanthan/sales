@@ -51,6 +51,13 @@ const kLargeHeaderStyle = TextStyle(
                                   fontWeight: FontWeight.w700
                                   );
 
+const kLargeHeaderBlack= TextStyle(
+                                  color: kAppBarColor,
+                                  fontFamily: 'Lato',
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.w700
+                                  );
+
 const kLargeHeaderStyle2 = TextStyle(
                                               fontSize:24,
                                               fontFamily: 'Lato',
@@ -106,6 +113,14 @@ const kMediumHeightTextStyle = TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 15,
                               height: 1.5,
+                              color: kSignInTextColor
+                            );
+
+
+const kMediumHeightTextStyle2 = TextStyle(
+                              fontFamily: 'Lato',
+                              fontSize: 15,
+                              height: 1.3,
                               color: kSignInTextColor
                             );
 
@@ -277,6 +292,14 @@ const k14Height = TextStyle(
                                 color: kAppBarColor,
                                 fontWeight: FontWeight.w400,
                                 height: 1.5
+                                );
+
+const k14Height2 = TextStyle(
+                                fontSize: 14.0,
+                                fontFamily: 'Lato',
+                                color: kAppBarColor,
+                                fontWeight: FontWeight.w400,
+                                height: 1.2
                                 );
 
 

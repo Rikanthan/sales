@@ -9,16 +9,21 @@ import 'package:sales/widgets/bars/tab_bar.dart';
 import 'package:sales/widgets/buttons/greenbutton.dart';
 import 'package:sales/widgets/drawer/products_drawer.dart';
 
+enum InventoryCountClick
+{
+  due,
+  upcoming,
+  completed,
+  cancelled
+}
+
 class StockCount extends StatefulWidget {
   @override
   _StockCountState createState() => _StockCountState();
 }
 
 class _StockCountState extends State<StockCount> {
-  bool _due = true;
-  bool _upcoming = false;
-  bool _completed = false;
-  bool _cancelled = false;
+  InventoryCountClick _inventoryCountClick = InventoryCountClick.due;
   bool lessFilters = true;
   String showText = 'due';
   @override
@@ -45,13 +50,10 @@ class _StockCountState extends State<StockCount> {
                               darkMode: false,
                               width: 57, 
                               height: 48,
-                              isClicked: _due,
+                              isClicked: _inventoryCountClick == InventoryCountClick.due,
                               onClicked: (){
                                           setState(() {
-                                            _due = true;
-                                            _upcoming= false;
-                                           _completed=false;
-                                           _cancelled = false;
+                                            _inventoryCountClick = InventoryCountClick.due;
                                            showText = 'due';
                                           });
                                         },
@@ -63,13 +65,10 @@ class _StockCountState extends State<StockCount> {
                                      darkMode: false,
                               width: 105, 
                               height: 48,
-                              isClicked: _upcoming,
+                              isClicked: _inventoryCountClick == InventoryCountClick.upcoming,
                               onClicked: (){
                                           setState(() {
-                                            _due = false;
-                                            _upcoming= true;
-                                           _completed=false;
-                                           _cancelled = false;
+                                            _inventoryCountClick = InventoryCountClick.upcoming;
                                            showText = 'upcoming';
                                           });
                                         },
@@ -82,13 +81,10 @@ class _StockCountState extends State<StockCount> {
                                      darkMode: false,
                               width: 110, 
                               height: 48,
-                              isClicked: _due,
+                              isClicked: _inventoryCountClick == InventoryCountClick.completed,
                               onClicked: (){
                                           setState(() {
-                                            _due = false;
-                                            _upcoming= false;
-                                           _completed=true;
-                                           _cancelled = false;
+                                            _inventoryCountClick = InventoryCountClick.completed;
                                            showText = 'completed';
                                           });
                                         },
@@ -101,13 +97,10 @@ class _StockCountState extends State<StockCount> {
                                      darkMode: false,
                               width: 80, 
                               height: 48,
-                              isClicked: _cancelled,
+                              isClicked: _inventoryCountClick == InventoryCountClick.cancelled,
                               onClicked: (){
                                           setState(() {
-                                            _due = false;
-                                            _upcoming= false;
-                                           _completed=false;
-                                           _cancelled = true;
+                                            _inventoryCountClick = InventoryCountClick.cancelled;
                                            showText = 'cancelled';
                                           });
                                         },
@@ -149,13 +142,13 @@ class _StockCountState extends State<StockCount> {
                                           padding: const EdgeInsets.only(bottom: 12.0),
                                           child: Text(
                                             'Get the job done faster with our free iOS app,Scanner',
-                                              style: kLargeHeaderStyle
+                                              style: kLargeHeaderStyle2
                                           ),
                                         ),
                                     Padding(
                                           padding: const EdgeInsets.only(bottom: 12.0),
                                           child: Text(
-                                            'Perform on-the-go inventory counts using an iPhone, iPad or iPod touch - no additional hardware needed! \nScanner and Vend work seamlessly together to sync stock levels and product details, saving time and \nreducing manual mistakes.',
+                                            'Perform on-the-go inventory counts using an iPhone, iPad or iPod touch - no additional hardware needed!\nScanner and Vend work seamlessly together to sync stock levels and product details, saving time and\nreducing manual mistakes.',
                                               style: kMediumHeightTextStyle
                                           ),
                                         ),

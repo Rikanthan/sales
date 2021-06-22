@@ -2,23 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/pages/products/promotions.dart';
-import 'package:sales/pages/products/stock_control.dart';
+import 'package:sales/widgets/cards/custom_cards/target_promotion.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_maxlines.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
-import 'package:sales/widgets/TextInput/user_table_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/choose_date_button.dart';
-import 'package:sales/widgets/buttons/choose_file_button.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
+import 'package:sales/widgets/cards/custom_cards/get_promotion_card.dart';
 import 'package:sales/widgets/drawer/products_drawer.dart';
-import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
-enum ProductClicked
+enum ChoosePromotionType
 {
-  chooseProducts,
-  importViaCSV
+ basic,
+ advanced
 }
 class AddPromotion extends StatefulWidget {
   @override
@@ -32,7 +30,9 @@ class _AddPromotionState extends State<AddPromotion> {
   String tax = 'Default Tax for this Outlet';
   String size = 'Size';
   String color = 'Colour';
-  ProductClicked _productClicked = ProductClicked.chooseProducts;
+  String customer = 'Choose the condition';
+  ChoosePromotionType _choosePromotionType = ChoosePromotionType.basic;
+  bool _isSelected = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -189,19 +189,28 @@ class _AddPromotionState extends State<AddPromotion> {
                               children: [
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Icon(
                                       Icons.money,
                                       color:kAppBarColor,
                                       size: 15,
                                       ),
-                                    Text('Promotion Name',style: kMediumTextStyle,),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only( bottom: 4.0),
+                                          child: Text('Promotion Name',style: kMediumTextStyle,),
+                                        ),
+                                        Text('Provide a short description to explain this\npromotion.'
+                                          ,style:kMediumHeightTextStyle2),
+                                      ],
+                                    ),
                                     
                                   ],
                                 ),
-                                Text('Provide a short description to explain this\npromotion.'
-                                    ,style:k14Height),
+                                
                                Padding(
                                  padding: const EdgeInsets.only(top:20.0,bottom: 20.0),
                                  child: Divider(
@@ -210,7 +219,7 @@ class _AddPromotionState extends State<AddPromotion> {
                                    ),
                                ),
                                Text('The name and description will be shown to both\ncashier and customers, to identify and explain\nthe promotion.'
-                               ,style: k14Height,
+                               ,style: k14Height2,
                                     )
                                   ],
                                 ),
@@ -275,16 +284,16 @@ class _AddPromotionState extends State<AddPromotion> {
                       GestureDetector(
                         onTap: (){
                           setState(() {
-                            _productClicked = ProductClicked.chooseProducts;
+                            _choosePromotionType = ChoosePromotionType.basic;
                           });
                         },
                         child: Container(
                           width: 348,
-                          height: 117,
+                          height: 123,
                           decoration: BoxDecoration(
                             color: Colors.white,
                              border: Border.all(
-                               color: _productClicked == ProductClicked.chooseProducts ?  kSignInButtonColor : kInputBorderColor,
+                               color: _choosePromotionType == ChoosePromotionType.basic ?  kSignInButtonColor : kInputBorderColor,
                                width: 2,
                              ),
                             borderRadius: BorderRadius.only(
@@ -293,7 +302,7 @@ class _AddPromotionState extends State<AddPromotion> {
                             ) 
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(20.0),
+                            padding: const EdgeInsets.only(top:12.0 ,bottom:12.0 ,left:20.0,right: 20.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -303,7 +312,7 @@ class _AddPromotionState extends State<AddPromotion> {
                                 ),
                                 Text('Basic',style: k18Black,),
                                 Padding(
-                                  padding: const EdgeInsets.only(top:20.0,bottom: 20.0),
+                                  padding: const EdgeInsets.only(top:16.0,bottom: 16.0),
                                   child: Divider(
                                     height: 1,
                                     color: kAppBarColor,
@@ -318,16 +327,16 @@ class _AddPromotionState extends State<AddPromotion> {
                       GestureDetector(
                         onTap: (){
                           setState(() {
-                            _productClicked = ProductClicked.importViaCSV;
+                            _choosePromotionType = ChoosePromotionType.advanced;
                           });
                         },
                         child: Container(
                           width: 348,
-                          height: 117,
+                          height: 123,
                           decoration: BoxDecoration(
                             color: Colors.white,
                              border: Border.all(
-                               color:  _productClicked == ProductClicked.importViaCSV ?  kSignInButtonColor : kInputBorderColor,
+                               color:  _choosePromotionType == ChoosePromotionType.advanced ?  kSignInButtonColor : kInputBorderColor,
                                width: 2,
                              ),
                             borderRadius: BorderRadius.only(
@@ -336,7 +345,7 @@ class _AddPromotionState extends State<AddPromotion> {
                             ) 
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(20.0),
+                            padding: const EdgeInsets.only(top:12.0 ,bottom:12.0 ,left:20.0,right: 20.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -346,7 +355,7 @@ class _AddPromotionState extends State<AddPromotion> {
                                 ),
                                 Text('Advanced',style: k18Black,),
                                 Padding(
-                                  padding: const EdgeInsets.only(top:20.0,bottom: 20.0),
+                                  padding: const EdgeInsets.only(top:16.0,bottom: 16.0),
                                   child: Divider(
                                     height: 1,
                                     color: kAppBarColor,
@@ -363,8 +372,101 @@ class _AddPromotionState extends State<AddPromotion> {
                     ] 
                   )
                 ),
-                 //_productClicked == ProductClicked.chooseProducts 
-                 
+                if( _choosePromotionType == ChoosePromotionType.basic)
+                 Padding(
+                   padding: const EdgeInsets.only(top:32.0,left:232),
+                   child: GetPromotionCard(),
+                 ),
+                 if( _choosePromotionType != ChoosePromotionType.basic)
+                Padding(
+                  padding: const EdgeInsets.only(left: 280,top:32),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text('When a customer',style: k18Black,),
+                      SizedBox(width: 12,),
+                      DropDownInput(
+                                isDarkMode: false,
+                                width: 338,
+                                height: 46,
+                                paddingAll: 12,
+                                onPressed: (String value){
+                                  setState(() {
+                                    customer = value;
+                                  });
+                                },
+                                dropdownValue: customer,
+                                dropdownList: ['Choose the condition','Buys the following items','Spend the following money'],
+                              ),
+                          ],
+                        ),
+                      ),
+                       if( _choosePromotionType != ChoosePromotionType.basic)
+                     SizedBox(height:56),
+                      if( _choosePromotionType != ChoosePromotionType.basic)
+                  Padding(
+                    padding: const EdgeInsets.only(top:20.0,bottom: 20.0),
+                    child: Divider(
+                      height: 1,
+                      color: kAppBarColor,
+                      ),
+                  ), 
+                   if( _choosePromotionType != ChoosePromotionType.basic)
+                    SizedBox(height:32),
+                     if( _choosePromotionType != ChoosePromotionType.basic)
+                  Padding(
+                    padding: const EdgeInsets.only(left:48.0,bottom: 24.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text('Show Prompt on Sell',style: k18Black,)
+                      ],
+                    ),
+                  ),
+                   if( _choosePromotionType != ChoosePromotionType.basic)       
+                  Padding(
+                    padding: const EdgeInsets.only(left:48.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 232,
+                          child: Text(
+                            'Choose to see a prompt\nabout this promotion on the\nSell screen when one of the\nincluded products is added to\nthe basket.',
+                            style: kMediumTextNormalStyle,
+                            ),
+                          ),
+                        Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                  padding: const EdgeInsets.only(right: 12.0),
+                                  child: Checkbox(
+                                    activeColor: MaterialStateColor.resolveWith((states) => _isSelected ? Colors.white : kAppBarColor),
+                                    hoverColor: MaterialStateColor.resolveWith((states) => _isSelected ? kSignInButtonColor : kAppBarColor),
+                                    overlayColor: MaterialStateColor.resolveWith((states) => _isSelected ? kSignInButtonColor : kAppBarColor),
+                                    fillColor: MaterialStateColor.resolveWith((states) => _isSelected ? kSignInButtonColor : kDashboardSearchBarFillColor),
+                                    value: _isSelected,
+                                    onChanged: (newValue){
+                                      setState(() {
+                                        _isSelected = newValue;
+                                      });
+                                    },
+                                    autofocus: false,
+                                    visualDensity: VisualDensity.standard,
+                                  ),
+                                ),
+                                Text('Show a prompt about this promotion on the Sell screen',style:kMediumTextNormalStyle)
+                            ],
+                          )
+                      ],
+                    ),
+                  ),
+                 TargetPromotionCard(),
                 ]
               )
             ]
