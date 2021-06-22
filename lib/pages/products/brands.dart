@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/pages/products/products.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/bars/product_bar.dart';
+import 'package:sales/widgets/cards/popup_cards/add_brand.dart';
 import 'package:sales/widgets/drawer/products_drawer.dart';
 
 class Brands extends StatefulWidget {
@@ -45,7 +47,12 @@ class _BrandsState extends State<Brands> {
                  blueButtonText: '',
                   blueOnTap: (){},
                  greenButtonText: 'Add Brand',
-                  greenOnTap: (){}
+                  greenOnTap: (){
+                    showDialog(
+                      context: context, 
+                      builder: (_) => AddBrands(header: 'Add Brand', brand: '')
+                      );
+                  }
                   ),
               
               Padding(
@@ -124,8 +131,17 @@ class _BrandsState extends State<Brands> {
                         text: 'Nude Lacy', 
                         number: '6', width: 600, 
                         textClick: (){},
-                        viewClick: (){},
-                        editClick: (){},
+                        viewClick: (){
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (_)=> Products())
+                          );
+                        },
+                        editClick: (){
+                          showDialog(
+                      context: context, 
+                      builder: (_) => AddBrands(header: 'Edit Brand', brand: 'Nude Lacy')
+                      );
+                        },
                         deleteClick: (){}
                         ),
                       Divider(
@@ -136,8 +152,17 @@ class _BrandsState extends State<Brands> {
                         text: 'Lilya', 
                         number: '4', width: 600, 
                         textClick: (){},
-                        viewClick: (){},
-                        editClick: (){},
+                        viewClick: (){
+                           Navigator.push(context, MaterialPageRoute(
+                            builder: (_)=> Products())
+                          );
+                        },
+                        editClick: (){
+                          showDialog(
+                          context: context, 
+                          builder: (_) => AddBrands(header: 'Edit Brand', brand: 'Lilya')
+                          );
+                        },
                         deleteClick: (){}
                         ),
                         Divider(
@@ -148,8 +173,17 @@ class _BrandsState extends State<Brands> {
                         text: 'Cluse', 
                         number: '3', width: 600, 
                         textClick: (){},
-                        viewClick: (){},
-                        editClick: (){},
+                        viewClick: (){
+                           Navigator.push(context, MaterialPageRoute(
+                            builder: (_)=> Products())
+                          );
+                        },
+                        editClick: (){
+                          showDialog(
+                          context: context, 
+                          builder: (_) => AddBrands(header: 'Edit Brand', brand: 'Cluse')
+                          );
+                        },
                         deleteClick: (){}
                         ),
 
@@ -161,8 +195,17 @@ class _BrandsState extends State<Brands> {
                         text: 'Quay', 
                         number: '1', width: 600, 
                         textClick: (){},
-                        viewClick: (){},
-                        editClick: (){},
+                        viewClick: (){
+                           Navigator.push(context, MaterialPageRoute(
+                            builder: (_)=> Products())
+                          );
+                        },
+                        editClick: (){
+                          showDialog(
+                            context: context, 
+                            builder: (_) => AddBrands(header: 'Edit Brand', brand: 'Quay')
+                            );
+                        },
                         deleteClick: (){}
                         ),
                     ],

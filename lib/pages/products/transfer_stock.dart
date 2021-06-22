@@ -320,7 +320,8 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                           buttonText: 'Save',
                           onPress: (){},
                           topPadding: 9,
-                          leftPadding: 24
+                          leftPadding: 24,
+                          width: 100,
                           ),
                       ],
                     ),

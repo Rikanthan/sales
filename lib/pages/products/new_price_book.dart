@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/pages/products/price_books.dart';
 import 'package:sales/pages/products/products.dart';
-import 'package:sales/pages/products/stock_control.dart';
 import 'package:sales/widgets/TextInput/setting_input_text.dart';
 import 'package:sales/widgets/TextInput/settings_cell.dart';
 import 'package:sales/widgets/TextInput/settings_drop_down.dart';
@@ -13,17 +13,17 @@ import 'package:sales/widgets/buttons/choose_file_button.dart';
 import 'package:sales/widgets/buttons/save_button.dart';
 import 'package:sales/widgets/buttons/settings_button.dart';
 import 'package:sales/widgets/drawer/setup_drawer.dart';
-class ReturnStock extends StatefulWidget {
+class AddNewPrice extends StatefulWidget {
  
   @override
-  _ReturnStockState createState() => _ReturnStockState();
+  _AddNewPriceState createState() => _AddNewPriceState();
 }
 
-class _ReturnStockState extends State<ReturnStock> {
+class _AddNewPriceState extends State<AddNewPrice> {
   
   @override
   Widget build(BuildContext context) {
-    String deliverTo = 'Any';
+    String customer = 'All Customers';
     String returnFrom = 'Main Outlet';
     bool isProduct = false;
     bool isStock = false;
@@ -90,10 +90,10 @@ class _ReturnStockState extends State<ReturnStock> {
                                 setState(() {
                                   isStock = false;
                                 });
-                                Navigator.push(context, MaterialPageRoute(builder: (_)=> StockControl()));
+                                Navigator.push(context, MaterialPageRoute(builder: (_)=> PriceBooks()));
                               },
                              child: Text(
-                              'Stock Control',
+                              'Price books',
                               style: TextStyle(
                                 fontFamily: 'Lato',
                                 fontSize: 14,
@@ -133,7 +133,7 @@ class _ReturnStockState extends State<ReturnStock> {
                     Padding(
                       padding: const EdgeInsets.only(top:10.0,bottom: 10.0),
                       child: Text(
-                        'New Stock Return',
+                        'New Price Book',
                         style: TextStyle(
                           fontSize: 23.52,
                           fontFamily: 'Lato',
@@ -145,7 +145,7 @@ class _ReturnStockState extends State<ReturnStock> {
                     SettingsGredientHeader(cellType: CellType.both ,width: 964 ,text: 'Details',),
                     Container(
                       width: 964,
-                      height: 247,
+                      height: 232,
                       decoration: BoxDecoration(
                         border: Border.all(
                           color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
@@ -162,21 +162,26 @@ class _ReturnStockState extends State<ReturnStock> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                       right: BorderSide( color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid)
+                                      ),
+                                    ),
                                 width:481,
+                                height: 230,
                                 child: Padding(
                                   padding: const EdgeInsets.all(20.0),
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
-                                         SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Return No.',),
+                                         SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Name',),
                                           SettingTextInput(
-                                            height: 26,
-                                             width: 245,
-                                            value: 'MAI-1'
+                                            height: 28,
+                                             width: 247,
+                                            value: ''
                                           )
                                         ],
                                       ),
@@ -184,20 +189,20 @@ class _ReturnStockState extends State<ReturnStock> {
                                        Row(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
-                                           SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Deliver to',),
+                                           SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Customer group',),
                                           SettingDropDown(
-                                              width: 200,
+                                              width: 160,
                                               height: 28,
-                                              paddingAll: 1,
+                                              paddingAll: 4,
                                               onPressed: (String newValue) 
                                                               {
                                                                 setState(() {
-                                                                deliverTo = newValue;
+                                                                customer = newValue;
                                                                 }
                                                               );
                                                             },
-                                              dropdownValue: deliverTo,
-                                              dropdownList: ['Any','Main Outlet'],
+                                              dropdownValue: customer,
+                                              dropdownList: ['All Customers',''],
                                               )
                                         ],
                                       ),
@@ -205,11 +210,11 @@ class _ReturnStockState extends State<ReturnStock> {
                                        Row(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
-                                           SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Return from',),
+                                           SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Outlet',),
                                           SettingDropDown(
-                                              width: 200,
+                                              width: 160,
                                               height: 28,
-                                              paddingAll: 1,
+                                              paddingAll: 4,
                                               onPressed: (String newValue) 
                                                               {
                                                                 setState(() {
@@ -229,7 +234,13 @@ class _ReturnStockState extends State<ReturnStock> {
                                 ),
                               ),
                               Container(
-                                  width:481,   
+                                  width:481, 
+                                  height: 230,
+                                   decoration: BoxDecoration(
+                                    border: Border(
+                                       left: BorderSide( color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid)
+                                      ),
+                                    ),  
                               child: Padding(
                                 padding: const EdgeInsets.all(20.0),
                                 child: Column(
@@ -238,7 +249,7 @@ class _ReturnStockState extends State<ReturnStock> {
                                           Row(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Delivery due',),
+                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Valid from',),
                                           SettingTextInput(
                                             height: 26,
                                             width: 247,
@@ -250,19 +261,7 @@ class _ReturnStockState extends State<ReturnStock> {
                                    Row(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Name / reference',),
-                                          SettingTextInput(
-                                            height: 26,
-                                            width: 247,
-                                            value: 'Return - Fri 18 Jun 2021'
-                                          )
-                                        ],
-                                      ),
-                                     SizedBox(height:10),
-                                   Row(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Supplier invoice',),
+                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Valid to',),
                                           SettingTextInput(
                                             height: 26,
                                             width: 247,
@@ -270,7 +269,58 @@ class _ReturnStockState extends State<ReturnStock> {
                                           )
                                         ],
                                       ),
-                                  SizedBox(height:20),
+                                       Padding(
+                                         padding: const EdgeInsets.only(top:20.0,bottom: 20.0),
+                                         child: Divider(
+                                            thickness: 1,
+                                            color: kInputBorderColor,
+                                          ),
+                                       ),
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Price book file',),
+                                            Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Row(
+                                                  mainAxisAlignment: MainAxisAlignment.start,
+                                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                                  children: [
+                                                    ChooseFile(
+                                                      buttonText: 'Choose File',
+                                                      onPress: (){}, 
+                                                      topPadding: 3,
+                                                      leftPadding: 10,
+                                                      width: 86,
+                                                      isButtonDisable: false,
+                                                      ),
+                                                      Text(' No file chosen',style: kMediumTextNormalStyle,)
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  height: 4,
+                                                ),
+                                                Text('You can upload your price book using a CSV', style: k14Grey,),
+                                                Row(
+                                                  children: [
+                                                    Text('Download a ', style: k14Grey,),
+                                                    GestureDetector(
+                                                      onTap: (){},
+                                                      child: Text(
+                                                        'template file ',
+                                                         style: k14Blue2,
+                                                         )
+                                                        ),
+                                                    Text('to get started', style: k14Grey,),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                            
+                                          ],
+                                        ),
                                   
                                     ],
                                   ),
@@ -278,29 +328,8 @@ class _ReturnStockState extends State<ReturnStock> {
                               ),
                             ],
                           ),
-                           Divider(
-                             thickness: 1,
-                             color: kInputBorderColor,
-                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(20.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Import stock return',),
-                                ChooseFile(
-                                  buttonText: 'Choose file',
-                                  onPress: (){}, 
-                                  topPadding: 3,
-                                  leftPadding: 10,
-                                  width: 86,
-                                  isButtonDisable: false,
-                                  ),
-                                Text('No file chosen',style: kMediumTextNormalStyle,)
-                              ],
-                            ),
-                          )
+                          
+                          
                         ],
                       ),
                     ),
@@ -323,11 +352,11 @@ class _ReturnStockState extends State<ReturnStock> {
                           ),
                           SizedBox(width:10),
                           SaveButton(
-                          buttonText: 'Save',
+                          buttonText: 'Save Price Book',
                           onPress: (){},
                           topPadding: 9,
                           leftPadding: 24,
-                          width: 100,
+                          width: 160,
                           ),
                       ],
                     ),

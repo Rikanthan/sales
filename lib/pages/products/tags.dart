@@ -6,6 +6,7 @@ import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/bars/product_bar.dart';
+import 'package:sales/widgets/cards/popup_cards/add_common.dart';
 import 'package:sales/widgets/drawer/products_drawer.dart';
 
 class Tags extends StatefulWidget {
@@ -40,7 +41,12 @@ class _TagsState extends State<Tags> {
                  blueButtonText: '',
                   blueOnTap: (){},
                  greenButtonText: 'Add Tag',
-                  greenOnTap: (){}
+                  greenOnTap: (){
+                    showDialog(
+                      context: context, 
+                      builder: (_)=> AddCommon(
+                        header: 'New Tag', item: '', subHeader: 'Tag') );
+                  }
                   ),
               
               Padding(
@@ -99,7 +105,12 @@ class _TagsState extends State<Tags> {
                         number: '4', width: 600, 
                         textClick: (){},
                         viewClick: (){},
-                        editClick: (){},
+                        editClick: (){
+                          showDialog(
+                          context: context, 
+                          builder: (_)=> AddCommon(
+                              header: 'Edit Tag', item: 'dress', subHeader: 'Tag') );
+                        },
                         deleteClick: (){}
                         ),
                       Divider(
@@ -111,7 +122,12 @@ class _TagsState extends State<Tags> {
                         number: '1', width: 600, 
                         textClick: (){},
                         viewClick: (){},
-                        editClick: (){},
+                        editClick: (){
+                          showDialog(
+                          context: context, 
+                          builder: (_)=> AddCommon(
+                              header: 'Edit Tag', item: 'shirt', subHeader: 'Tag') );
+                        },
                         deleteClick: (){}
                         ),
                         Divider(
@@ -123,7 +139,12 @@ class _TagsState extends State<Tags> {
                         number: '1', width: 600, 
                         textClick: (){},
                         viewClick: (){},
-                        editClick: (){},
+                        editClick: (){
+                          showDialog(
+                          context: context, 
+                          builder: (_)=> AddCommon(
+                              header: 'Edit Tag', item: 'sunglasses', subHeader: 'Tag') );
+                        },
                         deleteClick: (){}
                         ),
 
@@ -136,7 +157,12 @@ class _TagsState extends State<Tags> {
                         number: '1', width: 600, 
                         textClick: (){},
                         viewClick: (){},
-                        editClick: (){},
+                        editClick: (){
+                          showDialog(
+                          context: context, 
+                          builder: (_)=> AddCommon(
+                              header: 'Edit Tag', item: 'watch', subHeader: 'Tag') );
+                        },
                         deleteClick: (){}
                         ),
                     ],

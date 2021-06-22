@@ -321,5 +321,12 @@ const k24Black =   TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.w700
 );
-                             
+
+const k30Black = TextStyle(
+                          fontFamily: 'Lato',
+                          fontSize: 30,
+                          fontWeight: FontWeight.w700,
+                          color:kAppBarColor
+                          ); 
+
  //const k       

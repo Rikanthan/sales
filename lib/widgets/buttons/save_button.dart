@@ -5,7 +5,9 @@ class SaveButton extends StatelessWidget {
     @required this.onPress,
     @required this.topPadding,
     @required this.leftPadding,
+    @required this.width
   });
+  final double width;
   final String buttonText;
   final Function onPress;
   final double topPadding;
@@ -13,7 +15,7 @@ class SaveButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-       width:100,
+       width:width,
        height: 35,
        decoration: BoxDecoration(
                             border: Border.all(

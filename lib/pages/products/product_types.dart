@@ -6,6 +6,7 @@ import 'package:sales/widgets/TextInput/product_sub_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
+import 'package:sales/widgets/cards/popup_cards/add_common.dart';
 import 'package:sales/widgets/drawer/products_drawer.dart';
 
 class PriceTypes extends StatefulWidget {
@@ -41,7 +42,12 @@ class _PriceTypesState extends State<PriceTypes> {
                  blueButtonText: '',
                   blueOnTap: (){},
                  greenButtonText: 'Add Type',
-                  greenOnTap: (){}
+                  greenOnTap: (){
+                    showDialog(
+                          context: context, 
+                          builder: (_)=> AddCommon(
+                              header: 'Add Type', item: '', subHeader: 'Type') );
+                  }
                   ),
               
               Padding(
@@ -139,7 +145,12 @@ class _PriceTypesState extends State<PriceTypes> {
                                             size: 15,
                                             color: kDropDownColor,
                                             ),
-                                           onPressed: (){}
+                                           onPressed: (){
+                                             showDialog(
+                                                context: context, 
+                                                builder: (_)=> AddCommon(
+                                                    header: 'Edit Type', item: 'Fashion', subHeader: 'Type') );
+                                           }
                                            ),
                                         IconButton(
                                           icon: Icon(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/pages/products/add_promotion.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
@@ -150,7 +151,11 @@ class _PromotionsState extends State<Promotions> {
                  blueButtonText: '',
                   blueOnTap: (){},
                  greenButtonText: 'Add Promotion',
-                  greenOnTap: (){}
+                  greenOnTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_)=>AddPromotion()));
+                  }
                   ),
               Padding(
                 padding: const EdgeInsets.only(top:48.0,left: 72.0,bottom: 24.0,right: 72.0),

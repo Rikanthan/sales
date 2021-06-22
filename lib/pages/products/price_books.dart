@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/pages/products/new_price_book.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/price_sub_header.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
@@ -46,7 +47,11 @@ class _PriceBooksState extends State<PriceBooks> {
                  blueButtonText: '',
                   blueOnTap: (){},
                  greenButtonText: 'Add Price Book',
-                  greenOnTap: (){}
+                  greenOnTap: (){
+                     Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_)=>AddNewPrice()));
+                    }
                   ),
               Padding(
                 padding: const EdgeInsets.only(left:24.0,right: 24.0,top:24.0,bottom: 24.0),

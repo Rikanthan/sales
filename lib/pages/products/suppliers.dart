@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/pages/products/add_supplier.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/product_sub_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
@@ -47,7 +48,9 @@ class _SuppliersState extends State<Suppliers> {
                    blueButtonText: '',
                     blueOnTap: (){},
                    greenButtonText: 'Add Supplier',
-                    greenOnTap: (){}
+                    greenOnTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (_)=> AddSupplier(header: '', isEdit: false,)));
+                    }
                     ),
               ),
               
@@ -213,7 +216,9 @@ class _SuppliersState extends State<Suppliers> {
                                               size: 15,
                                               color: kDropDownColor,
                                               ),
-                                             onPressed: (){}
+                                             onPressed: (){
+                                               Navigator.push(context, MaterialPageRoute(builder: (_)=> AddSupplier(header: 'Flo & Frankie', isEdit: true,)));
+                                             }
                                              ),
                                         ),
                                         IconButton(
