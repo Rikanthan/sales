@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/pages/customer/import_customers.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_calendar.dart';
@@ -9,6 +10,7 @@ import 'package:sales/constants/colors.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
+import 'package:sales/widgets/cards/popup_cards/add_customer_details.dart';
 import 'package:sales/widgets/drawer/customer_drawer.dart';
 import 'package:sales/widgets/searchbar/dashboard_search_bar.dart';
 
@@ -75,9 +77,13 @@ class _CustomerState extends State<Customer> {
                text: 'Manage your customers and their balances, or segment them by demographics and spending \nhabits.',
                 addBlueButton: true,
                  blueButtonText: 'Import Customers', 
-                 blueOnTap: (){},
+                 blueOnTap: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (_)=> ImportCustomers()));
+                 },
                 greenButtonText: 'Add Customer',
-                 greenOnTap: (){}
+                 greenOnTap: (){
+                   showDialog(context: context, builder: (_)=> AddCustomerDetails());
+                 }
                  ),
               Container(
                 color:Colors.white,

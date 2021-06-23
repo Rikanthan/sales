@@ -82,10 +82,10 @@ class _InventoryReportState extends State<InventoryReport> {
                                    padding: const EdgeInsets.only(left:35.0,right: 35.0),
                                    child: TabBarItem(
                                      darkMode: false,
-                              width: 119, 
-                              height: 48,
-                              isClicked: _replenishment,
-                              onClicked: (){
+                                          width: 119, 
+                                          height: 48,
+                                          isClicked: _replenishment,
+                                          onClicked: (){
                                           setState(() {
                                           _summary = false;
                                           _replenishment = true;
@@ -96,17 +96,17 @@ class _InventoryReportState extends State<InventoryReport> {
                                             midBarText = 'A starting point to help you decide what to order and how much of it';
                                           });
                                         },
-                              text: 'Replenishment'
-                                ),
-                            ),
+                                         text: 'Replenishment'
+                                            ),
+                                        ),
                                  Padding(
                                    padding: const EdgeInsets.only(right:35.0),
                                    child: TabBarItem(
                                      darkMode: false,
-                              width: 103, 
-                              height: 48,
-                              isClicked: _performance,
-                              onClicked: (){
+                                        width: 103, 
+                                        height: 48,
+                                        isClicked: _performance,
+                                        onClicked: (){
                                           setState(() {
                                             _summary = false;
                                             _replenishment = false;

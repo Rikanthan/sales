@@ -49,18 +49,18 @@ class AddReportCheckboxPopup extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        CheckBoxText(header: 'All'),
+                        CheckBoxText(width:176.203,header: 'All'),
                         Padding(
                           padding: const EdgeInsets.only(top:8.0, bottom: 8.0),
                           child: Divider(
                             height: 1,
                           ),
                         ),
-                        CheckBoxText(header: 'Supplier Code'),
-                        CheckBoxText(header: 'Brand'),
-                        CheckBoxText(header: 'Supplier'),
-                        CheckBoxText(header: 'Type'),
-                        CheckBoxText(header: 'Tag'),
+                        CheckBoxText(width:176.203,header: 'Supplier Code'),
+                        CheckBoxText(width:176.203,header: 'Brand'),
+                        CheckBoxText(width:176.203,header: 'Supplier'),
+                        CheckBoxText(width:176.203,header: 'Type'),
+                        CheckBoxText(width:176.203,header: 'Tag'),
                       ],
                     ),
                     ],

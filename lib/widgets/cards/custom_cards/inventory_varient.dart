@@ -119,7 +119,9 @@ class _InventoryVarientState extends State<InventoryVarient> {
                                             CustomDivider(
                                               topPadding: 1, 
                                               width: 245, 
-                                              bottomPadding: 1
+                                              bottomPadding: 1,
+                                              thickness: 1,
+                                              color: kTableBorderColor,
                                               ),
                                             SizedBox(
                                               height: 24.0,

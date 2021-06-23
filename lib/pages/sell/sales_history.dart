@@ -75,19 +75,19 @@ class _SalesHistoryState extends State<SalesHistory> {
                                    padding: const EdgeInsets.only(left:14.0,right: 24.0),
                                    child: TabBarItem(
                                      darkMode: true,
-                              width: 117, 
-                              height: 48,
-                              isClicked: processReturn,
-                              onClicked: (){
+                                        width: 117, 
+                                        height: 48,
+                                        isClicked: processReturn,
+                                        onClicked: (){
                                           setState(() {
                                              all = false;
                                             processReturn = true;
                                             continueSale = false;
                                           });
                                         },
-                              text: 'Process return'
-                                ),
-                            ),
+                                       text: 'Process return'
+                                        ),
+                                  ),
                                  Padding(
                                    padding: const EdgeInsets.only(right:35.0),
                                    child: TabBarItem(

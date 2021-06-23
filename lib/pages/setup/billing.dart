@@ -223,7 +223,9 @@ class _BillingState extends State<Billing> {
               CustomDivider(
                 topPadding: 48,
                  width: 1024, 
-                 bottomPadding: 0
+                 bottomPadding: 0,
+                 thickness: 1,
+                color: kTableBorderColor,
                  ),
                 Padding(
                   padding: const EdgeInsets.only(left:48.0,top: 48,bottom: 24),

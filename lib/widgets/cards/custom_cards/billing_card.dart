@@ -325,7 +325,9 @@ class _BillingCardState extends State<BillingCard> {
           CustomDivider(
             topPadding: 20, 
             width: 696, 
-            bottomPadding: 20
+            bottomPadding: 20,
+             color: kTableBorderColor,
+             thickness: 1,
             ),
             Row(
               crossAxisAlignment: _isSelected ? CrossAxisAlignment.start : CrossAxisAlignment.center,
@@ -396,7 +398,9 @@ class _BillingCardState extends State<BillingCard> {
             CustomDivider(
             topPadding: 20, 
             width: 696, 
-            bottomPadding: 20
+            bottomPadding: 20,
+            thickness: 1,
+            color: kTableBorderColor,
             ),
         ],
       ),

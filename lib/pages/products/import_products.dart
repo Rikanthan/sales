@@ -86,7 +86,7 @@ class _ImportProductsState extends State<ImportProducts> {
                   Padding(
                       padding: const EdgeInsets.only(top:24.0, left:48.0, right: 48.0,bottom: 24.0),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
