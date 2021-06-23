@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/pages/products/add_inventory_count.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/button_bar.dart';
@@ -117,7 +118,10 @@ class _StockCountState extends State<StockCount> {
                  blueButtonText: '',
                   blueOnTap: (){},
                  greenButtonText: 'Add Inventory Count',
-                  greenOnTap: (){}
+                  greenOnTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=> 
+                    AddInventoryCount()));
+                  }
                   ),
               Padding(
                 padding: const EdgeInsets.only(left:24.0,right: 24.0,top:24.0,bottom: 24.0),
