@@ -3,9 +3,10 @@ import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 
 class CheckBoxText extends StatefulWidget {
-  const CheckBoxText({@required this.header, @required this.width }) ;
+  const CheckBoxText({@required this.header, @required this.width ,@required this.height }) ;
   final String header;
   final double width;
+  final double height;
   @override
   _CheckBoxTextState createState() => _CheckBoxTextState();
 }
@@ -18,7 +19,7 @@ class _CheckBoxTextState extends State<CheckBoxText> {
       children: [
         Container(
           width:widget.width,
-          height: 56,
+          height: widget.height,
           child: Padding(
             padding: const EdgeInsets.only(top:16.0,bottom: 16.0, left: 24.0,right: 20.0),
             child: Row(

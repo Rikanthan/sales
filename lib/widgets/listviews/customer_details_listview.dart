@@ -30,50 +30,6 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
            Column(
              crossAxisAlignment: CrossAxisAlignment.start,
              children: [
-                // Row(
-                //       crossAxisAlignment: CrossAxisAlignment.center,
-                //       mainAxisAlignment: MainAxisAlignment.start,
-                //       children: [
-                //         TabBarItem(
-                //           darkMode: false,
-                //           width: 68, 
-                //           height: 48,
-                //           isClicked: _customerDetails == CustomerDetails.contact,
-                //           onClicked: (){
-                //             setState(() {
-                //                _customerDetails = CustomerDetails.contact;
-                //             });
-                //           },
-                //           text: 'Contact'
-                //           ),
-                //           CustomDivider(
-                //             topPadding: 49, 
-                //             width: 30, 
-                //             bottomPadding: 0, 
-                //             color: kAppBarColor.withOpacity(0.5),
-                //             thickness: 1,
-                //             ),
-                //           TabBarItem(
-                //           darkMode: false,
-                //           width: 60, 
-                //           height: 48,
-                //           isClicked: _customerDetails == CustomerDetails.details,
-                //           onClicked: (){
-                //             setState(() {
-                //                _customerDetails = CustomerDetails.details;
-                //             });
-                //           },
-                //           text: 'Details'
-                //           ),
-                //           CustomDivider(
-                //             topPadding: 49, 
-                //             width: 578, 
-                //             bottomPadding: 0, 
-                //             color: kAppBarColor.withOpacity(0.5),
-                //             thickness: 1,
-                //             ),
-                //       ],
-                //     ),
                     SizedBox(
                               height: 20,
                             ),
@@ -96,6 +52,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             ),
                     SizedBox( height:12),                  
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -197,7 +154,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             darkMode: false,
                             validate:(value){},
                             onChange: (value){},
-                            paddingTop: 5,
+                            paddingTop: 0,
                             hideText: false,
                             height: 46,
                             width:356,
@@ -213,7 +170,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             darkMode: false,
                             validate:(value){},
                             onChange: (value){},
-                            paddingTop: 5,
+                            paddingTop: 0,
                             hideText: false,
                             height: 46,
                             width:356,
@@ -222,7 +179,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             SizedBox(
                               height: 52,
                             ),
-                            CheckBoxText(header: 'Use different address for\nphysical address', width:246 ),
+                            CheckBoxText(header: 'Use different address for\nphysical address', width:246 ,height: 66 , ),
                         ],
                       ),
                     ],
@@ -249,6 +206,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             ),
                     SizedBox( height:12), 
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -341,7 +299,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             darkMode: false,
                             validate:(value){},
                             onChange: (value){},
-                            paddingTop: 5,
+                            paddingTop: 0,
                             hideText: false,
                             height: 46,
                             width:356,
@@ -390,6 +348,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             ),
                     SizedBox( height:12), 
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
