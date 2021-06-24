@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/pages/setup/main_outlet.dart';
+import 'package:sales/pages/setup/main_register.dart';
 import 'package:sales/widgets/TextInput/gredient_text_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
@@ -217,15 +219,21 @@ class _OutletRegistersState extends State<OutletRegisters> {
                             padding: const EdgeInsets.only(top:7.0,bottom: 7.0,left: 9.0,right: 9.0),
                             child: Row(
                               children: [
-                                Text(
-                                  'Main Outlet',
-                                  style: TextStyle(
-                                    fontFamily: 'Lato',
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w700,
-                                    color: Color(0xFF0066cc),
-                                    )
-                                  ),
+                                GestureDetector(
+                                  onTap:(){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (_) => MainOutlet()));
+                                  },
+                                  child: Text(
+                                    'Main Outlet',
+                                    style: TextStyle(
+                                      fontFamily: 'Lato',
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xFF0066cc),
+                                      )
+                                    ),
+                                ),
                               ],
                             ),
                           )
@@ -340,16 +348,25 @@ class _OutletRegistersState extends State<OutletRegisters> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Main Register',
-                                  style: TextStyle(
-                                    fontFamily: 'Roboto',
-                                    fontSize: 14,
-                                    color: Color(0xFF0066cc),
-                                    decorationColor: Color(0xFF0066cc),
-                                    decorationStyle: TextDecorationStyle.solid
-                                    )
-                                  ),
+                                GestureDetector(
+                                  onTap:(){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (_) => 
+                                      MainRegister()
+                                      )
+                                      );
+                                  },
+                                  child: Text(
+                                    'Main Register',
+                                    style: TextStyle(
+                                      fontFamily: 'Roboto',
+                                      fontSize: 14,
+                                      color: Color(0xFF0066cc),
+                                      decorationColor: Color(0xFF0066cc),
+                                      decorationStyle: TextDecorationStyle.solid
+                                      )
+                                    ),
+                                ),
                               ],
                             ),
                           )

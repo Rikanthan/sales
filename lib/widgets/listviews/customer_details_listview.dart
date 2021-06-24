@@ -177,7 +177,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             hintText: 'Enter state',
                             ),
                             SizedBox(
-                              height: 52,
+                              height: 32,
                             ),
                             CheckBoxText(header: 'Use different address for\nphysical address', width:246 ,height: 66 , ),
                         ],
