@@ -5,10 +5,7 @@ import 'package:sales/widgets/TextInput/chec_box_text.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_maxlines.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
-import 'package:sales/widgets/bars/tab_bar.dart';
 import 'package:sales/widgets/buttons/choose_date_button.dart';
-import 'package:sales/widgets/cards/popup_cards/add_customer_details.dart';
-import 'package:sales/widgets/divider/custom_divider.dart';
 
 class CustomerDetailsListview extends StatefulWidget {
   CustomerDetailsListview({Key key}) : super(key: key);
@@ -18,7 +15,6 @@ class CustomerDetailsListview extends StatefulWidget {
 }
 
 class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
-  CustomerDetails _customerDetails = CustomerDetails.details;
   String country = 'Please select a country';
   String gender = 'Choose a gender...';
   @override
@@ -59,7 +55,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                         children: [
                           Text(
                             'Street',
-                          style: kMediumTextStyle
+                          style: k15BlackDark
                           ),
                           TextInput(
                             darkMode: false,
@@ -74,7 +70,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Suburb',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                             TextInput(
@@ -90,7 +86,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Postcode',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                             TextInput(
@@ -106,7 +102,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Country',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                           DropDownInput(
@@ -132,7 +128,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                         children: [
                           Text(
                             'Street',
-                          style: kMediumTextStyle
+                          style: k15BlackDark
                           ),
                           TextInput(
                             darkMode: false,
@@ -147,7 +143,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('City',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                            TextInput(
@@ -163,7 +159,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('State',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                             TextInput(
@@ -213,7 +209,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                         children: [
                           Text(
                             'Customer Code',
-                          style: kMediumTextStyle
+                          style: k15BlackDark
                           ),
                           TextInput(
                             darkMode: false,
@@ -228,14 +224,14 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Date of Birth',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                             ChooseDate(width: 356),
                             Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Website',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                             TextInput(
@@ -258,7 +254,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                         children: [
                           Text(
                             'Company Name',
-                          style: kMediumTextStyle
+                          style: k15BlackDark
                           ),
                           TextInput(
                             darkMode: false,
@@ -273,7 +269,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Gender',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                            DropDownInput(
@@ -292,7 +288,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                             Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Twitter',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                             TextInput(
@@ -312,7 +308,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                   Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Note',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                    TextInputMaxLines(
@@ -355,7 +351,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                         children: [
                           Text(
                             'Custom Field 1',
-                          style: kMediumTextStyle
+                          style: k15BlackDark
                           ),
                           TextInput(
                             darkMode: false,
@@ -370,7 +366,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                           Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Custom Field 3',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                             TextInput(
@@ -393,7 +389,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                         children: [
                           Text(
                             'Custom Field 2',
-                          style: kMediumTextStyle
+                          style: k15BlackDark
                           ),
                           TextInput(
                             darkMode: false,
@@ -408,7 +404,7 @@ class _CustomerDetailsListviewState extends State<CustomerDetailsListview> {
                           Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Custom Field 4',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                             TextInput(

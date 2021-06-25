@@ -32,7 +32,7 @@ class LicenseCard extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(bottom:16.0),
-                      child: Text('Item',style: kMediumTextStyle,),
+                      child: Text('Item',style: k15BlackDark,),
                     ),
                   ],
                 ),
@@ -49,7 +49,7 @@ class LicenseCard extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left:8,bottom:16.0),
-                      child: Text('Number of Licenses',style: kMediumTextStyle,),
+                      child: Text('Number of Licenses',style: k15BlackDark,),
                     ),
                   ],
                 ),
@@ -73,7 +73,7 @@ class LicenseCard extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(bottom:16.0),
-                      child: Text('Total',style: kMediumTextStyle,),
+                      child: Text('Total',style: k15BlackDark,),
                     ),
                   ],
                 ),

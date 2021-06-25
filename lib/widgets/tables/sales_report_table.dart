@@ -39,7 +39,7 @@ class SalesReportTable extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text('2021',style: kMediumTextStyle,),
+                        Text('2021',style: k15BlackDark,),
                       ],
                     )
                   ),
@@ -99,7 +99,7 @@ class SalesReportTable extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text('Summary',style: kMediumTextStyle,),
+                          Text('Summary',style: k15BlackDark,),
                         ],
                       ),
                     )
@@ -124,7 +124,7 @@ class SalesReportTable extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text('3rd\nMay',style: kMediumTextStyle,),
+                                Text('3rd\nMay',style: k15BlackDark,),
                               ],
                             ),
                           ),
@@ -137,7 +137,7 @@ class SalesReportTable extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text('10th\nMay',style: kMediumTextStyle,),
+                                Text('10th\nMay',style: k15BlackDark,),
                               ],
                             ),
                           ),
@@ -150,7 +150,7 @@ class SalesReportTable extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text('17th\nMay',style: kMediumTextStyle,),
+                                Text('17th\nMay',style: k15BlackDark,),
                               ],
                             ),
                           ),
@@ -163,7 +163,7 @@ class SalesReportTable extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text('24th\nMay',style: kMediumTextStyle,),
+                                Text('24th\nMay',style: k15BlackDark,),
                               ],
                             ),
                           ),
@@ -249,7 +249,7 @@ class SalesReportTable extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Margin(%)',style: kMediumTextStyle,),
+                          Text('Margin(%)',style: k15BlackDark,),
                         ],
                       )
                   ),

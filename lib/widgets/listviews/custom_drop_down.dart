@@ -63,7 +63,7 @@ double height , width ,xPosition, yPosition;
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Drop Down item 1',style: kMediumTextStyle,),
+              Text('Drop Down item 1',style: k15BlackDark,),
               Spacer(),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

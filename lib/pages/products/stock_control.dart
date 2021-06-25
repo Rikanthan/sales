@@ -27,7 +27,7 @@ class _StockControlState extends State<StockControl> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -126,7 +126,7 @@ class _StockControlState extends State<StockControl> {
                                 padding: const EdgeInsets.only(bottom: 4.0),
                                 child: Text(
                                   'Show',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                   ),
                               ),
                                  DropDownInput(
@@ -156,7 +156,7 @@ class _StockControlState extends State<StockControl> {
                                   padding: const EdgeInsets.only(bottom:4.0),
                                   child: Text(
                                     'Name/Number/Product/Supplier Invoice',
-                                    style: kMediumTextStyle,
+                                    style: k15BlackDark,
                                     ),
                                 ),
                                 TextInput(
@@ -180,7 +180,7 @@ class _StockControlState extends State<StockControl> {
                                   padding: const EdgeInsets.only(bottom:4.0),
                                   child: Text(
                                     'Outlet',
-                                    style: kMediumTextStyle,
+                                    style: k15BlackDark,
                                     ),
                                 ),
                                    DropDownInput(
@@ -216,7 +216,7 @@ class _StockControlState extends State<StockControl> {
                                 padding: const EdgeInsets.only(bottom:4.0),
                                 child: Text(
                                   'Date from',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                   ),
                               ),
                               TextInput(
@@ -239,7 +239,7 @@ class _StockControlState extends State<StockControl> {
                                 padding: const EdgeInsets.only(bottom:4.0),
                                 child: Text(
                                   'Date to',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                   ),
                               ),
                               TextInput(
@@ -262,7 +262,7 @@ class _StockControlState extends State<StockControl> {
                                 padding: const EdgeInsets.only(bottom:4.0),
                                 child: Text(
                                   'Due date from',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                   ),
                               ),
                               TextInput(
@@ -285,7 +285,7 @@ class _StockControlState extends State<StockControl> {
                                 padding: const EdgeInsets.only(bottom:4.0),
                                 child: Text(
                                   'Due date to',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                   ),
                               ),
                               TextInput(
@@ -317,7 +317,7 @@ class _StockControlState extends State<StockControl> {
                                     padding: const EdgeInsets.only(bottom:4.0),
                                     child: Text(
                                       'Supplier',
-                                      style: kMediumTextStyle,
+                                      style: k15BlackDark,
                                       ),
                                   ),
                                      DropDownInput(

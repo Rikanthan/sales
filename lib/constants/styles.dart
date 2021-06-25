@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'colors.dart';
 
-const kMediumTextStyle = TextStyle(
+const k15BlackDark = TextStyle(
             fontFamily: 'Lato',
             fontSize: 15,
             color: kSignInTextColor,
@@ -65,13 +65,13 @@ const kLargeHeaderStyle2 = TextStyle(
                                               fontWeight: FontWeight.w700
                                             );
 
-const kMediumTextStyle1 =  TextStyle(
+const k15BlackDark1 =  TextStyle(
                                       color: kHelpTextColor,
                                       fontFamily: 'Lato',
                                       fontSize: 14,
                                       );
 
-const kMediumTextStyle2 =  TextStyle(
+const k15BlackDark2 =  TextStyle(
                       fontFamily: 'Lato',
                       color: kAppBarTextColor,
                       fontSize: 16.0
@@ -90,7 +90,7 @@ const kExtraLargeTextStyle = TextStyle(
                                 fontWeight: FontWeight.w700
                                 );
 
-const kMediumTextStyle3 = TextStyle(
+const k15BlackDark3 = TextStyle(
                         color: kAppBarTextColor,
                         fontFamily: 'Lato',
                         fontSize: 14.0

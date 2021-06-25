@@ -29,7 +29,7 @@ class PriceEditProduct extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(top:20.0,bottom: 4.0),
-                          child: Text('Supply Price',style:kMediumTextStyle),
+                          child: Text('Supply Price',style:k15BlackDark),
                         ),
                         SizedBox(width: 550,),
                         Padding(
@@ -47,7 +47,7 @@ class PriceEditProduct extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text('Markup',style:kMediumTextStyle),
+                          Text('Markup',style:k15BlackDark),
                           TextInput(
                               darkMode: false,
                               hideText: false,
@@ -79,7 +79,7 @@ class PriceEditProduct extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Text('Retail Price',style:kMediumTextStyle),
+                              Text('Retail Price',style:k15BlackDark),
                                Text('Excluding Tax',style:kMediumTextNormalStyle),
                             ],
                           ),

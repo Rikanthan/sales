@@ -17,7 +17,7 @@ class DashboardAppBars extends StatelessWidget {
                     children: [
                       Text(
                         'Menu',
-                        style: kMediumTextStyle2
+                        style: k15BlackDark2
                       ),
                     ],
                   ),
@@ -28,7 +28,7 @@ class DashboardAppBars extends StatelessWidget {
                   children: [
                     Text(
                       'Help',
-                      style: kMediumTextStyle3
+                      style: k15BlackDark3
                     ),
                   ],
                 ),
@@ -52,7 +52,7 @@ class DashboardAppBars extends StatelessWidget {
                   children: [
                     Text(
                       'Nifras Ismail',
-                      style: kMediumTextStyle3
+                      style: k15BlackDark3
                     ),
                   ],
                 ),        

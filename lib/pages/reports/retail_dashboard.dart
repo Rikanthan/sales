@@ -49,7 +49,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
     
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -80,7 +80,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
                             children :[
                               Text(
                                 'View By',
-                                style:kMediumTextStyle
+                                style:k15BlackDark
                                 ),
                               SizedBox(
                                 height:5.0
@@ -120,7 +120,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
                               children :[
                                 Text(
                                   'Dates',
-                                  style:kMediumTextStyle
+                                  style:k15BlackDark
                                   ),
                                 SizedBox(
                                   height:5.0
@@ -141,7 +141,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
                             children: [
                               Text(
                                 'Outlet',
-                                style: kMediumTextStyle,
+                                style: k15BlackDark,
                               ),
                               SizedBox(
                                 height:5,
@@ -195,7 +195,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
                           children : [
                             Text(
                               'Filter report by a brand,channel ,customer or other keyword',
-                                style:kMediumTextStyle
+                                style:k15BlackDark
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

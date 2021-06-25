@@ -50,7 +50,7 @@ CalendarController _controllerTo;
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               mainAxisAlignment: MainAxisAlignment.start,
                                               children: [
-                                                Text('From',style: kMediumTextStyle,),
+                                                Text('From',style: k15BlackDark,),
                                                 TextInput(
                                                         darkMode: false,
                                                         hideText: false,
@@ -131,7 +131,7 @@ CalendarController _controllerTo;
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         children: [
-                                          Text('To',style: kMediumTextStyle,),
+                                          Text('To',style: k15BlackDark,),
                                            TextInput(
                                                   darkMode: false,
                                                   hideText: false,

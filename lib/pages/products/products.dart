@@ -28,7 +28,7 @@ class _ProductsState extends State<Products> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -72,7 +72,7 @@ class _ProductsState extends State<Products> {
                                 padding: const EdgeInsets.only(bottom:4.0),
                                 child: Text(
                                   'Search for Products',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                   ),
                               ),
                                 DashboardSearchBar(
@@ -92,7 +92,7 @@ class _ProductsState extends State<Products> {
                                 padding: const EdgeInsets.only(bottom: 4.0),
                                 child: Text(
                                   'Product Type',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                   ),
                               ),
                                 DropDownInput(
@@ -120,7 +120,7 @@ class _ProductsState extends State<Products> {
                                 padding: const EdgeInsets.only(bottom:4.0),
                                 child: Text(
                                   'Tags',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                   ),
                               ),
                               TextInput(
@@ -150,7 +150,7 @@ class _ProductsState extends State<Products> {
                                   padding: const EdgeInsets.only(bottom:4.0),
                                   child: Text(
                                     'Supplier',
-                                    style: kMediumTextStyle,
+                                    style: k15BlackDark,
                                     ),
                                 ),
                                   DropDownInput(
@@ -178,7 +178,7 @@ class _ProductsState extends State<Products> {
                                   padding: const EdgeInsets.only(bottom:4.0),
                                   child: Text(
                                     'Brand',
-                                    style: kMediumTextStyle,
+                                    style: k15BlackDark,
                                     ),
                                 ),
                                   DropDownInput(
@@ -206,7 +206,7 @@ class _ProductsState extends State<Products> {
                                   padding: const EdgeInsets.only(bottom:4.0),
                                   child: Text(
                                     'Status',
-                                    style: kMediumTextStyle,
+                                    style: k15BlackDark,
                                     ),
                                 ),
                                   DropDownInput(

@@ -28,7 +28,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
     
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -59,7 +59,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
                             children :[
                               Text(
                                 'Report Type',
-                                style:kMediumTextStyle
+                                style:k15BlackDark
                                 ),
                               SizedBox(
                                 height:5.0
@@ -88,7 +88,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
                               children :[
                                 Text(
                                   'Measure',
-                                  style:kMediumTextStyle
+                                  style:k15BlackDark
                                   ),
                                 SizedBox(
                                   height:5.0
@@ -118,7 +118,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
                               children: [
                                 Text(
                                   'Date Range',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                 ),
                                 SizedBox(
                                   height:5,
@@ -155,7 +155,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
                             children: [
                               Text(
                                 'Comparision',
-                                style: kMediumTextStyle,
+                                style: k15BlackDark,
                               ),
                               SizedBox(
                                 height:5,
@@ -210,7 +210,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
                           children : [
                             Text(
                               'Filter report by a brand,channel ,customer or other keyword',
-                                style:kMediumTextStyle
+                                style:k15BlackDark
                               ),
                               SizedBox(height: 5,),
                               Row(

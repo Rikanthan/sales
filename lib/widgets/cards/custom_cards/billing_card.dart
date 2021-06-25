@@ -120,7 +120,7 @@ class _BillingCardState extends State<BillingCard> {
                                       Column(
                                         children: [
                                           SizedBox(height:3),
-                                          Text('\$',style: kMediumTextStyle,),
+                                          Text('\$',style: k15BlackDark,),
                                         ],
                                       ),
                                       Text( PlanType.lite == widget.planType ? '99':'129',style: TextStyle(
@@ -223,7 +223,7 @@ class _BillingCardState extends State<BillingCard> {
                                       Column(
                                         children: [
                                           SizedBox(height:3),
-                                          Text('\$',style: kMediumTextStyle,),
+                                          Text('\$',style: k15BlackDark,),
                                         ],
                                       ),
                                       Text( PlanType.lite == widget.planType ? '119' : '159',style: TextStyle(
@@ -375,7 +375,7 @@ class _BillingCardState extends State<BillingCard> {
                       child: Text('If you were referred by a friend, enter the referral code given - you will both get a one time credit to\nyour subscriptions.', style: kMediumTextNormalStyle,),
                     ),
                     Text('Referral or coupon code',
-                    style: kMediumTextStyle,
+                    style: k15BlackDark,
                     ),
                     TextInput(
                   darkMode: false,

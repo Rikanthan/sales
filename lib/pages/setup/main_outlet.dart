@@ -4,7 +4,6 @@ import 'package:sales/pages/reports/register_closure_full_details.dart';
 import 'package:sales/pages/reports/register_closures.dart';
 import 'package:sales/pages/setup/edit_outlet.dart';
 import 'package:sales/widgets/TextInput/gredient_table_cell.dart';
-import 'package:sales/widgets/TextInput/gredient_text_header.dart';
 import 'package:sales/widgets/TextInput/light_gredient_text_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
@@ -25,7 +24,7 @@ class _MainOutletState extends State<MainOutlet> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),

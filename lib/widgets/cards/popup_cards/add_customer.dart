@@ -46,7 +46,7 @@ class AddCustomer extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Icon(Icons.report,size: 15,color: kAppBarColor,),
-                                    Text('   Add a customer to this sale.',style: kMediumTextStyle,),
+                                    Text('   Add a customer to this sale.',style: k15BlackDark,),
                                   ],
                                 ),
                                 Padding(

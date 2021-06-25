@@ -27,7 +27,7 @@ class SalesReportBody extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text(
-                                'Totals',style: kMediumTextStyle,
+                                'Totals',style: k15BlackDark,
                                 ),
                             ],
                           ),

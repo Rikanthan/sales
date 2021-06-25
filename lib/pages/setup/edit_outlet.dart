@@ -31,7 +31,7 @@ class _EditOutletState extends State<EditOutlet> {
     String tax = 'No Tax (0%)';
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),

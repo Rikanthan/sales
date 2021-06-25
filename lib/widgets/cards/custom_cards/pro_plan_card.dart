@@ -190,7 +190,7 @@ class ProPlan extends StatelessWidget {
                                 padding: const EdgeInsets.only(bottom: 12.0),
                                 child: Text(
                                   'per Outlet',
-                                  style: kMediumTextStyle
+                                  style: k15BlackDark
                                   ),
                               ),
                               Padding(

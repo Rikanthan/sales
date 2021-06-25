@@ -40,7 +40,7 @@ class PaymentReportTable extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text('2021',style: kMediumTextStyle,)
+                          Text('2021',style: k15BlackDark,)
                         ],
                       )
                     ),
@@ -89,7 +89,7 @@ class PaymentReportTable extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 20.0),
-                            child:Text('Payment Type',style: kMediumTextStyle,)
+                            child:Text('Payment Type',style: k15BlackDark,)
                           )              
                         ],
                       )  
@@ -105,7 +105,7 @@ class PaymentReportTable extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 15.0,right: 14.0),
-                            child:Text('3rd May',style: kMediumTextStyle,)
+                            child:Text('3rd May',style: k15BlackDark,)
                           )              
                         ],
                       )  
@@ -121,7 +121,7 @@ class PaymentReportTable extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 1,right: 14.0),
-                            child:Text('10th May',style: kMediumTextStyle,)
+                            child:Text('10th May',style: k15BlackDark,)
                           )              
                         ],
                       )  
@@ -137,7 +137,7 @@ class PaymentReportTable extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 1,right: 14.0),
-                            child:Text('17th May',style: kMediumTextStyle,)
+                            child:Text('17th May',style: k15BlackDark,)
                           )              
                         ],
                       )  
@@ -156,7 +156,7 @@ class PaymentReportTable extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 1,right: 15.0),
-                            child:Text('24th May',style: kMediumTextStyle,)
+                            child:Text('24th May',style: k15BlackDark,)
                           )              
                         ],
                       )  
@@ -175,7 +175,7 @@ class PaymentReportTable extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 15,right: 15.0),
-                            child:Text('Amount',style: kMediumTextStyle,)
+                            child:Text('Amount',style: k15BlackDark,)
                           )              
                         ],
                       )  

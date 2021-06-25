@@ -28,7 +28,7 @@ class TaxReportTable extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 20.0),
-                            child:Text('Tax Code',style: kMediumTextStyle,)
+                            child:Text('Tax Code',style: k15BlackDark,)
                           )              
                         ],
                       )  
@@ -47,7 +47,7 @@ class TaxReportTable extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 20.0),
-                            child:Text('Rate',style: kMediumTextStyle,)
+                            child:Text('Rate',style: k15BlackDark,)
                           )              
                         ],
                       )  
@@ -66,7 +66,7 @@ class TaxReportTable extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 14,right: 14.0),
-                            child:Text('Tax',style: kMediumTextStyle,)
+                            child:Text('Tax',style: k15BlackDark,)
                           )              
                         ],
                       )  

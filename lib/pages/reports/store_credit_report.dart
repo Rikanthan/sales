@@ -19,7 +19,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
     
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -52,7 +52,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Total Value Issued',style: kMediumTextStyle,
+                                  'Total Value Issued',style: k15BlackDark,
                                   ),
                                 Text(
                                   'Rs0.00',
@@ -73,7 +73,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Total Value Redeemed',style: kMediumTextStyle,
+                                    'Total Value Redeemed',style: k15BlackDark,
                                     ),
                                     Text(
                                   'Rs0.00',
@@ -98,7 +98,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Outstanding Balance',style: kMediumTextStyle,
+                                  'Outstanding Balance',style: k15BlackDark,
                                   ),
                                    Text(
                                   'Rs0.00',
@@ -131,7 +131,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                                  children: [
                                    Text(
                                      'Customer',
-                                     style: kMediumTextStyle,
+                                     style: k15BlackDark,
                                      ),
                                  ],
                                ),
@@ -148,7 +148,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                                  children: [
                                    Text(
                                      'Total issued',
-                                     style: kMediumTextStyle,
+                                     style: k15BlackDark,
                                      ),
                                  ],
                                ),
@@ -165,7 +165,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                                  children: [
                                    Text(
                                      'Total redeemed',
-                                     style: kMediumTextStyle,
+                                     style: k15BlackDark,
                                      ),
                                  ],
                                ),
@@ -182,7 +182,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                                  children: [
                                    Text(
                                      'Balance',
-                                     style: kMediumTextStyle,
+                                     style: k15BlackDark,
                                      ),
                                  ],
                                ),

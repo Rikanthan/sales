@@ -31,7 +31,7 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -126,11 +126,11 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Start Date',style: kMediumTextStyle,),
+                        Text('Start Date',style: k15BlackDark,),
                         SizedBox(height:5 ,),
                         ChooseDate(width: 318),
                         SizedBox(height: 20,),
-                        Text('Outlet',style: kMediumTextStyle,),   
+                        Text('Outlet',style: k15BlackDark,),   
                         DropDownInput(
                           isDarkMode: false,
                           width: 338,
@@ -152,7 +152,7 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Start Time',style: kMediumTextStyle,),
+                        Text('Start Time',style: k15BlackDark,),
                          TextInput(
                                 darkMode: false,
                                 hideText: false,
@@ -167,7 +167,7 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                             SizedBox(
                               height: 20,
                             ),
-                            Text('Count Name',style: kMediumTextStyle,),
+                            Text('Count Name',style: k15BlackDark,),
                                TextInput(
                                 darkMode: false,
                                 hideText: false,

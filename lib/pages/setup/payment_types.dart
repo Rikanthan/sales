@@ -61,7 +61,7 @@ class _PaymentTypesState extends State<PaymentTypes> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(top:16.0,bottom: 16.0),
-                        child: Text('Payment Types',style: kMediumTextStyle,),
+                        child: Text('Payment Types',style: k15BlackDark,),
                       ),
                       Divider(
                         thickness: 1.5,

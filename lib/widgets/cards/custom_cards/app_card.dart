@@ -41,7 +41,7 @@ class AppCard extends StatelessWidget {
                     width: 75,
                     height: 75,
                     ),
-                  Text(header,style: kMediumTextStyle,),
+                  Text(header,style: k15BlackDark,),
                   SizedBox(height: 8,),
                   Text(
                     subHeader,

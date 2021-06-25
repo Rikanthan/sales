@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/pages/setup/edit_outlet.dart';
+import 'package:sales/pages/setup/edit_register.dart';
 import 'package:sales/pages/setup/main_outlet.dart';
 import 'package:sales/pages/setup/main_register.dart';
 import 'package:sales/widgets/TextInput/gredient_text_header.dart';
@@ -25,7 +27,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -289,15 +291,21 @@ class _OutletRegistersState extends State<OutletRegisters> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Edit Outlet',
-                                  style: TextStyle(
-                                    fontFamily: 'Lato',
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
-                                    color: Color(0xFF0066cc),
-                                    )
-                                  ),
+                                GestureDetector(
+                                  onTap:(){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (_) => EditOutlet()));
+                                  },
+                                  child: Text(
+                                    'Edit Outlet',
+                                    style: TextStyle(
+                                      fontFamily: 'Lato',
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                      color: Color(0xFF0066cc),
+                                      )
+                                    ),
+                                ),
                                   GestureDetector(
                                     onTap: (){},
                                     child: Padding(
@@ -470,14 +478,20 @@ class _OutletRegistersState extends State<OutletRegisters> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Edit register',
-                                  style: TextStyle(
-                                    fontFamily: 'Roboto',
-                                    fontSize: 14,
-                                    color: Color(0xFF0066CC),
-                                    )
-                                  ),
+                                GestureDetector(
+                                  onTap:(){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (_) => EditRegister()));
+                                  },
+                                  child: Text(
+                                    'Edit register',
+                                    style: TextStyle(
+                                      fontFamily: 'Roboto',
+                                      fontSize: 14,
+                                      color: Color(0xFF0066CC),
+                                      )
+                                    ),
+                                ),
                               ],
                             ),
                           )
@@ -576,7 +590,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                         )
                                       ),
                                     ],
-                                ),
+                                    ),
                                   ),
                                 Divider(
                                   thickness: 1.2,

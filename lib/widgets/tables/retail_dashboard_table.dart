@@ -57,7 +57,7 @@ class _RetailTableState extends State<RetailTable> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text('Product',style:kMediumTextStyle),
+                            Text('Product',style:k15BlackDark),
                           ],
                         ),
                       ),
@@ -125,7 +125,7 @@ class _RetailTableState extends State<RetailTable> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Text('Trend',style:kMediumTextStyle),
+                            Text('Trend',style:k15BlackDark),
                           ],
                         ),
                       ),
@@ -189,7 +189,7 @@ class _RetailTableState extends State<RetailTable> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text('User',style:kMediumTextStyle),
+                            Text('User',style:k15BlackDark),
                           ],
                         ),
                       ),
@@ -257,7 +257,7 @@ class _RetailTableState extends State<RetailTable> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Text('Avg.Sale Value',style:kMediumTextStyle),
+                            Text('Avg.Sale Value',style:k15BlackDark),
                           ],
                         ),
                       ),
@@ -274,7 +274,7 @@ class _RetailTableState extends State<RetailTable> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Text('Avg.Items per Sale',style:kMediumTextStyle),
+                            Text('Avg.Items per Sale',style:k15BlackDark),
                           ],
                         ),
                       ),

@@ -25,7 +25,7 @@ class _PriceVarientState extends State<PriceVarient> {
              child: Row(
                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                children: [
-                 Text('Supply Price',style: kMediumTextStyle),
+                 Text('Supply Price',style: k15BlackDark),
                  Text('Rs18.00',style: kMediumTextNormalStyle,)
                ],
              ),
@@ -34,7 +34,7 @@ class _PriceVarientState extends State<PriceVarient> {
              crossAxisAlignment: CrossAxisAlignment.center,
              mainAxisAlignment: MainAxisAlignment.spaceBetween,
              children: [
-               Text('Supply Price',style: kMediumTextStyle),
+               Text('Supply Price',style: k15BlackDark),
                 TextInput(
                     darkMode: false,
                     hideText: false,
@@ -62,8 +62,8 @@ class _PriceVarientState extends State<PriceVarient> {
                Column(
                  crossAxisAlignment: CrossAxisAlignment.start,
                  children: [
-                   Text('Retail Price',style: kMediumTextStyle),
-                  Text('Excluding Tax',style: kMediumTextStyle),
+                   Text('Retail Price',style: k15BlackDark),
+                  Text('Excluding Tax',style: k15BlackDark),
                  ],
                ),
                 TextInput(

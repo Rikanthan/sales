@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sales/constants/colors.dart';
 class ChooseFile extends StatelessWidget {
   const ChooseFile({
     @required this.buttonText,

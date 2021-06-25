@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sales/constants/colors.dart';
 class LightGredientTableHeader extends StatelessWidget {
   LightGredientTableHeader({
     @required this.text,

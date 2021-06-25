@@ -30,7 +30,7 @@ class _SalesReportState extends State<SalesReport> {
     
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -61,7 +61,7 @@ class _SalesReportState extends State<SalesReport> {
                             children :[
                               Text(
                                 'Report Type',
-                                style:kMediumTextStyle
+                                style:k15BlackDark
                                 ),
                               SizedBox(
                                 height:5.0
@@ -90,7 +90,7 @@ class _SalesReportState extends State<SalesReport> {
                               children :[
                                 Text(
                                   'Measure',
-                                  style:kMediumTextStyle
+                                  style:k15BlackDark
                                   ),
                                 SizedBox(
                                   height:5.0
@@ -120,7 +120,7 @@ class _SalesReportState extends State<SalesReport> {
                               children: [
                                 Text(
                                   'Date Range',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                 ),
                                 SizedBox(
                                   height:5,
@@ -157,7 +157,7 @@ class _SalesReportState extends State<SalesReport> {
                             children: [
                               Text(
                                 'Comparision',
-                                style: kMediumTextStyle,
+                                style: k15BlackDark,
                               ),
                               SizedBox(
                                 height:5,
@@ -212,7 +212,7 @@ class _SalesReportState extends State<SalesReport> {
                           children : [
                             Text(
                               'Filter report by a brand,channel ,customer or other keyword',
-                                style:kMediumTextStyle
+                                style:k15BlackDark
                               ),
                               SizedBox(height: 5,),
                               Row(

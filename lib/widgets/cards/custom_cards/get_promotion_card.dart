@@ -44,9 +44,9 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
                 SizedBox(width:95),
                 Container(
                   width: 310,
-                  child: Text('Discount',style: kMediumTextStyle ,),
+                  child: Text('Discount',style: k15BlackDark ,),
                   ),
-                  Text('Product',style: kMediumTextStyle ,)
+                  Text('Product',style: k15BlackDark ,)
               ],
             ),
             SizedBox(
@@ -213,7 +213,7 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 95, bottom: 5),
-                  child: Text('Filter products by tag,type,brand,supplier or SKU',style: kMediumTextStyle,),
+                  child: Text('Filter products by tag,type,brand,supplier or SKU',style: k15BlackDark,),
                 ),
               ],
             ),

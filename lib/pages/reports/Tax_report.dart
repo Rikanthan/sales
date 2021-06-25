@@ -28,7 +28,7 @@ class _TaxReportState extends State<TaxReport> {
     
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -59,7 +59,7 @@ class _TaxReportState extends State<TaxReport> {
                             children :[
                               Text(
                                 'Report Type',
-                                style:kMediumTextStyle
+                                style:k15BlackDark
                                 ),
                               SizedBox(
                                 height:5.0
@@ -88,7 +88,7 @@ class _TaxReportState extends State<TaxReport> {
                               children: [
                                 Text(
                                   'Date Range',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                 ),
                                 SizedBox(
                                   height:5,
@@ -153,7 +153,7 @@ class _TaxReportState extends State<TaxReport> {
                           children : [
                             Text(
                               'Filter report by a brand,channel ,customer or other keyword',
-                                style:kMediumTextStyle
+                                style:k15BlackDark
                               ),
                               SizedBox(height: 5,),
                               Row(

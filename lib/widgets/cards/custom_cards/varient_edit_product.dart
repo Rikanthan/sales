@@ -48,7 +48,7 @@ class VariantsEditProduct extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Attribute (e.g. Colour)',style: kMediumTextStyle,),
+                        Text('Attribute (e.g. Colour)',style: k15BlackDark,),
                         SizedBox(height: 5,),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -118,7 +118,7 @@ class VariantsEditProduct extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Value (e.g. Red,Blue,Green)',style: kMediumTextStyle,),
+                        Text('Value (e.g. Red,Blue,Green)',style: k15BlackDark,),
                          SizedBox(height: 5,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,

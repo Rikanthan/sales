@@ -31,7 +31,7 @@ class _UsersState extends State<Users> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -163,7 +163,7 @@ class _UsersState extends State<Users> {
                                 padding: const EdgeInsets.only(bottom:4.0),
                                 child: Text(
                                   'Name ',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                   ),
                               ),
                                 DashboardSearchBar(
@@ -185,7 +185,7 @@ class _UsersState extends State<Users> {
                                   padding: const EdgeInsets.only(bottom: 4.0),
                                   child: Text(
                                     'Role',
-                                    style: kMediumTextStyle,
+                                    style: k15BlackDark,
                                     ),
                                 ),
                                   DropDownInput(
@@ -214,7 +214,7 @@ class _UsersState extends State<Users> {
                                 padding: const EdgeInsets.only(bottom:4.0),
                                 child: Text(
                                   'Outlet',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                   ),
                               ),
                                 DropDownInput(

@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
-import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
-import 'package:sales/widgets/TextInput/user_table_header.dart';
 import 'package:sales/widgets/bars/tab_bar.dart';
 import 'package:sales/widgets/buttons/toggle_button.dart';
 import 'package:sales/widgets/cards/custom_cards/image_varients.dart';
 import 'package:sales/widgets/cards/custom_cards/inventory_varient.dart';
 import 'package:sales/widgets/cards/custom_cards/price_varient.dart';
 import 'package:sales/widgets/cards/custom_cards/tax_varient.dart';
-import 'package:sales/widgets/divider/custom_divider.dart';
 
 enum VarientType{
   inventory,

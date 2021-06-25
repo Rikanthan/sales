@@ -22,7 +22,7 @@ class _PromotionsState extends State<Promotions> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -170,7 +170,7 @@ class _PromotionsState extends State<Promotions> {
                         children: [
                           Text(
                             'Start Date',
-                            style: kMediumTextStyle,
+                            style: k15BlackDark,
                             ),
                         ],
                       )
@@ -183,7 +183,7 @@ class _PromotionsState extends State<Promotions> {
                         children: [
                           Text(
                             'End Date',
-                            style: kMediumTextStyle,
+                            style: k15BlackDark,
                             ),
                         ],
                       )
@@ -196,7 +196,7 @@ class _PromotionsState extends State<Promotions> {
                         children: [
                           Text(
                             'Name',
-                            style: kMediumTextStyle,
+                            style: k15BlackDark,
                             ),
                         ],
                       )
@@ -209,7 +209,7 @@ class _PromotionsState extends State<Promotions> {
                         children: [
                           Text(
                             'Available On',
-                            style: kMediumTextStyle,
+                            style: k15BlackDark,
                             ),
                         ],
                       )

@@ -35,7 +35,7 @@ class ReportTableCell extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Text(
-                              text,style: kMediumTextStyle,
+                              text,style: k15BlackDark,
                               ),
                           ],
                         ),

@@ -192,7 +192,7 @@ class LitePlan extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.all(20.0),
                                       child: Text(
-                                        "You won't get:",style: kMediumTextStyle,
+                                        "You won't get:",style: k15BlackDark,
                                       ),
                                     ),
                                     Row(

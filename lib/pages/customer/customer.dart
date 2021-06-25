@@ -58,7 +58,7 @@ class _CustomerState extends State<Customer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -103,7 +103,7 @@ class _CustomerState extends State<Customer> {
                                       padding: const EdgeInsets.only(bottom:4.0),
                                       child: Text(
                                   'Search for Customers',
-                                  style:kMediumTextStyle
+                                  style:k15BlackDark
                                 ),
                                     ),
                                 DashboardSearchBar(
@@ -126,7 +126,7 @@ class _CustomerState extends State<Customer> {
                                           children:[
                                              Text(
                                               'City',
-                                               style:kMediumTextStyle
+                                               style:k15BlackDark
                                              ),
                                              TextInput(
                                                darkMode: false,
@@ -151,7 +151,7 @@ class _CustomerState extends State<Customer> {
                                                  padding: const EdgeInsets.only(bottom:4.0),
                                                  child: Text(
                                                   'Country',
-                                                   style: kMediumTextStyle
+                                                   style: k15BlackDark
                                                  ),
                                                ),
                                                 DropDownInput(
@@ -184,7 +184,7 @@ class _CustomerState extends State<Customer> {
                                 padding: const EdgeInsets.only(bottom:4.0),
                                 child: Text(
                                     'Customer Group',
-                                    style: kMediumTextStyle
+                                    style: k15BlackDark
                                   ),
                               ), 
                                 DropDownInput(
@@ -210,7 +210,7 @@ class _CustomerState extends State<Customer> {
                                         padding: const EdgeInsets.only(top:12.0,bottom:4),
                                         child: Text(
                                         'Date Created',
-                                          style:kMediumTextStyle
+                                          style:k15BlackDark
                                         ),
                                       ), 
                                       InputCalender(

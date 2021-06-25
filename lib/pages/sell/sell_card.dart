@@ -161,7 +161,7 @@ class _SellCardState extends State<SellCard> {
                                           ),
                                     Text(
                                     '2 items',
-                                    style: kMediumTextStyle1
+                                    style: k15BlackDark1
                                     ),
                                     Spacer(),
                                     Text(
@@ -310,7 +310,7 @@ class _SellCardState extends State<SellCard> {
                                         ),
                                         Text(
                                         'Edit to make a partial payment.',
-                                        style: kMediumTextStyle1,
+                                        style: k15BlackDark1,
                                         ),
                                     ],
                                   ),

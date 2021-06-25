@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
-import 'package:sales/widgets/TextInput/chec_box_text.dart';
-import 'package:sales/widgets/TextInput/check_box_container.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/TextInput/user_table_header.dart';
 import 'package:sales/widgets/buttons/custom_button.dart';
-import 'package:sales/widgets/buttons/esc_button.dart';
 
 enum ProductClicked
 {
@@ -90,7 +87,7 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                               ),
                             Text(
                               'Product Name',
-                                style:kMediumTextStyle
+                                style:k15BlackDark
                               ),
                           TextInput(
                             darkMode: false,
@@ -318,7 +315,7 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Text('Variant Attribute ',style: kMediumTextStyle,),
+                                      Text('Variant Attribute ',style: k15BlackDark,),
                                       Text('(e.g.Size)',style: k14Black)
                                     ],
                                   ),
@@ -360,7 +357,7 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                                    Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Text('Value ',style: kMediumTextStyle,),
+                                      Text('Value ',style: k15BlackDark,),
                                       Text('(e.g.Small, Medium, Large)',style: k14Black)
                                     ],
                                   ),

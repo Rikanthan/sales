@@ -183,7 +183,7 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(left:4.0),
-                                    child: Text('Limit to a Customer Group',style: kMediumTextStyle,),
+                                    child: Text('Limit to a Customer Group',style: k15BlackDark,),
                                   ),
                                 ],
                               ),
@@ -206,7 +206,7 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Text('Targeted Customer Group', style: kMediumTextStyle,),
+                                        Text('Targeted Customer Group', style: k15BlackDark,),
                                         SizedBox(height: 5,),
                                             DropDownInput(
                                                       isDarkMode: false,
@@ -245,7 +245,7 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(left:4.0),
-                                        child: Text('Apply a Promo Code',style: kMediumTextStyle,),
+                                        child: Text('Apply a Promo Code',style: k15BlackDark,),
                                       ),
                                     ],
                                   ),

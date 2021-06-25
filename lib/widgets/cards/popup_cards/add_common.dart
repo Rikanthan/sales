@@ -61,7 +61,7 @@ class _AddCommonState extends State<AddCommon> {
                     SizedBox( height:32),                   
                   Text(
                     '${widget.subHeader} name',
-                  style: kMediumTextStyle
+                  style: k15BlackDark
                   ),
                   TextInput(
                     darkMode: false,

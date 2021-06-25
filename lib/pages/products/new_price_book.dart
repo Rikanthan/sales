@@ -29,7 +29,7 @@ class _AddNewPriceState extends State<AddNewPrice> {
     bool isStock = false;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),

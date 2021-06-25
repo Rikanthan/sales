@@ -82,7 +82,7 @@ class _AddPromoCodePopupState extends State<AddPromoCodePopup> {
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Text('Number of Redemptions',style: kMediumTextStyle,),
+                                      Text('Number of Redemptions',style: k15BlackDark,),
                                       Text('Leave blank for unlimited',style: kMediumTextNormalStyle,)
                                     ],
                                   )

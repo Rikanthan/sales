@@ -174,19 +174,19 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.only(top:24,bottom:4.0),
-                                          child: Text('Type',style: kMediumTextStyle,),
+                                          child: Text('Type',style: k15BlackDark,),
                                         ),
-                                        Text('-',style: kMediumTextStyle,),
+                                        Text('-',style: k15BlackDark,),
                                         Padding(
                                           padding: const EdgeInsets.only(top:16.0,bottom: 4.0),
-                                          child: Text('Description',style: kMediumTextStyle,),
+                                          child: Text('Description',style: k15BlackDark,),
                                         ),
-                                        Text('-',style: kMediumTextStyle,),
+                                        Text('-',style: k15BlackDark,),
                                         Padding(
                                           padding: const EdgeInsets.only(top:16.0,bottom: 4.0),
-                                          child: Text('Tags',style: kMediumTextStyle,),
+                                          child: Text('Tags',style: k15BlackDark,),
                                         ),
-                                        Text('-',style: kMediumTextStyle,),
+                                        Text('-',style: k15BlackDark,),
                                         ],
                                       ) ,
                                     ),
@@ -202,8 +202,8 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                           Row(
                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Text('Supplier',style: kMediumTextStyle,),
-                                              Text('Supplier Price',style: kMediumTextStyle,),
+                                              Text('Supplier',style: k15BlackDark,),
+                                              Text('Supplier Price',style: k15BlackDark,),
                                             ],
                                           ),
                                           Padding(
@@ -272,15 +272,15 @@ class _ActiveProductsState extends State<ActiveProducts> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Outlet',style: kMediumTextStyle,),
+                          Text('Outlet',style: k15BlackDark,),
                           Expanded(child: Text('')),
                           if(_inventory)
-                          Text('Current Inventory',style: kMediumTextStyle,),
+                          Text('Current Inventory',style: k15BlackDark,),
                           if(_price)
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                              Text('Supply Price',style: kMediumTextStyle,),
+                              Text('Supply Price',style: k15BlackDark,),
                             ],
                           ),
                           if(_price)
@@ -289,7 +289,7 @@ class _ActiveProductsState extends State<ActiveProducts> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                              Text('Retail Price',style: kMediumTextStyle,),
+                              Text('Retail Price',style: k15BlackDark,),
                             ],
                           ))
                             ],

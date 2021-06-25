@@ -23,7 +23,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
     
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -49,7 +49,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children : [
-                          Text('Gift card Number',style: kMediumTextStyle),
+                          Text('Gift card Number',style: k15BlackDark),
                           SizedBox(height: 5,),
                           DashboardSearchBar(
                             iconData: Icons.search,
@@ -91,7 +91,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                           child: Padding(
                             padding: const EdgeInsets.only(top:20,bottom: 20,right: 40),
                             child: Text(
-                              'Total Value Sold',style: kMediumTextStyle,
+                              'Total Value Sold',style: k15BlackDark,
                               ),
                           )
                         ),
@@ -106,7 +106,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Total Value Redeemed',style: kMediumTextStyle,
+                                    'Total Value Redeemed',style: k15BlackDark,
                                     ),
                                 ],
                               ),
@@ -124,7 +124,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                           child: Padding(
                             padding: const EdgeInsets.only(top:20,bottom: 20,right: 40),
                             child: Text(
-                              'Outstanding Balance',style: kMediumTextStyle,
+                              'Outstanding Balance',style: k15BlackDark,
                               ),
                           )
                         ),
@@ -139,7 +139,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Gift Cards in Circulation',style: kMediumTextStyle,
+                                    'Gift Cards in Circulation',style: k15BlackDark,
                                     ),
                                 ],
                               ),
@@ -173,7 +173,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                                  children: [
                                    Text(
                                      'Gift card number',
-                                     style: kMediumTextStyle,
+                                     style: k15BlackDark,
                                      ),
                                  ],
                                ),
@@ -190,7 +190,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                                  children: [
                                    Text(
                                      'Total sold',
-                                     style: kMediumTextStyle,
+                                     style: k15BlackDark,
                                      ),
                                  ],
                                ),
@@ -207,7 +207,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                                  children: [
                                    Text(
                                      'Total redeemed',
-                                     style: kMediumTextStyle,
+                                     style: k15BlackDark,
                                      ),
                                  ],
                                ),
@@ -224,7 +224,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                                  children: [
                                    Text(
                                      'Balance',
-                                     style: kMediumTextStyle,
+                                     style: k15BlackDark,
                                      ),
                                  ],
                                ),

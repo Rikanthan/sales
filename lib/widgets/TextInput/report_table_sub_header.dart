@@ -29,7 +29,7 @@ final bool bottomBorder;
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text(text,style: kMediumTextStyle,),
+                          Text(text,style: k15BlackDark,),
                         ],
                       ),
                     )

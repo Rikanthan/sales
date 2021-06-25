@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
-import 'package:sales/widgets/TextInput/text_input_only.dart';
-import 'package:sales/widgets/buttons/custom_button.dart';
-import 'package:sales/widgets/buttons/greenbutton.dart';
 import 'package:sales/widgets/listviews/custom_drop_down.dart';
 import 'package:table_calendar/table_calendar.dart';
  
@@ -18,7 +15,6 @@ class ChooseDatePopUp extends StatefulWidget {
 }
 
 class _CalenderRangeState extends State<ChooseDatePopUp> {
-  CalendarController _controllerFrom;
 CalendarController _controllerTo;
  String dateFrom = 'e.g. 12 Mar 1991';
  String dateTo = 'e.g. 12 Mar 1991';
@@ -26,7 +22,6 @@ CalendarController _controllerTo;
   @override  
   void initState() {  
     super.initState();
-    _controllerFrom = CalendarController();
     _controllerTo = CalendarController();
   }
   Widget build(BuildContext context) {

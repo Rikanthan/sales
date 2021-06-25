@@ -9,7 +9,6 @@ import 'package:sales/widgets/cards/custom_cards/inventory_edit_product.dart';
 import 'package:sales/widgets/cards/custom_cards/price_edit_product.dart';
 import 'package:sales/widgets/cards/custom_cards/tax_edit_product.dart';
 import 'package:sales/widgets/cards/custom_cards/varient_edit_product.dart';
-import 'package:sales/widgets/cards/popup_cards/add_product.dart';
 import 'package:sales/widgets/drawer/products_drawer.dart';
 
 class EditProduct extends StatefulWidget {
@@ -31,7 +30,7 @@ class _PromotionsState extends State<EditProduct> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),

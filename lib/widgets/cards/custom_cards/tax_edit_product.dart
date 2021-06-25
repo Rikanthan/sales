@@ -35,7 +35,7 @@ class TaxEditProduct extends StatelessWidget {
                           height: 51.5,
                           child: Padding(
                             padding: const EdgeInsets.only(top:16.0,bottom: 16.0),
-                            child: Text('Outlet',style:kMediumTextStyle),
+                            child: Text('Outlet',style:k15BlackDark),
                           ),
                         ),
                       ],
@@ -48,7 +48,7 @@ class TaxEditProduct extends StatelessWidget {
                           width: 237,
                           child: Padding(
                             padding: const EdgeInsets.only(top:16.0,bottom: 16.0),
-                            child: Text('Tax',style:kMediumTextStyle),
+                            child: Text('Tax',style:k15BlackDark),
                           ),
                         ),
                       ],

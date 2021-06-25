@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
-import 'package:sales/pages/products/promotions.dart';
 import 'package:sales/pages/products/suppliers.dart';
-import 'package:sales/widgets/cards/custom_cards/target_promotion.dart';
 import 'package:sales/widgets/TextInput/drop_down_text_input.dart';
 import 'package:sales/widgets/TextInput/text_input_maxlines.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
@@ -31,7 +29,7 @@ class _AddSupplierState extends State<AddSupplier> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -137,7 +135,7 @@ class _AddSupplierState extends State<AddSupplier> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Supplier name',style: kMediumTextStyle,),
+                                Text('Supplier name',style: k15BlackDark,),
                                 TextInput(
                                 darkMode: false,
                                 hideText: false,
@@ -157,7 +155,7 @@ class _AddSupplierState extends State<AddSupplier> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Default Markup',style: kMediumTextStyle,),
+                                Text('Default Markup',style: k15BlackDark,),
                                 TextInput(
                                 darkMode: false,
                                 hideText: false,
@@ -176,7 +174,7 @@ class _AddSupplierState extends State<AddSupplier> {
                          SizedBox(
                               height: 20,
                             ),
-                        Text('Description',style: kMediumTextStyle,),
+                        Text('Description',style: k15BlackDark,),
                         TextInputMaxLines(
                                 darkMode: false,
                                 hideText: false,
@@ -229,7 +227,7 @@ class _AddSupplierState extends State<AddSupplier> {
                      Column(
                        crossAxisAlignment: CrossAxisAlignment.start,
                        children: [
-                         Text('First name',style: kMediumTextStyle,),
+                         Text('First name',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -244,7 +242,7 @@ class _AddSupplierState extends State<AddSupplier> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('Company',style: kMediumTextStyle,),
+                          Text('Company',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -259,7 +257,7 @@ class _AddSupplierState extends State<AddSupplier> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('Phone',style: kMediumTextStyle,),
+                          Text('Phone',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -274,7 +272,7 @@ class _AddSupplierState extends State<AddSupplier> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('Fax',style: kMediumTextStyle,),
+                          Text('Fax',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -289,7 +287,7 @@ class _AddSupplierState extends State<AddSupplier> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('Twitter',style: kMediumTextStyle,),
+                          Text('Twitter',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -312,7 +310,7 @@ class _AddSupplierState extends State<AddSupplier> {
                       Column(
                        crossAxisAlignment: CrossAxisAlignment.start,
                        children: [
-                         Text('Last name',style: kMediumTextStyle,),
+                         Text('Last name',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -327,7 +325,7 @@ class _AddSupplierState extends State<AddSupplier> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('Email',style: kMediumTextStyle,),
+                          Text('Email',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -342,7 +340,7 @@ class _AddSupplierState extends State<AddSupplier> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('Mobile',style: kMediumTextStyle,),
+                          Text('Mobile',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -357,7 +355,7 @@ class _AddSupplierState extends State<AddSupplier> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('Website',style: kMediumTextStyle,),
+                          Text('Website',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -409,7 +407,7 @@ class _AddSupplierState extends State<AddSupplier> {
                          SizedBox(
                             height: 20,
                           ),
-                         Text('Street',style: kMediumTextStyle,),
+                         Text('Street',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -424,7 +422,7 @@ class _AddSupplierState extends State<AddSupplier> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('Suburb',style: kMediumTextStyle,),
+                          Text('Suburb',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -439,7 +437,7 @@ class _AddSupplierState extends State<AddSupplier> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('State',style: kMediumTextStyle,),
+                          Text('State',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -466,7 +464,7 @@ class _AddSupplierState extends State<AddSupplier> {
                          SizedBox(
                             height: 20,
                           ),
-                         Text('Street',style: kMediumTextStyle,),
+                         Text('Street',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -481,7 +479,7 @@ class _AddSupplierState extends State<AddSupplier> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('Postcode',style: kMediumTextStyle,),
+                          Text('Postcode',style: k15BlackDark,),
                           TextInput(
                           darkMode: false,
                           hideText: false,
@@ -496,7 +494,7 @@ class _AddSupplierState extends State<AddSupplier> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('Country',style: kMediumTextStyle,),
+                          Text('Country',style: k15BlackDark,),
                           SizedBox(
                             height: 5,
                           ),

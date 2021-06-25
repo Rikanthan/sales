@@ -35,7 +35,7 @@ class _GeneralState extends State<General> {
     Answer _answer = Answer.yes;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),

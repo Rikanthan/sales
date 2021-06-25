@@ -21,7 +21,7 @@ class AppBars extends StatelessWidget {
                 children: [
                   Text(
                     'Sign in',
-                    style: kMediumTextStyle2
+                    style: k15BlackDark2
                   )
                 ],
               ),
@@ -32,7 +32,7 @@ class AppBars extends StatelessWidget {
               children: [
                 Text(
                   'Help',
-                  style: kMediumTextStyle3
+                  style: k15BlackDark3
                 ),
               ],
             ),

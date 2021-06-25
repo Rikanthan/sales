@@ -62,7 +62,7 @@ class _PersonalTokensState extends State<PersonalTokens> {
                               child: Row(
                                 children: [
                                   Text(
-                                    'Name',style: kMediumTextStyle,),
+                                    'Name',style: k15BlackDark,),
                                 ],
                               )
                             ),
@@ -70,10 +70,10 @@ class _PersonalTokensState extends State<PersonalTokens> {
                             Container(
                               width: 506.91,
                               child: Text(
-                                'Last 4 Characters of Personal Token',style: kMediumTextStyle,)
+                                'Last 4 Characters of Personal Token',style: k15BlackDark,)
                                 ),
                               Text(
-                                'Expiry Date',style: kMediumTextStyle,
+                                'Expiry Date',style: k15BlackDark,
                                 )
                           ],
                         ),

@@ -27,7 +27,7 @@ class TextInputField extends StatelessWidget {
                 width: width,
                 child: Center(
                 child: Padding(
-                  padding: EdgeInsets.only(left: 34.0,right: 34.0,top:paddingTop),
+                  padding: EdgeInsets.only(top:paddingTop),
                   child: TextFormField(
                     textInputAction: action,
                     validator: validate,
@@ -60,7 +60,7 @@ class TextInputField extends StatelessWidget {
                     hintText:hintText,
                    hintStyle: TextStyle(
                      fontFamily: 'Lato',
-                  color:Colors.blue[700].withOpacity(0.7),
+                  color: kDashboardIconColor,
                   fontSize: 15,
                         ),
                      ),

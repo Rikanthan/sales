@@ -36,7 +36,7 @@ class _OrderStockState extends State<OrderStock> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -138,7 +138,7 @@ class _OrderStockState extends State<OrderStock> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Supplier',style: kMediumTextStyle,),
+                        Text('Supplier',style: k15BlackDark,),
                         SizedBox(height:5 ,),
                         DropDownInput(
                                   isDarkMode: false,
@@ -157,7 +157,7 @@ class _OrderStockState extends State<OrderStock> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text('Supplier Invoice Number ',style: kMediumTextStyle,),
+                            Text('Supplier Invoice Number ',style: k15BlackDark,),
                             Text('(Optional)',style: kMediumTextNormalStyle,),
                           ],
                         ),
@@ -176,7 +176,7 @@ class _OrderStockState extends State<OrderStock> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text('Order Number  ',style: kMediumTextStyle,),
+                            Text('Order Number  ',style: k15BlackDark,),
                             Text('This is to help you identify this order',style: kMediumTextNormalStyle,),
                           ],
                         ),
@@ -197,7 +197,7 @@ class _OrderStockState extends State<OrderStock> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text('Note ',style: kMediumTextStyle,),
+                            Text('Note ',style: k15BlackDark,),
                             Text('(Optional)',style: kMediumTextNormalStyle,),
                           ],
                         ),
@@ -236,7 +236,7 @@ class _OrderStockState extends State<OrderStock> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Deliver to',style: kMediumTextStyle,),
+                        Text('Deliver to',style: k15BlackDark,),
                         SizedBox(height: 5,),
                         DropDownInput(
                                   isDarkMode: false,
@@ -255,14 +255,14 @@ class _OrderStockState extends State<OrderStock> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text('Delivery Date ',style: kMediumTextStyle,),
+                            Text('Delivery Date ',style: k15BlackDark,),
                             Text('(Optional)',style: kMediumTextNormalStyle,),
                           ],
                         ),
                         SizedBox(height: 5,),
                         ChooseDate(width: 338),
                         SizedBox(height: 20,),
-                        Text('Preview',style: kMediumTextStyle,),
+                        Text('Preview',style: k15BlackDark,),
                         SizedBox(height: 5,),
                         Container(
                           height: 216,
@@ -539,7 +539,7 @@ class _OrderStockState extends State<OrderStock> {
                      crossAxisAlignment: CrossAxisAlignment.center,
                      mainAxisAlignment: MainAxisAlignment.end,
                      children: [
-                       Text('\u20B9 0.00',style: kMediumTextStyle,)
+                       Text('\u20B9 0.00',style: k15BlackDark,)
                      ],
                    ),
                  ),

@@ -24,7 +24,7 @@ final double height;
                         mainAxisAlignment: alignment,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text(text,style: kMediumTextStyle,),
+                          Text(text,style: k15BlackDark,),
                         ],
                       ),
                     )

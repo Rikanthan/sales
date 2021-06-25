@@ -45,7 +45,7 @@ class InventoryEditProduct extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Supplier',style: kMediumTextStyle,),
+                        Text('Supplier',style: k15BlackDark,),
                         DropDownInput(
                                   isDarkMode: false,
                                   width: 226.67,
@@ -62,7 +62,7 @@ class InventoryEditProduct extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Supplier Code',style: kMediumTextStyle,),
+                        Text('Supplier Code',style: k15BlackDark,),
                         TextInput(
                                 darkMode: false,
                                 hideText: false,
@@ -81,7 +81,7 @@ class InventoryEditProduct extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Supply Price',style: kMediumTextStyle,),
+                        Text('Supply Price',style: k15BlackDark,),
                         TextInput(
                                 darkMode: false,
                                 hideText: false,

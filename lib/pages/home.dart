@@ -12,7 +12,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       drawer: HomeDrawer(),
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),

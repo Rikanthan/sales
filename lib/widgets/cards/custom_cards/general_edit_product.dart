@@ -55,7 +55,7 @@ class GeneralEditProduct extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Name',style: kMediumTextStyle,),
+                        Text('Name',style: k15BlackDark,),
                         TextInput(
                                 darkMode: false,
                                 hideText: false,
@@ -74,7 +74,7 @@ class GeneralEditProduct extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Brand',style: kMediumTextStyle,),
+                        Text('Brand',style: k15BlackDark,),
                         SizedBox(height: 5,),
                         DropDownInput(
                                   isDarkMode: false,
@@ -96,7 +96,7 @@ class GeneralEditProduct extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                      Text('Description',style: kMediumTextStyle,),
+                      Text('Description',style: k15BlackDark,),
                       SizedBox(height: 5,),
                       DescriptionCard(),
                       Padding(
@@ -105,7 +105,7 @@ class GeneralEditProduct extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Text('Tags',style: kMediumTextStyle,),
+                            Text('Tags',style: k15BlackDark,),
                             SizedBox(width: 8,),
                             Text('Describe the product using relevant keywords for easy filtering.',style: kMediumTextNormalStyle,)
                           ],
@@ -149,7 +149,7 @@ class GeneralEditProduct extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Text('Product Type',style: kMediumTextStyle,),
+                            Text('Product Type',style: k15BlackDark,),
                             SizedBox(width: 8,),
                             Text('Categorise your products with types that can be used to filter sales and inventory reports.',style: kMediumTextNormalStyle,)
                           ],
@@ -177,7 +177,7 @@ class GeneralEditProduct extends StatelessWidget {
                             padding: const EdgeInsets.only(top:12.0,bottom: 5),
                             child: Text(
                               'Sell on Point-of-Sale',
-                              style:kMediumTextStyle
+                              style:k15BlackDark
                               ),
                           ),
                           Text(
@@ -188,7 +188,7 @@ class GeneralEditProduct extends StatelessWidget {
                             padding: const EdgeInsets.only(top:20.0,bottom: 5),
                             child: Text(
                               'Upload Images',
-                              style:kMediumTextStyle
+                              style:k15BlackDark
                               ),
                           ),
                           Text(

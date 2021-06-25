@@ -37,7 +37,7 @@ class _AddPromotionState extends State<AddPromotion> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -133,7 +133,7 @@ class _AddPromotionState extends State<AddPromotion> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Promotion name',style: kMediumTextStyle,),
+                        Text('Promotion name',style: k15BlackDark,),
                         SizedBox(height:5 ,),
                          TextInput(
                                 darkMode: false,
@@ -149,7 +149,7 @@ class _AddPromotionState extends State<AddPromotion> {
                         SizedBox(height: 8,),
                         Text('Max characters: 30',style: k15Blue2,), 
                         SizedBox(height: 20,),
-                        Text('Short Description',style: kMediumTextStyle,),
+                        Text('Short Description',style: k15BlackDark,),
                         TextInputMaxLines(
                                 darkMode: false,
                                 hideText: false,
@@ -165,7 +165,7 @@ class _AddPromotionState extends State<AddPromotion> {
                         SizedBox(height: 8,),
                         Text('Max characters: 70',style: k15Blue2,), 
                         SizedBox(height: 20,),
-                        Text('Date',style: kMediumTextStyle,),   
+                        Text('Date',style: k15BlackDark,),   
                         ChooseDate(width: 328),
                       ],
                     ),
@@ -175,7 +175,7 @@ class _AddPromotionState extends State<AddPromotion> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text('Preview',style: kMediumTextStyle,),
+                        Text('Preview',style: k15BlackDark,),
                         SizedBox(height: 5,),
                         Container(
                           height: 202,
@@ -201,7 +201,7 @@ class _AddPromotionState extends State<AddPromotion> {
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.only( bottom: 4.0),
-                                          child: Text('Promotion Name',style: kMediumTextStyle,),
+                                          child: Text('Promotion Name',style: k15BlackDark,),
                                         ),
                                         Text('Provide a short description to explain this\npromotion.'
                                           ,style:kMediumHeightTextStyle2),
@@ -228,7 +228,7 @@ class _AddPromotionState extends State<AddPromotion> {
                             SizedBox(
                               height: 40,
                             ),
-                            Text('Outlets',style: kMediumTextStyle,),
+                            Text('Outlets',style: k15BlackDark,),
                               SizedBox(height: 5,),
                               DropDownInput(
                                         isDarkMode: false,

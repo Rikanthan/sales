@@ -60,7 +60,7 @@ class _AddBrandsState extends State<AddBrands> {
                     SizedBox( height:32),                   
                   Text(
                     'Brand name',
-                  style: kMediumTextStyle
+                  style: k15BlackDark
                   ),
                   TextInput(
                     darkMode: false,
@@ -75,7 +75,7 @@ class _AddBrandsState extends State<AddBrands> {
                     Padding(
                     padding: const EdgeInsets.only(top:20.0, bottom: 5),
                     child: Text('Description',
-                    style: kMediumTextStyle
+                    style: k15BlackDark
                     ),
                   ),
                   TextInputMaxLines(

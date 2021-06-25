@@ -33,7 +33,7 @@ class _InventoryVarientState extends State<InventoryVarient> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('SKU Code Type',style: kMediumTextStyle,),
+                                Text('SKU Code Type',style: k15BlackDark,),
                                 SizedBox(height: 5,),
                                 DropDownInput(
                                       isDarkMode: false,
@@ -68,7 +68,7 @@ class _InventoryVarientState extends State<InventoryVarient> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('SKU Code',style: kMediumTextStyle,),
+                                Text('SKU Code',style: k15BlackDark,),
                                 TextInput(
                                   darkMode: false,
                                   hideText: false,
@@ -87,7 +87,7 @@ class _InventoryVarientState extends State<InventoryVarient> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                  Text('Preview',style: kMediumTextStyle,),
+                                  Text('Preview',style: k15BlackDark,),
                                   Container(
                                     color: kHomeBackgroundColor,
                                       child:Padding(

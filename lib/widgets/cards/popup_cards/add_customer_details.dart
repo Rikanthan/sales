@@ -119,7 +119,7 @@ class _AddCustomerDetailsState extends State<AddCustomerDetails> {
                         children: [
                           Text(
                             'First Name',
-                          style: kMediumTextStyle
+                          style: k15BlackDark
                           ),
                           TextInput(
                             darkMode: false,
@@ -134,7 +134,7 @@ class _AddCustomerDetailsState extends State<AddCustomerDetails> {
                             Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Email',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                             TextInput(
@@ -150,7 +150,7 @@ class _AddCustomerDetailsState extends State<AddCustomerDetails> {
                             Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Customer Group',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                           DropDownInput(
@@ -176,7 +176,7 @@ class _AddCustomerDetailsState extends State<AddCustomerDetails> {
                         children: [
                           Text(
                             'Last Name',
-                          style: kMediumTextStyle
+                          style: k15BlackDark
                           ),
                           TextInput(
                             darkMode: false,
@@ -191,7 +191,7 @@ class _AddCustomerDetailsState extends State<AddCustomerDetails> {
                             Padding(
                             padding: const EdgeInsets.only(top:20.0, bottom: 5),
                             child: Text('Contact Number',
-                            style: kMediumTextStyle
+                            style: k15BlackDark
                               ),
                             ),
                             Row(
@@ -271,7 +271,7 @@ class _AddCustomerDetailsState extends State<AddCustomerDetails> {
                                      width: 16,
                                    ),
                                    Text('Add an email address to this customer so that you can email their receipts or send them\npromotional emails.'
-                                    , style: kMediumTextStyle,)
+                                    , style: k15BlackDark,)
                                  ],
                                ),
                              ),

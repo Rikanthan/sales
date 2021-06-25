@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
+import 'package:sales/pages/setup/edit_outlet.dart';
+import 'package:sales/pages/setup/main_outlet.dart';
 import 'package:sales/widgets/TextInput/gredient_text_header.dart';
 import 'package:sales/widgets/TextInput/settings_gredient.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
@@ -21,7 +23,7 @@ class _SalesTaxState extends State<SalesTax> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -287,15 +289,21 @@ class _SalesTaxState extends State<SalesTax> {
                             padding: const EdgeInsets.only(top:7.0,bottom: 7.0,left: 9.0,right: 9.0),
                             child: Row(
                               children: [
-                                Text(
-                                  'Main Outlet',
-                                  style: TextStyle(
-                                    fontFamily: 'Lato',
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w700,
-                                    color: Color(0xFF0066cc),
-                                    )
-                                  ),
+                                GestureDetector(
+                                  onTap:(){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (_) => MainOutlet()));
+                                  },
+                                  child: Text(
+                                    'Main Outlet',
+                                    style: TextStyle(
+                                      fontFamily: 'Lato',
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xFF0066cc),
+                                      )
+                                    ),
+                                ),
                               ],
                             ),
                           )
@@ -342,14 +350,22 @@ class _SalesTaxState extends State<SalesTax> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Edit Outlet',
-                                  style: TextStyle(
-                                    fontFamily: 'Lato',
-                                    fontSize: 14,
-                                    color: Color(0xFF0066cc),
-                                    )
-                                  ),
+                                GestureDetector(
+                                  onTap:(){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (_) => EditOutlet()
+                                      )
+                                    );
+                                  },
+                                  child: Text(
+                                    'Edit Outlet',
+                                    style: TextStyle(
+                                      fontFamily: 'Lato',
+                                      fontSize: 14,
+                                      color: Color(0xFF0066cc),
+                                      )
+                                    ),
+                                ),
                               ],
                             ),
                           )

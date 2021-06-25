@@ -163,7 +163,7 @@ class InventoryPerformanceTable extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text('Items\nSold\nper\nDay' , style: kMediumTextStyle,)
+                          Text('Items\nSold\nper\nDay' , style: k15BlackDark,)
                         ],
                       )
                         
@@ -179,7 +179,7 @@ class InventoryPerformanceTable extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text('Sell-\nthrough\nRate' , style: kMediumTextStyle,)
+                          Text('Sell-\nthrough\nRate' , style: k15BlackDark,)
                         ],
                       )
                         
@@ -195,7 +195,7 @@ class InventoryPerformanceTable extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text('Days\nCover' , style: kMediumTextStyle,)
+                          Text('Days\nCover' , style: k15BlackDark,)
                         ],
                       )           
                     ),

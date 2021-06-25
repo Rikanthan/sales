@@ -11,7 +11,6 @@ import 'package:sales/widgets/buttons/toggle_button.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:sales/widgets/cards/popup_cards/calender_range.dart';
 import 'package:sales/widgets/drawer/report_drawer.dart';
-import 'package:sales/widgets/tables/inventory_performance_table.dart';
 import 'package:sales/widgets/tables/inventory_replenishment_table.dart';
 import 'package:sales/widgets/tables/inventory_summary_table.dart';
 
@@ -39,7 +38,7 @@ class _InventoryReportState extends State<InventoryReport> {
     
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kDashboardAppBarColor,
+        backgroundColor: kAppBarColor,
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
@@ -146,7 +145,7 @@ class _InventoryReportState extends State<InventoryReport> {
                             children :[
                               Text(
                                 'Report Type',
-                                style:kMediumTextStyle
+                                style:k15BlackDark
                                 ),
                               SizedBox(
                                 height:5.0
@@ -175,7 +174,7 @@ class _InventoryReportState extends State<InventoryReport> {
                               children :[
                                 Text(
                                   'Measure',
-                                  style:kMediumTextStyle
+                                  style:k15BlackDark
                                   ),
                                 SizedBox(
                                   height:5.0
@@ -205,7 +204,7 @@ class _InventoryReportState extends State<InventoryReport> {
                               children: [
                                 Text(
                                   'Date Range',
-                                  style: kMediumTextStyle,
+                                  style: k15BlackDark,
                                 ),
                                 SizedBox(
                                   height:5,
@@ -283,7 +282,7 @@ class _InventoryReportState extends State<InventoryReport> {
                           children : [
                             Text(
                               'Filter report by a brand,channel ,customer or other keyword',
-                                style:kMediumTextStyle
+                                style:k15BlackDark
                               ),
                               SizedBox(height: 5,),
                               Row(

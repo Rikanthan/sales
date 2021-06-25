@@ -170,7 +170,7 @@ class InventoryReplenishmentTable extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text('Items Sold per Day' , style: kMediumTextStyle,)
+                        Text('Items Sold per Day' , style: k15BlackDark,)
                       ],
                     )
                       
@@ -186,7 +186,7 @@ class InventoryReplenishmentTable extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text('Days Cover' , style: kMediumTextStyle,)
+                        Text('Days Cover' , style: k15BlackDark,)
                       ],
                     )
                       
