@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
+import 'package:sales/widgets/TextInput/text_input_maxlines.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/dark_button_bar.dart';
@@ -41,7 +42,6 @@ class _CashManagementState extends State<CashManagement> {
                  text: 'Cash Management',
                  isDarkMode: true,
                  ),
-                 //HelpTextBar(height: 77, isDarkMode: true, text: 'Set opening cash drawer amount.'),
                  DarkMidButtonBar(
                 customButtonText: 'Remove Cash',
                 customButtonOnTap: (){
@@ -88,7 +88,8 @@ class _CashManagementState extends State<CashManagement> {
                         'Notes Optional',
                         style:kMediumTextDarkStyle
                         ),
-                      TextInput(
+                      TextInputMaxLines(
+                        maxLines: 4,
                         validate: (val) => val.length == 0 ? 'Enter the note' : 'Max characters: 255',
                         onChange: (val) {
                                                 },
@@ -116,9 +117,7 @@ class _CashManagementState extends State<CashManagement> {
                               topPadding: 0
                               ),
                           ],
-                        ),
-                        
-                        
+                        ),   
                     ]
                   ),
                 )
