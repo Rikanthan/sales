@@ -116,11 +116,11 @@ class _SellCardState extends State<SellCard> {
                                   children: [
                                     Text(
                                           'Sub-total',
-                                          style: kMediumTextDarkNormalStyle
+                                          style: k15WhiteNormal
                                           ),
                                     Text(
                                           'Rs139.80',
-                                          style: kMediumTextDarkNormalStyle
+                                          style: k15WhiteNormal
                                           ),
                                   ],
                                 ),
@@ -133,11 +133,11 @@ class _SellCardState extends State<SellCard> {
                                   children: [
                                     Text(
                                           'Tax No Tax',
-                                          style: kMediumTextDarkNormalStyle
+                                          style: k15WhiteNormal
                                           ),
                                     Text(
                                           'Rs0.00',
-                                          style: kMediumTextDarkNormalStyle
+                                          style: k15WhiteNormal
                                           ),
                                   ],
                                 ),
@@ -166,7 +166,7 @@ class _SellCardState extends State<SellCard> {
                                     Spacer(),
                                     Text(
                                           'Rs139.80',
-                                          style: kMediumTextDarkNormalStyle
+                                          style: k15WhiteNormal
                                           ),
                                   ],
                                 ),
@@ -193,11 +193,11 @@ class _SellCardState extends State<SellCard> {
                                           children: [
                                             Text(
                                                   'Cash',
-                                                  style: kMediumTextDarkNormalStyle
+                                                  style: k15WhiteNormal
                                                   ),
                                             Text(
                                                   'Rs139.80',
-                                                  style: kMediumTextDarkNormalStyle
+                                                  style: k15WhiteNormal
                                                   ),
                                           ],
                                         ),
@@ -210,7 +210,7 @@ class _SellCardState extends State<SellCard> {
                                           children: [
                                             Text(
                                                   'Fri, 11 Jun 21 10:26am',
-                                                  style: kMediumTextDarkNormalStyle
+                                                  style: k15WhiteNormal
                                                   ),
                                           ],
                                         ),
@@ -234,7 +234,7 @@ class _SellCardState extends State<SellCard> {
                                                   ),
                                             Text(
                                                   'Rs0.00',
-                                                  style: kMediumTextDarkNormalStyle
+                                                  style: k15WhiteNormal
                                                   ),
                                           ],
                                         ),

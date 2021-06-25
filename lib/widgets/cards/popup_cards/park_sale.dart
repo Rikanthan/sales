@@ -46,7 +46,7 @@ class ParkSalePopup extends StatelessWidget {
                     ),
                   Padding(
                     padding: const EdgeInsets.only(top:32.0, bottom: 20.0),
-                    child: Text('You are about to park this sale. Add a note so it can be identified\nby the next person who continues this sale.',style: kMediumTextDarkNormalStyle),
+                    child: Text('You are about to park this sale. Add a note so it can be identified\nby the next person who continues this sale.',style: k15WhiteNormal),
                   ),
                   TextInput(
                     darkMode: true,

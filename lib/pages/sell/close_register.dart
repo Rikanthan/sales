@@ -3,6 +3,7 @@ import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
 import 'package:sales/widgets/TextInput/close_register_header.dart';
 import 'package:sales/widgets/TextInput/custom_header.dart';
+import 'package:sales/widgets/TextInput/text_input_maxlines.dart';
 import 'package:sales/widgets/TextInput/text_input_only.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/midbar.dart';
@@ -98,10 +99,10 @@ class _CloseRegisterState extends State<CloseRegister> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Main Outlet',style: kMediumTextDarkNormalStyle,),
-                            Text('Main Register',style: kMediumTextDarkNormalStyle,),
-                            Text('2',style: kMediumTextDarkNormalStyle,),
-                            Text('Mon,31st May,2021,11:43am',style: kMediumTextDarkNormalStyle,),
+                            Text('Main Outlet',style: k15WhiteNormal,),
+                            Text('Main Register',style: k15WhiteNormal,),
+                            Text('2',style: k15WhiteNormal,),
+                            Text('Mon,31st May,2021,11:43am',style: k15WhiteNormal,),
                           ],
                         ),
                       )
@@ -424,7 +425,8 @@ class _CloseRegisterState extends State<CloseRegister> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('Note',style: kMediumTextDarkStyle,),
-                        TextInput(
+                        TextInputMaxLines(
+                          maxLines: 4,
                           darkMode: true,
                           validate: (val) => val.length == 0 ? 'Enter the amount' : null,
                             onChange: (val) {

@@ -31,7 +31,7 @@ class EnterprisePlan extends StatelessWidget {
                             SizedBox(
                               height: 20,
                             ),
-                            Text('A solution tailored to expanding\n  retailers or franchises',style: kMediumTextDarkNormalStyle,)
+                            Text('A solution tailored to expanding\n  retailers or franchises',style: k15WhiteNormal,)
                           ],
                         ),
                       ),

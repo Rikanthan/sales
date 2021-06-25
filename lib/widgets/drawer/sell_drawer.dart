@@ -9,6 +9,7 @@ import 'package:sales/pages/sell/settings.dart';
 import 'package:sales/pages/sell/status.dart';
 import 'package:sales/widgets/buttons/esc_button.dart';
 import 'package:sales/widgets/cards/custom_cards/drawer_menu_item.dart';
+import 'package:sales/widgets/cards/popup_cards/switch.dart';
 import 'package:sales/widgets/drawer/main_drawer.dart';
 
 enum SalesClicked {
@@ -81,7 +82,11 @@ final SalesClicked salesClicked;
                                     )
                                 ),
                                 TextButton(
-                                  onPressed: (){},
+                                  onPressed: (){
+                                    showDialog(
+                                      context: context,
+                                       builder: (_)=> SwitchMode());
+                                  },
                                    child: Row(
                                      mainAxisAlignment: MainAxisAlignment.start,
                                      crossAxisAlignment: CrossAxisAlignment.center,

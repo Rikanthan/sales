@@ -38,7 +38,8 @@ class DrawerItem extends StatelessWidget {
               style:TextStyle(
               color:darkMode ? kHelpTextColor:kSignInTextColor,
               fontSize: 14,
-              fontFamily: 'Lato',            
+              fontFamily: 'Lato',  
+              fontWeight: FontWeight.w900         
                 )
               )
             ],

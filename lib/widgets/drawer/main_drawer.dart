@@ -28,8 +28,8 @@ class MainDrawer extends StatelessWidget {
   Color _selectedColor( MainDrawerClick itemClick)
   {
     Color clickedColor;
-    mainDrawerClick == itemClick && isDarkMode ? clickedColor = kSignInTextColor :
-    mainDrawerClick != itemClick && isDarkMode ? clickedColor = kDrawerBackgroundColor :
+    mainDrawerClick == itemClick && isDarkMode ? clickedColor =kDrawerBackgroundColor :
+    mainDrawerClick != itemClick && isDarkMode ? clickedColor = kSignInTextColor  :
     mainDrawerClick == itemClick && !isDarkMode ? clickedColor = Colors.white : 
     clickedColor = kInputBorderColor;
     return clickedColor;

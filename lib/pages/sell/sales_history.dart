@@ -386,7 +386,7 @@ class _SalesHistoryState extends State<SalesHistory> {
                   children: [
                     Text(
                       'No results.',
-                      style: kMediumTextDarkNormalStyle
+                      style: k15WhiteNormal
                       ),
                     SizedBox(
                       height: 12,

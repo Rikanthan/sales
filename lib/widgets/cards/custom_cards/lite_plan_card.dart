@@ -41,7 +41,7 @@ class LitePlan extends StatelessWidget {
                             SizedBox(
                               height: 20,
                             ),
-                            Text('Intuitive POS and basic store\nmanagement for small retailers',style: kMediumTextDarkNormalStyle,)
+                            Text('Intuitive POS and basic store\nmanagement for small retailers',style: k15WhiteNormal,)
                           ],
                         ),
                       ),

@@ -65,8 +65,8 @@ class RetrieveSale extends StatelessWidget {
                                 padding: const EdgeInsets.only(top:20.0,bottom: 12),
                                 child: Text("You don't have any parked sales",style: kMediumTextDarkStyle),
                               ),
-                              Text('Parked Sales allow you to put products on hold,',style: kMediumTextDarkNormalStyle,),
-                              Text('while you serve other customers.',style: kMediumTextDarkNormalStyle,)
+                              Text('Parked Sales allow you to put products on hold,',style: k15WhiteNormal,),
+                              Text('while you serve other customers.',style: k15WhiteNormal,)
 
                             ],
                           ),

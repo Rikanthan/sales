@@ -15,7 +15,7 @@ const kMediumTextDarkStyle = TextStyle(
             fontWeight: FontWeight.w700
               );
 
-const kMediumTextDarkNormalStyle = TextStyle(
+const k15WhiteNormal = TextStyle(
             fontFamily: 'Lato',
             fontSize: 15,
             color: kHelpTextColor,

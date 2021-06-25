@@ -38,7 +38,7 @@ class ProductButton extends StatelessWidget {
             children: [
               Text(
                 text,
-                style: kMediumTextDarkNormalStyle
+                style: k15WhiteNormal
               )
             ],
           ),

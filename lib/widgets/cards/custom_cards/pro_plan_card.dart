@@ -35,7 +35,7 @@ class ProPlan extends StatelessWidget {
                       height: 30,
                       width: 232,
                       color:kSignInButtonColor,
-                      child: Center(child: Text('Recommended',style: kMediumTextDarkNormalStyle,)),
+                      child: Center(child: Text('Recommended',style: k15WhiteNormal,)),
                     ),
                     Container(
                       color: kAppBarColor,
@@ -59,7 +59,7 @@ class ProPlan extends StatelessWidget {
                               SizedBox(
                                 height: 20,
                               ),
-                              Text('A complete platform for\nestablished single or multi-\n           store retailers',style: kMediumTextDarkNormalStyle,)
+                              Text('A complete platform for\nestablished single or multi-\n           store retailers',style: k15WhiteNormal,)
                             ],
                           ),
                         ),

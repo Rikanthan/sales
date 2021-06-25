@@ -45,7 +45,7 @@ class ProductsItem2Popup extends StatelessWidget {
                     ),
                   Padding(
                     padding: const EdgeInsets.only(top:4.0, bottom: 20.0),
-                    child: Text('Select Size > Select Colour',style: kMediumTextDarkNormalStyle),
+                    child: Text('Select Size > Select Colour',style: k15WhiteNormal),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
