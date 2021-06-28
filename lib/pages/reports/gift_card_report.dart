@@ -40,7 +40,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                  text: 'Gift Card Report'
                  ),
               Container(
-                color:Colors.white,
+                color:kWhite,
                 child: Padding(
                   padding: const EdgeInsets.only(top:24,bottom: 24,left: 48,right: 48),
                   child: Row(
@@ -163,7 +163,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                        Row(
                          children: [
                            Container(
-                             color:Colors.white,
+                             color:kWhite,
                              height: 52,
                              width:231,
                              child: Padding(
@@ -180,7 +180,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                              ),
                            ),
                            Container(
-                              color:Colors.white,
+                              color:kWhite,
                              height: 52,
                              width:232,
                              child: Padding(
@@ -197,7 +197,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                              ),
                            ),
                            Container(
-                              color:Colors.white,
+                              color:kWhite,
                              height: 52,
                              width:232,
                              child: Padding(
@@ -214,7 +214,7 @@ class _GiftCardReportState extends State<GiftCardReport> {
                              ),
                            ),
                            Container(
-                              color:Colors.white,
+                              color:kWhite,
                              height: 52,
                              width:232,
                              child: Padding(

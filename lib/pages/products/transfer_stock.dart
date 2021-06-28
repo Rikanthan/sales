@@ -12,7 +12,8 @@ import 'package:sales/widgets/bars/midbar.dart';
 import 'package:sales/widgets/buttons/choose_file_button.dart';
 import 'package:sales/widgets/buttons/save_button.dart';
 import 'package:sales/widgets/buttons/settings_button.dart';
-import 'package:sales/widgets/drawer/setup_drawer.dart';
+import 'package:sales/widgets/drawer/products_drawer.dart';
+
 class NewStockTransfer extends StatefulWidget {
   @override
   _NewStockTransferState createState() => _NewStockTransferState();
@@ -32,16 +33,21 @@ class _NewStockTransferState extends State<NewStockTransfer> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: SetupDrawer(setupClicked:SetupClicked.general ),
+      drawer: ProductDrawer(productsClicked: ProductsClicked.stockControl,),
       body:SingleChildScrollView(
         child: Container(
-          color:Colors.white,
+          color:kWhite,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DashboardMidBar(),
               Padding(
-                padding: const EdgeInsets.only(top:20.0,bottom: 20.0,left:30.0 ,right: 30.0),
+                padding: const EdgeInsets.only(
+                                            top:20.0,
+                                            bottom: 20.0,
+                                            left:30.0 ,
+                                            right: 30.0
+                                            ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -55,7 +61,12 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                                 setState(() {
                                   isProduct = true;
                                 });
-                                Navigator.push(context, MaterialPageRoute(builder: (_)=> Products())); 
+                                Navigator.push(
+                                      context, 
+                                      MaterialPageRoute(
+                                                  builder: (_)=> Products()
+                                                  )
+                                              ); 
                             },
                             child: Text(
                               'Products',
@@ -63,10 +74,12 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                                 fontFamily: 'Lato',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color:Color(0xFF0066CC),
-                                decoration: isProduct ? TextDecoration.underline : TextDecoration.none,
+                                color:kLightBlue,
+                                decoration: isProduct ? 
+                                                TextDecoration.underline : 
+                                                TextDecoration.none,
                                 decorationStyle: TextDecorationStyle.solid,
-                                decorationColor: Color(0xFF0066CC)
+                                decorationColor: kLightBlue
                                 ),
                             ),
                           ),
@@ -78,7 +91,7 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -89,7 +102,13 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                                 setState(() {
                                   isStock = false;
                                 });
-                                Navigator.push(context, MaterialPageRoute(builder: (_)=> StockControl()));
+                                Navigator.push(
+                                          context, 
+                                          MaterialPageRoute(
+                                                builder: (_)=> 
+                                                    StockControl()
+                                                    )
+                                                  );
                               },
                              child: Text(
                               'Stock Control',
@@ -97,10 +116,12 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                                 fontFamily: 'Lato',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color:Color(0xFF0066CC),
-                                decoration: isStock ? TextDecoration.underline : TextDecoration.none,
+                                color:kLightBlue,
+                                decoration: isStock ? 
+                                            TextDecoration.underline : 
+                                            TextDecoration.none,
                                 decorationStyle: TextDecorationStyle.solid,
-                                decorationColor: Color(0xFF0066CC)
+                                decorationColor: kLightBlue
                                 ),
                               ),
                            ),
@@ -112,7 +133,7 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -123,7 +144,7 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                         ],
@@ -141,7 +162,11 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                         ),
                       ),
                     ),
-                    SettingsGredientHeader(cellType: CellType.both ,width: 964 ,text: 'Details',),
+                    SettingsGredientHeader(
+                                        cellType: CellType.both ,
+                                        width: 964 ,
+                                        text: 'Details',
+                                      ),
                     Row(
                       children: [
                         Container(
@@ -149,7 +174,7 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                           height:260,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(5),
@@ -164,7 +189,12 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Name / reference',),
+                                   SettingsCell(
+                                              height: 24, 
+                                              width: 150 , 
+                                              textSpan: false, 
+                                              text: 'Name / reference',
+                                              ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 247,
@@ -176,7 +206,12 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Delivery due',),
+                                    SettingsCell(
+                                              height: 24, 
+                                              width: 150 , 
+                                              textSpan: false, 
+                                              text: 'Delivery due',
+                                              ),
                                          SettingTextInput(
                                       height: 26,
                                        width: 247,
@@ -188,7 +223,12 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                                  Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                     SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Auto fill',),
+                                     SettingsCell(
+                                                height: 24, 
+                                                width: 150 , 
+                                                textSpan: false, 
+                                                text: 'Auto fill',
+                                                ),
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
@@ -204,7 +244,10 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                                                             );
                                                           },
                                             dropdownValue: autoFill,
-                                            dropdownList: ['Auto-fill from reorder point','Don\'t auto-fill'],
+                                            dropdownList: [
+                                                        'Auto-fill from reorder point',
+                                                        'Don\'t auto-fill'
+                                                        ],
                                             ),
                                             Text(
                                                  'Auto fill your order (500 product max).',
@@ -222,16 +265,24 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                                  Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                     SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Import order',),
+                                     SettingsCell(
+                                       height: 24, 
+                                       width: 150 , 
+                                       textSpan: false, 
+                                       text: 'Import order',
+                                      ),
                                     ChooseFile(
-                                  buttonText: 'Choose file',
-                                  onPress: (){}, 
-                                  topPadding: 3,
-                                  leftPadding: 10,
-                                  width: 86,
-                                  isButtonDisable: false,
-                                  ),
-                                Text('No file chosen',style: kMediumTextNormalStyle,)            
+                                        buttonText: 'Choose file',
+                                        onPress: (){}, 
+                                        topPadding: 3,
+                                        leftPadding: 10,
+                                        width: 86,
+                                        isButtonDisable: false,
+                                      ),
+                                Text(
+                                    'No file chosen',
+                                    style: k15BlackNormal,
+                                    )            
                                   ],
                                 ),
                               ],
@@ -243,7 +294,9 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                           height:261,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, 
+                              width: 0.7, 
+                              style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(5),
@@ -256,40 +309,50 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                                   children: [
                                     Row(
                                       children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Source outlet'),
+                                        SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'Source outlet'
+                                            ),
                                         SettingDropDown(
-                                        width: 245,
-                                        height: 22,
-                                        paddingAll: 1,
-                                        onPressed: (String newValue) 
-                                                        {
-                                                          setState(() {
-                                                          sourceOutlet = newValue;
-                                                          }
-                                                        );
-                                                      },
-                                        dropdownValue: sourceOutlet,
-                                        dropdownList: ['Main Outlet',''],
+                                          width: 245,
+                                          height: 22,
+                                          paddingAll: 1,
+                                          onPressed: (String newValue) 
+                                                          {
+                                                            setState(() {
+                                                            sourceOutlet = newValue;
+                                                            }
+                                                          );
+                                                        },
+                                          dropdownValue: sourceOutlet,
+                                          dropdownList: ['Main Outlet',''],
                                         ),
                                       ],
                                     ),
                                     SizedBox(height:10),
                                    Row(
                                       children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Destination outlet'),
+                                        SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'Destination outlet'
+                                            ),
                                         SettingDropDown(
-                                        width: 245,
-                                        height: 22,
-                                        paddingAll: 1,
-                                        onPressed: (String newValue) 
-                                                        {
-                                                          setState(() {
-                                                          destinationOutlet = newValue;
-                                                          }
-                                                        );
-                                                      },
-                                        dropdownValue: destinationOutlet,
-                                        dropdownList: ['Main Outlet',''],
+                                          width: 245,
+                                          height: 22,
+                                          paddingAll: 1,
+                                          onPressed: (String newValue) 
+                                                          {
+                                                            setState(() {
+                                                            destinationOutlet = newValue;
+                                                            }
+                                                          );
+                                                        },
+                                          dropdownValue: destinationOutlet,
+                                          dropdownList: ['Main Outlet',''],
                                         ),
                                       ],
                                     ),
@@ -317,11 +380,11 @@ class _NewStockTransferState extends State<NewStockTransfer> {
                           ),
                           SizedBox(width:10),
                           SaveButton(
-                          buttonText: 'Save',
-                          onPress: (){},
-                          topPadding: 9,
-                          leftPadding: 24,
-                          width: 100,
+                            buttonText: 'Save',
+                            onPress: (){},
+                            topPadding: 9,
+                            leftPadding: 24,
+                            width: 100,
                           ),
                       ],
                     ),

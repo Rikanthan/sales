@@ -154,7 +154,7 @@ class CloseRecordCard extends StatelessWidget {
                             onPressed: (){
                               showDialog(
                                   context: context,
-                                  builder: (BuildContext context) => SetAmountPopup(),
+                                  builder: (_) => SetAmountPopup(),
                                 );
                             },
                              child:  Text(

@@ -33,7 +33,11 @@ class _PromotionsState extends State<Promotions> {
           child:Column(
             children: [
               DashboardMidBar(),
-              CustomHeader(backgroundColor:kHomeBackgroundColor,isDarkMode: false, text: 'Promotions'),
+              CustomHeader(
+                        backgroundColor : kHomeBackgroundColor,
+                          isDarkMode: false, 
+                          text: 'Promotions'
+                          ),
               Padding(
                 padding: const EdgeInsets.only(left:48.0),
                 child: Row(
@@ -47,8 +51,7 @@ class _PromotionsState extends State<Promotions> {
                                         color: _current ? kSignInButtonColor : kInputBorderColor,
                                         width:_current ?5.0 : 0.0,
                                         )
-                                    ),
-                                   
+                                    ),         
                                   ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -118,7 +121,6 @@ class _PromotionsState extends State<Promotions> {
                                           width:_all ?5.0 : 0.0,
                                           )
                                       ),
-                                     
                                     ),
                                     child: Row(
                                       children: [
@@ -139,9 +141,8 @@ class _PromotionsState extends State<Promotions> {
                                           ),
                                       ],
                                     ),
+                                  ),
                                 ),
-                                 ),
-                    
                   ]
                 ),
               ),
@@ -154,11 +155,20 @@ class _PromotionsState extends State<Promotions> {
                   greenOnTap: (){
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (_)=>AddPromotion()));
+                      MaterialPageRoute(
+                                builder: (_)=>
+                                          AddPromotion()
+                                          )
+                                        );
                   }
                   ),
               Padding(
-                padding: const EdgeInsets.only(top:48.0,left: 72.0,bottom: 24.0,right: 72.0),
+                padding: const EdgeInsets.only(
+                                        top:48.0,
+                                        left: 72.0,
+                                        bottom: 24.0,
+                                        right: 72.0
+                                        ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -255,8 +265,7 @@ class _PromotionsState extends State<Promotions> {
                               color: kDashboardMidBarColor
                             )
                         ),
-                      ),
-                         
+                      ),                    
                     ]
                   ),
                 ),

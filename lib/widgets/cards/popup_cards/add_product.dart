@@ -28,7 +28,7 @@ class  AddProductPopup extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
-                    color: Colors.white,
+                    color: kWhite,
                     borderRadius: BorderRadius.only(
                       topLeft:Radius.circular(4),
                       topRight: Radius.circular(4)
@@ -54,7 +54,7 @@ class  AddProductPopup extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top:20.0),
                         child: Text('The chosen image will apply to the $productType "$text". To add $addImage, drag and drop anywhere, or',
-                        style: kMediumTextNormalStyle
+                        style: k15BlackNormal
                         ),
                       ),
                       Row(
@@ -62,7 +62,7 @@ class  AddProductPopup extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text('browse',style: k15BlackUnderline,),
-                          Text(' to upload.',style: kMediumTextNormalStyle,)
+                          Text(' to upload.',style: k15BlackNormal,)
                         ],
                       ),
                       SizedBox(
@@ -72,7 +72,7 @@ class  AddProductPopup extends StatelessWidget {
                         width:784,
                         height: 281,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: kWhite,
                           borderRadius: BorderRadius.all(Radius.circular(4)),
                           border: Border.all(
                             color:kInputBorderColor,
@@ -99,7 +99,7 @@ class  AddProductPopup extends StatelessWidget {
                                         height: 60.0,
                                         ),
                                         SizedBox(height: 15,),
-                                      Text('Drag image here to upload',style: kMediumTextNormalStyle,),
+                                      Text('Drag image here to upload',style: k15BlackNormal,),
                                         ]
                                     )
                                   ],
@@ -117,7 +117,7 @@ class  AddProductPopup extends StatelessWidget {
                                         height: 60.0,
                                         ),
                                         SizedBox(height: 15,),
-                                      Text('Tap images to select.',style: kMediumTextNormalStyle,),
+                                      Text('Tap images to select.',style: k15BlackNormal,),
                                         ]
                                     )
                                   ],
@@ -148,7 +148,7 @@ class  AddProductPopup extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text('No image chose for this $productType.',style: kMediumTextNormalStyle,),
+                            Text('No image chose for this $productType.',style: k15BlackNormal,),
                             Spacer(),
                             CustomButton(
                               buttonText: 'Cancel',

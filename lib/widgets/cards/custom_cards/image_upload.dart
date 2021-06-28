@@ -19,7 +19,7 @@ class ImageUpload extends StatelessWidget {
                           width: 0.7,
                           color: kInputBorderColor,
                                 ),
-                          color:Colors.white,
+                          color:kWhite,
                           borderRadius: BorderRadius.circular(5)
                               ),
                       child: Row(
@@ -35,9 +35,9 @@ class ImageUpload extends StatelessWidget {
                                 width:94,
                                 height: 60.0,
                                 ),
-                              Text('Drag images',style: kMediumTextNormalStyle,),
-                              Text('here to',style: kMediumTextNormalStyle,),
-                              Text('upload',style: kMediumTextNormalStyle,),
+                              Text('Drag images',style: k15BlackNormal,),
+                              Text('here to',style: k15BlackNormal,),
+                              Text('upload',style: k15BlackNormal,),
                             ],
                           ),
                           Column(
@@ -50,8 +50,8 @@ class ImageUpload extends StatelessWidget {
                                 width:94,
                                 height: 60.0,
                                 ),
-                              Text('Drag and drop',style: kMediumTextNormalStyle,),
-                              Text('to reorder',style: kMediumTextNormalStyle,),                           
+                              Text('Drag and drop',style: k15BlackNormal,),
+                              Text('to reorder',style: k15BlackNormal,),                           
                             ],
                           ),
                           Column(
@@ -64,8 +64,8 @@ class ImageUpload extends StatelessWidget {
                                 width:94,
                                 height: 60.0,
                                 ),
-                              Text('Drag outside',style: kMediumTextNormalStyle,),
-                              Text('to delete',style: kMediumTextNormalStyle,),               
+                              Text('Drag outside',style: k15BlackNormal,),
+                              Text('to delete',style: k15BlackNormal,),               
                             ],
                           )
                         ],
@@ -80,7 +80,7 @@ class ImageUpload extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text('Drag images here or ',style: kMediumTextNormalStyle,),
+                Text('Drag images here or ',style: k15BlackNormal,),
                 GestureDetector(
                   onTap: (){},
                   child: Text(
@@ -88,14 +88,19 @@ class ImageUpload extends StatelessWidget {
                     style: k15Underline,
                     )
                   ),
-                Text(' to upload ',style: kMediumTextNormalStyle,),
+                Text(' to upload ',style: k15BlackNormal,),
                 Spacer(),
                  CustomButton(
                         buttonText: 'Choose Images', 
                         onPress: (){
                            showDialog(
                               context: context,
-                              builder: (BuildContext context) => AddProductPopup(text: 'Audhild Tee',isVarient: false,),
+                              builder: (_) 
+                                        => 
+                                        AddProductPopup(
+                                              text: 'Audhild Tee',
+                                              isVarient: false,
+                                              ),
                             );
                         },
                         buttonColor: kSignInButtonColor, 

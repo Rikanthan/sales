@@ -36,7 +36,7 @@ class _AddNewPriceState extends State<AddNewPrice> {
       drawer: SetupDrawer(setupClicked:SetupClicked.general ),
       body:SingleChildScrollView(
         child: Container(
-          color:Colors.white,
+          color:kWhite,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -64,10 +64,10 @@ class _AddNewPriceState extends State<AddNewPrice> {
                                 fontFamily: 'Lato',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color:Color(0xFF0066CC),
+                                color:kLightBlue,
                                 decoration: isProduct ? TextDecoration.underline : TextDecoration.none,
                                 decorationStyle: TextDecorationStyle.solid,
-                                decorationColor: Color(0xFF0066CC)
+                                decorationColor: kLightBlue
                                 ),
                             ),
                           ),
@@ -79,7 +79,7 @@ class _AddNewPriceState extends State<AddNewPrice> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -90,7 +90,13 @@ class _AddNewPriceState extends State<AddNewPrice> {
                                 setState(() {
                                   isStock = false;
                                 });
-                                Navigator.push(context, MaterialPageRoute(builder: (_)=> PriceBooks()));
+                                Navigator.push(
+                                  context, 
+                                  MaterialPageRoute(
+                                    builder: (_)=> 
+                                    PriceBooks()
+                                    )
+                                  );
                               },
                              child: Text(
                               'Price books',
@@ -98,10 +104,10 @@ class _AddNewPriceState extends State<AddNewPrice> {
                                 fontFamily: 'Lato',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color:Color(0xFF0066CC),
+                                color:kLightBlue,
                                 decoration: isStock ? TextDecoration.underline : TextDecoration.none,
                                 decorationStyle: TextDecorationStyle.solid,
-                                decorationColor: Color(0xFF0066CC)
+                                decorationColor: kLightBlue
                                 ),
                           ),
                            ),
@@ -113,7 +119,7 @@ class _AddNewPriceState extends State<AddNewPrice> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -124,7 +130,7 @@ class _AddNewPriceState extends State<AddNewPrice> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                         ],
@@ -142,13 +148,19 @@ class _AddNewPriceState extends State<AddNewPrice> {
                         ),
                       ),
                     ),
-                    SettingsGredientHeader(cellType: CellType.both ,width: 964 ,text: 'Details',),
+                    SettingsGredientHeader(
+                      cellType: CellType.both,
+                      width: 964,
+                      text: 'Details',
+                      ),
                     Container(
                       width: 964,
                       height: 232,
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                          color:kCustomWhite,
+                           width: 0.7, 
+                           style: BorderStyle.solid
                           ),
                         borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(5),
@@ -164,7 +176,11 @@ class _AddNewPriceState extends State<AddNewPrice> {
                               Container(
                                 decoration: BoxDecoration(
                                     border: Border(
-                                       right: BorderSide( color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid)
+                                       right: BorderSide( 
+                                         color:kCustomWhite, 
+                                         width: 0.7, 
+                                         style: BorderStyle.solid
+                                         )
                                       ),
                                     ),
                                 width:481,
@@ -177,7 +193,12 @@ class _AddNewPriceState extends State<AddNewPrice> {
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
-                                         SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Name',),
+                                         SettingsCell(
+                                           height: 24, 
+                                           width: 150 , 
+                                           textSpan: false, 
+                                           text: 'Name',
+                                           ),
                                           SettingTextInput(
                                             height: 28,
                                              width: 247,
@@ -189,7 +210,12 @@ class _AddNewPriceState extends State<AddNewPrice> {
                                        Row(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
-                                           SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Customer group',),
+                                           SettingsCell(
+                                                height: 24, 
+                                                width: 150 , 
+                                                textSpan: false, 
+                                                text: 'Customer group',
+                                                ),
                                           SettingDropDown(
                                               width: 160,
                                               height: 28,
@@ -238,7 +264,11 @@ class _AddNewPriceState extends State<AddNewPrice> {
                                   height: 230,
                                    decoration: BoxDecoration(
                                     border: Border(
-                                       left: BorderSide( color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid)
+                                       left: BorderSide( 
+                                         color:kCustomWhite, 
+                                         width: 0.7, 
+                                         style: BorderStyle.solid
+                                         )
                                       ),
                                     ),  
                               child: Padding(
@@ -249,7 +279,12 @@ class _AddNewPriceState extends State<AddNewPrice> {
                                           Row(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Valid from',),
+                                        SettingsCell(
+                                                  height: 24, 
+                                                  width: 150 , 
+                                                  textSpan: false, 
+                                                  text: 'Valid from',
+                                                  ),
                                           SettingTextInput(
                                             height: 26,
                                             width: 247,
@@ -261,7 +296,12 @@ class _AddNewPriceState extends State<AddNewPrice> {
                                    Row(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Valid to',),
+                                        SettingsCell(
+                                                height: 24, 
+                                                width: 150 , 
+                                                textSpan: false, 
+                                                text: 'Valid to',
+                                                ),
                                           SettingTextInput(
                                             height: 26,
                                             width: 247,
@@ -270,7 +310,10 @@ class _AddNewPriceState extends State<AddNewPrice> {
                                         ],
                                       ),
                                        Padding(
-                                         padding: const EdgeInsets.only(top:20.0,bottom: 20.0),
+                                         padding: const EdgeInsets.only(
+                                                              top:20.0,
+                                                              bottom: 20.0
+                                                              ),
                                          child: Divider(
                                             thickness: 1,
                                             color: kInputBorderColor,
@@ -280,7 +323,12 @@ class _AddNewPriceState extends State<AddNewPrice> {
                                           mainAxisAlignment: MainAxisAlignment.start,
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Price book file',),
+                                            SettingsCell(
+                                                      height: 24, 
+                                                      width: 150 , 
+                                                      textSpan: false, 
+                                                      text: 'Price book file',
+                                                      ),
                                             Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
@@ -296,13 +344,16 @@ class _AddNewPriceState extends State<AddNewPrice> {
                                                       width: 86,
                                                       isButtonDisable: false,
                                                       ),
-                                                      Text(' No file chosen',style: kMediumTextNormalStyle,)
+                                                      Text(' No file chosen',style: k15BlackNormal,)
                                                   ],
                                                 ),
                                                 SizedBox(
                                                   height: 4,
                                                 ),
-                                                Text('You can upload your price book using a CSV', style: k14Grey,),
+                                                Text(
+                                                    'You can upload your price book using a CSV', 
+                                                    style: k14Grey,
+                                                    ),
                                                 Row(
                                                   children: [
                                                     Text('Download a ', style: k14Grey,),
@@ -317,23 +368,18 @@ class _AddNewPriceState extends State<AddNewPrice> {
                                                   ],
                                                 )
                                               ],
-                                            ),
-                                            
+                                            ),  
                                           ],
                                         ),
-                                  
                                     ],
                                   ),
                                 ),
                               ),
                             ],
                           ),
-                          
-                          
                         ],
                       ),
                     ),
-                    
                     Padding(
                       padding: const EdgeInsets.only(top:10.0,bottom: 10.0),
                       child: Divider(

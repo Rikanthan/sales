@@ -42,22 +42,26 @@ class _UsersState extends State<Users> {
           child:Column(
             children: [
               DashboardMidBar(),
-              CustomHeader(backgroundColor:kHomeBackgroundColor,isDarkMode: false, text: 'Users'),
+              CustomHeader(
+                backgroundColor:kHomeBackgroundColor,
+                isDarkMode: false, 
+                text: 'Users'
+                ),
               Padding(
                 padding: const EdgeInsets.only(left:48.0),
                 child: Row(
                   children: [
                     Container(
-                                  width:60,
-                                  height: 48,
-                                  decoration:BoxDecoration(
-                                    border: Border(
-                                      bottom: BorderSide(
-                                        color: usersTabBar == UsersTabBar.users ? kSignInButtonColor : kInputBorderColor,
-                                        width: usersTabBar == UsersTabBar.users ? 5.0 : 0.0,
-                                        )
-                                    ),
-                                   
+                            width:60,
+                            height: 48,
+                            decoration:BoxDecoration(
+                              border: Border(
+                                bottom: BorderSide(
+                                  color: usersTabBar == UsersTabBar.users ? 
+                                        kSignInButtonColor : kInputBorderColor,
+                                  width: usersTabBar == UsersTabBar.users ? 5.0 : 0.0,
+                                  )
+                              ),
                                   ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -69,7 +73,8 @@ class _UsersState extends State<Users> {
                                                       fontFamily: 'Lato',
                                                       fontSize: 18,
                                                       fontWeight: FontWeight.w400,
-                                                      color:  usersTabBar != UsersTabBar.users  ? kAppBarColor : kSignInButtonColor,
+                                                      color:  usersTabBar != UsersTabBar.users ? 
+                                                              kAppBarColor : kSignInButtonColor,
                                                        ),
                                           ),
                                         onPressed: ()
@@ -90,8 +95,12 @@ class _UsersState extends State<Users> {
                                     decoration:BoxDecoration(
                                       border: Border(
                                         bottom: BorderSide(
-                                          color:  usersTabBar == UsersTabBar.role ? kSignInButtonColor : kInputBorderColor,
-                                          width: usersTabBar == UsersTabBar.role ? 5.0 : 0.0,
+                                          color:  usersTabBar == UsersTabBar.role ? 
+                                                              kSignInButtonColor : 
+                                                              kInputBorderColor,
+                                          width: usersTabBar == UsersTabBar.role ? 
+                                                                      5.0 : 
+                                                                      0.0,
                                           )
                                       ),
                                      
@@ -105,7 +114,9 @@ class _UsersState extends State<Users> {
                                                         fontFamily: 'Lato',
                                                         fontSize: 18,
                                                         fontWeight: FontWeight.w400,
-                                                        color:  usersTabBar != UsersTabBar.users ?  kSignInButtonColor : kAppBarColor,
+                                                        color:  usersTabBar != UsersTabBar.users ?  
+                                                                      kSignInButtonColor : 
+                                                                      kAppBarColor,
                                                          ),
                                             ),
                                           onPressed: ()
@@ -145,10 +156,15 @@ class _UsersState extends State<Users> {
               Container(
                 width: 1024,
                 height: 118,
-                color:Colors.white,
+                color:kWhite,
                 child:
                    Padding(
-                      padding: const EdgeInsets.only(left: 48,right: 48,top:24,bottom:12),
+                      padding: const EdgeInsets.only(
+                                                    left: 48,
+                                                    right: 48,
+                                                    top:24,
+                                                    bottom:12
+                                                    ),
                      child: Column(
                        crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -201,7 +217,11 @@ class _UsersState extends State<Users> {
                                                     );
                                                   },
                                     dropdownValue: roles,
-                                    dropdownList: ['All Roles','Admin','Manager','Cashier'],
+                                    dropdownList: [
+                                                  'All Roles',
+                                                  'Admin',
+                                                  'Manager',
+                                                  'Cashier'],
                                   )
                                 ],
                               ),
@@ -230,7 +250,10 @@ class _UsersState extends State<Users> {
                                                   );
                                                 },
                                   dropdownValue: outlet,
-                                  dropdownList: ['All Outlets','Main Outlet'],
+                                  dropdownList: [
+                                            'All Outlets',
+                                            'Main Outlet'
+                                            ],
                                 ),
                               ],
                             ),
@@ -250,14 +273,17 @@ class _UsersState extends State<Users> {
                               ],
                             )
                           ]
-                        ),                                               
+                        ),
                       ],
                     ),
-                   ),                
+                   ), 
                 ),
                 if(usersTabBar == UsersTabBar.users)
                 Padding(
-                  padding: const EdgeInsets.only(left:48,right:48,top:24.0),
+                  padding: const EdgeInsets.only(
+                                                left:48,
+                                                right:48,
+                                                top:24.0),
                   child: Column(
                     children: [
                       Row(
@@ -339,7 +365,7 @@ class _UsersState extends State<Users> {
                                  child: Text(
                                    'RS',
                                    style: TextStyle(
-                                     color: Colors.white,
+                                     color: kWhite,
                                      fontSize: 18,
                                      fontWeight: FontWeight.w700
                                     ),
@@ -388,7 +414,7 @@ class _UsersState extends State<Users> {
                                   children: [
                                     Text(
                                       'Account\nOwner,\nAdmin',
-                                      style: kMediumTextNormalStyle,
+                                      style: k15BlackNormal,
                                       ),
                                   ],
                                 ),
@@ -403,7 +429,7 @@ class _UsersState extends State<Users> {
                                   children: [
                                     Text(
                                       'All Outlets',
-                                      style: kMediumTextNormalStyle,
+                                      style: k15BlackNormal,
                                       ),
                                   ],
                                 ),
@@ -413,7 +439,7 @@ class _UsersState extends State<Users> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
-                                color:Colors.white,
+                                color:kWhite,
                                 width:100,
                                 child: Padding(
                                   padding: const EdgeInsets.all(12.0),
@@ -430,7 +456,7 @@ class _UsersState extends State<Users> {
                                         ),
                                       Text(
                                         '0.00',
-                                        style: kMediumTextNormalStyle,
+                                        style: k15BlackNormal,
                                         ),
                                     ],
                                   ),
@@ -443,17 +469,15 @@ class _UsersState extends State<Users> {
                                 width:106,
                                 child: Text(
                                   '28 minutes  \nago',
-                                  style: kMediumTextNormalStyle,
+                                  style: k15BlackNormal,
                                   ),
                               ),
                             ),
-                           // Spacer(),
                             Icon(
                               Icons.check_sharp,
                               color: kAppBarColor,
                               size: 15,
-                            ),
-                            
+                            ),                           
                           ],
                         ),
                       )

@@ -43,7 +43,7 @@ class _AddCustomerDetailsState extends State<AddCustomerDetails> {
           Container(
             decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
-                color: Colors.white,
+                color: kWhite,
                 borderRadius: BorderRadius.all(Radius.circular(4))
               ),
             width: 800,
@@ -241,7 +241,7 @@ class _AddCustomerDetailsState extends State<AddCustomerDetails> {
                                   SizedBox(
                                     width: 12,
                                   ),
-                                  Text('Opt-In to Marketing and\nPromotional Emails',style: kMediumTextNormalStyle,)
+                                  Text('Opt-In to Marketing and\nPromotional Emails',style: k15BlackNormal,)
                               ],
                             ),
                         ],

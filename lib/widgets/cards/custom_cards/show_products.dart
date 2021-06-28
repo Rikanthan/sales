@@ -78,8 +78,16 @@ class _ShowProductsState extends State<ShowProducts> {
                   Padding(
                     padding: const EdgeInsets.only(left:8.0,right: 8.0),
                     child: Checkbox(
-                      activeColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
-                      focusColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
+                      activeColor: MaterialStateColor
+                                            .resolveWith(
+                                                      (states) => 
+                                                          kSignInButtonColor
+                                                          ),
+                      focusColor: MaterialStateColor
+                                            .resolveWith(
+                                                          (states) => 
+                                                          kSignInButtonColor
+                                                          ),
                       value: _isSelected,
                        onChanged: (newValue){
                          setState(() {
@@ -209,16 +217,17 @@ class _ShowProductsState extends State<ShowProducts> {
               color:kAppBarColor
             ),
             Container(
-              //color: _expansionTile? kInputBorderColor: Colors.white,
+              //color: _expansionTile? kInputBorderColor: kWhite,
                 decoration: 
                       BoxDecoration(
                                     border: Border(
                                       left: BorderSide(
-                                        color: _expansionTile? kInputBorderColor: kSignInButtonColor,
+                                        color: _expansionTile ? kInputBorderColor 
+                                                    : kSignInButtonColor,
                                         width: _expansionTile? 0 :4.0,
                                         )
                                     ),
-                                    color: _expansionTile? kInputBorderColor: Colors.white,
+                                    color: _expansionTile? kInputBorderColor: kWhite,
                                   ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -230,7 +239,8 @@ class _ShowProductsState extends State<ShowProducts> {
                         padding: const EdgeInsets.only(left:8,right:0,top: 8,bottom: 8),
                         child: InkWell(
                           child: Icon(
-                            ! _expansionTile?Icons.keyboard_arrow_down :Icons.keyboard_arrow_right,
+                            ! _expansionTile  ? Icons.keyboard_arrow_down : 
+                                                Icons.keyboard_arrow_right,
                             size: 15,
                             color: kDashboardMidBarColor,
                             ),
@@ -244,8 +254,14 @@ class _ShowProductsState extends State<ShowProducts> {
                       Padding(
                           padding: const EdgeInsets.only(left:8.0,top:8.0,bottom:8.0,right: 8.0),
                           child: Checkbox(
-                            activeColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
-                            focusColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
+                            activeColor: MaterialStateColor
+                                                .resolveWith(
+                                                          (states) => kSignInButtonColor
+                                                          ),
+                            focusColor: MaterialStateColor
+                                                .resolveWith(
+                                                            (states) => kSignInButtonColor
+                                                            ),
                             value: _isSelected,
                              onChanged: (newValue){
                                setState(() {
@@ -266,7 +282,7 @@ class _ShowProductsState extends State<ShowProducts> {
                                 Icon(
                                   Icons.account_box_rounded,
                                   size: 50,
-                                  color: Colors.white,
+                                  color: kWhite,
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(left:8.0),
@@ -374,10 +390,10 @@ class _ShowProductsState extends State<ShowProducts> {
                                           padding: 0.0,
                                           activeText: ' \u2714',
                                           inactiveText: '\u2716',
-                                          activeTextColor: Colors.white,
+                                          activeTextColor: kWhite,
                                           inactiveTextColor: kDashboardMidBarColor,
                                           activeColor: kSignInButtonColor,
-                                          inactiveColor: Colors.white,
+                                          inactiveColor: kWhite,
                                           activeSwitchBorder: Border.all(
                                               color: kDropDownColor,
                                               width: 3.0,

@@ -31,7 +31,7 @@ class EscButton extends StatelessWidget {
                       alignment: Alignment.topRight,
                       child: CircleAvatar(
                       radius: 25.0,
-                      backgroundColor: isDarkMode ? kDrawerBackgroundColor : Colors.white,
+                      backgroundColor: isDarkMode ? kDrawerBackgroundColor : kWhite,
                       child: Icon(
                         Icons.close,
                         color: isDarkMode ? kSignInTextColor : kHomeDrawerCloseColor

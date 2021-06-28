@@ -69,7 +69,7 @@ class TaxEditProduct extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Main Outlet',style: kMediumTextNormalStyle,),
+                    Text('Main Outlet',style: k15BlackNormal,),
                     DropDownInput(
                                   isDarkMode: false,
                                   width: 418.92,

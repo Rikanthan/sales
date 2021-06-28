@@ -21,7 +21,11 @@ class _AddressInformationState extends State<AddressInformation> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SettingsGredientHeader(cellType: CellType.both ,width: 964 , text: 'Address',),
+          SettingsGredientHeader(
+            cellType: CellType.both ,
+            width: 964 ,
+             text: 'Address',
+             ),
           Row(
             children: [
               Container(
@@ -29,13 +33,26 @@ class _AddressInformationState extends State<AddressInformation> {
                 height:35,
                 decoration: BoxDecoration(
                             border: Border(
-                              left:BorderSide(color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid),
-                              right:BorderSide(color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid), 
+                              left:BorderSide(
+                                          color:kCustomWhite, 
+                                          width: 0.7, 
+                                          style: BorderStyle.solid
+                                          ),
+                              right:BorderSide(
+                                          color:kCustomWhite, 
+                                          width: 0.7, 
+                                          style: BorderStyle.solid
+                                          ), 
                               ),
                               color: Color(0xFFf6f6f6)
                             ), 
                           child: Padding(
-                            padding: const EdgeInsets.only(left: 20,right: 20,top:9,bottom: 7),
+                            padding: const EdgeInsets.only(
+                                                    left: 20,
+                                                    right: 20,
+                                                    top:9,
+                                                    bottom: 7
+                                                    ),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -43,7 +60,7 @@ class _AddressInformationState extends State<AddressInformation> {
                                     Text(
                                       'Physical Address',
                                         style: TextStyle(
-                                          color: Color(0xFF333333),
+                                          color: kBlackOpacity,
                                           fontSize: 14,
                                           fontFamily: 'Lato'
                                           ),
@@ -58,7 +75,11 @@ class _AddressInformationState extends State<AddressInformation> {
                         height:35,
                          decoration: BoxDecoration(
                             border: Border(
-                              right:BorderSide(color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid),
+                              right:BorderSide(
+                                            color:kCustomWhite, 
+                                            width: 0.7, 
+                                            style: BorderStyle.solid
+                                            ),
                               ),
                               color: Color(0xFFf6f6f6)
                             ), 
@@ -74,7 +95,7 @@ class _AddressInformationState extends State<AddressInformation> {
                                       child: Text(
                                         'Postal Address',
                                           style: TextStyle(
-                                            color: Color(0xFF333333),
+                                            color: kBlackOpacity,
                                             fontSize: 14,
                                             fontFamily: 'Lato'
                                             ),
@@ -85,7 +106,7 @@ class _AddressInformationState extends State<AddressInformation> {
                                       child: Text(
                                           'Same as Physical Address',
                                             style: TextStyle(
-                                              color: Color(0xFF0066CC),
+                                              color: kLightBlue,
                                               fontSize: 14,
                                               fontFamily: 'Lato'
                                               ),
@@ -104,7 +125,9 @@ class _AddressInformationState extends State<AddressInformation> {
                           height:292,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, 
+                              width: 0.7, 
+                              style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(5),
@@ -119,7 +142,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Street',),
+                                   SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'Street',
+                                            ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 245,
@@ -131,7 +159,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Street',),
+                                   SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'Street',
+                                            ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 245,
@@ -143,7 +176,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Suburb',),
+                                   SettingsCell(
+                                              height: 24, 
+                                              width: 150 , 
+                                              textSpan: false, 
+                                              text: 'Suburb',
+                                              ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 160,
@@ -155,7 +193,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'City',),
+                                   SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'City',
+                                            ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 160,
@@ -167,7 +210,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Postcode',),
+                                   SettingsCell(
+                                          height: 24, 
+                                          width: 150 , 
+                                          textSpan: false, 
+                                          text: 'Postcode',
+                                          ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 73,
@@ -179,7 +227,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'State',),
+                                   SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'State',
+                                            ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 160,
@@ -191,7 +244,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Country',),
+                                   SettingsCell(
+                                              height: 24, 
+                                              width: 150 , 
+                                              textSpan: false, 
+                                              text: 'Country',
+                                              ),
                                     SettingDropDown(
                                         width: 160,
                                         height: 22,
@@ -204,7 +262,13 @@ class _AddressInformationState extends State<AddressInformation> {
                                                         );
                                                       },
                                         dropdownValue: country2,
-                                        dropdownList: ['India','SriLanka','UK',"USA",'Australia'],
+                                        dropdownList: [
+                                                        'India',
+                                                        'SriLanka',
+                                                        'UK',
+                                                        "USA",
+                                                        'Australia'
+                                                        ],
                                         ),
                                   ],
                                 ),
@@ -218,7 +282,7 @@ class _AddressInformationState extends State<AddressInformation> {
                           height:292,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(5),
@@ -233,7 +297,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Street',),
+                                   SettingsCell(
+                                                height: 24, 
+                                                width: 150 , 
+                                                textSpan: false, 
+                                                text: 'Street',
+                                                ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 245,
@@ -245,7 +314,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Street',),
+                                   SettingsCell(
+                                          height: 24, 
+                                          width: 150 , 
+                                          textSpan: false, 
+                                          text: 'Street',
+                                          ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 245,
@@ -257,7 +331,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Suburb',),
+                                   SettingsCell(
+                                          height: 24, 
+                                          width: 150 , 
+                                          textSpan: false, 
+                                          text: 'Suburb',
+                                          ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 160,
@@ -269,7 +348,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'City',),
+                                   SettingsCell(
+                                     height: 24, 
+                                     width: 150 , 
+                                     textSpan: false, 
+                                     text: 'City',
+                                     ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 160,
@@ -281,7 +365,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Postcode',),
+                                   SettingsCell(
+                                      height: 24, 
+                                      width: 150 , 
+                                      textSpan: false, 
+                                      text: 'Postcode',
+                                      ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 73,
@@ -293,7 +382,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'State',),
+                                   SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'State',
+                                            ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 160,
@@ -305,7 +399,12 @@ class _AddressInformationState extends State<AddressInformation> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Country',),
+                                   SettingsCell(
+                                              height: 24, 
+                                              width: 150 , 
+                                              textSpan: false, 
+                                              text: 'Country',
+                                              ),
                                     SettingDropDown(
                                         width: 160,
                                         height: 22,
@@ -330,7 +429,10 @@ class _AddressInformationState extends State<AddressInformation> {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top:10.0,bottom: 10.0),
+                      padding: const EdgeInsets.only(
+                                                  top:10.0,
+                                                  bottom: 10.0
+                                                  ),
                       child: Divider(
                         thickness: 1,
                         color: kInputBorderColor,

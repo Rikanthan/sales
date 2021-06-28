@@ -26,7 +26,7 @@ class  EditValueNamesPopup extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
-                    color: Colors.white,
+                    color: kWhite,
                     borderRadius: BorderRadius.all(
                         Radius.circular(4),
                       )
@@ -86,7 +86,7 @@ class  EditValueNamesPopup extends StatelessWidget {
                                  mainAxisAlignment: MainAxisAlignment.start,
                                  crossAxisAlignment: CrossAxisAlignment.center,
                                  children: [
-                                   Text('Size',style:kMediumTextNormalStyle),
+                                   Text('Size',style:k15BlackNormal),
                                  ],
                                ),
                              ),
@@ -148,7 +148,7 @@ class  EditValueNamesPopup extends StatelessWidget {
                                  mainAxisAlignment: MainAxisAlignment.start,
                                  crossAxisAlignment: CrossAxisAlignment.center,
                                  children: [
-                                   Text('Colour',style:kMediumTextNormalStyle),
+                                   Text('Colour',style:k15BlackNormal),
                                  ],
                                ),
                              ),
@@ -199,7 +199,7 @@ class  EditValueNamesPopup extends StatelessWidget {
                                  mainAxisAlignment: MainAxisAlignment.start,
                                  crossAxisAlignment: CrossAxisAlignment.center,
                                  children: [
-                                   Text('Material',style:kMediumTextNormalStyle),
+                                   Text('Material',style:k15BlackNormal),
                                  ],
                                ),
                              ),

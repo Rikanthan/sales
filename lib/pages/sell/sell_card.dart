@@ -275,7 +275,6 @@ class _SellCardState extends State<SellCard> {
                                     )
                                 ),
                                 height: 604,
-                        //width:440,
                         child:Padding(
                           padding: const EdgeInsets.only(top:20.0, left: 30.0, right: 30.0),
                           child: Column(
@@ -384,9 +383,7 @@ class _SellCardState extends State<SellCard> {
                   ],
                 ),
               ],
-            ),
-            
-            
+            ),   
           ],
         ),
       )

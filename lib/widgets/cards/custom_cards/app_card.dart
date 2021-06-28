@@ -28,7 +28,7 @@ class AppCard extends StatelessWidget {
             width: 2.0
             ),
           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-          color:Colors.white
+          color:kWhite
           ),
         child: Padding(
           padding: const EdgeInsets.all(24.0),
@@ -71,7 +71,7 @@ class AppCard extends StatelessWidget {
                       onPress: (){},
                       fontSize: 15,
                       buttonTextColor: isFind ? kDashboardIconColor : kHelpTextColor,
-                      buttonColor: isFind ? Colors.white : kDashboardIconColor ,
+                      buttonColor: isFind ? kWhite : kDashboardIconColor ,
                       topPadding: 12,
                       leftPadding: 20
                       ),

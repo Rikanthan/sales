@@ -48,7 +48,7 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
           Container(
             decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
-                color: Colors.white,
+                color: kWhite,
                 borderRadius: BorderRadius.all(Radius.circular(4))
               ),
             width: 872,
@@ -70,7 +70,7 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                     ),
                     SizedBox(height: 32,),
                   Container(
-                    color: Colors.white,
+                    color: kWhite,
                     height: 465,
                     width: 807.6,
                     child: ListView(
@@ -81,7 +81,7 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                         children: [
                           Text(
                             'Add basic information to your products so you can sell it-in-store as soon as possible. You can add more catalog information\nlater as needed.'
-                          ,style: kMediumTextNormalStyle,),
+                          ,style: k15BlackNormal,),
                           SizedBox(
                             height: 24,
                               ),
@@ -136,8 +136,8 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                                             thickness: 1,
                                           ),
                                         ),
-                                        Text('This product is a single SKU with',style: kMediumTextNormalStyle,),
-                                        Text('its own inventory',style: kMediumTextNormalStyle,),
+                                        Text('This product is a single SKU with',style: k15BlackNormal,),
+                                        Text('its own inventory',style: k15BlackNormal,),
                                       ],
                                     ),
                                   ),
@@ -170,11 +170,11 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                                             thickness: 1,
                                           ),
                                         ),
-                                        Text('This is a group of similar products',style: kMediumTextNormalStyle,),
-                                        Text('which have different attributes,',style: kMediumTextNormalStyle,),
-                                        Text('like size or color. Each variant is a',style: kMediumTextNormalStyle,),
-                                        Text('unique SKU with its own',style: kMediumTextNormalStyle,),
-                                        Text('inventory',style: kMediumTextNormalStyle,),
+                                        Text('This is a group of similar products',style: k15BlackNormal,),
+                                        Text('which have different attributes,',style: k15BlackNormal,),
+                                        Text('like size or color. Each variant is a',style: k15BlackNormal,),
+                                        Text('unique SKU with its own',style: k15BlackNormal,),
+                                        Text('inventory',style: k15BlackNormal,),
                                         SizedBox(
                                           height: 7,
                                         )
@@ -214,11 +214,11 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                                             thickness: 1,
                                           ),
                                         ),
-                                        Text('This product is made up of',style: kMediumTextNormalStyle,),
-                                        Text('specified quantities of one or more',style: kMediumTextNormalStyle,),
-                                        Text('products.A composite is a single',style: kMediumTextNormalStyle,),
-                                        Text('SKU but uses the inventory of the',style: kMediumTextNormalStyle,),
-                                        Text('products within it.',style: kMediumTextNormalStyle,),
+                                        Text('This product is made up of',style: k15BlackNormal,),
+                                        Text('specified quantities of one or more',style: k15BlackNormal,),
+                                        Text('products.A composite is a single',style: k15BlackNormal,),
+                                        Text('SKU but uses the inventory of the',style: k15BlackNormal,),
+                                        Text('products within it.',style: k15BlackNormal,),
                                         SizedBox(
                                           height: 7,
                                         )
@@ -255,9 +255,9 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                                   SizedBox(
                                     height: 5,
                                   ),
-                                  Text('Automatically generate a SKU\n',style:kMediumTextNormalStyle),
+                                  Text('Automatically generate a SKU\n',style:k15BlackNormal),
                                   if(_skuType== SkuType.automatic)
-                                  Text('A SKU will automatically be generated once this product has been saved.',style:kMediumTextNormalStyle),
+                                  Text('A SKU will automatically be generated once this product has been saved.',style:k15BlackNormal),
                                 ],
                               )
                              ],
@@ -283,7 +283,7 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                                   SizedBox(
                                     height: 5,
                                   ),
-                                  Text('Enter a custom SKU',style:kMediumTextNormalStyle),
+                                  Text('Enter a custom SKU',style:k15BlackNormal),
                                   if(_skuType == SkuType.custom)
                                     TextInput(
                                     darkMode: false,
@@ -297,7 +297,7 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                                       },
                                     ),
                                     if(_skuType == SkuType.custom)
-                                  Text('Only use lower case letters and numbers, no symbols or spaces',style:kMediumTextNormalStyle),
+                                  Text('Only use lower case letters and numbers, no symbols or spaces',style:k15BlackNormal),
                                 ],
                               )
                              ],
@@ -382,7 +382,7 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [    
                                    Checkbox(
-                                    activeColor: MaterialStateColor.resolveWith((states) => _isSelected ? Colors.white : kAppBarColor),
+                                    activeColor: MaterialStateColor.resolveWith((states) => _isSelected ? kWhite : kAppBarColor),
                                     hoverColor: MaterialStateColor.resolveWith((states) => _isSelected ? kSignInButtonColor : kAppBarColor),
                                     overlayColor: MaterialStateColor.resolveWith((states) => _isSelected ? kSignInButtonColor : kAppBarColor),
                                     fillColor: MaterialStateColor.resolveWith((states) => _isSelected ? kSignInButtonColor : kDashboardSearchBarFillColor),
@@ -440,7 +440,7 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                                  Padding(
                                    padding: const EdgeInsets.only(top:40.0,bottom: 40.0),
                                    child: Text('Choose an attribute, like colour, and start entering values, like red or blue, to add variants'
-                                   ,style: kMediumTextNormalStyle,),
+                                   ,style: k15BlackNormal,),
                                  )
                                ],
                              ), 
@@ -508,7 +508,7 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                                       padding: const EdgeInsets.all(8.0),
                                       child: Text(
                                          '10018',
-                                         style: kMediumTextNormalStyle,
+                                         style: k15BlackNormal,
                                          ),
                                         )
                                       ),
@@ -584,7 +584,7 @@ class _AddProductsPopupState extends State<AddProductsPopup> {
                       if(_productClicked != ProductClicked.compositeProduct)
                       Text(
                         '1 product will be added',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                       CustomButton(
                         buttonText: _productClicked == ProductClicked.compositeProduct ? 'Next':'Add Product',

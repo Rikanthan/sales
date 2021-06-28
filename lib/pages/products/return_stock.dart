@@ -36,13 +36,18 @@ class _ReturnStockState extends State<ReturnStock> {
       drawer: SetupDrawer(setupClicked:SetupClicked.general ),
       body:SingleChildScrollView(
         child: Container(
-          color:Colors.white,
+          color:kWhite,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DashboardMidBar(),
               Padding(
-                padding: const EdgeInsets.only(top:20.0,bottom: 20.0,left:30.0 ,right: 30.0),
+                padding: const EdgeInsets.only(
+                                        top:20.0,
+                                        bottom: 20.0,
+                                        left:30.0,
+                                        right: 30.0
+                                        ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -56,7 +61,12 @@ class _ReturnStockState extends State<ReturnStock> {
                                 setState(() {
                                   isProduct = true;
                                 });
-                                Navigator.push(context, MaterialPageRoute(builder: (_)=> Products())); 
+                                Navigator.push(
+                                          context, 
+                                          MaterialPageRoute(
+                                            builder: (_)=> Products()
+                                            )
+                                      ); 
                             },
                             child: Text(
                               'Products',
@@ -64,10 +74,10 @@ class _ReturnStockState extends State<ReturnStock> {
                                 fontFamily: 'Lato',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color:Color(0xFF0066CC),
+                                color:kLightBlue,
                                 decoration: isProduct ? TextDecoration.underline : TextDecoration.none,
                                 decorationStyle: TextDecorationStyle.solid,
-                                decorationColor: Color(0xFF0066CC)
+                                decorationColor: kLightBlue
                                 ),
                             ),
                           ),
@@ -79,7 +89,7 @@ class _ReturnStockState extends State<ReturnStock> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -98,10 +108,10 @@ class _ReturnStockState extends State<ReturnStock> {
                                 fontFamily: 'Lato',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color:Color(0xFF0066CC),
+                                color:kLightBlue,
                                 decoration: isStock ? TextDecoration.underline : TextDecoration.none,
                                 decorationStyle: TextDecorationStyle.solid,
-                                decorationColor: Color(0xFF0066CC)
+                                decorationColor: kLightBlue
                                 ),
                           ),
                            ),
@@ -113,7 +123,7 @@ class _ReturnStockState extends State<ReturnStock> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -124,7 +134,7 @@ class _ReturnStockState extends State<ReturnStock> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                         ],
@@ -148,7 +158,7 @@ class _ReturnStockState extends State<ReturnStock> {
                       height: 247,
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                          color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                           ),
                         borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(5),
@@ -297,7 +307,7 @@ class _ReturnStockState extends State<ReturnStock> {
                                   width: 86,
                                   isButtonDisable: false,
                                   ),
-                                Text('No file chosen',style: kMediumTextNormalStyle,)
+                                Text('No file chosen',style: k15BlackNormal,)
                               ],
                             ),
                           )

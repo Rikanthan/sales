@@ -38,13 +38,18 @@ class _EditOutletState extends State<EditOutlet> {
       drawer: SetupDrawer(setupClicked:SetupClicked.outlets ),
       body:SingleChildScrollView(
         child: Container(
-          color:Colors.white,
+          color:kWhite,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DashboardMidBar(),
               Padding(
-                padding: const EdgeInsets.only(top:20.0,bottom: 20.0,left:30.0 ,right: 30.0),
+                padding: const EdgeInsets.only(
+                                        top:20.0,
+                                        bottom: 20.0,
+                                        left:30.0 ,
+                                        right: 30.0
+                                        ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -59,10 +64,10 @@ class _EditOutletState extends State<EditOutlet> {
                               fontFamily: 'Lato',
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
-                              color:Color(0xFF0066CC),
+                              color:kLightBlue,
                               decoration: TextDecoration.none,
                               decorationStyle: TextDecorationStyle.solid,
-                              decorationColor: Color(0xFF0066CC)
+                              decorationColor: kLightBlue
                               ),
                           ),
                           SizedBox(
@@ -73,7 +78,7 @@ class _EditOutletState extends State<EditOutlet> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           Text(
@@ -82,10 +87,10 @@ class _EditOutletState extends State<EditOutlet> {
                               fontFamily: 'Lato',
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
-                              color:Color(0xFF0066CC),
+                              color:kLightBlue,
                               decoration: TextDecoration.none,
                               decorationStyle: TextDecorationStyle.solid,
-                              decorationColor: Color(0xFF0066CC)
+                              decorationColor: kLightBlue
                               ),
                           ),
                           SizedBox(
@@ -99,7 +104,7 @@ class _EditOutletState extends State<EditOutlet> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                         ],
@@ -117,7 +122,11 @@ class _EditOutletState extends State<EditOutlet> {
                         ),
                       ),
                     ),
-                    SettingsGredientHeader(cellType: CellType.both ,width: 964 ,text: 'Details',),
+                    SettingsGredientHeader(
+                      cellType: CellType.both ,
+                      width: 964 ,
+                      text: 'Details',
+                      ),
                     Row(
                       children: [
                         Container(
@@ -125,7 +134,7 @@ class _EditOutletState extends State<EditOutlet> {
                           height:252,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(5),
@@ -140,7 +149,12 @@ class _EditOutletState extends State<EditOutlet> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Outlet name',),
+                                   SettingsCell(
+                                     height: 24,
+                                      width: 150 , 
+                                      textSpan: false, 
+                                      text: 'Outlet name',
+                                      ),
                                     SettingTextInput(
                                       height: 28,
                                        width: 247,
@@ -152,7 +166,12 @@ class _EditOutletState extends State<EditOutlet> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Default sales tax',),
+                                    SettingsCell(
+                                      height: 24, 
+                                      width: 150 , 
+                                      textSpan: false, 
+                                      text: 'Default sales tax',
+                                      ),
                                      SettingDropDown(
                                         width: 190,
                                         height: 28,
@@ -165,14 +184,18 @@ class _EditOutletState extends State<EditOutlet> {
                                                         );
                                                       },
                                         dropdownValue: tax,
-                                        dropdownList: ['No Tax (0%)','Select Sales Tax','Add Sales Tax'],
+                                        dropdownList: [
+                                                     'No Tax (0%)',
+                                                     'Select Sales Tax',
+                                                     'Add Sales Tax'
+                                                     ],
                                         ),
                                       SizedBox(width:5),
                                       Text(
                                         'Add sales tax',
                                             style: TextStyle(
                                                 fontSize: 14,
-                                                color: Color(0xFF0066cc)
+                                                color: kLightBlue
                                             ),
                                           )  
                                   ],
@@ -191,7 +214,11 @@ class _EditOutletState extends State<EditOutlet> {
                                  Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                     SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Order number prefix',),
+                                     SettingsCell(
+                                                height: 24, 
+                                                width: 150 ,
+                                                 textSpan: false, 
+                                                 text: 'Order number prefix',),
                                     SettingTextInput(
                                       height: 28,
                                        width: 247,
@@ -203,7 +230,12 @@ class _EditOutletState extends State<EditOutlet> {
                                  Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                     SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Order number',),
+                                     SettingsCell(
+                                                height: 24,
+                                                 width: 150 , 
+                                                 textSpan: false, 
+                                                 text: 'Order number',
+                                                 ),
                                     SettingTextInput(
                                       height: 28,
                                        width: 247,
@@ -222,7 +254,7 @@ class _EditOutletState extends State<EditOutlet> {
                           height:252,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(5),
@@ -235,7 +267,12 @@ class _EditOutletState extends State<EditOutlet> {
                                   children: [
                                     Row(
                                       children: [
-                                        SettingsCell(height: 40, width: 150 , textSpan: true, text: 'Supplier return\nprefix'),
+                                        SettingsCell(
+                                                height: 40, 
+                                                width: 150 , 
+                                                textSpan: true, 
+                                                text: 'Supplier return\nprefix'
+                                                ),
                                         SettingTextInput(
                                             height: 28,
                                             width: 247,
@@ -246,7 +283,12 @@ class _EditOutletState extends State<EditOutlet> {
                                     SizedBox(height:10),
                                    Row(
                                       children: [
-                                        SettingsCell(height: 40, width: 150 , textSpan: true, text: 'Supplier return\nnumber'),
+                                        SettingsCell(
+                                          height: 40, 
+                                          width: 150 , 
+                                          textSpan: true, 
+                                          text: 'Supplier return\nnumber'
+                                          ),
                                          SettingTextInput(
                                             height: 28,
                                             width: 247,
@@ -264,13 +306,17 @@ class _EditOutletState extends State<EditOutlet> {
                     SizedBox(
                       height: 15,
                     ),
-                    SettingsGredientHeader(cellType: CellType.both ,width: 964 ,text: 'Sell Screen Prompts',),
+                    SettingsGredientHeader(
+                              cellType: CellType.both ,
+                              width: 964 ,
+                              text: 'Sell Screen Prompts',
+                              ),
                     Container(
                        width:962,
                         height:130,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(5),
@@ -279,10 +325,19 @@ class _EditOutletState extends State<EditOutlet> {
                           child: Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only( top: 20,left: 20.0, right: 20.0 ,bottom: 10.0),
+                                padding: const EdgeInsets.only(
+                                                         top: 20,
+                                                         left: 20.0,
+                                                          right: 20.0 ,
+                                                          bottom: 10.0),
                                 child: Row(
                                   children: [
-                                     SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Negative inventory'),
+                                     SettingsCell(
+                                              height: 24,
+                                              width: 150 , 
+                                              textSpan: false, 
+                                              text: 'Negative inventory'
+                                              ),
                                      Checkbox(
                                         value: negativeInventory,
                                         onChanged: (bool value){
@@ -298,7 +353,7 @@ class _EditOutletState extends State<EditOutlet> {
                                     Text(
                                       'Warn sell screen users when they are about to sell more inventory than is\navailable',
                                       style: TextStyle(
-                                        color: Color(0xFF333333),
+                                        color: kBlackOpacity,
                                         fontFamily: 'Roboto',
                                         fontSize: 14
                                         ),
@@ -312,10 +367,26 @@ class _EditOutletState extends State<EditOutlet> {
                                   children: [
                                      SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Add customer'),
                                      Checkbox(
-                                       activeColor: MaterialStateColor.resolveWith((states) => addCustomer ? Colors.white : kAppBarColor),
-                                    hoverColor: MaterialStateColor.resolveWith((states) => addCustomer ? kSignInButtonColor : kAppBarColor),
-                                    overlayColor: MaterialStateColor.resolveWith((states) => addCustomer ? kSignInButtonColor : kAppBarColor),
-                                    fillColor: MaterialStateColor.resolveWith((states) => addCustomer? kSignInButtonColor : kDashboardSearchBarFillColor),
+                                       activeColor: MaterialStateColor
+                                                              .resolveWith(
+                                                                        (states) => addCustomer ? kWhite : 
+                                                                                    kAppBarColor
+                                                                                    ),
+                                        hoverColor: MaterialStateColor
+                                                                .resolveWith(
+                                                                        (states) => addCustomer ? kSignInButtonColor :
+                                                                                     kAppBarColor
+                                                                                     ),
+                                    overlayColor: MaterialStateColor
+                                                                .resolveWith(
+                                                                        (states) => addCustomer ? kSignInButtonColor : 
+                                                                                      kAppBarColor
+                                                                                      ),
+                                    fillColor: MaterialStateColor
+                                                                .resolveWith(
+                                                                        (states) => addCustomer? kSignInButtonColor : 
+                                                                                      kDashboardSearchBarFillColor
+                                                                                      ),
                                         value: addCustomer,
                                         onChanged: (bool newValue){
                                           setState(() {
@@ -331,7 +402,7 @@ class _EditOutletState extends State<EditOutlet> {
                                     Text(
                                       'Warn sell screen users when they haven\'t added a customer to the\n sale.',
                                       style: TextStyle(
-                                        color: Color(0xFF333333),
+                                        color: kBlackOpacity,
                                         fontFamily: 'Roboto',
                                         fontSize: 14
                                         ),
@@ -345,7 +416,11 @@ class _EditOutletState extends State<EditOutlet> {
                      SizedBox(
                         height: 20,
                         ),
-                    SettingsGredientHeader(cellType: CellType.both ,width: 964 ,text: 'Physical Address and Contact Details',),
+                    SettingsGredientHeader(
+                                        cellType: CellType.both ,
+                                        width: 964 ,
+                                        text: 'Physical Address and Contact Details',
+                                        ),
                     Row(
                       children: [
                         Container(
@@ -353,7 +428,7 @@ class _EditOutletState extends State<EditOutlet> {
                           height:355,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(5),
@@ -368,7 +443,12 @@ class _EditOutletState extends State<EditOutlet> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Street',),
+                                   SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'Street',
+                                            ),
                                     SettingTextInput(
                                       height: 28,
                                        width: 247,
@@ -380,7 +460,12 @@ class _EditOutletState extends State<EditOutlet> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Street',),
+                                   SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'Street',
+                                            ),
                                     SettingTextInput(
                                       height: 28,
                                        width: 247,
@@ -392,7 +477,12 @@ class _EditOutletState extends State<EditOutlet> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Suburb',),
+                                   SettingsCell(
+                                            height: 24,
+                                             width: 150 , 
+                                             textSpan: false, 
+                                             text: 'Suburb',
+                                             ),
                                     SettingTextInput(
                                       height: 28,
                                        width: 247,
@@ -404,7 +494,12 @@ class _EditOutletState extends State<EditOutlet> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'City',),
+                                   SettingsCell(
+                                          height: 24, 
+                                          width: 150 , 
+                                          textSpan: false,
+                                          text: 'City',
+                                          ),
                                     SettingTextInput(
                                       height: 28,
                                        width: 247,
@@ -416,7 +511,12 @@ class _EditOutletState extends State<EditOutlet> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Postcode',),
+                                   SettingsCell(
+                                          height: 24, 
+                                          width: 150 , 
+                                          textSpan: false, 
+                                          text: 'Postcode',
+                                          ),
                                     SettingTextInput(
                                       height: 28,
                                        width: 75,
@@ -428,7 +528,12 @@ class _EditOutletState extends State<EditOutlet> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'State',),
+                                   SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'State',
+                                            ),
                                     SettingTextInput(
                                       height: 28,
                                        width: 247,
@@ -440,7 +545,12 @@ class _EditOutletState extends State<EditOutlet> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Country',),
+                                    SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'Country',
+                                            ),
                                      SettingDropDown(
                                         width: 200,
                                         height: 28,
@@ -455,14 +565,18 @@ class _EditOutletState extends State<EditOutlet> {
                                         dropdownValue: country,
                                         dropdownList: ['Select a country','Sri Lanka','India','UK'],
                                         ),
-                                       
                                   ],
                                 ), 
                                 SizedBox(height: 10,),
                                  Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Time zone',),
+                                    SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'Time zone',
+                                            ),
                                      SettingDropDown(
                                         width: 200,
                                         height: 28,
@@ -475,11 +589,15 @@ class _EditOutletState extends State<EditOutlet> {
                                                         );
                                                       },
                                         dropdownValue: timeZone,
-                                        dropdownList: ['(GMT+05:30)','(GMT+05:00)','(GMT+04:00)','(GMT+04:30)'],
+                                        dropdownList: [
+                                                '(GMT+05:30)',
+                                                '(GMT+05:00)',
+                                                '(GMT+04:00)',
+                                                '(GMT+04:30)'
+                                                ],
                                         ),     
                                   ],
                                 ), 
-                                 
                               ],
                             ),
                           ),
@@ -489,7 +607,7 @@ class _EditOutletState extends State<EditOutlet> {
                           height:355,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(5),
@@ -502,7 +620,12 @@ class _EditOutletState extends State<EditOutlet> {
                                   children: [
                                     Row(
                                       children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: true, text: 'Email'),
+                                        SettingsCell(
+                                              height: 24, 
+                                              width: 150 , 
+                                              textSpan: true, 
+                                              text: 'Email'
+                                              ),
                                         SettingTextInput(
                                             height: 28,
                                             width: 247,
@@ -513,7 +636,12 @@ class _EditOutletState extends State<EditOutlet> {
                                     SizedBox(height:10),
                                    Row(
                                       children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: true, text: 'Phone'),
+                                        SettingsCell(
+                                              height: 24, 
+                                              width: 150 , 
+                                              textSpan: true, 
+                                              text: 'Phone'
+                                              ),
                                          SettingTextInput(
                                             height: 28,
                                             width: 247,
@@ -524,7 +652,12 @@ class _EditOutletState extends State<EditOutlet> {
                                      SizedBox(height:10), 
                                     Row(
                                       children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: true, text: 'Twitter'),
+                                        SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: true, 
+                                            text: 'Twitter'
+                                            ),
                                          SettingTextInput(
                                             height: 28,
                                             width: 247,

@@ -18,7 +18,12 @@ class DeleteIconButton extends StatelessWidget {
         color:kDashboardMidBarColor
         ),
        child: Padding(
-         padding: const EdgeInsets.only(left:10.0,right:10.0,top: 6.0,bottom: 6.0),
+         padding: const EdgeInsets.only(
+                              left:10.0,
+                              right:10.0,
+                              top: 6.0,
+                              bottom: 6.0
+                              ),
          child: Row(
            children: [
              Text(
@@ -33,7 +38,7 @@ class DeleteIconButton extends StatelessWidget {
               SizedBox(width: 6,),
               Icon(
             Icons.delete,
-            color:Colors.white,
+            color:kWhite,
             size: 15,
             ),
            ],

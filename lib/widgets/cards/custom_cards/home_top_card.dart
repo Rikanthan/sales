@@ -9,7 +9,7 @@ class HomeTopCard extends StatelessWidget {
                 padding: EdgeInsets.only(top: 44,left: 48,right: 48),
                 child: Container(
                   width: 902,
-                  color: Colors.white,
+                  color: kWhite,
                     child: Column(
                       children: [
                         HomeHeaderText(

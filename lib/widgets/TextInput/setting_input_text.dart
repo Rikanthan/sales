@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/constants/colors.dart';
 
 class SettingTextInput extends StatelessWidget {
   const SettingTextInput({
@@ -20,12 +21,12 @@ class SettingTextInput extends StatelessWidget {
                   textAlignVertical: TextAlignVertical.top,
                   textAlign: TextAlign.start,
                   decoration: InputDecoration(
-                  fillColor: Colors.white,
+                  fillColor: kWhite,
                   filled: true,
                   enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(2.0),
                 borderSide: BorderSide(
-                  color: Color(0xFF767676),
+                  color: kDarkGrey,
                   width: 1.0,
                 ),
                 ),

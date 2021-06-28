@@ -43,7 +43,12 @@ class _ImportCustomersState extends State<ImportCustomers> {
                         setState(() {
                           isSwitch = false;
                         });
-                         Navigator.push(context, MaterialPageRoute(builder: (_)=> Customer()));
+                         Navigator.push(
+                           context,
+                            MaterialPageRoute(
+                              builder: (_)=> Customer()
+                              )
+                            );
                       }
                     ),
                     Text(' Import Customers',style: k32Black,)
@@ -60,7 +65,7 @@ class _ImportCustomersState extends State<ImportCustomers> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text('Create a spreadsheet file. We\'ll check your data for common errors before uploading it. ',
-                      style: kMediumTextNormalStyle,),
+                      style: k15BlackNormal,),
                       GestureDetector(
                         child: Text(
                           'Need help?',
@@ -71,7 +76,12 @@ class _ImportCustomersState extends State<ImportCustomers> {
                       CustomButton(
                         buttonText: 'Back to Customers', 
                         onPress: (){
-                           Navigator.push(context, MaterialPageRoute(builder: (_)=> Customer()));
+                           Navigator.push(
+                             context, 
+                             MaterialPageRoute(
+                               builder: (_)=> Customer()
+                               )
+                              );
                         },
                         buttonColor: kDashboardMidBarColor, 
                         topPadding: 20, 
@@ -86,15 +96,19 @@ class _ImportCustomersState extends State<ImportCustomers> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                      padding: const EdgeInsets.only(top:24.0, left:48.0, right: 48.0,bottom: 24.0),
+                      padding: const EdgeInsets.only(
+                        top:24.0,
+                         left:48.0, 
+                         right: 48.0,
+                         bottom: 24.0
+                         ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SizedBox(
                             height: 48.0,
-                          ),
-                           
+                          ),  
                           Icon(
                           Icons.cloud_upload,
                           size: 28,
@@ -129,8 +143,7 @@ class _ImportCustomersState extends State<ImportCustomers> {
                           buttonColor: kSignInButtonColor, 
                           topPadding: 20, 
                           leftPadding: 30
-                          ),
-                                              
+                          ),                                            
                         ],
                       ),
                   )

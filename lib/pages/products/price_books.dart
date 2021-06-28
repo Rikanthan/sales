@@ -57,7 +57,7 @@ class _PriceBooksState extends State<PriceBooks> {
                 padding: const EdgeInsets.only(left:24.0,right: 24.0,top:24.0,bottom: 24.0),
                 child:
                  Container(
-                   color: Colors.white,
+                   color: kWhite,
                    child:Padding(
                      padding: const EdgeInsets.all(36.0),
                      child: Row(

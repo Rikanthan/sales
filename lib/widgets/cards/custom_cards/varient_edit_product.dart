@@ -41,8 +41,11 @@ class VariantsEditProduct extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Choose up to three variable\nattributes for this product to\ncreate and manage SKUs and\ntheir inventory levels.',
-                      style: kMediumTextNormalStyle,
+                      'Choose up to three variable\n'
+                      'attributes for this product to'
+                      '\ncreate and manage SKUs and'
+                      '\ntheir inventory levels.',
+                      style: k15BlackNormal,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -132,7 +135,7 @@ class VariantsEditProduct extends StatelessWidget {
                               width: 0.7,
                               color: kBlackOpacity.withOpacity(0.2),
                                     ),
-                              color:Colors.white
+                              color:kWhite
                                   ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -186,7 +189,7 @@ class VariantsEditProduct extends StatelessWidget {
                               width: 0.7,
                               color:  kBlackOpacity.withOpacity(0.2),
                                     ),
-                              color:Colors.white
+                              color:kWhite
                                   ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,

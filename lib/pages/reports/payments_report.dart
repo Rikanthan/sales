@@ -32,7 +32,8 @@ class _PaymentsReportState extends State<PaymentsReport> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: ReportDrawer(reportsClicked:ReportsClicked.paymentReports ),
+      drawer: ReportDrawer(
+                reportsClicked:ReportsClicked.paymentReports ),
       body:SingleChildScrollView(
         child: Container(
           color:kHomeBackgroundColor,
@@ -45,9 +46,14 @@ class _PaymentsReportState extends State<PaymentsReport> {
                  text: 'Payments Report'
                  ),
               Container(
-                color: Colors.white,
+                color: kWhite,
                 child:Padding(
-                  padding: const EdgeInsets.only(top:24,bottom:24,left:48.0,right: 48.0),
+                  padding: const EdgeInsets.only(
+                                          top:24,
+                                          bottom:24,
+                                          left:48.0,
+                                          right: 48.0
+                                          ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children:[
@@ -139,10 +145,10 @@ class _PaymentsReportState extends State<PaymentsReport> {
                                             ),
                                         ),
                                         child:  Padding(
-                                          padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left:12.0,right: 12.0),
+                                          padding: const EdgeInsets.all(12.0),
                                           child: Text(
                                             "3rd May 2021-26th May 2021",
-                                              style: kMediumTextNormalStyle
+                                              style: k15BlackNormal
                                             ),
                                         ),
                                       ),
@@ -240,8 +246,7 @@ class _PaymentsReportState extends State<PaymentsReport> {
                                     height: 42,
                                     width:563,
                                     hintText: 'Add a filter...',
-                                  ),
-                                  
+                                  ),                   
                                 ],
                               ),
                               Padding(
@@ -275,7 +280,12 @@ class _PaymentsReportState extends State<PaymentsReport> {
               ),
               SizedBox(height: 12.0,),
               Padding(
-                padding: const EdgeInsets.only(top: 13.0,left: 20.0,bottom: 13.0,right: 20.0),
+                padding: const EdgeInsets.only(
+                                            top: 13.0,
+                                            left: 20.0,
+                                            bottom: 13.0,
+                                            right: 20.0
+                                            ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

@@ -62,7 +62,7 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                           width: 232,
                           child: Text(
                             'Allow all customers to\nreceive this promotion or\ntarget specific groups.',
-                            style: kMediumTextNormalStyle,
+                            style: k15BlackNormal,
                             ),
                           ), 
                           Column(
@@ -80,9 +80,11 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                       width: 348,
                                       height: 123,
                                       decoration: BoxDecoration(
-                                        color: Colors.white,
+                                        color: kWhite,
                                          border: Border.all(
-                                           color: _targetPromotion == TargetPromotion.available ?  kSignInButtonColor : kInputBorderColor,
+                                           color: _targetPromotion == TargetPromotion.available ?  
+                                                                kSignInButtonColor : 
+                                                                kInputBorderColor,
                                            width: 2,
                                          ),
                                         borderRadius: BorderRadius.only(
@@ -91,7 +93,12 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                         ) 
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsets.only(top:12.0 ,bottom:12.0 ,left:20.0,right: 20.0),
+                                        padding: const EdgeInsets.only(
+                                                                  top:12.0 ,
+                                                                  bottom:12.0 ,
+                                                                  left:20.0,
+                                                                  right: 20.0
+                                                                  ),
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.center,
                                           mainAxisAlignment: MainAxisAlignment.start,
@@ -107,7 +114,10 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                                 color: kAppBarColor,
                                                 ),
                                             ),
-                                            Text('All customers can receive this promotion.',style: kMediumTextNormalStyle,),
+                                            Text(
+                                              'All customers can receive this promotion.'
+                                                        ,style: k15BlackNormal,
+                                                        ),
                                           ],
                                         ),
                                       ),
@@ -123,9 +133,10 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                           width: 348,
                                           height: 123,
                                           decoration: BoxDecoration(
-                                            color: Colors.white,
+                                            color: kWhite,
                                             border: Border.all(
-                                              color:  _targetPromotion == TargetPromotion.exclusive ?  kSignInButtonColor : kInputBorderColor,
+                                              color:  _targetPromotion == TargetPromotion.exclusive ?  
+                                                                  kSignInButtonColor : kInputBorderColor,
                                               width: 2,
                                             ),
                                             borderRadius: BorderRadius.only(
@@ -134,7 +145,12 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                             ) 
                                           ),
                                           child: Padding(
-                                            padding: const EdgeInsets.only(top:12.0 ,bottom:12.0 ,left:20.0,right: 20.0),
+                                            padding: const EdgeInsets.only(
+                                                                        top:12.0 ,
+                                                                        bottom:12.0 ,
+                                                                        left:20.0,
+                                                                        right: 20.0
+                                                                        ),
                                             child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.center,
                                               mainAxisAlignment: MainAxisAlignment.start,
@@ -142,7 +158,10 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                                 SizedBox(
                                                   height: 4,
                                                 ),
-                                                Text('Exclusive to Some',style: k18Black,),
+                                                Text(
+                                                    'Exclusive to Some'
+                                                    ,style: k18Black,
+                                                    ),
                                                 Padding(
                                                   padding: const EdgeInsets.only(top:16.0,bottom: 16.0),
                                                   child: Divider(
@@ -150,8 +169,14 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                                     color: kAppBarColor,
                                                     ),
                                                 ),
-                                                Text('Only customers within a customer group, or',style: kMediumTextNormalStyle,),
-                                                Text('with a promo code,can redeem this promotion.',style: kMediumTextNormalStyle,),
+                                                Text(
+                                                  'Only customers within a customer group, or'
+                                                      ,style: k15BlackNormal,
+                                                      ),
+                                                Text(
+                                                    'with a promo code,can redeem this promotion.'
+                                                    ,style: k15BlackNormal,
+                                                    ),
                                               ],
                                             ),
                                           ),
@@ -168,10 +193,22 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Radio(
-                                      activeColor: MaterialStateColor.resolveWith((states) =>  kSignInButtonColor),
-                                    hoverColor: MaterialStateColor.resolveWith((states) =>  kSignInButtonColor),
-                                    overlayColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor ),
-                                    fillColor: MaterialStateColor.resolveWith((states) => _promotionClicked == PromotionClicked.limit ? kSignInButtonColor : kAppBarColor ),
+                                      activeColor: MaterialStateColor
+                                                        .resolveWith(
+                                                                  (states) =>  kSignInButtonColor
+                                                                  ),
+                                    hoverColor: MaterialStateColor
+                                                        .resolveWith(
+                                                                  (states) =>  kSignInButtonColor
+                                                                  ),
+                                    overlayColor: MaterialStateColor
+                                                        .resolveWith(
+                                                                  (states) => kSignInButtonColor 
+                                                                  ),
+                                    fillColor: MaterialStateColor
+                                                        .resolveWith(
+                                                                  (states) => _promotionClicked == PromotionClicked.limit 
+                                                                      ? kSignInButtonColor : kAppBarColor ),
                                     value: PromotionClicked.limit,
                                     groupValue: _promotionClicked,
                                     onChanged: (PromotionClicked value)
@@ -195,12 +232,14 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                     children: [  
                                       Text(
                                         'Only customers from the chosen group will receive this promotion.'
-                                            ,style: kMediumTextNormalStyle
+                                            ,style: k15BlackNormal
                                             ),
                                     ],
                                   ),
                                 ),
-                                if(_promotionClicked == PromotionClicked.limit && (_targetPromotion == TargetPromotion.exclusive))
+                                if(_promotionClicked == PromotionClicked.limit 
+                                                                && 
+                                                                (_targetPromotion == TargetPromotion.exclusive))
                                   Padding(
                                     padding: const EdgeInsets.only(left:38.0,top: 20.0,bottom: 20.0),
                                     child: Column(
@@ -219,7 +258,10 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                                         });
                                                       },
                                                       dropdownValue: customerGroup,
-                                                      dropdownList: ['Please choose a Customer Group','Select all Customer Groups'],
+                                                      dropdownList: [
+                                                                'Please choose a Customer Group',
+                                                                'Select all Customer Groups'
+                                                                ],
                                                     ),
                                               ],
                                             ),
@@ -230,10 +272,24 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
                                       Radio(
-                                          activeColor: MaterialStateColor.resolveWith((states) =>  kSignInButtonColor),
-                                        hoverColor: MaterialStateColor.resolveWith((states) =>  kSignInButtonColor),
-                                        overlayColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor ),
-                                        fillColor: MaterialStateColor.resolveWith((states) => _promotionClicked == PromotionClicked.promo ? kSignInButtonColor : kAppBarColor ),
+                                          activeColor: MaterialStateColor
+                                                                  .resolveWith(
+                                                                          (states) =>  kSignInButtonColor
+                                                                          ),
+                                        hoverColor: MaterialStateColor
+                                                                  .resolveWith(
+                                                                            (states) =>  kSignInButtonColor
+                                                                            ),
+                                        overlayColor: MaterialStateColor
+                                                                  .resolveWith(
+                                                                            (states) => kSignInButtonColor 
+                                                                            ),
+                                        fillColor: MaterialStateColor
+                                                                  .resolveWith(
+                                                                            (states) => 
+                                                                              _promotionClicked == PromotionClicked.promo ? 
+                                                                              kSignInButtonColor : kAppBarColor 
+                                                                              ),
                                         value: PromotionClicked.promo,
                                         groupValue: _promotionClicked,
                                         onChanged: (PromotionClicked value)
@@ -257,17 +313,18 @@ class _TargetPromotionCardState extends State<TargetPromotionCard> {
                                       children: [  
                                         Text(
                                           'Only customers with a promo code can redeem this promotion.'
-                                              ,style: kMediumTextNormalStyle
+                                              ,style: k15BlackNormal
                                               ),
                                       ],
                                     ),
                                   ),
-                                   if(_promotionClicked == PromotionClicked.promo && (_targetPromotion == TargetPromotion.exclusive))
+                                   if(_promotionClicked == PromotionClicked.promo && 
+                                                (_targetPromotion == TargetPromotion.exclusive))
                                     Padding(
                                       padding: const EdgeInsets.only(top:12.0,left: 40),
                                       child: Container(
                                         width: 616,
-                                        color: Colors.white,
+                                        color: kWhite,
                                         child: Padding(
                                           padding: const EdgeInsets.all(12.0),
                                           child: Column(

@@ -19,7 +19,7 @@ class GreenButton extends StatelessWidget {
                    child: Text(
                       buttonText,
                       style:TextStyle(
-                        color: Colors.white,
+                        color: kWhite,
                         fontFamily: 'Lato',
                         fontSize: 15,
                         fontWeight: FontWeight.bold
@@ -27,9 +27,24 @@ class GreenButton extends StatelessWidget {
                     ),
                     onPressed: onPress,
                    style:ButtonStyle(
-                      backgroundColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor ),
-                      padding:  MaterialStateProperty.resolveWith((states) => EdgeInsets.only(left:36,right:36,top:20,bottom:20)),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                      backgroundColor: MaterialStateColor
+                                                      .resolveWith(
+                                                                (states) => kSignInButtonColor 
+                                                                  ),
+                      padding:  MaterialStateProperty
+                                                    .resolveWith(
+                                                                (states) => EdgeInsets.only(
+                                                                                      left:36,
+                                                                                      right:36,
+                                                                                      top:20,
+                                                                                      bottom:20
+                                                                                      )
+                                                                                  ),
+                      shape: MaterialStateProperty
+                                            .all(
+                                              RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(4)
+                                                ),
                     ),                
                   )
               )

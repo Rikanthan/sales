@@ -71,7 +71,7 @@ class _RegisterClosureState extends State<RegisterClosure> {
                                       Container(
                                          decoration: BoxDecoration(
                                           border: Border.all(
-                                            color:Color(0xFF767676),
+                                            color:kDarkGrey,
                                             width:1
                                             ),
                                           borderRadius: BorderRadius.all(Radius.circular(3))        
@@ -116,11 +116,15 @@ class _RegisterClosureState extends State<RegisterClosure> {
                                                 borderRadius: BorderRadius.circular(5.0),
                                                 side: BorderSide(
                                                   width: 1,
-                                                  color: Color(0xFFb0b0b0)
+                                                  color: kCustomGrey
                                                   ),
                                                 )
                                               ),
-                                              foregroundColor: MaterialStateColor.resolveWith((states) => Color(0xFFEFEFEF))
+                                              foregroundColor: MaterialStateColor
+                                                              .resolveWith(
+                                                                          (states) => 
+                                                                                Color(0xFFEFEFEF)
+                                                                                )
                                           ),
                                     )
                                 ],
@@ -264,7 +268,6 @@ class _RegisterClosureState extends State<RegisterClosure> {
                             isTextBlue: false,
                             isTextBold: false
                           ),
-
                           RegisterCell(
                             alignment: MainAxisAlignment.end,
                             width: 100,
@@ -273,7 +276,6 @@ class _RegisterClosureState extends State<RegisterClosure> {
                             isTextBlue: false,
                             isTextBold: false
                           ),
-
                           RegisterCell(
                             alignment: MainAxisAlignment.end,
                             width: 100,
@@ -282,7 +284,6 @@ class _RegisterClosureState extends State<RegisterClosure> {
                             isTextBlue: false,
                             isTextBold: false
                           ),
-
                         ],
                       )
                     ],

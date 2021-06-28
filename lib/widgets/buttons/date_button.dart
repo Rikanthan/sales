@@ -19,84 +19,103 @@ class DateButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children :[
-                                  TextButton(
-                                    onPressed: (){},
-                                    style: ButtonStyle(
-                                      shape: MaterialStateProperty.all(
-                                        RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(2.0),
-                                          side: BorderSide(
-                                            width: 2,
-                                            color: isDayClicked?kSignInButtonColor:kInputBorderColor
-                                            )
-                                          )
-                                        ),
-                                    ),
-                                    child:  Padding(
-                                      padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left:20.0,right: 20.0),
-                                      child: Text(
-                                        "Day",
-                                        style: TextStyle(
-                                          color: kAppBarColor,
-                                          fontFamily: 'Lato',
-                                          fontSize: 15
-                                          )
-                                        ),
-                                    ),
-                                  ),
-                                  TextButton(
-                                    onPressed: (){},
-                                    style: ButtonStyle(
-                                      shape: MaterialStateProperty.all(
-                                        RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(2.0),
-                                          side: BorderSide(
-                                            width: 2,
-                                            color: isWeekClicked?kSignInButtonColor:kInputBorderColor
-                                            )
-                                          )
-                                        ),
-                                    ),
-                                    child:  Padding(
-                                      padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left:20.0,right: 20.0),
-                                      child: Text(
-                                        "Week",
-                                          style: TextStyle(
-                                          color: kAppBarColor,
-                                          fontFamily: 'Lato',
-                                          fontSize: 15
-                                          )
-                                        ),
-                                    ),
-                                  ),
-                                  TextButton(
-                                    onPressed: (){},
-                                    style: ButtonStyle(
-                                      shape: MaterialStateProperty.all(
-                                        RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(2.0),
-                                          side: BorderSide(
-                                            width: 2,
-                                            color: isMonthClicked?kSignInButtonColor:kInputBorderColor
-                                            )
-                                          )
-                                        ),
-                                    ),
-                                    child:  Padding(
-                                      padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left:20.0,right: 20.0),
-                                      child: Text(
-                                        "Month",
-                                          style: TextStyle(
-                                          color: kAppBarColor,
-                                          fontFamily: 'Lato',
-                                          fontSize: 15
-                                          )
-                                        ),
-                                    ),
-                                  )
-                                ]
-                              );
+            mainAxisAlignment: MainAxisAlignment.start,
+            children :[
+              TextButton(
+                onPressed: (){},
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(2.0),
+                      side: BorderSide(
+                        width: 2,
+                        color: isDayClicked ? kSignInButtonColor:
+                                  kInputBorderColor
+                        )
+                      )
+                    ),
+                ),
+                child:  Padding(
+                  padding: const EdgeInsets.only(
+                                          top:12.0,
+                                          bottom: 12.0,
+                                          left:20.0,
+                                          right: 20.0
+                                          ),
+                  child: Text(
+                    "Day",
+                    style: TextStyle(
+                      color: kAppBarColor,
+                      fontFamily: 'Lato',
+                      fontSize: 15
+                      )
+                    ),
+                ),
+              ),
+              TextButton(
+                onPressed: (){},
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(2.0),
+                      side: BorderSide(
+                        width: 2,
+                        color: isWeekClicked  ? kSignInButtonColor 
+                                :kInputBorderColor
+                        )
+                      )
+                    ),
+                ),
+                child:  Padding(
+                  padding: const EdgeInsets.only(
+                                            top:12.0,
+                                            bottom: 12.0,
+                                            left:20.0,
+                                            right: 20.0
+                                            ),
+                  child: Text(
+                    "Week",
+                      style: TextStyle(
+                      color: kAppBarColor,
+                      fontFamily: 'Lato',
+                      fontSize: 15
+                      )
+                    ),
+                ),
+              ),
+              TextButton(
+                onPressed: (){},
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(2.0),
+                      side: BorderSide(
+                        width: 2,
+                        color: isMonthClicked ? 
+                                kSignInButtonColor:
+                                kInputBorderColor
+                        )
+                      )
+                    ),
+                ),
+                child:  Padding(
+                  padding: const EdgeInsets.only(
+                                                top:12.0,
+                                                bottom: 12.0,
+                                                left:20.0,
+                                                right: 20.0
+                                                ),
+                  child: Text(
+                    "Month",
+                      style: TextStyle(
+                      color: kAppBarColor,
+                      fontFamily: 'Lato',
+                      fontSize: 15
+                      )
+                    ),
+                ),
+              )
+            ]
+          );
   }
 }

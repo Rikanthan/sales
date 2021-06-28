@@ -34,13 +34,18 @@ class _OutletRegistersState extends State<OutletRegisters> {
       drawer: SetupDrawer(setupClicked:SetupClicked.outlets),
       body:SingleChildScrollView(
         child: Container(
-          color:Colors.white,
+          color:kWhite,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DashboardMidBar(),
               Padding(
-                padding: const EdgeInsets.only(top:20.0,bottom: 20.0,left:30.0 ,right: 30.0),
+                padding: const EdgeInsets.only(
+                                            top:20.0,
+                                            bottom: 20.0,
+                                            left:30.0 ,
+                                            right: 30.0
+                                            ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -55,10 +60,10 @@ class _OutletRegistersState extends State<OutletRegisters> {
                               fontFamily: 'Lato',
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
-                              color:Color(0xFF0066CC),
+                              color:kLightBlue,
                               decoration: TextDecoration.none,
                               decorationStyle: TextDecorationStyle.solid,
-                              decorationColor: Color(0xFF0066CC)
+                              decorationColor: kLightBlue
                               ),
                           ),
                           SizedBox(
@@ -69,7 +74,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -80,7 +85,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                         ],
@@ -102,7 +107,12 @@ class _OutletRegistersState extends State<OutletRegisters> {
                       width:964,
                       height: 40,
                       child: Padding(
-                        padding: const EdgeInsets.only(top:8.0,bottom: 8.0,left: 10.0,right: 10.0),
+                        padding: const EdgeInsets.only(
+                                                    top:8.0,
+                                                    bottom: 8.0,
+                                                    left: 10.0,
+                                                    right: 10.0
+                                                    ),
                         child: Row(
                           children: [
                             OutletButton(
@@ -127,16 +137,16 @@ class _OutletRegistersState extends State<OutletRegisters> {
                       ),
                       decoration: BoxDecoration(
                     border: Border.all(
-                      color:Color(0xFFb0b0b0), width: 1, style: BorderStyle.solid
+                      color:kCustomGrey, width: 1, style: BorderStyle.solid
                       ),
                     gradient: LinearGradient(
-                         colors: [Color(0xFFededed) , Color(0xFFdbdbdb) ],
+                         colors: [ kCustomWhite7 ,  kCustomWhite8 ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
                     ),
                      boxShadow:[
                       BoxShadow(
-                        color: Colors.white.withOpacity(0.2),
+                        color: kWhite.withOpacity(0.2),
                         spreadRadius: -1,
                         blurRadius: 2,
                         offset: Offset.zero
@@ -151,58 +161,58 @@ class _OutletRegistersState extends State<OutletRegisters> {
                     Row(
                       children: [
                         GredientTableHeader(
-                          text: 'Outlet Name', 
-                          isDarkMode: false, 
-                          width: 162.23,
-                          isLeftborder: true,
-                          isTopRightRadius: false,
-                          isTopLeftRadius: true,
-                          alignment: MainAxisAlignment.start
+                            text: 'Outlet Name', 
+                            isDarkMode: false, 
+                            width: 162.23,
+                            isLeftborder: true,
+                            isTopRightRadius: false,
+                            isTopLeftRadius: true,
+                            alignment: MainAxisAlignment.start
                           ),
                           GredientTableHeader(
-                          text: 'Default Tax', 
-                          isDarkMode:false, 
-                          width: 162.23,
-                          isLeftborder: true,
-                          isTopRightRadius: false,
-                          isTopLeftRadius: false,
-                          alignment: MainAxisAlignment.start
+                              text: 'Default Tax', 
+                              isDarkMode:false, 
+                              width: 162.23,
+                              isLeftborder: true,
+                              isTopRightRadius: false,
+                              isTopLeftRadius: false,
+                              alignment: MainAxisAlignment.start
                           ),
                           GredientTableHeader(
-                          text: 'Registers', 
-                          isDarkMode:false, 
-                          width: 133.61,
-                          isLeftborder: true,
-                          isTopRightRadius: false,
-                          isTopLeftRadius: false,
-                          alignment: MainAxisAlignment.start
+                              text: 'Registers', 
+                              isDarkMode:false, 
+                              width: 133.61,
+                              isLeftborder: true,
+                              isTopRightRadius: false,
+                              isTopLeftRadius: false,
+                              alignment: MainAxisAlignment.start
                           ),
                           GredientTableHeader(
-                          text: 'Status', 
-                          isDarkMode:false, 
-                          width: 76.34,
-                          isLeftborder: true,
-                          isTopRightRadius: false,
-                          isTopLeftRadius: false,
-                          alignment: MainAxisAlignment.start
+                              text: 'Status', 
+                              isDarkMode:false, 
+                              width: 76.34,
+                              isLeftborder: true,
+                              isTopRightRadius: false,
+                              isTopLeftRadius: false,
+                              alignment: MainAxisAlignment.start
                           ),
                           GredientTableHeader(
-                          text: 'Details', 
-                          isDarkMode:false, 
-                          width: 229.03,
-                          isLeftborder: true,
-                          isTopRightRadius: false,
-                          isTopLeftRadius: false,
-                          alignment: MainAxisAlignment.start
+                              text: 'Details', 
+                              isDarkMode:false, 
+                              width: 229.03,
+                              isLeftborder: true,
+                              isTopRightRadius: false,
+                              isTopLeftRadius: false,
+                              alignment: MainAxisAlignment.start
                           ),
                           GredientTableHeader(
-                          text: '', 
-                          isDarkMode:false, 
-                          width: 190.91,
-                          isLeftborder: true,
-                          isTopRightRadius: true,
-                          isTopLeftRadius: false,
-                          alignment: MainAxisAlignment.start
+                              text: '', 
+                              isDarkMode:false, 
+                              width: 190.91,
+                              isLeftborder: true,
+                              isTopRightRadius: true,
+                              isTopLeftRadius: false,
+                              alignment: MainAxisAlignment.start
                           ),
                       ],
                     ),
@@ -211,20 +221,30 @@ class _OutletRegistersState extends State<OutletRegisters> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid
+                              color : kCustomWhite6, width: 1, style: BorderStyle.solid
                               ),
-                              color: Color(0xFFF6F6F6)
+                              color: kCustomWhite2
                           ),
                           width: 162.23,
                           height: 46,
                           child:Padding(
-                            padding: const EdgeInsets.only(top:7.0,bottom: 7.0,left: 9.0,right: 9.0),
+                            padding: const EdgeInsets.only(
+                                                      top:7.0,
+                                                      bottom: 7.0,
+                                                      left: 9.0,
+                                                      right: 9.0
+                                                      ),
                             child: Row(
                               children: [
                                 GestureDetector(
                                   onTap:(){
-                                    Navigator.push(context, MaterialPageRoute(
-                                      builder: (_) => MainOutlet()));
+                                    Navigator.push(
+                                            context, 
+                                            MaterialPageRoute(
+                                                           builder: (_) => 
+                                                                    MainOutlet()
+                                                                    )
+                                                                  );
                                   },
                                   child: Text(
                                     'Main Outlet',
@@ -232,7 +252,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                       fontFamily: 'Lato',
                                       fontSize: 14,
                                       fontWeight: FontWeight.w700,
-                                      color: Color(0xFF0066cc),
+                                      color: kLightBlue,
                                       )
                                     ),
                                 ),
@@ -243,14 +263,23 @@ class _OutletRegistersState extends State<OutletRegisters> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid)
+                              bottom: BorderSide(
+                                        color : kCustomWhite6, 
+                                        width: 1, 
+                                        style: BorderStyle.solid
+                                        )
                               ),
-                              color: Color(0xFFF6F6F6)
+                              color: kCustomWhite2
                           ),
                           width: 162.23,
                           height: 46,
                           child:Padding(
-                            padding: const EdgeInsets.only(top:7.0,bottom: 7.0,left: 9.0,right: 9.0),
+                            padding: const EdgeInsets.only(
+                                                    top:7.0,
+                                                    bottom: 7.0,
+                                                    left: 9.0,
+                                                    right: 9.0
+                                                    ),
                             child: Row(
                               children: [
                                 Text(
@@ -259,7 +288,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                     fontFamily: 'Lato',
                                     fontSize: 14,
                                     fontWeight: FontWeight.w700,
-                                    color: Color(0xFF333333),
+                                    color: kBlackOpacity,
                                     )
                                   ),
                               ],
@@ -269,9 +298,11 @@ class _OutletRegistersState extends State<OutletRegisters> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border.all(
-                             color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid
+                             color : kCustomWhite6, 
+                             width: 1, 
+                             style: BorderStyle.solid
                               ),
-                              color: Color(0xFFF6F6F6)
+                              color: kCustomWhite2
                           ),
                           width: 438.98,
                           height: 46,
@@ -279,22 +310,39 @@ class _OutletRegistersState extends State<OutletRegisters> {
                          Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              right: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid)
+                              bottom: BorderSide(
+                                          color : kCustomWhite6, 
+                                          width: 1, 
+                                          style: BorderStyle.solid
+                                          ),
+                              right: BorderSide(
+                                            color : kCustomWhite6, 
+                                            width: 1, 
+                                            style: BorderStyle.solid
+                                            )
                               ),
-                              color: Color(0xFFF6F6F6)
+                              color: kCustomWhite2
                           ),
                           width: 190.91,
                           height: 46,
                           child:Padding(
-                            padding: const EdgeInsets.only(top:7.0,left: 9.0,right: 9.0),
+                            padding: const EdgeInsets.only(
+                                                        top:7.0,
+                                                        left: 9.0,
+                                                        right: 9.0
+                                                        ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 GestureDetector(
                                   onTap:(){
-                                    Navigator.push(context, MaterialPageRoute(
-                                      builder: (_) => EditOutlet()));
+                                    Navigator.push(
+                                        context, 
+                                        MaterialPageRoute(
+                                                          builder: (_) => 
+                                                          EditOutlet()
+                                                          )
+                                                        );
                                   },
                                   child: Text(
                                     'Edit Outlet',
@@ -302,7 +350,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                       fontFamily: 'Lato',
                                       fontSize: 14,
                                       fontWeight: FontWeight.normal,
-                                      color: Color(0xFF0066cc),
+                                      color: kLightBlue,
                                       )
                                     ),
                                 ),
@@ -316,7 +364,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                         fontFamily: 'Lato',
                                         fontSize: 14,
                                         decoration: TextDecoration.underline,
-                                        color: Color(0xFF333333),
+                                        color: kBlackOpacity,
                                         )
                                       ),
                                     ),
@@ -334,9 +382,21 @@ class _OutletRegistersState extends State<OutletRegisters> {
                           height: 92,
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              left: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              right: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid)
+                              bottom: BorderSide(
+                                                color : kCustomWhite6, 
+                                                width: 1, 
+                                                style: BorderStyle.solid
+                                                ),
+                              left: BorderSide(
+                                              color : kCustomWhite6, 
+                                              width: 1, 
+                                              style: BorderStyle.solid
+                                              ),
+                              right: BorderSide(
+                                                color : kCustomWhite6, 
+                                                width: 1, 
+                                                style: BorderStyle.solid
+                                                )
                               ),
                               color: Color(0xFFFCFCFC)
                                 )
@@ -344,33 +404,48 @@ class _OutletRegistersState extends State<OutletRegisters> {
                           Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom:BorderSide (color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              right:BorderSide (color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
+                              bottom:BorderSide (
+                                                color : kCustomWhite6, 
+                                                width: 1, 
+                                                style: BorderStyle.solid
+                                                ),
+                              right:BorderSide (
+                                                color : kCustomWhite6, 
+                                                width: 1, 
+                                                style: BorderStyle.solid
+                                                ),
                               ),
                           ),
                           width: 133.61,
                           height: 92,
                           child:Padding(
-                            padding: const EdgeInsets.only(top:7.0,bottom: 7.0,left: 9.0,right: 9.0),
+                            padding: const EdgeInsets.only(
+                                                          top:7.0,
+                                                          bottom: 7.0,
+                                                          left: 9.0,
+                                                          right: 9.0
+                                                          ),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 GestureDetector(
                                   onTap:(){
-                                    Navigator.push(context, MaterialPageRoute(
-                                      builder: (_) => 
-                                      MainRegister()
-                                      )
-                                      );
+                                    Navigator.push(
+                                                context, 
+                                                MaterialPageRoute(
+                                                                builder: (_) => 
+                                                                            MainRegister()
+                                                                            )
+                                                                        );
                                   },
                                   child: Text(
                                     'Main Register',
                                     style: TextStyle(
                                       fontFamily: 'Roboto',
                                       fontSize: 14,
-                                      color: Color(0xFF0066cc),
-                                      decorationColor: Color(0xFF0066cc),
+                                      color: kLightBlue,
+                                      decorationColor: kLightBlue,
                                       decorationStyle: TextDecorationStyle.solid
                                       )
                                     ),
@@ -382,14 +457,27 @@ class _OutletRegistersState extends State<OutletRegisters> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom:BorderSide (color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              right:BorderSide (color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
+                              bottom:BorderSide(
+                                              color : kCustomWhite6, 
+                                              width: 1, 
+                                              style: BorderStyle.solid
+                                              ),
+                              right:BorderSide(
+                                              color : kCustomWhite6, 
+                                              width: 1, 
+                                              style: BorderStyle.solid
+                                              ),
                               ),
                           ),
                           width: 76.34,
                           height: 92,
                           child:Padding(
-                            padding: const EdgeInsets.only(top:8.0,bottom: 8.0,left: 10.0,right: 10.0),
+                            padding: const EdgeInsets.only(
+                                                          top:8.0,
+                                                          bottom: 8.0,
+                                                          left: 10.0,
+                                                          right: 10.0
+                                                          ),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -399,7 +487,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                   style: TextStyle(
                                     fontFamily: 'Roboto',
                                     fontSize: 14,
-                                    color: Color(0xFF333333),
+                                    color: kBlackOpacity,
                                     )
                                   ),
                               ],
@@ -409,14 +497,26 @@ class _OutletRegistersState extends State<OutletRegisters> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom:BorderSide (color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              right:BorderSide (color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
+                              bottom:BorderSide(
+                                                color : kCustomWhite6, 
+                                                width: 1, 
+                                                style: BorderStyle.solid
+                                                ),
+                              right:BorderSide(
+                                                color : kCustomWhite6, 
+                                                width: 1, 
+                                                style: BorderStyle.solid
+                                                ),
                               ),
                           ),
                           width: 228.03,
                           height: 92,
                           child:Padding(
-                            padding: const EdgeInsets.only(top:8.0,left: 10.0,right: 10.0),
+                            padding: const EdgeInsets.only(
+                                                          top:8.0,
+                                                          left: 10.0,
+                                                          right: 10.0
+                                                          ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -426,17 +526,20 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                   style: TextStyle(
                                     fontFamily: 'Roboto',
                                     fontSize: 14,
-                                    color: Color(0xFF333333),
+                                    color: kBlackOpacity,
                                     )
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(top:5.0,bottom: 5.0),
+                                    padding: const EdgeInsets.only(
+                                                                  top:5.0,
+                                                                  bottom: 5.0
+                                                                  ),
                                     child: Text(
                                     '•   Invoice 1',
                                     style: TextStyle(
                                       fontFamily: 'Roboto',
                                       fontSize: 14,
-                                      color: Color(0xFF333333),
+                                      color: kBlackOpacity,
                                       )
                                     ),
                                   ),
@@ -445,7 +548,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                   style: TextStyle(
                                     fontFamily: 'Roboto',
                                     fontSize: 14,
-                                    color: Color(0xFF333333),
+                                    color: kBlackOpacity,
                                     )
                                   ),
                                   Padding(
@@ -455,7 +558,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                     style: TextStyle(
                                       fontFamily: 'Roboto',
                                       fontSize: 14,
-                                      color: Color(0xFF0066cc),
+                                      color: kLightBlue,
                                       )
                                     ),
                                   ),
@@ -466,14 +569,27 @@ class _OutletRegistersState extends State<OutletRegisters> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom:BorderSide (color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              right:BorderSide (color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
+                              bottom:BorderSide(
+                                                color : kCustomWhite6, 
+                                                width: 1, 
+                                                style: BorderStyle.solid
+                                                ),
+                              right:BorderSide(
+                                                color : kCustomWhite6, 
+                                                width: 1, 
+                                                style: BorderStyle.solid
+                                                ),
                               ),
                           ),
                           width: 189.91,
                           height: 92,
                           child:Padding(
-                            padding: const EdgeInsets.only(top:8.0,bottom: 8.0,left: 10.0,right: 10.0),
+                            padding: const EdgeInsets.only(
+                                                          top:8.0,
+                                                          bottom: 8.0,
+                                                          left: 10.0,
+                                                          right: 10.0
+                                                          ),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -488,7 +604,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                     style: TextStyle(
                                       fontFamily: 'Roboto',
                                       fontSize: 14,
-                                      color: Color(0xFF0066CC),
+                                      color: kLightBlue,
                                       )
                                     ),
                                 ),
@@ -504,7 +620,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                           style: TextStyle(
                                     fontFamily: 'Lato',
                                     fontSize: 14,
-                                    color: Color(0xFF333333),
+                                    color: kBlackOpacity,
                                     fontWeight: FontWeight.w700
                                     )
                     ),
@@ -516,9 +632,11 @@ class _OutletRegistersState extends State<OutletRegisters> {
                         height: 222,
                         decoration: BoxDecoration(
                             border: Border.all(
-                              color:Colors.black.withOpacity(0.4), width: 1, style: BorderStyle.solid
+                                            color:Colors.black.withOpacity(0.4), 
+                                              width: 1, 
+                                              style: BorderStyle.solid
                               ),
-                              color: Colors.white,
+                              color: kWhite,
                               boxShadow: [
                                 BoxShadow(
                                     color: Colors.black.withOpacity(0.4),
@@ -538,7 +656,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                   style: TextStyle(
                                     fontFamily: 'Lato',
                                     fontSize: 14,
-                                    color: Color(0xFF0066cc),
+                                    color: kLightBlue,
                                     )
                                   ),
                                   Padding(
@@ -548,7 +666,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                     style: TextStyle(
                                       fontFamily: 'Lato',
                                       fontSize: 14,
-                                      color: Color(0xFF333333),
+                                      color: kBlackOpacity,
                                       )
                                     ),
                                   ),
@@ -557,7 +675,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                     style: TextStyle(
                                       fontFamily: 'Lato',
                                       fontSize: 14,
-                                      color: Color(0xFF333333),
+                                      color: kBlackOpacity,
                                       )
                                     ),
                                   Padding(
@@ -565,7 +683,11 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                     child: Divider(thickness: 1.2,),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(left:8.0,right: 8.0,bottom: 11.0),
+                                    padding: const EdgeInsets.only(
+                                                                left:8.0,
+                                                                right: 8.0,
+                                                                bottom: 11.0
+                                                                ),
                                     child: Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -577,7 +699,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                         style: TextStyle(
                                           fontFamily: 'Lato',
                                           fontSize: 14,
-                                          color: Color(0xFF333333),
+                                          color: kBlackOpacity,
                                           )
                                         ),
                                       ),
@@ -586,7 +708,7 @@ class _OutletRegistersState extends State<OutletRegisters> {
                                       style: TextStyle(
                                         fontFamily: 'Lato',
                                         fontSize: 14,
-                                        color: Color(0xFF333333),
+                                        color: kBlackOpacity,
                                         )
                                       ),
                                     ],

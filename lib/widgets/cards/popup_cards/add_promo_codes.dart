@@ -31,7 +31,7 @@ class _AddPromoCodePopupState extends State<AddPromoCodePopup> {
               Container(
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
-                    color: Colors.white,
+                    color: kWhite,
                     borderRadius: BorderRadius.all(
                         Radius.circular(4),
                       )
@@ -63,7 +63,7 @@ class _AddPromoCodePopupState extends State<AddPromoCodePopup> {
                             children: <Widget>[
                               
                               Text('These codes can be redeemed as many times as you decide. Use this to reach a\nwide audience. Custom codes cannot be created more than once across all\npromotions.'
-                               ,style: kMediumTextNormalStyle,),
+                               ,style: k15BlackNormal,),
                                SizedBox(height: 20,),
                               Divider(
                                 thickness: 1,
@@ -83,7 +83,7 @@ class _AddPromoCodePopupState extends State<AddPromoCodePopup> {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text('Number of Redemptions',style: k15BlackDark,),
-                                      Text('Leave blank for unlimited',style: kMediumTextNormalStyle,)
+                                      Text('Leave blank for unlimited',style: k15BlackNormal,)
                                     ],
                                   )
                                 ],

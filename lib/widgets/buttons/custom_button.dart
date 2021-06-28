@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/constants/colors.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton({
     @required this.buttonText,
@@ -19,7 +20,7 @@ class CustomButton extends StatelessWidget {
      child: Text(
         buttonText,
         style:TextStyle(
-          color: Colors.white,
+          color: kWhite,
           fontFamily: 'Lato',
           fontSize: 15,
           fontWeight: FontWeight.bold
@@ -27,15 +28,24 @@ class CustomButton extends StatelessWidget {
       ),
       onPressed: onPress,
      style:ButtonStyle(
-        backgroundColor: MaterialStateColor.resolveWith((states) => buttonColor ),
-        padding:  MaterialStateProperty.resolveWith((states) => EdgeInsets.only(
-                                                                                left:leftPadding,
-                                                                                right:leftPadding,
-                                                                                top:topPadding,
-                                                                                bottom:topPadding
-                                                                                )
-                                                                              ),
-        shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+        backgroundColor: MaterialStateColor
+                                  .resolveWith(
+                                    (states) => buttonColor 
+                                    ),
+        padding:  MaterialStateProperty
+                                .resolveWith(
+                                            (states) => EdgeInsets.only(
+                                                                    left:leftPadding,
+                                                                    right:leftPadding,
+                                                                    top:topPadding,
+                                                                    bottom:topPadding
+                                                                    )
+                                                                  ),
+        shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                            borderRadius: 
+                                                   BorderRadius.circular(4)
+                                                   ),
       ),                
     )
               )

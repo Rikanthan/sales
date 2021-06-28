@@ -72,7 +72,7 @@ class _ReceiveStockState extends State<ReceiveStock> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text('Count and receive products that have been delivered from your suppliers ',
-                      style: kMediumTextNormalStyle,),
+                      style: k15BlackNormal,),
                       GestureDetector(
                         child: Text(
                           'Need help?',
@@ -97,8 +97,7 @@ class _ReceiveStockState extends State<ReceiveStock> {
                         buttonColor: kSignInButtonColor, 
                         topPadding: 20, 
                         leftPadding: 30
-                        ),
-                      
+                        ),                   
                     ],
                   ),
                 ),
@@ -126,7 +125,7 @@ class _ReceiveStockState extends State<ReceiveStock> {
                       width: 232,
                       child: Text(
                         'Adding details for this order\nhelps you stay on top of all\nyour orders and means your\nstaff can easily identify\nincoming items.',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                     ),
                     Column(
@@ -153,7 +152,7 @@ class _ReceiveStockState extends State<ReceiveStock> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text('Supplier Invoice Number ',style: k15BlackDark,),
-                            Text('(Optional)',style: kMediumTextNormalStyle,),
+                            Text('(Optional)',style: k15BlackNormal,),
                           ],
                         ),
                         TextInput(
@@ -172,10 +171,10 @@ class _ReceiveStockState extends State<ReceiveStock> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text('Order Number  ',style: k15BlackDark,),
-                            Text('This is to help you identify this order',style: kMediumTextNormalStyle,),
+                            Text('This is to help you identify this order',style: k15BlackNormal,),
                           ],
                         ),
-                        Text('and must be unique',style: kMediumTextNormalStyle,),
+                        Text('and must be unique',style: k15BlackNormal,),
                         TextInput(
                                 darkMode: false,
                                 hideText: false,
@@ -193,7 +192,7 @@ class _ReceiveStockState extends State<ReceiveStock> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text('Note ',style: k15BlackDark,),
-                            Text('(Optional)',style: kMediumTextNormalStyle,),
+                            Text('(Optional)',style: k15BlackNormal,),
                           ],
                         ),
                         TextInputMaxLines(
@@ -250,7 +249,7 @@ class _ReceiveStockState extends State<ReceiveStock> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text('Delivery Date ',style: k15BlackDark,),
-                            Text('(Optional)',style: kMediumTextNormalStyle,),
+                            Text('(Optional)',style: k15BlackNormal,),
                           ],
                         ),
                         SizedBox(height: 5,),
@@ -290,7 +289,7 @@ class _ReceiveStockState extends State<ReceiveStock> {
                       width: 232,
                       child: Text(
                         'Choose products to add to\nthis order, or choose a CSV\nfile of products to import.',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                       ),
                       Column(
@@ -356,7 +355,7 @@ class _ReceiveStockState extends State<ReceiveStock> {
                 Padding(
                   padding: const EdgeInsets.only(right: 48),
                   child: Container(
-                    color: Colors.white,
+                    color: kWhite,
                     width: 696,
                     height: 66,
                     child: Padding(
@@ -383,7 +382,7 @@ class _ReceiveStockState extends State<ReceiveStock> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Add products to this order.',style: kMediumTextNormalStyle,),
+                          Text('Add products to this order.',style: k15BlackNormal,),
                           CustomButton(
                           buttonText: 'Add Products from Reorder Points', 
                           onPress: (){},
@@ -430,6 +429,3 @@ class _ReceiveStockState extends State<ReceiveStock> {
     );
   }
 }
-
-          
-  

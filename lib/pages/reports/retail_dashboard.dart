@@ -34,12 +34,42 @@ class _RetailDashboardState extends State<RetailDashboard> {
          sales: 5,
           barColor: charts.ColorUtil.fromDartColor(Colors.blue)
         ),
-      new TimeSeriesSales(time: DateTime(2021,3 , 22),sales: 4, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
-      new TimeSeriesSales(time: DateTime(2021, 3, 23),sales: 1, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
-      new TimeSeriesSales(time: DateTime(2021, 3, 24),sales: 2, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
-      new TimeSeriesSales(time: DateTime(2021, 3 , 25),sales: 3, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
-      new TimeSeriesSales(time: DateTime(2021, 3, 26),sales: 4, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
-      new TimeSeriesSales(time: DateTime(2021, 3, 27),sales: 5, barColor: charts.ColorUtil.fromDartColor(Colors.blue)),
+      new TimeSeriesSales(
+            time: DateTime(2021,3 , 22),
+              sales: 4,
+               barColor: charts.
+                            ColorUtil.
+                                  fromDartColor(Colors.blue)),
+      new TimeSeriesSales(
+                time: DateTime(2021, 3, 23),
+                    sales: 1, 
+                        barColor: charts.
+                                      ColorUtil.
+                                        fromDartColor(Colors.blue)),
+      new TimeSeriesSales(
+                time: DateTime(2021, 3, 24),
+                      sales: 2, 
+                          barColor: charts.
+                                      ColorUtil.
+                                          fromDartColor(Colors.blue)),
+      new TimeSeriesSales(
+                time: DateTime(2021, 3 , 25),
+                      sales: 3, 
+                          barColor: charts.
+                                        ColorUtil.
+                                              fromDartColor(Colors.blue)),
+      new TimeSeriesSales(
+                  time: DateTime(2021, 3, 26),
+                                sales: 4, 
+                                    barColor: charts.
+                                                ColorUtil.
+                                                  fromDartColor(Colors.blue)),
+      new TimeSeriesSales(
+                  time: DateTime(2021, 3, 27),
+                                  sales: 5, 
+                                      barColor: charts.
+                                                    ColorUtil.
+                                                    fromDartColor(Colors.blue)),
 
     ];
 
@@ -66,7 +96,7 @@ class _RetailDashboardState extends State<RetailDashboard> {
                  text: 'Retail Dashboard'
                  ),
               Container(
-                color: Colors.white,
+                color: kWhite,
                 child:Padding(
                   padding: const EdgeInsets.only(top:24,bottom:24,left:48.0,right: 48.0),
                   child: Column(

@@ -112,7 +112,7 @@ class _InventoryVarientState extends State<InventoryVarient> {
                                                   SizedBox(
                                                   width: 8, 
                                                   ),
-                                                  Text( widget.text+'\n10007',style: kMediumTextNormalStyle,),
+                                                  Text( widget.text+'\n10007',style: k15BlackNormal,),
                                                 ],
                                               ),
                                             ),
@@ -188,7 +188,7 @@ class _InventoryVarientState extends State<InventoryVarient> {
                              child: Row(
                                crossAxisAlignment: CrossAxisAlignment.center,
                                children: [
-                                 Text('Main Outlet',style: kMediumTextNormalStyle,),
+                                 Text('Main Outlet',style: k15BlackNormal,),
                                ],
                              ),
                             ),

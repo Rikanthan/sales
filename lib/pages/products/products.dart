@@ -39,7 +39,7 @@ class _ProductsState extends State<Products> {
           child:Column(
             children: [
               DashboardMidBar(),
-              CustomHeader(backgroundColor:Colors.white,isDarkMode: false,text: 'Products'),
+              CustomHeader(backgroundColor:kWhite,isDarkMode: false,text: 'Products'),
               MidButtonBar(
                 text: 'Add, view and edit your products all in one place.                                                                                                                                ', 
                 addBlueButton: true,
@@ -55,7 +55,7 @@ class _ProductsState extends State<Products> {
                 }
                 ),
               Container(
-                color:Colors.white,
+                color:kWhite,
                 child:
                    Padding(
                       padding: const EdgeInsets.only(left: 48,right: 48,top:24,bottom:12),

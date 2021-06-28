@@ -31,13 +31,18 @@ class _MainOutletState extends State<MainOutlet> {
       drawer: SetupDrawer(setupClicked:SetupClicked.outlets),
       body:SingleChildScrollView(
         child: Container(
-          color:Colors.white,
+          color:kWhite,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DashboardMidBar(),
               Padding(
-                padding: const EdgeInsets.only(top:20.0,bottom: 20.0,left:30.0 ,right: 30.0),
+                padding: const EdgeInsets.only(
+                                        top:20.0,
+                                        bottom: 20.0,
+                                        left:30.0 ,
+                                        right: 30.0
+                                        ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -48,10 +53,13 @@ class _MainOutletState extends State<MainOutlet> {
                         children: [
                           GestureDetector(
                             onTap: (){
-                            
                                 Navigator.push(
-                                  context, MaterialPageRoute(builder: (_)=> RegisterClosure()));
-                              
+                                  context, 
+                                  MaterialPageRoute(
+                                    builder: (_)=> 
+                                          RegisterClosure()
+                                          )
+                                    );
                             },
                             child: Text(
                               'Setup',
@@ -59,10 +67,10 @@ class _MainOutletState extends State<MainOutlet> {
                                 fontFamily: 'Lato',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color:Color(0xFF0066CC),
+                                color:kLightBlue,
                                 decoration: TextDecoration.none,
                                 decorationStyle: TextDecorationStyle.solid,
-                                decorationColor: Color(0xFF0066CC)
+                                decorationColor: kLightBlue
                                 ),
                             ),
                           ),
@@ -74,7 +82,7 @@ class _MainOutletState extends State<MainOutlet> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -82,10 +90,13 @@ class _MainOutletState extends State<MainOutlet> {
                           ),
                           GestureDetector(
                             onTap: (){
-                            
                                 Navigator.push(
-                                  context, MaterialPageRoute(builder: (_)=> RegisterClosure()));
-                              
+                                  context,
+                                   MaterialPageRoute(
+                                     builder: (_)=> 
+                                              RegisterClosure()
+                                              )
+                                          );
                             },
                             child: Text(
                               'Outlets and Registers',
@@ -93,10 +104,10 @@ class _MainOutletState extends State<MainOutlet> {
                                 fontFamily: 'Lato',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color:Color(0xFF0066CC),
+                                color:kLightBlue,
                                 decoration: TextDecoration.none,
                                 decorationStyle: TextDecorationStyle.solid,
-                                decorationColor: Color(0xFF0066CC)
+                                decorationColor: kLightBlue
                                 ),
                             ),
                           ),
@@ -108,7 +119,7 @@ class _MainOutletState extends State<MainOutlet> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -119,7 +130,7 @@ class _MainOutletState extends State<MainOutlet> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                         ],
@@ -148,7 +159,11 @@ class _MainOutletState extends State<MainOutlet> {
                               buttonText: 'Edit Outlet',
                               onPress: (){     
                                 Navigator.push(
-                                  context, MaterialPageRoute(builder: (_)=> EditOutlet()));                            
+                                  context, 
+                                  MaterialPageRoute(
+                                    builder: (_)=> EditOutlet()
+                                    )
+                                  );                            
                               }, 
                               topPadding: 3,
                               leftPadding: 10,
@@ -162,7 +177,12 @@ class _MainOutletState extends State<MainOutlet> {
                                 buttonText: 'Add a Register',
                                 onPress: (){     
                                   Navigator.push(
-                                    context, MaterialPageRoute(builder: (_)=> RegisterClosureFullDetails()));                            
+                                    context, 
+                                    MaterialPageRoute(
+                                      builder: (_)=> 
+                                                  RegisterClosureFullDetails()
+                                                  )
+                                              );                            
                                 }, 
                                 topPadding: 3,
                                 leftPadding: 10,
@@ -174,7 +194,12 @@ class _MainOutletState extends State<MainOutlet> {
                                 buttonText: 'Delete Outlet',
                                 onPress: (){     
                                   Navigator.push(
-                                    context, MaterialPageRoute(builder: (_)=> RegisterClosureFullDetails()));                            
+                                    context, 
+                                        MaterialPageRoute(
+                                            builder: (_)=> 
+                                            RegisterClosureFullDetails()
+                                            )
+                                        );                            
                                 }, 
                                 topPadding: 3,
                                 leftPadding: 10,
@@ -187,16 +212,16 @@ class _MainOutletState extends State<MainOutlet> {
                       ),
                       decoration: BoxDecoration(
                     border: Border.all(
-                      color:Color(0xFFb0b0b0), width: 1, style: BorderStyle.solid
+                      color:kCustomGrey, width: 1, style: BorderStyle.solid
                       ),
                     gradient: LinearGradient(
-                         colors: [Color(0xFFededed) , Color(0xFFdbdbdb) ],
+                         colors: [ kCustomWhite7 ,  kCustomWhite8 ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
                     ),
                      boxShadow:[
                       BoxShadow(
-                        color: Colors.white.withOpacity(0.2),
+                        color: kWhite.withOpacity(0.2),
                         spreadRadius: -1,
                         blurRadius: 2,
                         offset: Offset.zero
@@ -230,7 +255,7 @@ class _MainOutletState extends State<MainOutlet> {
                                           style: TextStyle(
                                           fontFamily: 'Lato',
                                           fontSize: 14,
-                                          color: Color(0xFF333333),
+                                          color: kBlackOpacity,
                                           fontWeight: FontWeight.w700
                                           )
                                     ),
@@ -240,7 +265,7 @@ class _MainOutletState extends State<MainOutlet> {
                                           style: TextStyle(
                                           fontFamily: 'Lato',
                                           fontSize: 14,
-                                          color: Color(0xFF333333),
+                                          color: kBlackOpacity,
                                           )
                                     ),
                                 ],
@@ -266,7 +291,7 @@ class _MainOutletState extends State<MainOutlet> {
                                           style: TextStyle(
                                           fontFamily: 'Lato',
                                           fontSize: 14,
-                                          color: Color(0xFF333333),
+                                          color: kBlackOpacity,
                                           fontWeight: FontWeight.w700
                                           )
                                     ),
@@ -276,7 +301,7 @@ class _MainOutletState extends State<MainOutlet> {
                                           style: TextStyle(
                                           fontFamily: 'Lato',
                                           fontSize: 14,
-                                          color: Color(0xFF333333),
+                                          color: kBlackOpacity,
                                           )
                                     ),
                                 ],
@@ -302,7 +327,7 @@ class _MainOutletState extends State<MainOutlet> {
                             style: TextStyle(
                                       fontFamily: 'Lato',
                                       fontSize: 20.04,
-                                      color: Color(0xFF333333),
+                                      color: kBlackOpacity,
                                       fontWeight: FontWeight.w700
                                       )
                       ),
@@ -383,8 +408,6 @@ class _MainOutletState extends State<MainOutlet> {
                           ),
                       ],
                     ),
-                   
-           
                     Row(
                       children: [
                         GredientTableCell(

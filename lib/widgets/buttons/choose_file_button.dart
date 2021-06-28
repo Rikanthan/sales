@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/constants/colors.dart';
 class ChooseFile extends StatelessWidget {
   const ChooseFile({
     @required this.buttonText,
@@ -21,14 +22,17 @@ class ChooseFile extends StatelessWidget {
         width: width,
        decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFb0b0b0), width: 0.7, style: BorderStyle.solid
+                              color: kCustomGrey,
+                               width: 0.7, 
+                              style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.all(
                                  Radius.circular(2),
                                 ),
-                              
         gradient: LinearGradient(
-                        colors: isButtonDisable ? [Color(0xFFFAFAFA) , Color(0xFFdddddd) ] : [Color(0xFFFAFAFA) , Color(0xFFCECECE) ],
+                        colors: isButtonDisable ? 
+                                [kCustomWhite3 , kCustomWhite4 ] : 
+                                [kCustomWhite3 ,kCustomWhite5 ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
                     ),
@@ -45,7 +49,10 @@ class ChooseFile extends StatelessWidget {
       ),
       onPressed: onPress,
      style:ButtonStyle(
-        backgroundColor: MaterialStateColor.resolveWith((states) => Colors.transparent ),
+        backgroundColor: MaterialStateColor
+                            .resolveWith(
+                                        (states) => Colors.transparent
+                                               ),
         padding:  MaterialStateProperty
                     .resolveWith((states) 
                             => EdgeInsets.only(
@@ -60,8 +67,8 @@ class ChooseFile extends StatelessWidget {
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(2)
                             ),
-      ),                
-    )
+                        ),                
+                      )
               )
         );
   }

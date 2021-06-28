@@ -45,7 +45,7 @@ class ReportDrawer extends StatelessWidget {
           MainDrawer(isDarkMode: false, mainDrawerClick: MainDrawerClick.reports),
           Container(
             width:145,
-            color: Colors.white,
+            color: kWhite,
             child: Column(
               children: <Widget>[
                 Expanded(

@@ -56,16 +56,25 @@ class _AddPromotionState extends State<AddPromotion> {
                       child: Icon(
                         Icons.arrow_back,
                         size: 24,
-                        color: !isSwitch ? kSignInButtonColor: kInputBorderColor,
+                        color: !isSwitch ? kSignInButtonColor: kFooterColor,
                         ), 
                       onTap: (){
                         setState(() {
                           isSwitch = false;
                         });
-                        Navigator.push(context, MaterialPageRoute(builder: (_)=> Promotions()));
+                        Navigator.push(
+                          context, 
+                          MaterialPageRoute(
+                            builder: (_)=> 
+                            Promotions()
+                            )
+                          );
                       }
                     ),
-                    Text('New Promotion',style: k32Black,)
+                    Text(
+                      'New Promotion',
+                      style: k32Black,
+                      )
                   ],
                 ),
               ),
@@ -78,7 +87,10 @@ class _AddPromotionState extends State<AddPromotion> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('Set special offers and discounts for your customers.',style: kMediumTextNormalStyle,),
+                      Text(
+                        'Set special offers and discounts for your customers.',
+                        style: k15BlackNormal,
+                        ),
                         Spacer(),
                       CustomButton(
                         buttonText: 'Cancel', 
@@ -98,7 +110,6 @@ class _AddPromotionState extends State<AddPromotion> {
                         topPadding: 20, 
                         leftPadding: 30
                         ),
-                      
                     ],
                   ),
                 ),
@@ -126,7 +137,7 @@ class _AddPromotionState extends State<AddPromotion> {
                       width: 232,
                       child: Text(
                         'Name the promotion and\nspecify the dates for when it\nwill apply.',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                     ),
                     Column(
@@ -147,9 +158,17 @@ class _AddPromotionState extends State<AddPromotion> {
                                   },
                                 ),
                         SizedBox(height: 8,),
-                        Text('Max characters: 30',style: k15Blue2,), 
-                        SizedBox(height: 20,),
-                        Text('Short Description',style: k15BlackDark,),
+                        Text(
+                          'Max characters: 30',
+                          style: k15Blue2,
+                          ), 
+                        SizedBox(
+                          height: 20,
+                          ),
+                        Text(
+                          'Short Description',
+                          style: k15BlackDark,
+                          ),
                         TextInputMaxLines(
                                 darkMode: false,
                                 hideText: false,
@@ -180,7 +199,7 @@ class _AddPromotionState extends State<AddPromotion> {
                         Container(
                           height: 202,
                           width:348,
-                          color:Colors.white,
+                          color:kWhite,
                           child: Padding(
                             padding: const EdgeInsets.all(24.0),
                             child: Column(
@@ -278,7 +297,7 @@ class _AddPromotionState extends State<AddPromotion> {
                       width: 232,
                       child: Text(
                         'Set up the type of promotion\nyou would like to run.',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                       ), 
                       GestureDetector(
@@ -291,15 +310,16 @@ class _AddPromotionState extends State<AddPromotion> {
                           width: 348,
                           height: 123,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: kWhite,
                              border: Border.all(
-                               color: _choosePromotionType == ChoosePromotionType.basic ?  kSignInButtonColor : kInputBorderColor,
+                                            color: _choosePromotionType == ChoosePromotionType.basic ?  
+                                                      kSignInButtonColor : kInputBorderColor,
                                width: 2,
                              ),
                             borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(4),
-                              bottomLeft: Radius.circular(4)
-                            ) 
+                                                topLeft: Radius.circular(4),
+                                                bottomLeft: Radius.circular(4)
+                                               ) 
                           ),
                           child: Padding(
                             padding: const EdgeInsets.only(top:12.0 ,bottom:12.0 ,left:20.0,right: 20.0),
@@ -318,7 +338,7 @@ class _AddPromotionState extends State<AddPromotion> {
                                     color: kAppBarColor,
                                     ),
                                 ),
-                                Text('Offer customers a discount',style: kMediumTextNormalStyle,),
+                                Text('Offer customers a discount',style: k15BlackNormal,),
                               ],
                             ),
                           ),
@@ -334,10 +354,11 @@ class _AddPromotionState extends State<AddPromotion> {
                           width: 348,
                           height: 123,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: kWhite,
                              border: Border.all(
-                               color:  _choosePromotionType == ChoosePromotionType.advanced ?  kSignInButtonColor : kInputBorderColor,
-                               width: 2,
+                                        color:  _choosePromotionType == ChoosePromotionType.advanced ?  
+                                          kSignInButtonColor : kInputBorderColor,
+                                        width: 2,
                              ),
                             borderRadius: BorderRadius.only(
                               topRight: Radius.circular(4),
@@ -345,7 +366,12 @@ class _AddPromotionState extends State<AddPromotion> {
                             ) 
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.only(top:12.0 ,bottom:12.0 ,left:20.0,right: 20.0),
+                            padding: const EdgeInsets.only(
+                                                  top:12.0 ,
+                                                  bottom:12.0 ,
+                                                  left:20.0,
+                                                  right: 20.0
+                                                  ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -361,14 +387,19 @@ class _AddPromotionState extends State<AddPromotion> {
                                     color: kAppBarColor,
                                     ),
                                 ),
-                                Text('Offer customers a discount or gift, based on',style: kMediumTextNormalStyle,),
-                                Text('what they buy or how much they spend.',style: kMediumTextNormalStyle,),
+                                Text(
+                                  'Offer customers a discount or gift, based on',
+                                  style: k15BlackNormal,
+                                  ),
+                                Text(
+                                  'what they buy or how much they spend.',
+                                  style: k15BlackNormal,
+                                  ),
                               ],
                             ),
                           ),
                         ),
                       ),
-                     
                     ] 
                   )
                 ),
@@ -397,7 +428,11 @@ class _AddPromotionState extends State<AddPromotion> {
                                   });
                                 },
                                 dropdownValue: customer,
-                                dropdownList: ['Choose the condition','Buys the following items','Spend the following money'],
+                                dropdownList: [
+                                  'Choose the condition',
+                                  'Buys the following items',
+                                  'Spend the following money'
+                                  ],
                               ),
                           ],
                         ),
@@ -436,7 +471,7 @@ class _AddPromotionState extends State<AddPromotion> {
                           width: 232,
                           child: Text(
                             'Choose to see a prompt\nabout this promotion on the\nSell screen when one of the\nincluded products is added to\nthe basket.',
-                            style: kMediumTextNormalStyle,
+                            style: k15BlackNormal,
                             ),
                           ),
                         Row(
@@ -446,10 +481,25 @@ class _AddPromotionState extends State<AddPromotion> {
                               Padding(
                                   padding: const EdgeInsets.only(right: 12.0),
                                   child: Checkbox(
-                                    activeColor: MaterialStateColor.resolveWith((states) => _isSelected ? Colors.white : kAppBarColor),
-                                    hoverColor: MaterialStateColor.resolveWith((states) => _isSelected ? kSignInButtonColor : kAppBarColor),
-                                    overlayColor: MaterialStateColor.resolveWith((states) => _isSelected ? kSignInButtonColor : kAppBarColor),
-                                    fillColor: MaterialStateColor.resolveWith((states) => _isSelected ? kSignInButtonColor : kDashboardSearchBarFillColor),
+                                    activeColor: MaterialStateColor
+                                                          .resolveWith(
+                                                            (states) => _isSelected ? kWhite : 
+                                                                            kAppBarColor
+                                                                            ),
+                                    hoverColor: MaterialStateColor
+                                                              .resolveWith(
+                                                                (states) => _isSelected ? kSignInButtonColor 
+                                                                          : kAppBarColor
+                                                                          ),
+                                    overlayColor: MaterialStateColor
+                                                              .resolveWith(
+                                                                (states) => _isSelected ? kSignInButtonColor 
+                                                                  : kAppBarColor),
+                                    fillColor: MaterialStateColor
+                                                              .resolveWith(
+                                                                (states) => _isSelected ? kSignInButtonColor
+                                                                       : kDashboardSearchBarFillColor
+                                                                       ),
                                     value: _isSelected,
                                     onChanged: (newValue){
                                       setState(() {
@@ -460,7 +510,10 @@ class _AddPromotionState extends State<AddPromotion> {
                                     visualDensity: VisualDensity.standard,
                                   ),
                                 ),
-                                Text('Show a prompt about this promotion on the Sell screen',style:kMediumTextNormalStyle)
+                                Text(
+                                  'Show a prompt about this promotion on the Sell screen',
+                                        style:k15BlackNormal
+                                        )
                             ],
                           )
                       ],

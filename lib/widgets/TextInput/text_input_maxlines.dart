@@ -27,7 +27,7 @@ class TextInputMaxLines extends StatelessWidget {
     return  Padding(
       padding:  EdgeInsets.only(top:paddingTop),
       child: Container(
-        color: darkMode ? kDashboardSearchBarFillColor : Colors.white,
+        color: darkMode ? kDashboardSearchBarFillColor : kWhite,
         height: height,
         width: width,
         child: TextFormField(
@@ -36,12 +36,13 @@ class TextInputMaxLines extends StatelessWidget {
                         obscureText: hideText,
                         maxLines: maxLines,
                         decoration: InputDecoration(
-                        fillColor: darkMode ? kDashboardSearchBarFillColor : Colors.white,
+                        fillColor: darkMode ? kDashboardSearchBarFillColor : kWhite,
                         filled: true,
                          hintText:hintText,
                             hintStyle: TextStyle(
                                   fontFamily: 'Lato',
-                                  color: darkMode ? kDashboardIconColor : Colors.blue[700].withOpacity(0.7),
+                                  color: darkMode ? kDashboardIconColor : 
+                                                    Colors.blue[700].withOpacity(0.7),
                                   fontSize: 15
                                   ),
                         enabledBorder: OutlineInputBorder(

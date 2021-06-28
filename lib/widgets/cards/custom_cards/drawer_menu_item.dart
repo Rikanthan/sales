@@ -16,7 +16,12 @@ class DrawerMenuItem extends StatelessWidget {
           child: Container(
             height: 57,
             child: Padding(
-              padding: const EdgeInsets.only(top:20.0,bottom: 20.0,right: 10.0,left: 10.0),
+              padding: const EdgeInsets.only(
+                                        top:20.0,
+                                        bottom: 20.0,
+                                        right: 10.0,
+                                        left: 10.0
+                                        ),
               child: Text(
                 buttonText,
                 style:TextStyle(

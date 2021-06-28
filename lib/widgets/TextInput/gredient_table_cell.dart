@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/constants/colors.dart';
 class GredientTableCell extends StatelessWidget {
   GredientTableCell({
     @required this.text,
@@ -28,7 +29,7 @@ class GredientTableCell extends StatelessWidget {
                       bottomLeft:isBottomLeftRadius? Radius.circular(0): Radius.circular(0),
                       bottomRight:isBottomRightRadius ? Radius.circular(0) : Radius.circular(0)
                       ),
-                    color: Colors.white,
+                    color: kWhite,
                     border: Border.all(
                       color: Color(0xFFd8d8d8),width:1
                     )
@@ -46,7 +47,7 @@ class GredientTableCell extends StatelessWidget {
                               child: Text(
                                 text,
                                 style:TextStyle(
-                                  color: isTextButton ? Color(0xff0066cc) : Colors.white,
+                                  color: isTextButton ? kLightBlue : kWhite,
                                   fontSize: 14,
                                   fontFamily: 'Roboto',
                                   shadows: [
@@ -71,7 +72,7 @@ class GredientTableCell extends StatelessWidget {
                       top:BorderSide(color: Color(0xFFd8d8d8),width:1),
                       bottom:BorderSide(color: Color(0xFFd8d8d8),width:1),
                       ),
-                      color: Colors.white
+                      color: kWhite
                   ),
                   height: 26,
                   width: width,
@@ -85,7 +86,7 @@ class GredientTableCell extends StatelessWidget {
                           child: Text(
                             text,
                             style:TextStyle(
-                              color: isTextButton ? Color(0xff0066cc) : Color(0xFF333333),
+                              color: isTextButton ? kLightBlue : kBlackOpacity,
                               fontSize: 14,
                               fontFamily: 'Roboto',
                               )

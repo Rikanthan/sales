@@ -48,7 +48,6 @@ class _InventoryReportState extends State<InventoryReport> {
           color:kHomeBackgroundColor,
           child:Column(
             children: [
-              //DashboardMidBar(),
               CustomHeader(
                 backgroundColor:kHomeBackgroundColor,
                  text: 'Inventory Report',
@@ -131,7 +130,7 @@ class _InventoryReportState extends State<InventoryReport> {
                 greenOnTap: (){}
                 ),  
               Container(
-                color: Colors.white,
+                color: kWhite,
                 child:Padding(
                   padding: const EdgeInsets.only(top:24,bottom:24,left:48.0,right: 48.0),
                   child: Column(
@@ -163,7 +162,14 @@ class _InventoryReportState extends State<InventoryReport> {
                                                 );
                                               },
                                 dropdownValue: reportType,
-                                dropdownList: ['Product','SKU Name','Brand','Outlet','Supplier','Product Type'],
+                                dropdownList: [
+                                            'Product',
+                                            'SKU Name',
+                                            'Brand',
+                                            'Outlet',
+                                            'Supplier',
+                                            'Product Type'
+                                            ],
                               ),
                             ]
                           ),
@@ -230,13 +236,18 @@ class _InventoryReportState extends State<InventoryReport> {
                                             ),
                                         ),
                                         child:  Padding(
-                                          padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left:12.0,right: 12.0),
+                                          padding: const EdgeInsets.only(
+                                                                    top:12.0,
+                                                                    bottom: 12.0,
+                                                                    left:12.0,
+                                                                    right: 12.0
+                                                                    ),
                                           child: Row(
                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
                                                 dateRange,
-                                                  style: kMediumTextNormalStyle
+                                                  style: k15BlackNormal
                                                 ),
                                                 Icon(
                                                   Icons.calendar_view_day_outlined,
@@ -336,7 +347,7 @@ class _InventoryReportState extends State<InventoryReport> {
                                         padding: const EdgeInsets.all(12.0),
                                         child: Text(
                                           'Show inactive inventory',
-                                          style: kMediumTextNormalStyle
+                                          style: k15BlackNormal
                                           ),
                                       )
                                   ],
@@ -370,7 +381,12 @@ class _InventoryReportState extends State<InventoryReport> {
               ),
               SizedBox(height: 12.0,),
               Padding(
-                padding: const EdgeInsets.only(top: 13.0,left: 20.0,bottom: 13.0,right: 20.0),
+                padding: const EdgeInsets.only(
+                                            top: 13.0,
+                                            left: 20.0,
+                                            bottom: 13.0,
+                                            right: 20.0
+                                            ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

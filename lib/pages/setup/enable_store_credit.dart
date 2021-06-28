@@ -26,7 +26,7 @@ class EnableStoreCredit extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left:48.0,right: 48.0,top:24),
                 child: Container(
-                  color: Colors.white,
+                  color: kWhite,
                   child: Column(
                     children: [
                       SizedBox(height: 28,),

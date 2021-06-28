@@ -103,7 +103,7 @@ class _SellSettingsState extends State<SellSettings> {
                 padding: const EdgeInsets.only(top:20.0,bottom: 20.0),
                 child: Divider(
                   thickness: 1,
-                  color: Color(0xFFfafbfb)
+                  color : kCustomWhite9
                 ),
               ),
                Container(
@@ -254,7 +254,12 @@ class _SellSettingsState extends State<SellSettings> {
                                       borderRadius: BorderRadius.all(Radius.circular(5))
                                       ),
                                     child: Padding(
-                                      padding: const EdgeInsets.only(left:20.0,right: 20.0,top:24,bottom: 24),
+                                      padding: const EdgeInsets.only(
+                                                                left:20.0,
+                                                                right: 20.0,
+                                                                top:24,
+                                                                bottom: 24
+                                                                ),
                                       child: Row(
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         crossAxisAlignment: CrossAxisAlignment.center,

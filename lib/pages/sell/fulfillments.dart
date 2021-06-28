@@ -288,7 +288,6 @@ class _FullfillmentsState extends State<Fullfillments> {
                   ),
                 )
               ),
-              //SizedBox(height: 12.0,),
               Padding(
                 padding: const EdgeInsets.only(left:48.0, right: 48.0, top: 24.0),
                 child: Column(

@@ -45,7 +45,7 @@ class _VariantExpansionState extends State<VariantExpansion> {
                         border: Border(
                           left: BorderSide(color: _isExpansion? kSignInButtonColor : Colors.transparent,width: 3)
                           ),
-                        color: _isExpansion ? Colors.white : Colors.transparent
+                        color: _isExpansion ? kWhite : Colors.transparent
                       ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,7 +86,7 @@ class _VariantExpansionState extends State<VariantExpansion> {
                     SizedBox(
                      width: 8, 
                     ),
-                    Text( widget.text,style: kMediumTextNormalStyle,),
+                    Text( widget.text,style: k15BlackNormal,),
                         ],
                       ),
                     ),
@@ -184,7 +184,7 @@ class _VariantExpansionState extends State<VariantExpansion> {
               border: Border(
                 left: BorderSide(color: kSignInButtonColor,width: 3)
                 ),
-              color: Colors.white
+              color: kWhite
             ),
             child: Padding(
               padding:  EdgeInsets.only(

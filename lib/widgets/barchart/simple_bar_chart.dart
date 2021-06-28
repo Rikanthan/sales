@@ -97,11 +97,18 @@ class SubscriberChart extends StatelessWidget {
             SizedBox(height: 40,),
             Expanded(
               child: charts.TimeSeriesChart(
-                series, animate: true,dateTimeFactory: charts.LocalDateTimeFactory(),
+                series, 
+                animate: true,
+                dateTimeFactory: charts.LocalDateTimeFactory(),
                 ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left:20,right:28.0,top:27.4,bottom: 20),
+              padding: const EdgeInsets.only(
+                                      left:20,
+                                      right:28.0,
+                                      top:27.4,
+                                      bottom: 20
+                                      ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [

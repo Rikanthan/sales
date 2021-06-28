@@ -56,7 +56,7 @@ class _TaxVarientState extends State<TaxVarient> {
                              child: Row(
                                crossAxisAlignment: CrossAxisAlignment.center,
                                children: [
-                                 Text('Main Outlet',style: kMediumTextNormalStyle,),
+                                 Text('Main Outlet',style: k15BlackNormal,),
                                ],
                              ),
                             ),

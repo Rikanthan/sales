@@ -31,13 +31,16 @@ class EnterprisePlan extends StatelessWidget {
                             SizedBox(
                               height: 20,
                             ),
-                            Text('A solution tailored to expanding\n  retailers or franchises',style: k15WhiteNormal,)
+                            Text(
+                              'A solution tailored to expanding\n  retailers or franchises',
+                                    style: k15WhiteNormal,
+                                    )
                           ],
                         ),
                       ),
                     ),
                     Container(
-                        color: Colors.white,
+                        color: kWhite,
                         width: 232,
                         height: 254,
                         child: Padding(
@@ -61,7 +64,8 @@ class EnterprisePlan extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(top:5.0),
                                 child: Text(
-                                  ' All Feature in the Pro Plan\nDedicated Account Manager\n   Customized Onboarding',
+                                  ' All Feature in the Pro Plan\nDedicated Account Manager'
+                                  '\n   Customized Onboarding',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     color: kAppBarColor,

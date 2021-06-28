@@ -185,9 +185,10 @@ class DescriptionCard extends StatelessWidget {
                       minLines: 10, // any number you need (It works as the rows for the textarea)
                       keyboardType: TextInputType.multiline,
                       maxLines: null,
-                      initialValue: 'The Audhild tee has a simple front with a side pocket.\n\nFeaturing an open back detail.',
+                      initialValue: 'The Audhild tee has a simple front with a side pocket.'
+                                    '\n\nFeaturing an open back detail.',
                       decoration: InputDecoration(
-                          fillColor: Colors.white,
+                          fillColor: kWhite,
                           filled: true,
                           enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(

@@ -57,10 +57,23 @@ class _AddCashState extends State<AddCash> {
                     Row(
                     children: [
                        Radio(
-                          activeColor: MaterialStateColor.resolveWith((states) =>  kSignInButtonColor),
-                        hoverColor: MaterialStateColor.resolveWith((states) =>  kSignInButtonColor),
-                        overlayColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor ),
-                        fillColor: MaterialStateColor.resolveWith((states) => _cashIn == CashIn.cashIn ? kSignInButtonColor : kAppBarColor ),
+                          activeColor: MaterialStateColor
+                                                  .resolveWith(
+                                                        (states) =>  kSignInButtonColor
+                                                          ),
+                        hoverColor: MaterialStateColor
+                                                  .resolveWith(
+                                                          (states) =>  kSignInButtonColor
+                                                          ),
+                        overlayColor: MaterialStateColor
+                                                  .resolveWith(
+                                                            (states) => kSignInButtonColor 
+                                                            ),
+                        fillColor: MaterialStateColor
+                                                  .resolveWith(
+                                                              (states) => _cashIn == CashIn.cashIn 
+                                                              ? kSignInButtonColor :
+                                                               kAppBarColor ),
                         value: CashIn.cashIn,
                         groupValue: _cashIn,
                         onChanged: (CashIn value)
@@ -75,10 +88,24 @@ class _AddCashState extends State<AddCash> {
                         child: Text('Cash in',style: k15White,),
                       ),
                       Radio(
-                         activeColor: MaterialStateColor.resolveWith((states) =>  kSignInButtonColor),
-                        hoverColor: MaterialStateColor.resolveWith((states) =>  kSignInButtonColor),
-                        overlayColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor ),
-                        fillColor: MaterialStateColor.resolveWith((states) => _cashIn == CashIn.pettyCashIn ? kSignInButtonColor : kAppBarColor ),
+                         activeColor: MaterialStateColor
+                                                .resolveWith(
+                                                        (states) =>  kSignInButtonColor
+                                                        ),
+                        hoverColor: MaterialStateColor
+                                                .resolveWith(
+                                                          (states) =>  kSignInButtonColor
+                                                          ),
+                        overlayColor: MaterialStateColor
+                                                .resolveWith(
+                                                          (states) => kSignInButtonColor 
+                                                          ),
+                        fillColor: MaterialStateColor
+                                                .resolveWith(
+                                                            (states) => _cashIn == CashIn.pettyCashIn 
+                                                            ? kSignInButtonColor 
+                                                            : kAppBarColor 
+                                                            ),
                         value: CashIn.pettyCashIn,
                         groupValue: _cashIn,
                         onChanged: (CashIn value)

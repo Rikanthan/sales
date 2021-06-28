@@ -27,10 +27,10 @@ class ToggleButton extends StatelessWidget {
                     padding: 0.0,
                     activeText: ' \u2714',
                     inactiveText: '\u2716',
-                    activeTextColor: Colors.white,
+                    activeTextColor: kWhite,
                     inactiveTextColor: kDashboardMidBarColor,
                     activeColor: kSignInButtonColor,
-                    inactiveColor: Colors.white,
+                    inactiveColor: kWhite,
                     activeSwitchBorder: Border.all(
                         color: kDropDownColor,
                         width: 3.0,

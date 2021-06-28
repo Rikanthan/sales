@@ -26,7 +26,7 @@ class _PriceVarientState extends State<PriceVarient> {
                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                children: [
                  Text('Supply Price',style: k15BlackDark),
-                 Text('Rs18.00',style: kMediumTextNormalStyle,)
+                 Text('Rs18.00',style: k15BlackNormal,)
                ],
              ),
            ),

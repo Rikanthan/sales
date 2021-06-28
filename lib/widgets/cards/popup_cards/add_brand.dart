@@ -37,7 +37,7 @@ class _AddBrandsState extends State<AddBrands> {
           Container(
             decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
-                color: Colors.white,
+                color: kWhite,
                 borderRadius: BorderRadius.all(Radius.circular(4))
               ),
             width: 450,

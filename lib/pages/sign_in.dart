@@ -29,7 +29,7 @@ class SignIn extends StatelessWidget {
           width:596,
           decoration: BoxDecoration(
            borderRadius: BorderRadius.all(Radius.circular(4.0)),
-           color:Colors.white,
+           color:kWhite,
            shape: BoxShape.rectangle
          ),
          child: Padding(

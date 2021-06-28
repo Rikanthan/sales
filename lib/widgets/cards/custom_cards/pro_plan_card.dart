@@ -12,7 +12,8 @@ class ProPlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-          decoration: planType== PlanType.pro ? BoxDecoration(
+          decoration: planType== PlanType.pro ?
+                     BoxDecoration(
             border: Border.all(width: 3,color: kSignInButtonColor ),
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(5),
@@ -65,7 +66,7 @@ class ProPlan extends StatelessWidget {
                         ),
                       ),
                       Container(
-                          color: Colors.white,
+                          color: kWhite,
                           width: 232,
                           height: 404,
                           child: Padding(
@@ -73,7 +74,10 @@ class ProPlan extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text('1+ Outlets',style:kSubHeaderTextStyle),
+                                Text(
+                                    '1+ Outlets',
+                                    style:kSubHeaderTextStyle
+                                    ),
                                 Padding(
                                   padding: const EdgeInsets.only(top:20.0,bottom: 10.0),
                                   child: Text(
@@ -110,47 +114,48 @@ class ProPlan extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(top:10.0),
                                   child: Text(
-                                      'Advanced Reporting',style: kMediumTextNormalStyle,
+                                      'Advanced Reporting',style: k15BlackNormal,
                                     ),
                                 ),
                                 SizedBox(height:3),
                                 Text(
-                                      'Advanced Promotions',style: kMediumTextNormalStyle,
+                                      'Advanced Promotions',style: k15BlackNormal,
                                     ),
                                 SizedBox(height:3),
                                 Text(
-                                      'Gift Cards & Loyalty',style: kMediumTextNormalStyle,
+                                      'Gift Cards & Loyalty',style: k15BlackNormal,
                                     ),
                                 SizedBox(height:3),
                                 Text(
-                                      'Customizable User',style: kMediumTextNormalStyle,
+                                      'Customizable User',style: k15BlackNormal,
                                     ),
                                 SizedBox(height:3),
                                 Text(
-                                      'Permissions',style: kMediumTextNormalStyle,
+                                      'Permissions',style: k15BlackNormal,
                                     ),
                                 SizedBox(height:3),
                                 Text(
-                                      'All Add-ons',style: kMediumTextNormalStyle,
+                                      'All Add-ons',style: k15BlackNormal,
                                     ),
                                 SizedBox(height:3),
                                 Text(
-                                      'Ecommerce Channels',style: kMediumTextNormalStyle,
+                                      'Ecommerce Channels',style: k15BlackNormal,
                                     ),
                                 SizedBox(height:3),
                                 Text(
-                                      'API Access',style: kMediumTextNormalStyle,
+                                      'API Access',style: k15BlackNormal,
                                     ),
                                 SizedBox(height:3),
                                 Text(
-                                      'Award Winning Support',style: kMediumTextNormalStyle,
+                                      'Award Winning Support',style: k15BlackNormal,
                                     ),
                               ],
                             ),
                           ),
                         ),
                       Container(
-                        color: PlanType.pro == planType ? kInputBorderColor : kPlanCardBottomColor,
+                        color: PlanType.pro == planType ? 
+                                    kInputBorderColor : kPlanCardBottomColor,
                         width: 232,
                         height: 220,
                         child: Padding(

@@ -15,7 +15,8 @@ class HelpTextBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-                color: isDarkMode ? kAppBarColor : kInputBorderColor,
+                color: isDarkMode ? kAppBarColor 
+                : kInputBorderColor,
                 height: height,
                child: Padding(
                  padding: const EdgeInsets.only(left:48.0),

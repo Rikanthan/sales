@@ -39,7 +39,10 @@ class _SuppliersState extends State<Suppliers> {
             children: [
               DashboardMidBar(),
               CustomHeader(
-                backgroundColor:kHomeBackgroundColor,isDarkMode: false, text: 'Suppliers'),
+                          backgroundColor : kHomeBackgroundColor,
+                          isDarkMode: false, 
+                          text: 'Suppliers'
+                          ),
               SizedBox(
                 width: 1024,
                 child: MidButtonBar(
@@ -49,13 +52,27 @@ class _SuppliersState extends State<Suppliers> {
                     blueOnTap: (){},
                    greenButtonText: 'Add Supplier',
                     greenOnTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (_)=> AddSupplier(header: '', isEdit: false,)));
+                      Navigator.push(
+                                  context, 
+                                  MaterialPageRoute(
+                                    builder: (_)=> 
+                                    AddSupplier(
+                                      header: '',
+                                       isEdit: false,
+                                       )
+                                       )
+                                      );
                     }
                     ),
               ),
               
               Padding(
-                padding: const EdgeInsets.only(top:24.0,bottom:24.0,right:48.0,left: 48.0),
+                padding: const EdgeInsets.only(
+                                      top:24.0,
+                                      bottom:24.0,
+                                      right:48.0,
+                                      left: 48.0
+                                      ),
                 child: Container(
                   child:Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,7 +93,7 @@ class _SuppliersState extends State<Suppliers> {
                                 _number = true;
                                 _description = true;
                                 _markup = true;
-                                _isThisAscending?_isThisAscending = false:_isThisAscending = true;
+                                _isThisAscending = ! _isThisAscending;
                               });
                             },
                             isThisProduct: false, 
@@ -95,7 +112,7 @@ class _SuppliersState extends State<Suppliers> {
                                 _number = true;
                                 _description = false;
                                 _markup = true;
-                                _isThisAscending?_isThisAscending = false:_isThisAscending = true;
+                                _isThisAscending = ! _isThisAscending;
                               });
                             },
                             isThisProduct: false, 
@@ -115,7 +132,7 @@ class _SuppliersState extends State<Suppliers> {
                                 _number = true;
                                 _markup = false;
                                 _description = true;
-                                _isThisAscending?_isThisAscending = false:_isThisAscending = true;
+                                _isThisAscending = ! _isThisAscending;
                               });
                             },
                             isThisProduct: false, 
@@ -135,7 +152,7 @@ class _SuppliersState extends State<Suppliers> {
                                _name = true;
                               _description = true;
                               _markup = true;
-                                _isThisAscending?_isThisAscending = false:_isThisAscending = true;
+                               _isThisAscending = ! _isThisAscending;
                               });
                             },
                             isThisProduct: false, 
@@ -171,7 +188,7 @@ class _SuppliersState extends State<Suppliers> {
                                       ),
                                       Text(
                                         '0%',
-                                        style: kMediumTextNormalStyle
+                                        style: k15BlackNormal
                                         )                      
                                   ],
                                 ),
@@ -217,8 +234,17 @@ class _SuppliersState extends State<Suppliers> {
                                               color: kDropDownColor,
                                               ),
                                              onPressed: (){
-                                               Navigator.push(context, MaterialPageRoute(builder: (_)=> AddSupplier(header: 'Flo & Frankie', isEdit: true,)));
-                                             }
+                                               Navigator.push(
+                                                 context, 
+                                                 MaterialPageRoute(
+                                                              builder: (_)=> 
+                                                              AddSupplier(
+                                                                header: 'Flo & Frankie', 
+                                                                isEdit: true,
+                                                                )
+                                                              )
+                                                          );
+                                              }
                                              ),
                                         ),
                                         IconButton(

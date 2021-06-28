@@ -14,7 +14,8 @@ class ChooseDate extends StatelessWidget {
                                         onPressed: (){
                                            showDialog(
                                               context: context,
-                                              builder: (BuildContext context) => ChooseDatePopUp(),
+                                              builder: (_) => 
+                                                      ChooseDatePopUp(),
                                             );
                                         },
                                         style: ButtonStyle(
@@ -29,7 +30,7 @@ class ChooseDate extends StatelessWidget {
                                             ),
                                         ),
                                         child:  Padding(
-                                          padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left:12.0,right: 12.0),
+                                          padding: const EdgeInsets.all(12.0),
                                           child: Row(
                                             children: [
                                               Icon(

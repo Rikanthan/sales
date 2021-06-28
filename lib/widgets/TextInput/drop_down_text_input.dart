@@ -50,7 +50,7 @@ class DropDownInput extends StatelessWidget {
           ),
                 ),
           decoration: ShapeDecoration(
-            color:isDarkMode? kDashboardSearchBarFillColor : Colors.white,
+            color:isDarkMode? kDashboardSearchBarFillColor : kWhite,
             shape: RoundedRectangleBorder(
             side: BorderSide(
               width: 2.0, 

@@ -42,13 +42,18 @@ class _GeneralState extends State<General> {
       drawer: SetupDrawer(setupClicked:SetupClicked.general ),
       body:SingleChildScrollView(
         child: Container(
-          color:Colors.white,
+          color:kWhite,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DashboardMidBar(),
               Padding(
-                padding: const EdgeInsets.only(top:20.0,bottom: 20.0,left:30.0 ,right: 30.0),
+                padding: const EdgeInsets.only(
+                                            top:20.0,
+                                            bottom: 20.0,
+                                            left:30.0 ,
+                                            right: 30.0
+                                            ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -63,10 +68,10 @@ class _GeneralState extends State<General> {
                               fontFamily: 'Lato',
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
-                              color:Color(0xFF0066CC),
+                              color:kLightBlue,
                               decoration: TextDecoration.none,
                               decorationStyle: TextDecorationStyle.solid,
-                              decorationColor: Color(0xFF0066CC)
+                              decorationColor: kLightBlue
                               ),
                           ),
                           SizedBox(
@@ -77,7 +82,7 @@ class _GeneralState extends State<General> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -88,7 +93,7 @@ class _GeneralState extends State<General> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                         ],
@@ -106,7 +111,11 @@ class _GeneralState extends State<General> {
                         ),
                       ),
                     ),
-                    SettingsGredientHeader(cellType: CellType.both ,width: 964 ,text: 'Store Settings',),
+                    SettingsGredientHeader(
+                                      cellType: CellType.both ,
+                                      width: 964 ,
+                                      text: 'Store Settings',
+                                      ),
                     Row(
                       children: [
                         Container(
@@ -114,7 +123,7 @@ class _GeneralState extends State<General> {
                           height:400,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(5),
@@ -129,7 +138,12 @@ class _GeneralState extends State<General> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Store name',),
+                                   SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'Store name',
+                                            ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 245,
@@ -141,12 +155,17 @@ class _GeneralState extends State<General> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Private URL',),
+                                    SettingsCell(
+                                              height: 24, 
+                                              width: 150 , 
+                                              textSpan: false, 
+                                              text: 'Private URL',
+                                              ),
                                         Text(
                                             'shop23.vendhq.com',
                                             style: TextStyle(
                                               fontSize: 14,
-                                              color:Color(0xFF333333),
+                                              color:kBlackOpacity,
                                               fontFamily: 'Lato',
                                               ),
                                             ),
@@ -156,7 +175,12 @@ class _GeneralState extends State<General> {
                                  Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                     SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Default currency',),
+                                     SettingsCell(
+                                                height: 24, 
+                                                width: 150 , 
+                                                textSpan: false, 
+                                                text: 'Default currency',
+                                                ),
                                     SettingDropDown(
                                         width: 200,
                                         height: 28,
@@ -169,7 +193,10 @@ class _GeneralState extends State<General> {
                                                         );
                                                       },
                                         dropdownValue: currency,
-                                        dropdownList: ['Indian Rupees','Srilankan Rupees'],
+                                        dropdownList: [
+                                                  'Indian Rupees',
+                                                  'Srilankan Rupees'
+                                                  ],
                                         )
                                   ],
                                 ),
@@ -177,7 +204,12 @@ class _GeneralState extends State<General> {
                                  Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                     SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Time zone',),
+                                     SettingsCell(
+                                              height: 24, 
+                                              width: 150 , 
+                                              textSpan: false, 
+                                              text: 'Time zone',
+                                              ),
                                     SettingDropDown(
                                         width: 200,
                                         height: 28,
@@ -199,7 +231,12 @@ class _GeneralState extends State<General> {
                                  Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                     SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Display prices',),
+                                     SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'Display prices',
+                                            ),
                                     SettingDropDown(
                                         width: 200,
                                         height: 28,
@@ -225,7 +262,7 @@ class _GeneralState extends State<General> {
                           height:400,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(5),
@@ -238,7 +275,12 @@ class _GeneralState extends State<General> {
                                   children: [
                                     Row(
                                       children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Label printer format'),
+                                        SettingsCell(
+                                          height: 24, 
+                                          width: 150 , 
+                                          textSpan: false, 
+                                          text: 'Label printer format'
+                                          ),
                                         SettingDropDown(
                                         width: 245,
                                         height: 22,
@@ -251,14 +293,26 @@ class _GeneralState extends State<General> {
                                                         );
                                                       },
                                         dropdownValue: printer,
-                                        dropdownList: ['Continuous feed','Continuous feed (wide)','Continuous dual (2x1)','Avery Sheet of 3 X 11','Avery Sheet of 5 X 13','US Letter of 3 X 10','Sheet of 4 X 14'],
+                                        dropdownList: 
+                                        ['Continuous feed',
+                                        'Continuous feed (wide)',
+                                        'Continuous dual (2x1)',
+                                        'Avery Sheet of 3 X 11',
+                                        'Avery Sheet of 5 X 13',
+                                        'US Letter of 3 X 10',
+                                        'Sheet of 4 X 14'],
                                         ),
                                       ],
                                     ),
                                     SizedBox(height:10),
                                    Row(
                                       children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'SKU generation'),
+                                        SettingsCell(
+                                          height: 24,
+                                           width: 150 , 
+                                           textSpan: false, 
+                                           text: 'SKU generation'
+                                           ),
                                         SettingDropDown(
                                         width: 245,
                                         height: 22,
@@ -271,22 +325,39 @@ class _GeneralState extends State<General> {
                                                         );
                                                       },
                                         dropdownValue: sku,
-                                        dropdownList: ['Generate by Sequence Number','Generate by Name'],
+                                        dropdownList: [
+                                          'Generate by Sequence Number',
+                                          'Generate by Name'
+                                          ],
                                         ),
                                       ],
                                     ),
                                      SizedBox(height:10),
                                    Row(
                                       children: [
-                                        SettingsCell(height: 38, width: 150 , textSpan: true, text: 'Current sequence\nnumber'),
-                                        SettingTextInput(height: 26, width: 245, value: '10000')
+                                        SettingsCell(
+                                          height: 38, 
+                                          width: 150 , 
+                                          textSpan: true, 
+                                          text: 'Current sequence\nnumber'
+                                          ),
+                                        SettingTextInput(
+                                          height: 26, 
+                                          width: 245, 
+                                          value: '10000'
+                                          )
                                       ],
                                     ),
                                   SizedBox(height:10),
                                    Row(
                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        SettingsCell(height: 38, width: 150 , textSpan: true, text: 'Sell screen\nbarcodes'),
+                                        SettingsCell(
+                                          height: 38, 
+                                          width: 150 , 
+                                          textSpan: true, 
+                                          text: 'Sell screen\nbarcodes'
+                                          ),
                                         Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
@@ -302,7 +373,11 @@ class _GeneralState extends State<General> {
                                                             );
                                                           },
                                             dropdownValue: sellScreen,
-                                            dropdownList: ['','Only allow SKUs','Allow barcodes with\nembedded price','Allow barcodes with\nembedded weight'],
+                                            dropdownList: ['',
+                                            'Only allow SKUs',
+                                            'Allow barcodes with\nembedded price',
+                                            'Allow barcodes with\nembedded weight'
+                                            ],
                                             ),
                                             TextButton(
                                               onPressed: (){},
@@ -310,7 +385,7 @@ class _GeneralState extends State<General> {
                                                  'How do I embed prices or weights?',
                                                  style: TextStyle(
                                                    fontSize: 14,
-                                                   color:Color(0xFF0066CC),
+                                                   color:kLightBlue,
                                                    fontFamily: 'Lato'
                                                    ),
                                                  )
@@ -322,7 +397,12 @@ class _GeneralState extends State<General> {
                                     SizedBox(height:10),
                                    Row(
                                       children: [
-                                        SettingsCell(height: 38, width: 150 , textSpan: true, text: 'User switching\nsecurity'),
+                                        SettingsCell(
+                                          height: 38, 
+                                          width: 150 , 
+                                          textSpan: true, 
+                                          text: 'User switching\nsecurity'
+                                          ),
                                         SettingDropDown(
                                         width: 245,
                                         height: 22,
@@ -335,14 +415,24 @@ class _GeneralState extends State<General> {
                                                         );
                                                       },
                                         dropdownValue: userSwitching,
-                                        dropdownList: ['','Never require a password\nwhen switching between users','Require a password\nwhen switching to a user\nwith greater privileges',"Don't require a password to\nswitch users when switching\nwith a barcode",'Always require a password\nwhen switching between users'],
+                                        dropdownList: [
+                                          '',
+                                          'Never require a password\nwhen switching between users',
+                                          'Require a password\nwhen switching to a user\nwith greater privileges',
+                                          "Don't require a password to\nswitch users when switching\nwith a barcode",
+                                          'Always require a password\nwhen switching between users'],
                                         ),
                                       ],
                                     ),
                                     SizedBox(height:10),
                                     Row(
                                       children: [
-                                        SettingsCell(height: 56, width: 150 , textSpan: true, text: 'Automatically add\ncustomers from\nreceipts'),
+                                        SettingsCell(
+                                          height: 56, 
+                                          width: 150 , 
+                                          textSpan: true, 
+                                          text: 'Automatically add\ncustomers from\nreceipts'
+                                          ),
                                         Radio(
                                           value: Answer.yes,
                                           groupValue: _answer,
@@ -353,7 +443,14 @@ class _GeneralState extends State<General> {
                                             });
                                           }
                                         ),
-                                        Text('Yes',style: TextStyle(fontFamily: 'Lato',fontSize: 14, color: kAppBarColor),),
+                                        Text(
+                                          'Yes',
+                                          style: TextStyle(
+                                            fontFamily: 'Lato',
+                                            fontSize: 14, 
+                                            color: kAppBarColor
+                                            ),
+                                        ),
                                         SizedBox(width:20),
                                         Radio(
                                           value: Answer.no,
@@ -365,10 +462,23 @@ class _GeneralState extends State<General> {
                                             });
                                           }
                                         ),
-                                        Text('No',style: TextStyle(fontFamily: 'Lato',fontSize: 14, color: kAppBarColor),),
+                                        Text(
+                                          'No',
+                                          style: TextStyle(
+                                            fontFamily: 'Lato',
+                                            fontSize: 14,
+                                             color: kAppBarColor
+                                             ),
+                                          ),
                                       ],
                                     ),
-                                    Text("Get more complete records of who's buying what. When you email a\n receipt to a customer. we'll automatically add them to the sale or \ncreate a new customer.",style: TextStyle(fontFamily: 'Lato',fontSize: 14, color: kAppBarColor),)
+                                    Text("Get more complete records of who's buying what. When you email a\n receipt to a customer. we'll automatically add them to the sale or \ncreate a new customer.",
+                                    style: TextStyle(
+                                      fontFamily: 'Lato',
+                                      fontSize: 14, 
+                                      color: kAppBarColor
+                                      ),
+                                  )
                                 ],
                             ),
                           ),

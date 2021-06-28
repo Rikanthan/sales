@@ -29,11 +29,11 @@ class RetailTableHeader extends StatelessWidget {
                  decoration: BoxDecoration(
                               border: Border(
                                 bottom:BorderSide(
-                                  color: rightBorder? kFooterColor : Colors.white,
+                                  color: rightBorder? kFooterColor : kWhite,
                                   width: rightBorder ? 1.0 :0.0 
                                   ),
                                 right: BorderSide(
-                                  color: rightBorder? kFooterColor : Colors.white,
+                                  color: rightBorder? kFooterColor : kWhite,
                                   width: rightBorder ? 1.0 :0.0 
                                   ),
                                 ),

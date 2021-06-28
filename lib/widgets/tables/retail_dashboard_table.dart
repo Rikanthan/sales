@@ -37,7 +37,7 @@ class _RetailTableState extends State<RetailTable> {
             decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(5)),
                   border: Border.all(color: kFooterColor),
-                  color:Colors.white,
+                  color:kWhite,
                 ),
             child: Column(
               children: [
@@ -169,7 +169,7 @@ class _RetailTableState extends State<RetailTable> {
             decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(5)),
                   border: Border.all(color: kFooterColor),
-                  color:Colors.white,
+                  color:kWhite,
                 ),
             child: Column(
               children: [

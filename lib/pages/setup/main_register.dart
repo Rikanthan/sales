@@ -30,13 +30,18 @@ class _MainRegisterState extends State<MainRegister> {
       drawer: SetupDrawer(setupClicked:SetupClicked.outlets),
       body:SingleChildScrollView(
         child: Container(
-          color:Colors.white,
+          color:kWhite,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DashboardMidBar(),
               Padding(
-                padding: const EdgeInsets.only(top:20.0,bottom: 20.0,left:30.0 ,right: 30.0),
+                padding: const EdgeInsets.only(
+                                            top:20.0,
+                                            bottom: 20.0,
+                                            left:30.0 ,
+                                            right: 30.0
+                                            ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -47,10 +52,13 @@ class _MainRegisterState extends State<MainRegister> {
                         children: [
                           GestureDetector(
                             onTap: (){
-                            
                                 Navigator.push(
-                                  context, MaterialPageRoute(builder: (_)=> RegisterClosure()));
-                              
+                                  context, 
+                                        MaterialPageRoute(
+                                                    builder: (_)=> 
+                                                              RegisterClosure()
+                                                              )
+                                                          );
                             },
                             child: Text(
                               'Setup',
@@ -58,10 +66,10 @@ class _MainRegisterState extends State<MainRegister> {
                                 fontFamily: 'Lato',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color:Color(0xFF0066CC),
+                                color:kLightBlue,
                                 decoration: TextDecoration.none,
                                 decorationStyle: TextDecorationStyle.solid,
-                                decorationColor: Color(0xFF0066CC)
+                                decorationColor: kLightBlue
                                 ),
                             ),
                           ),
@@ -73,7 +81,7 @@ class _MainRegisterState extends State<MainRegister> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -81,10 +89,13 @@ class _MainRegisterState extends State<MainRegister> {
                           ),
                           GestureDetector(
                             onTap: (){
-                            
                                 Navigator.push(
-                                  context, MaterialPageRoute(builder: (_)=> RegisterClosure()));
-                              
+                                  context, 
+                                      MaterialPageRoute(
+                                                  builder: (_)=> 
+                                                          RegisterClosure()
+                                                          )
+                                                      );
                             },
                             child: Text(
                               'Outlets and Registers',
@@ -92,10 +103,10 @@ class _MainRegisterState extends State<MainRegister> {
                                 fontFamily: 'Lato',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color:Color(0xFF0066CC),
+                                color:kLightBlue,
                                 decoration: TextDecoration.none,
                                 decorationStyle: TextDecorationStyle.solid,
-                                decorationColor: Color(0xFF0066CC)
+                                decorationColor: kLightBlue
                                 ),
                             ),
                           ),
@@ -107,7 +118,7 @@ class _MainRegisterState extends State<MainRegister> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -118,7 +129,7 @@ class _MainRegisterState extends State<MainRegister> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -129,7 +140,7 @@ class _MainRegisterState extends State<MainRegister> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -140,7 +151,7 @@ class _MainRegisterState extends State<MainRegister> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                         ],
@@ -162,7 +173,12 @@ class _MainRegisterState extends State<MainRegister> {
                       width:964,
                       height: 40,
                       child: Padding(
-                        padding: const EdgeInsets.only(top:8.0,bottom: 8.0,left: 10.0,right: 10.0),
+                        padding: const EdgeInsets.only(
+                                                      top:8.0,
+                                                      bottom: 8.0,
+                                                      left: 10.0,
+                                                      right: 10.0
+                                                      ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -170,7 +186,12 @@ class _MainRegisterState extends State<MainRegister> {
                               buttonText: 'Edit Register',
                               onPress: (){     
                                 Navigator.push(
-                                  context, MaterialPageRoute(builder: (_)=> RegisterClosureFullDetails()));                            
+                                  context, 
+                                  MaterialPageRoute(
+                                    builder: (_)=> 
+                                            RegisterClosureFullDetails()
+                                            )
+                                        );                            
                               }, 
                               topPadding: 3,
                               leftPadding: 10,
@@ -181,29 +202,33 @@ class _MainRegisterState extends State<MainRegister> {
                                 buttonText: 'Delete Register',
                                 onPress: (){     
                                   Navigator.push(
-                                    context, MaterialPageRoute(builder: (_)=> RegisterClosureFullDetails()));                            
+                                    context, 
+                                    MaterialPageRoute(
+                                                  builder: (_)=>
+                                                         RegisterClosureFullDetails()
+                                                         )
+                                                      );                            
                                 }, 
                                 topPadding: 3,
                                 leftPadding: 10,
                                 width: 114.84,
                                 isButtonDisable: false,
                               ),
-                              
                           ],
                         ),
                       ),
                       decoration: BoxDecoration(
                     border: Border.all(
-                      color:Color(0xFFb0b0b0), width: 1, style: BorderStyle.solid
+                      color:kCustomGrey, width: 1, style: BorderStyle.solid
                       ),
                     gradient: LinearGradient(
-                         colors: [Color(0xFFededed) , Color(0xFFdbdbdb) ],
+                         colors: [ kCustomWhite7 ,  kCustomWhite8 ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
                     ),
                      boxShadow:[
                       BoxShadow(
-                        color: Colors.white.withOpacity(0.2),
+                        color: kWhite.withOpacity(0.2),
                         spreadRadius: -1,
                         blurRadius: 2,
                         offset: Offset.zero
@@ -246,7 +271,7 @@ class _MainRegisterState extends State<MainRegister> {
                                               style: TextStyle(
                                               fontFamily: 'Lato',
                                               fontSize: 14,
-                                              color: Color(0xFF333333),
+                                              color: kBlackOpacity,
                                               fontWeight: FontWeight.w700
                                               )
                                         ),
@@ -261,7 +286,7 @@ class _MainRegisterState extends State<MainRegister> {
                                             style: TextStyle(
                                             fontFamily: 'Lato',
                                             fontSize: 14,
-                                            color: Color(0xFF333333),
+                                            color: kBlackOpacity,
                                             )
                                       ),
                                   ],
@@ -295,7 +320,7 @@ class _MainRegisterState extends State<MainRegister> {
                                             style: TextStyle(
                                             fontFamily: 'Lato',
                                             fontSize: 14,
-                                            color: Color(0xFF333333),
+                                            color: kBlackOpacity,
                                             fontWeight: FontWeight.w700
                                             )
                                       ),
@@ -305,7 +330,7 @@ class _MainRegisterState extends State<MainRegister> {
                                             style: TextStyle(
                                             fontFamily: 'Lato',
                                             fontSize: 14,
-                                            color: Color(0xFF333333),
+                                            color: kBlackOpacity,
                                             )
                                       ),
                                   ],
@@ -332,7 +357,7 @@ class _MainRegisterState extends State<MainRegister> {
                             style: TextStyle(
                                       fontFamily: 'Lato',
                                       fontSize: 20.04,
-                                      color: Color(0xFF333333),
+                                      color: kBlackOpacity,
                                       fontWeight: FontWeight.w700
                                       )
                       ),
@@ -435,7 +460,7 @@ class _MainRegisterState extends State<MainRegister> {
                           child: Text(
                             'View all register closures for Main Register',
                             style:TextStyle(
-                              color: Color(0xff0066cc),
+                              color: kLightBlue,
                               fontSize: 14,
                               fontFamily: 'Roboto',
                               )

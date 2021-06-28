@@ -23,7 +23,7 @@ class   AddReportPopup extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
-                color: Colors.white,
+                color: kWhite,
                 borderRadius: BorderRadius.all(Radius.circular(4))
               ),
             width: 730,
@@ -45,7 +45,7 @@ class   AddReportPopup extends StatelessWidget {
                     ),
                     SizedBox(height: 32,),
                   Container(
-                    color: Colors.white,
+                    color: kWhite,
                     height: 465,
                     width: 656,
                     child: ListView(

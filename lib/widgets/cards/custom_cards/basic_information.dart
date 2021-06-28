@@ -21,7 +21,9 @@ class BasicInformation extends StatelessWidget {
                           height:190,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, 
+                              width: 0.7, 
+                              style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(5),
@@ -36,7 +38,12 @@ class BasicInformation extends StatelessWidget {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Contact name',),
+                                   SettingsCell(
+                                     height: 24, 
+                                     width: 150 , 
+                                     textSpan: false, 
+                                     text: 'Contact name',
+                                     ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 120,
@@ -53,7 +60,12 @@ class BasicInformation extends StatelessWidget {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Email',),
+                                    SettingsCell(
+                                      height: 24, 
+                                      width: 150 , 
+                                      textSpan: false, 
+                                      text: 'Email',
+                                      ),
                                      SettingTextInput(
                                       height: 26,
                                        width: 245,
@@ -92,7 +104,7 @@ class BasicInformation extends StatelessWidget {
                                          child: Text(
                                          ' update your contact email in your user profile',
                                          style: TextStyle(
-                                           color: Color(0xFF0066cc),
+                                           color: kLightBlue,
                                            fontFamily: 'Lato',
                                            fontSize: 14
                                            ),
@@ -104,7 +116,12 @@ class BasicInformation extends StatelessWidget {
                                  Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                     SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Phone',),
+                                     SettingsCell(
+                                       height: 24, 
+                                       width: 150 , 
+                                       textSpan: false, 
+                                       text: 'Phone',
+                                       ),
                                     SettingTextInput(
                                       height: 26,
                                        width: 245,
@@ -121,7 +138,9 @@ class BasicInformation extends StatelessWidget {
                           height:190,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, 
+                              width: 0.7, 
+                              style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(5),
@@ -134,15 +153,33 @@ class BasicInformation extends StatelessWidget {
                                   children: [
                                     Row(
                                       children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Website'),
-                                        SettingTextInput(height: 26, width: 245, value: ''),
+                                        SettingsCell(
+                                                height: 24, 
+                                                width: 150 , 
+                                                textSpan: false, 
+                                                text: 'Website'
+                                                ),
+                                        SettingTextInput(
+                                                    height: 26, 
+                                                    width: 245, 
+                                                    value: ''
+                                                    ),
                                       ],
                                     ),
                                     SizedBox(height:10),
                                     Row(
                                       children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Twitter'),
-                                        SettingTextInput(height: 26, width: 245, value: ''),
+                                        SettingsCell(
+                                                  height: 24, 
+                                                  width: 150 , 
+                                                  textSpan: false, 
+                                                  text: 'Twitter'
+                                                  ),
+                                        SettingTextInput(
+                                                      height: 26, 
+                                                      width: 245, 
+                                                      value: ''
+                                                      ),
                                       ],
                                     ),
                                 ],

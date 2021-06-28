@@ -34,7 +34,10 @@ class _TagsState extends State<Tags> {
             children: [
               DashboardMidBar(),
               CustomHeader(
-                backgroundColor:kHomeBackgroundColor,isDarkMode: false, text: 'Product Tags'),
+                    backgroundColor :  kHomeBackgroundColor,
+                    isDarkMode: false, 
+                    text: 'Product Tags'
+                    ),
               MidButtonBar(
                 text: 'A list of all your Tags.',
                  addBlueButton: false, 
@@ -44,13 +47,23 @@ class _TagsState extends State<Tags> {
                   greenOnTap: (){
                     showDialog(
                       context: context, 
-                      builder: (_)=> AddCommon(
-                        header: 'New Tag', item: '', subHeader: 'Tag') );
+                      builder: (_)  => 
+                      AddCommon(
+                        header: 'New Tag', 
+                        item: '', 
+                        subHeader: 'Tag'
+                        )
+                      );
                   }
                   ),
               
               Padding(
-                padding: const EdgeInsets.only(top:24.0,bottom:24.0,right:48.0,left: 48.0),
+                padding: const EdgeInsets.only(
+                                        top:24.0,
+                                        bottom:24.0,
+                                        right:48.0,
+                                        left: 48.0
+                                        ),
                 child: Container(
                   child:Column(
                     children: [
@@ -58,35 +71,35 @@ class _TagsState extends State<Tags> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           ProductSubHeader(
-                            text: 'Name',
-                            width: 480,
-                            expandedWidth: 495, 
-                            isOtherClicked: _name,
-                            isThisAscending: _isThisAscending,
-                            isThisNumber: false, 
-                            onPress:(){
-                              setState(() {
-                                _name = false;
-                                _number = true;
-                                _isThisAscending?_isThisAscending = false:_isThisAscending = true;
-                              });
-                            },
-                            isThisProduct: false, 
-                            isSelected: false
+                              text: 'Name',
+                              width: 480,
+                              expandedWidth: 495, 
+                              isOtherClicked: _name,
+                              isThisAscending: _isThisAscending,
+                              isThisNumber: false, 
+                              onPress:(){
+                                setState(() {
+                                  _name = false;
+                                  _number = true;
+                                  _isThisAscending = ! _isThisAscending;
+                                });
+                              },
+                              isThisProduct: false, 
+                              isSelected: false
                             ),
                             ProductSubHeader(
-                            text: 'Number of Products',
-                            width: 136,
-                            expandedWidth: 153, 
-                            isOtherClicked: _number,
-                            isThisAscending: _isThisAscending,
-                            isThisNumber: true, 
-                            onPress:(){
-                              setState(() {
-                               _number = false;
-                               _name = true;
-                                _isThisAscending?_isThisAscending = false:_isThisAscending = true;
-                              });
+                              text: 'Number of Products',
+                              width: 136,
+                              expandedWidth: 153, 
+                              isOtherClicked: _number,
+                              isThisAscending: _isThisAscending,
+                              isThisNumber: true, 
+                              onPress:(){
+                                setState(() {
+                                _number = false;
+                                _name = true;
+                                  _isThisAscending = ! _isThisAscending;
+                                });
                             },
                             isThisProduct: false, 
                             isSelected: false
@@ -109,7 +122,11 @@ class _TagsState extends State<Tags> {
                           showDialog(
                           context: context, 
                           builder: (_)=> AddCommon(
-                              header: 'Edit Tag', item: 'dress', subHeader: 'Tag') );
+                              header: 'Edit Tag',
+                              item: 'dress', 
+                              subHeader: 'Tag'
+                              )
+                            );
                         },
                         deleteClick: (){}
                         ),
@@ -126,20 +143,24 @@ class _TagsState extends State<Tags> {
                           showDialog(
                           context: context, 
                           builder: (_)=> AddCommon(
-                              header: 'Edit Tag', item: 'shirt', subHeader: 'Tag') );
+                                        header: 'Edit Tag', 
+                                        item: 'shirt', 
+                                        subHeader: 'Tag'
+                                        )
+                                      );
                         },
                         deleteClick: (){}
                         ),
                         Divider(
-                        thickness: 2,
-                        color:kInputBorderColor
-                      ),
+                          thickness: 2,
+                          color:kInputBorderColor
+                        ),
                         ProductBar(
-                        text: 'sunglasses', 
-                        number: '1', width: 600, 
-                        textClick: (){},
-                        viewClick: (){},
-                        editClick: (){
+                          text: 'sunglasses', 
+                          number: '1', width: 600, 
+                          textClick: (){},
+                          viewClick: (){},
+                          editClick: (){
                           showDialog(
                           context: context, 
                           builder: (_)=> AddCommon(

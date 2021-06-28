@@ -39,7 +39,7 @@ CalendarController _controllerTo;
                                 height: 306,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(5),
-                                  color: Colors.white
+                                  color: kWhite
                                   ),
                                 child: Padding(
                                   padding: const EdgeInsets.all(24.0),
@@ -50,7 +50,7 @@ CalendarController _controllerTo;
                                             TableCalendar(
                                               initialCalendarFormat: CalendarFormat.month,  
                                             calendarStyle: CalendarStyle(  
-                                                  todayColor: Colors.white,
+                                                  todayColor: kWhite,
                                                   selectedColor: kSignInButtonColor,  
                                                   todayStyle: k15Blue 
                                               ),  
@@ -60,7 +60,7 @@ CalendarController _controllerTo;
                                                   color: Colors.brown,  
                                                   borderRadius: BorderRadius.circular(22.0),  
                                                 ),  
-                                                formatButtonTextStyle: TextStyle(color: Colors.white),  
+                                                formatButtonTextStyle: TextStyle(color: kWhite),  
                                                 formatButtonShowsNext: false,  
                                               ),  
                                               startingDayOfWeek: StartingDayOfWeek.monday, 
@@ -77,7 +77,8 @@ CalendarController _controllerTo;
                                                 print(dateFrom);
                                               },  
                                               builders: CalendarBuilders(  
-                                                  selectedDayBuilder: (context, date, events) => Container(  
+                                                  selectedDayBuilder: (context, date, events) => 
+                                                  Container(  
                                                       margin: const EdgeInsets.all(5.0),  
                                                       alignment: Alignment.center,  
                                                       decoration: BoxDecoration(  
@@ -85,13 +86,14 @@ CalendarController _controllerTo;
                                                           borderRadius: BorderRadius.circular(8.0)),  
                                                       child: Text(  
                                                         date.day.toString(),  
-                                                        style: TextStyle(color: Colors.white),  
+                                                        style: TextStyle(color: kWhite),  
                                                       )),  
-                                                  todayDayBuilder: (context, date, events) => Container(  
+                                                  todayDayBuilder: (context, date, events) => 
+                                                  Container(  
                                                       margin: const EdgeInsets.all(5.0),  
                                                       alignment: Alignment.center,  
                                                       decoration: BoxDecoration(  
-                                                          color: Colors.white,  
+                                                          color: kWhite,  
                                                           borderRadius: BorderRadius.circular(8.0)),  
                                                       child: Text(  
                                                         date.day.toString(),  
@@ -115,9 +117,9 @@ CalendarController _controllerTo;
                                               width: 19.97,
                                               decoration: BoxDecoration(
                                               shape: BoxShape.rectangle,
-                                              color: Colors.white,
+                                              color: kWhite,
                                               border:Border.all(
-                                                  color: Colors.white,width: 1,
+                                                  color: kWhite,width: 1,
                                                 )
                                               ),
                                             ),

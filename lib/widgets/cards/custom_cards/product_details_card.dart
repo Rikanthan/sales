@@ -51,7 +51,8 @@ class _ProductDetailsCardState extends State<ProductDetailsCard> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                   Icon(
-                                      !isExpansion ? Icons.keyboard_arrow_right : Icons.keyboard_arrow_down,
+                                      !isExpansion ? Icons.keyboard_arrow_right :
+                                                   Icons.keyboard_arrow_down,
                                       color: kDashboardMidBarColor,
                                       size: 15,
                                     ),

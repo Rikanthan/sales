@@ -42,7 +42,11 @@ class _StockCountState extends State<StockCount> {
           child:Column(
             children: [
               DashboardMidBar(),
-              CustomHeader(backgroundColor:kHomeBackgroundColor,isDarkMode: false, text: 'Inventory Counts'),
+              CustomHeader( 
+                        backgroundColor: kHomeBackgroundColor,
+                        isDarkMode: false, 
+                        text: 'Inventory Counts'
+                        ),
               Padding(
                 padding: const EdgeInsets.only(left:48.0,bottom: 20),
                 child: Row(
@@ -124,10 +128,15 @@ class _StockCountState extends State<StockCount> {
                   }
                   ),
               Padding(
-                padding: const EdgeInsets.only(left:24.0,right: 24.0,top:24.0,bottom: 24.0),
+                padding: const EdgeInsets.only(
+                                    left:24.0,
+                                    right: 24.0,
+                                    top:24.0,
+                                    bottom: 24.0
+                                    ),
                 child:
                  Container(
-                   color: Colors.white,
+                   color: kWhite,
                    child:Padding(
                      padding: const EdgeInsets.all(36.0),
                      child: Row(
@@ -173,7 +182,6 @@ class _StockCountState extends State<StockCount> {
                                               style: k15Underline
                                             ),
                                               onPressed: (){},
-
                                               )
                                           ],
                                         )
@@ -198,7 +206,7 @@ class _StockCountState extends State<StockCount> {
                         padding: const EdgeInsets.all(12.0),
                         child: Text(
                           'You have no $showText inventory counts',
-                          style:kMediumTextNormalStyle
+                          style:k15BlackNormal
                         ),
                       ),
                       GreenButton(

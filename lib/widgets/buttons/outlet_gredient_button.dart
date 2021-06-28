@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/constants/colors.dart';
 class OutletButton extends StatelessWidget {
   const OutletButton({
     @required this.buttonText,
@@ -21,14 +22,19 @@ class OutletButton extends StatelessWidget {
         width: width,
        decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFb0b0b0), width: 0.7, style: BorderStyle.solid
+                              color:kCustomGrey,
+                              width: 0.7, 
+                              style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.all(
                                  Radius.circular(10),
                                 ),
                               
         gradient: LinearGradient(
-                        colors: isButtonDisable ? [Color(0xFFFAFAFA) , Color(0xFFdddddd) ] : [Color(0xFFFAFAFA) , Color(0xFFCECECE) ],
+                        colors: isButtonDisable ?
+                                [kCustomWhite3 ,
+                                 kCustomWhite4 ] : 
+                                [kCustomWhite3 , kCustomWhite5 ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
                     ),
@@ -37,7 +43,9 @@ class OutletButton extends StatelessWidget {
      child: Text(
         buttonText,
         style:TextStyle(
-          color: isButtonDisable ? Color(0xFF686868).withOpacity(0.8) : Color(0xFF686868),
+          color: isButtonDisable ? 
+                    kGrey.withOpacity(0.8) : 
+                    kGrey,
           fontFamily: 'Lato',
           fontSize: 14,
           fontWeight: FontWeight.w700
@@ -45,7 +53,9 @@ class OutletButton extends StatelessWidget {
       ),
       onPressed: onPress,
      style:ButtonStyle(
-        backgroundColor: MaterialStateColor.resolveWith((states) => Colors.transparent ),
+        backgroundColor: MaterialStateColor
+                                .resolveWith(
+                                          (states) => Colors.transparent ),
         padding:  MaterialStateProperty
                     .resolveWith((states) 
                             => EdgeInsets.only(
@@ -60,8 +70,8 @@ class OutletButton extends StatelessWidget {
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30)
                             ),
-      ),                
-    )
+                      ),                
+                    )
               )
         );
   }

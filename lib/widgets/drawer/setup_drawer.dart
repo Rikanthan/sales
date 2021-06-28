@@ -49,7 +49,7 @@ class SetupDrawer extends StatelessWidget {
           MainDrawer(isDarkMode: false, mainDrawerClick: MainDrawerClick.setup),
           Container(
             width:145,
-            color: Colors.white,
+            color: kWhite,
             child: Column(
               children: <Widget>[
                 Expanded(

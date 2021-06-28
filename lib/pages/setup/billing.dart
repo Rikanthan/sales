@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales/constants/colors.dart';
 import 'package:sales/constants/styles.dart';
+import 'package:sales/pages/setup/bill_payment.dart';
 import 'package:sales/widgets/TextInput/home_text_header.dart';
 import 'package:sales/widgets/appbar/dashboard_appbar.dart';
 import 'package:sales/widgets/bars/help_text_bar.dart';
@@ -38,14 +39,18 @@ class _BillingState extends State<Billing> {
           child: Column(
             children: [
               DashboardMidBar(),
-              HelpTextBar(height: 93, isDarkMode: false, text: 'Upgrade your plan to get the best out of Vend.'),
+              HelpTextBar(
+                height: 93, 
+                isDarkMode: false, 
+                text: 'Upgrade your plan to get the best out of Vend.'
+                ),
               Padding(
                 padding: const EdgeInsets.only(left:48.0,right: 48.0,top:24),
                 child: Column(
                   children: [
                     Container(
                       width: 928,
-                      color: Colors.white,
+                      color: kWhite,
                       child: Column(
                         children: [
                           SizedBox(height: 28,),
@@ -73,10 +78,10 @@ class _BillingState extends State<Billing> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("We've given you sample products to practise making sales with, and you may have tried adding products or\ncustomers as a test.It's important to clear them out before starting your own store.",style:kMediumTextNormalStyle),
+                            Text("We've given you sample products to practise making sales with, and you may have tried adding products or\ncustomers as a test.It's important to clear them out before starting your own store.",style:k15BlackNormal),
                             Padding(
                               padding: const EdgeInsets.only(top: 20, bottom: 20),
-                              child: Text('You can choose to clear out all Sales History, Products, and/or Customer data.',style: kMediumTextNormalStyle,),
+                              child: Text('You can choose to clear out all Sales History, Products, and/or Customer data.',style: k15BlackNormal,),
                             ),
                             CustomButton(
                               buttonText: 'Select data to clear',
@@ -178,7 +183,7 @@ class _BillingState extends State<Billing> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Buy licenses for Outlets and\nRegisters to be able to set\nthem up.\nListed prices are exclusive \nof tax. ',style: kMediumTextNormalStyle,),
+                              Text('Buy licenses for Outlets and\nRegisters to be able to set\nthem up.\nListed prices are exclusive \nof tax. ',style: k15BlackNormal,),
                               Text(
                                 'What are Outlets and',
                                     style: k15Blue
@@ -235,7 +240,12 @@ class _BillingState extends State<Billing> {
                     children: [
                       ButtonText(
                         buttonText: 'Enter Credit Card Details',
-                         onPress: (){}, 
+                         onPress: (){
+                           Navigator.push(context, MaterialPageRoute(
+                             builder: (_)=> BillPayment()
+                             )
+                            );
+                         }, 
                          topPadding: 25,
                          leftPadding: 40,
                          buttonColor: kSignInButtonColor,

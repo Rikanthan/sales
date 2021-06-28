@@ -115,7 +115,7 @@ class _CloseRegisterState extends State<CloseRegister> {
                 padding: const EdgeInsets.only(left:48.0,right:48.0,top:20.0,bottom: 20.0),
                 child: Divider(
                   thickness: 1,
-                  color: Color(0xFFfafbfb)
+                  color : kCustomWhite9
                 ),
               ),
                Container(
@@ -399,7 +399,7 @@ class _CloseRegisterState extends State<CloseRegister> {
                 padding: const EdgeInsets.only(left:48.0,right:48.0,bottom: 20.0),
                 child: Divider(
                   thickness: 1,
-                  color: Color(0xFFfafbfb)
+                  color : kCustomWhite9
                 ),
               ),
               Padding(

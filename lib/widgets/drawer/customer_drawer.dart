@@ -26,7 +26,7 @@ class CustomerDrawer extends StatelessWidget {
           MainDrawer(isDarkMode: false, mainDrawerClick: MainDrawerClick.customer),
           Container(
             width:145,
-            color: Colors.white,
+            color: kWhite,
             child: Column(
               children: <Widget>[
                 Expanded(

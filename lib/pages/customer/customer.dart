@@ -69,7 +69,7 @@ class _CustomerState extends State<Customer> {
             children: [
               DashboardMidBar(),
              CustomHeader(
-               backgroundColor:Colors.white,
+               backgroundColor:kWhite,
                text: 'Customer',
                isDarkMode: false,
                ),
@@ -86,7 +86,7 @@ class _CustomerState extends State<Customer> {
                  }
                  ),
               Container(
-                color:Colors.white,
+                color:kWhite,
                 child: Padding(
                   padding: const EdgeInsets.only(top:24.0,bottom:24,left: 48,right: 48),
                   child: Column(

@@ -23,7 +23,6 @@ class _BillingCardState extends State<BillingCard> {
   BillingType billingType = BillingType.annual;
   String total = 'Annualy';
   bool _isSelected = false;
-  //PlanType planType = PlanType.lite;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -58,9 +57,11 @@ class _BillingCardState extends State<BillingCard> {
                   width: 348,
                   height: 189,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: kWhite,
                     border: Border.all(
-                      color:billingType == BillingType.annual ? kSignInButtonColor : kTableBorderColor,
+                      color:  billingType == BillingType.annual ? 
+                                                  kSignInButtonColor : 
+                                                  kTableBorderColor,
                       width: 2
                       ),
                     borderRadius: BorderRadius.only(
@@ -69,7 +70,12 @@ class _BillingCardState extends State<BillingCard> {
                       )
                     ),
                   child: Padding(
-                    padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left: 20, right: 20),
+                    padding: const EdgeInsets.only(
+                                              top:12.0,
+                                              bottom: 12.0,
+                                              left: 20, 
+                                              right: 20
+                                              ),
                     child: Column(
                       children: [
                         billingType == BillingType.annual ?
@@ -106,9 +112,10 @@ class _BillingCardState extends State<BillingCard> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              PlanType.lite == widget.planType ?'Get your bill once a\nyear and save \$240\neach year':
+                              PlanType.lite == widget.planType ?
+                              'Get your bill once a\nyear and save \$240\neach year':
                                           'Get your bill once a\nyear and save \$360\neach year',
-                                          style: kMediumTextNormalStyle,
+                                          style: k15BlackNormal,
                                           ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
@@ -123,7 +130,10 @@ class _BillingCardState extends State<BillingCard> {
                                           Text('\$',style: k15BlackDark,),
                                         ],
                                       ),
-                                      Text( PlanType.lite == widget.planType ? '99':'129',style: TextStyle(
+                                      Text( 
+                                        PlanType.lite == widget.planType ? 
+                                                            '99':'129',
+                                      style: TextStyle(
                                         fontFamily:'Lato',
                                         fontSize: 32,
                                         fontWeight: FontWeight.w700,
@@ -136,15 +146,16 @@ class _BillingCardState extends State<BillingCard> {
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
                                           SizedBox(height:1),
-                                          Text(' / mo',style: kMediumTextNormalStyle,),
+                                          Text(' / mo',style: k15BlackNormal,),
                                         ],
                                       )
                                     ],
                                   ),
                                   Text(
-                                    PlanType.lite == widget.planType ? 'USD Billed Annually\nTotal bill:\$ 1188\nannually' : 
-                                    'USD Billed Annually\nTotal bill:\$ 1548\nannually'
-                                    ,style: kMediumTextNormalStyle,)
+                                    PlanType.lite == widget.planType ? 
+                                        'USD Billed Annually\nTotal bill:\$ 1188\nannually' : 
+                                          'USD Billed Annually\nTotal bill:\$ 1548\nannually'
+                                    ,style: k15BlackNormal,)
                               ],
                             )
                           ],
@@ -165,9 +176,11 @@ class _BillingCardState extends State<BillingCard> {
                   width: 350,
                   height: 189,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: kWhite,
                     border: Border.all(
-                      color: billingType == BillingType.monthly ? kSignInButtonColor : kTableBorderColor,
+                      color: billingType == BillingType.monthly ? 
+                                          kSignInButtonColor : 
+                                          kTableBorderColor,
                       width: 2
                       ),
                     borderRadius: BorderRadius.only(
@@ -176,7 +189,12 @@ class _BillingCardState extends State<BillingCard> {
                       )
                     ),
                   child: Padding(
-                    padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left: 20, right: 20),
+                    padding: const EdgeInsets.only(
+                                                top:12.0,
+                                                bottom: 12.0,
+                                                left: 20, 
+                                                right: 20
+                                                ),
                     child: Column(
                       children: [
                         billingType == BillingType.monthly ?
@@ -212,7 +230,10 @@ class _BillingCardState extends State<BillingCard> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Get your bill once a\nmonth',style: kMediumTextNormalStyle,),
+                            Text(
+                                'Get your bill once a\nmonth',
+                                style: k15BlackNormal,
+                                ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -223,10 +244,16 @@ class _BillingCardState extends State<BillingCard> {
                                       Column(
                                         children: [
                                           SizedBox(height:3),
-                                          Text('\$',style: k15BlackDark,),
+                                          Text(
+                                              '\$',
+                                              style: k15BlackDark,
+                                              ),
                                         ],
                                       ),
-                                      Text( PlanType.lite == widget.planType ? '119' : '159',style: TextStyle(
+                                      Text( 
+                                        PlanType.lite == widget.planType ? 
+                                                    '119' : '159',
+                                      style: TextStyle(
                                         fontFamily:'Lato',
                                         fontSize: 32,
                                         fontWeight: FontWeight.w700,
@@ -239,7 +266,10 @@ class _BillingCardState extends State<BillingCard> {
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
                                           SizedBox(height:1),
-                                          Text(' / mo',style: kMediumTextNormalStyle,),
+                                          Text(
+                                              ' / mo',
+                                              style: k15BlackNormal,
+                                              ),
                                         ],
                                       )
                                     ],
@@ -247,7 +277,10 @@ class _BillingCardState extends State<BillingCard> {
                                   SizedBox(
                                     height: 4,
                                   ),
-                                  Text('USD Billed Monthly',style: kMediumTextNormalStyle,)
+                                  Text(
+                                      'USD Billed Monthly',
+                                      style: k15BlackNormal,
+                                      )
                               ],
                             )
                           ],
@@ -300,9 +333,12 @@ class _BillingCardState extends State<BillingCard> {
                           ],
                         ),
                         Text(
-                         billingType == BillingType.monthly && widget.planType == PlanType.pro ? '159'
-                          : billingType == BillingType.annual && widget.planType == PlanType.pro ? '1548'
-                          : billingType == BillingType.monthly && widget.planType == PlanType.lite ? '119'
+                         billingType == BillingType.monthly && 
+                                widget.planType == PlanType.pro ? '159'
+                          : billingType == BillingType.annual && 
+                                  widget.planType == PlanType.pro ? '1548'
+                          : billingType == BillingType.monthly && 
+                                  widget.planType == PlanType.lite ? '119'
                           : '1188'
                           ,style: TextStyle(
                           fontFamily:'Lato',
@@ -317,7 +353,7 @@ class _BillingCardState extends State<BillingCard> {
                     SizedBox(
                       height: 4,
                     ),
-                    Text('USD Billed $total',style: kMediumTextNormalStyle,)
+                    Text('USD Billed $total',style: k15BlackNormal,)
                 ],
               )
             ],
@@ -330,12 +366,22 @@ class _BillingCardState extends State<BillingCard> {
              thickness: 1,
             ),
             Row(
-              crossAxisAlignment: _isSelected ? CrossAxisAlignment.start : CrossAxisAlignment.center,
+              crossAxisAlignment: _isSelected ? 
+                                      CrossAxisAlignment.start : 
+                                          CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Checkbox(
-                      activeColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
-                      focusColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
+                      activeColor: MaterialStateColor.
+                                            resolveWith(
+                                                      (states) => 
+                                                          kSignInButtonColor
+                                                          ),
+                      focusColor: MaterialStateColor
+                                              .resolveWith(
+                                                        (states) => 
+                                                        kSignInButtonColor
+                                                        ),
                       value: _isSelected,
                        onChanged: (newValue){
                          setState(() {
@@ -372,9 +418,14 @@ class _BillingCardState extends State<BillingCard> {
                         ),
                     Padding(
                       padding: const EdgeInsets.only(top:12.0,bottom: 20.0),
-                      child: Text('If you were referred by a friend, enter the referral code given - you will both get a one time credit to\nyour subscriptions.', style: kMediumTextNormalStyle,),
+                      child: Text(
+                          'If you were referred by a friend, enter the referral code given'
+                          '- you will both get a one time credit to\nyour subscriptions.'
+                          , style: k15BlackNormal,
+                          ),
                     ),
-                    Text('Referral or coupon code',
+                    Text(
+                      'Referral or coupon code',
                     style: k15BlackDark,
                     ),
                     TextInput(

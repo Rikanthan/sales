@@ -38,7 +38,7 @@ class _StockControlState extends State<StockControl> {
           child:Column(
             children: [
               DashboardMidBar(),
-              CustomHeader(backgroundColor:Colors.white,isDarkMode: false,text: 'Stock Control'),
+              CustomHeader(backgroundColor:kWhite,isDarkMode: false,text: 'Stock Control'),
               Container(
                 color:kInputBorderColor,
                 child: Padding(
@@ -61,7 +61,12 @@ class _StockControlState extends State<StockControl> {
                         child: CustomButton(
                           buttonText: 'Order Stock',
                           onPress: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (_)=> OrderStock()));
+                            Navigator.push(
+                                      context, 
+                                      MaterialPageRoute(
+                                        builder: (_)=> OrderStock()
+                                        )
+                                    );
                           },
                           buttonColor: kDashboardMidBarColor, 
                           topPadding: 24, 
@@ -73,7 +78,12 @@ class _StockControlState extends State<StockControl> {
                         child: CustomButton(
                           buttonText: 'Receive Stock',
                           onPress: (){
-                             Navigator.push(context, MaterialPageRoute(builder: (_)=> ReceiveStock()));
+                             Navigator.push(
+                                        context, 
+                                        MaterialPageRoute(
+                                          builder: (_)=> ReceiveStock()
+                                          )
+                                      );
                           },
                           buttonColor: kDashboardMidBarColor, 
                           topPadding: 24, 
@@ -85,7 +95,12 @@ class _StockControlState extends State<StockControl> {
                         child: CustomButton(
                           buttonText: 'Return Stock',
                           onPress: (){
-                             Navigator.push(context, MaterialPageRoute(builder: (_)=> ReturnStock()));
+                             Navigator.push(
+                                        context, 
+                                        MaterialPageRoute(
+                                          builder: (_)=> ReturnStock()
+                                          )
+                                      );
                           },
                           buttonColor: kDashboardMidBarColor, 
                           topPadding: 24, 
@@ -97,7 +112,12 @@ class _StockControlState extends State<StockControl> {
                         child: CustomButton(
                           buttonText: 'Transfer Stock',
                           onPress: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (_)=> NewStockTransfer()));
+                            Navigator.push(
+                                        context, 
+                                        MaterialPageRoute(
+                                          builder: (_)=> NewStockTransfer()
+                                          )
+                                      );
                           },
                           buttonColor: kDashboardMidBarColor, 
                           topPadding: 24, 
@@ -109,10 +129,15 @@ class _StockControlState extends State<StockControl> {
                 ),
               ),
               Container(
-                color:Colors.white,
+                color:kWhite,
                 child:
                    Padding(
-                      padding: const EdgeInsets.only(left: 48,right: 48,top:24,bottom:12),
+                      padding: const EdgeInsets.only(
+                                                left: 48,
+                                                right: 48,
+                                                top:24,
+                                                bottom:12
+                                                ),
                      child: Column(
                       children: [
                         Row(
@@ -142,7 +167,17 @@ class _StockControlState extends State<StockControl> {
                                                   );
                                                 },
                                   dropdownValue: orders,
-                                  dropdownList: ['All orders','Open orders','Sent orders','Dispatched orders','Sent returns','Received orders','Overdue orders','Cancelled orders','Failed orders'],
+                                  dropdownList: [
+                                                'All orders',
+                                                'Open orders',
+                                                'Sent orders',
+                                                'Dispatched orders',
+                                                'Sent returns',
+                                                'Received orders',
+                                                'Overdue orders',
+                                                'Cancelled orders',
+                                                'Failed orders'
+                                                ],
                                 )
                               ],
                             ),
@@ -348,11 +383,13 @@ class _StockControlState extends State<StockControl> {
                               TextButton(
                             onPressed: (){
                               setState(() {
-                                lessFilters? lessFilters=false: lessFilters=true;
+                                lessFilters ? lessFilters = false : 
+                                lessFilters = true;
                               });
                             },
                              child: Text(
-                               lessFilters?'More filters Options':'Less filters Options',
+                               lessFilters ?  'More filters Options':
+                                        'Less filters Options',
                                 style: kMediumBlueTextStyle
                                )
                              ),
@@ -385,7 +422,7 @@ class _StockControlState extends State<StockControl> {
                        ),
                        Text(
                          'No results found.Try a different search or filer.',
-                         style: kMediumTextNormalStyle
+                         style: k15BlackNormal
                          )
                      ],
                    ),

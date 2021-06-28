@@ -22,12 +22,20 @@ class ProductBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Padding(
-                        padding: const EdgeInsets.only(left:8.0,top:4.0,bottom: 8.0),
+                        padding: const EdgeInsets.only(
+                                                      left:8.0,
+                                                      top:4.0,
+                                                      bottom: 8.0
+                                                      ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(top:20.0,bottom: 20.0,right: 40.0),
+                              padding: const EdgeInsets.only(
+                                                          top:20.0,
+                                                          bottom: 20.0,
+                                                          right: 40.0
+                                                          ),
                               child: Container(
                                 width: 645,
                                 child: Row(
@@ -57,7 +65,11 @@ class ProductBar extends StatelessWidget {
                               ),
                             ),  
                             Padding(
-                              padding: const EdgeInsets.only(top:20,bottom: 20,left: 40.0),
+                              padding: const EdgeInsets.only(
+                                                            top:20,
+                                                            bottom: 20,
+                                                            left: 40.0
+                                                        ),
                               child: Container(
                                 width: 195,
                                 child:Row(

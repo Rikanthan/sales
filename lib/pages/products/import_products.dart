@@ -37,7 +37,7 @@ class _ImportProductsState extends State<ImportProducts> {
                       child: Icon(
                         Icons.arrow_back,
                         size: 24,
-                        color: !isSwitch ? kInputBorderColor : kSignInButtonColor,
+                        color: !isSwitch ? kFooterColor : kSignInButtonColor,
                         ), 
                       onTap: (){
                         setState(() {
@@ -60,7 +60,7 @@ class _ImportProductsState extends State<ImportProducts> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text('Create a spreadsheet file. We\'ll check your data for common errors before uploading it. ',
-                      style: kMediumTextNormalStyle,),
+                      style: k15BlackNormal,),
                       GestureDetector(
                         child: Text(
                           'Need help?',
@@ -90,7 +90,7 @@ class _ImportProductsState extends State<ImportProducts> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            color: Colors.white,
+                            color: kWhite,
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -128,7 +128,7 @@ class _ImportProductsState extends State<ImportProducts> {
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Text('codes in bulk, check out our ',style: kMediumTextNormalStyle,),
+                                      Text('codes in bulk, check out our ',style: k15BlackNormal,),
                                       GestureDetector(
                                         onTap: (){},
                                         child: Text(

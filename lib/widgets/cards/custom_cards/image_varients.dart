@@ -40,7 +40,11 @@ class ImageVarient extends StatelessWidget {
                                     onTap: (){
                                       showDialog(
                                           context: context,
-                                          builder: (BuildContext context) => AddProductPopup(text: text,isVarient: true,),
+                                          builder: (_) => 
+                                                  AddProductPopup(
+                                                    text: text,
+                                                    isVarient: true,
+                                                    ),
                                         );
                                     },
                                     child: Text(
@@ -48,10 +52,10 @@ class ImageVarient extends StatelessWidget {
                                       )
                                     ),
                                   Text(
-                                    ' an image',style: kMediumTextNormalStyle,),
+                                    ' an image',style: k15BlackNormal,),
                                 ],
                               ),
-                              Text('for this variant',style: kMediumTextNormalStyle,),
+                              Text('for this variant',style: k15BlackNormal,),
                             ]
             )
           ),
@@ -91,7 +95,12 @@ class ImageVarientButton extends StatelessWidget {
               onPress: (){
                  showDialog(
                     context: context,
-                    builder: (BuildContext context) => AddProductPopup(text: text,isVarient: true,),
+                    builder: (_) 
+                                => 
+                                AddProductPopup(
+                                  text: text,
+                                  isVarient: true,
+                                  ),
                   );
               }, 
               buttonColor: kDashboardMidBarColor, 

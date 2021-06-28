@@ -27,8 +27,6 @@ class SettingDropDown extends StatelessWidget {
                   padding:  EdgeInsets.all(paddingAll),
                   child: DropdownButton<String>(
             value: dropdownValue,
-            // icon: Icon(Icons.keyboard_arrow_down),
-            // iconSize: 14,
             style: TextStyle(
               fontSize: 14,
                   fontStyle: FontStyle.normal,
@@ -48,12 +46,12 @@ class SettingDropDown extends StatelessWidget {
           ),
         ),
           decoration: ShapeDecoration(
-            color: Colors.white,
+            color: kWhite,
             shape: RoundedRectangleBorder(
             side: BorderSide(
               width: 1.0, 
               style: BorderStyle.solid,
-              color: Color(0xFF767676)
+              color: kDarkGrey
               ),
              borderRadius: BorderRadius.all(Radius.circular(1.0)),
             ),

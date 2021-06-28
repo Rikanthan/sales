@@ -18,7 +18,10 @@ class LitePlan extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
                 children: [
-                  SizedBox(height: planType == PlanType.lite ? 0 : 60),
+                  SizedBox(
+                    height: planType == PlanType.lite ? 
+                                      0 : 60
+                                      ),
                   Container(
                     color: kAppBarColor,
                       width: width,
@@ -41,13 +44,16 @@ class LitePlan extends StatelessWidget {
                             SizedBox(
                               height: 20,
                             ),
-                            Text('Intuitive POS and basic store\nmanagement for small retailers',style: k15WhiteNormal,)
+                            Text(
+                              'Intuitive POS and basic store\nmanagement for small retailers'
+                              ,style: k15WhiteNormal,
+                              )
                           ],
                         ),
                       ),
                     ),
                     Container(
-                        color: Colors.white,
+                        color: kWhite,
                         width: width,
                         height: 288,
                         child: Padding(
@@ -107,7 +113,9 @@ class LitePlan extends StatelessWidget {
                         ),
                       ),
                     Container(
-                      color:PlanType.lite == planType ? kInputBorderColor : kPlanCardBottomColor,
+                      color:PlanType.lite == planType ? 
+                                      kInputBorderColor : 
+                                      kPlanCardBottomColor,
                       width: width,
                       height: planType == PlanType.lite ? 198 + 254 : 198,
                       child: Padding(
@@ -203,7 +211,7 @@ class LitePlan extends StatelessWidget {
                                           size: 15,
                                           color:kAppBarColor
                                           ),
-                                        Text(' Advanced Reporting',style: kMediumTextNormalStyle,)
+                                        Text(' Advanced Reporting',style: k15BlackNormal,)
                                       ],
                                     ),
                                     SizedBox(height:3),
@@ -215,7 +223,7 @@ class LitePlan extends StatelessWidget {
                                           size: 15,
                                           color:kAppBarColor
                                           ),
-                                        Text(' Advanced Promotions',style: kMediumTextNormalStyle,)
+                                        Text(' Advanced Promotions',style: k15BlackNormal,)
                                       ],
                                     ),
                                      SizedBox(height:3),
@@ -227,7 +235,7 @@ class LitePlan extends StatelessWidget {
                                           size: 15,
                                           color:kAppBarColor
                                           ),
-                                        Text(' Gift Cards & Loyalty',style: kMediumTextNormalStyle,)
+                                        Text(' Gift Cards & Loyalty',style: k15BlackNormal,)
                                       ],
                                     ),
                                      SizedBox(height:3),
@@ -240,7 +248,7 @@ class LitePlan extends StatelessWidget {
                                           size: 15,
                                           color:kAppBarColor
                                           ),
-                                        Text(' Customizable User\nPermissions',style: kMediumTextNormalStyle,)
+                                        Text(' Customizable User\nPermissions',style: k15BlackNormal,)
                                       ],
                                     ),
                                      SizedBox(height:3),
@@ -252,7 +260,7 @@ class LitePlan extends StatelessWidget {
                                           size: 15,
                                           color:kAppBarColor
                                           ),
-                                        Text(' Other Add-ons',style: kMediumTextNormalStyle,)
+                                        Text(' Other Add-ons',style: k15BlackNormal,)
                                       ],
                                     ),
                                      SizedBox(height:3),
@@ -264,7 +272,7 @@ class LitePlan extends StatelessWidget {
                                           size: 15,
                                           color:kAppBarColor
                                           ),
-                                        Text(' Ecommerce Channels',style: kMediumTextNormalStyle,)
+                                        Text(' Ecommerce Channels',style: k15BlackNormal,)
                                       ],
                                     ),
                                      SizedBox(height:3),
@@ -276,7 +284,7 @@ class LitePlan extends StatelessWidget {
                                           size: 15,
                                           color:kAppBarColor
                                           ),
-                                        Text(' API Access',style: kMediumTextNormalStyle,)
+                                        Text(' API Access',style: k15BlackNormal,)
                                       ],
                                     ),
                                   ],

@@ -47,7 +47,7 @@ class _SalesReportState extends State<SalesReport> {
                  text: 'Sales Report'
                  ),
               Container(
-                color: Colors.white,
+                color: kWhite,
                 child:Padding(
                   padding: const EdgeInsets.only(top:24,bottom:24,left:48.0,right: 48.0),
                   child: Column(
@@ -79,7 +79,16 @@ class _SalesReportState extends State<SalesReport> {
                                                 );
                                               },
                                 dropdownValue: reportType,
-                                dropdownList: ['Sales Summary','User','Outlet','Register','Customer','Customer Group','Promotion','Sales Channel'],
+                                dropdownList: [
+                                                'Sales Summary',
+                                                'User',
+                                                'Outlet',
+                                                'Register',
+                                                'Customer',
+                                                'Customer Group',
+                                                'Promotion',
+                                                'Sales Channel'
+                                                ],
                               ),
                             ]
                           ),
@@ -108,7 +117,25 @@ class _SalesReportState extends State<SalesReport> {
                                                 );
                                               },
                                 dropdownValue: measure,
-                                dropdownList: ['Avg.Items per Sale','Avg.Sale Value','Avg.Sale Value(Incl.Tax)','Cost of Goods Sold','Customer Count','Discounted','Discounted %','First Sale','Items Sold','Last Sale','Margin (%)','Return Count','Returns(%)','Revenue','Revenue (Incl. Tax)','Sale Count','Sales with Customer (%)','Tax'],
+                                dropdownList: [
+                                              'Avg.Items per Sale',
+                                              'Avg.Sale Value',
+                                              'Avg.Sale Value(Incl.Tax)',
+                                              'Cost of Goods Sold',
+                                              'Customer Count',
+                                              'Discounted',
+                                              'Discounted %',
+                                              'First Sale',
+                                              'Items Sold',
+                                              'Last Sale',
+                                              'Margin (%)',
+                                              'Return Count',
+                                              'Returns(%)',
+                                              'Revenue',
+                                              'Revenue (Incl. Tax)',
+                                              'Sale Count',
+                                              'Sales with Customer (%)',
+                                              'Tax'],
                               ),
                               ]
                             ),
@@ -141,10 +168,15 @@ class _SalesReportState extends State<SalesReport> {
                                             ),
                                         ),
                                         child:  Padding(
-                                          padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left:12.0,right: 12.0),
+                                          padding: const EdgeInsets.only(
+                                                                top:12.0,
+                                                                bottom: 12.0,
+                                                                left:12.0,
+                                                                right: 12.0
+                                                                ),
                                           child: Text(
                                             "3rd May 2021-26th May 2021",
-                                              style: kMediumTextNormalStyle
+                                              style: k15BlackNormal
                                             ),
                                         ),
                                       ),

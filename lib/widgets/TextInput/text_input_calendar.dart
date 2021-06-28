@@ -34,7 +34,7 @@ class InputCalender extends StatelessWidget {
                             color: kDashboardMidBarColor,
                             height: 3.5 
                           ),
-                          fillColor: darkMode?kDashboardSearchBarFillColor:Colors.white,
+                          fillColor: darkMode ? kDashboardSearchBarFillColor  :   kWhite,
                           filled: true,
                           prefixIcon: Padding(
                             padding: const EdgeInsets.only(
@@ -64,12 +64,24 @@ class InputCalender extends StatelessWidget {
                                         ),
                                       ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(4)),
-                            borderSide: BorderSide(width:2.0, color: Colors.blue[400]),
+                            borderRadius: BorderRadius
+                                                    .all(
+                                                        Radius.circular(4)
+                                                        ),
+                            borderSide: BorderSide(
+                                                  width:2.0, 
+                                                  color: Colors.blue[400]
+                                                  ),
                           ),      
                           enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(4)),
-                            borderSide: BorderSide(width:2.0, color: kInputBorderColor),
+                            borderRadius: BorderRadius
+                                                    .all(
+                                                        Radius.circular(4)
+                                                        ),
+                            borderSide: BorderSide(
+                                              width:2.0, 
+                                              color: kInputBorderColor
+                                              ),
                           ),
                         ),
                       ),

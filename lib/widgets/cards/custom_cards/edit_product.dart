@@ -67,7 +67,10 @@ class _PromotionsState extends State<EditProduct> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('Add, view and edit your products all in one place.',style: kMediumTextNormalStyle,),
+                      Text(
+                        'Add, view and edit your products all in one place.',
+                        style: k15BlackNormal,
+                        ),
                       GestureDetector(
                         child: Text(
                           'Need help?',

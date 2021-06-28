@@ -23,11 +23,12 @@ class TabBarItem extends StatelessWidget {
                     decoration:BoxDecoration(
                       border: Border(
                         bottom: BorderSide(
-                           color: !isClicked && !darkMode ? kAppBarColor : isClicked  ? kSignInButtonColor :kDashboardColor,
-                          width:isClicked ?5.0 : 0.0,
+                           color: !isClicked && !darkMode ? 
+                                    kAppBarColor : isClicked  ? 
+                                    kSignInButtonColor : kDashboardColor,
+                          width:isClicked ? 5.0 : 0.0,
                           )
                       ),
-                      
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -40,7 +41,9 @@ class TabBarItem extends StatelessWidget {
                                         fontFamily: 'Lato',
                                         fontSize: 18,
                                         fontWeight: FontWeight.w400,
-                                        color: !isClicked && !darkMode ? kAppBarColor : isClicked  ? kSignInButtonColor :kHelpTextColor,
+                                        color: !isClicked && !darkMode ?
+                                                kAppBarColor : isClicked  ? 
+                                                kSignInButtonColor :  kHelpTextColor,
                                           ),
                             ),
                           onPressed: onClicked  

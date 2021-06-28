@@ -105,8 +105,12 @@ class InventoryEditProduct extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Checkbox(
-                        activeColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
-                        focusColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor),
+                        activeColor: MaterialStateColor
+                                                  .resolveWith(
+                                                        (states) => kSignInButtonColor),
+                        focusColor: MaterialStateColor
+                                                  .resolveWith(
+                                                        (states) => kSignInButtonColor),
                         value: isClicked,
                         onChanged: checkBoxClicked,
                         ),
@@ -128,7 +132,9 @@ class InventoryEditProduct extends StatelessWidget {
                               ),
                       Padding(
                         padding: const EdgeInsets.only(top:12.0),
-                        child: Text('Manage orders, transfers and returns accurately, and get reports and insights on this product\'s performance.',
+                        child: Text(
+                            'Manage orders, transfers and returns accurately,' 
+                            ' and get reports and insights on this product\'s performance.',
                          style: k14Black2,
                          ),
                       ),

@@ -24,7 +24,12 @@ class LicenseCard extends StatelessWidget {
                 width: 139.19,
                 height: 35,
                 decoration: BoxDecoration(
-                  border: Border(bottom: BorderSide(color: kTableBorderColor, width: 1,))
+                  border: Border(
+                    bottom: BorderSide(
+                      color: kTableBorderColor, 
+                      width: 1,
+                      )
+                    )
                   ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -41,7 +46,12 @@ class LicenseCard extends StatelessWidget {
                 width: 147.42,
                 height: 35,
                 decoration: BoxDecoration(
-                  border: Border(bottom: BorderSide(color: kTableBorderColor, width: 1,))
+                  border: Border(
+                    bottom: BorderSide(
+                      color: kTableBorderColor, 
+                      width: 1,
+                      )
+                    )
                   ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -49,7 +59,10 @@ class LicenseCard extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left:8,bottom:16.0),
-                      child: Text('Number of Licenses',style: k15BlackDark,),
+                      child: Text(
+                              'Number of Licenses',
+                              style: k15BlackDark,
+                              ),
                     ),
                   ],
                 ),
@@ -58,14 +71,24 @@ class LicenseCard extends StatelessWidget {
                 width: 215.67,
                 height: 35,
                 decoration: BoxDecoration(
-                  border: Border(bottom: BorderSide(color: kTableBorderColor, width: 1,))
+                  border: Border(
+                        bottom: BorderSide(
+                          color: kTableBorderColor, 
+                          width: 1,
+                          )
+                        )
                   ),
               ),
               Container(
                 width: 143.72,
                 height: 35,
                 decoration: BoxDecoration(
-                  border: Border(bottom: BorderSide(color: kTableBorderColor, width: 1,))
+                  border: Border(
+                            bottom: BorderSide(
+                              color: kTableBorderColor, 
+                              width: 1,
+                              )
+                            )
                   ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -82,7 +105,12 @@ class LicenseCard extends StatelessWidget {
                 width: 50,
                 height: 35,
                 decoration: BoxDecoration(
-                  border: Border(bottom: BorderSide(color: kTableBorderColor, width: 1,))
+                  border: Border(
+                              bottom: BorderSide(
+                                            color: kTableBorderColor, 
+                                            width: 1,
+                                            )
+                                        )
                   ),
               ),
             ],
@@ -100,7 +128,7 @@ class LicenseCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Outlets',style: kMediumTextNormalStyle,),
+                      Text('Outlets',style: k15BlackNormal,),
                     ],
                   ),
                 ),
@@ -130,7 +158,11 @@ class LicenseCard extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left:8.0,top: 16,),
-                      child: Text(planType == PlanType.pro ? '1@\$129/mo (Pro Plan)' : '1@\$99/mo (Lite Plan)' ,style: kMediumTextNormalStyle,),
+                      child: Text(
+                          planType == PlanType.pro ? 
+                                    '1@\$129/mo (Pro Plan)' : 
+                                    '1@\$99/mo (Lite Plan)' ,
+                                    style: k15BlackNormal,),
                     )
                   ],
                 ),
@@ -144,10 +176,16 @@ class LicenseCard extends StatelessWidget {
                     Column(
                       children: [
                         SizedBox(height:3),
-                        Text('\$',style: kSubHeaderTextStyle,),
+                        Text(
+                              '\$',
+                              style: kSubHeaderTextStyle,
+                              ),
                       ],
                     ),
-                    Text(planType == PlanType.pro ? '129' :'99',style: TextStyle(
+                    Text(
+                          planType == PlanType.pro ? 
+                              '129' :'99',
+                              style: TextStyle(
                       fontFamily:'Lato',
                       fontSize: 32,
                       fontWeight: FontWeight.w700,
@@ -180,7 +218,7 @@ class LicenseCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Registers',style: kMediumTextNormalStyle,),
+                      Text('Registers',style: k15BlackNormal,),
                     ],
                   ),
                 ),
@@ -210,7 +248,7 @@ class LicenseCard extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left:8.0, top: 16),
-                      child: Text('1 free Register',style: kMediumTextNormalStyle,),
+                      child: Text('1 free Register',style: k15BlackNormal,),
                     )
                   ],
                 ),

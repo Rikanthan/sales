@@ -17,7 +17,11 @@ class ToggleIconButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Icon(Icons.check_circle, color: kSignInButtonColor,size: 35.0,),
+            Icon(
+                    Icons.check_circle,
+                      color: kSignInButtonColor,
+                      size: 35.0,
+                      ),
             Stack(
               children: [
                 AnimatedPositioned(
@@ -28,11 +32,24 @@ class ToggleIconButton extends StatelessWidget {
                   right: isToggle ? 0.0 : 60.0,
                   child: AnimatedSwitcher(
                     duration: Duration(milliseconds: 1000),
-                    transitionBuilder: (Widget child, Animation<double> animation){
-                      return RotationTransition(turns: animation , child:child);
+                    transitionBuilder: (
+                                Widget child, 
+                                Animation<double> animation
+                                ){
+                      return RotationTransition(
+                                      turns: animation ,
+                                       child:child)
+                                       ;
                     },
-                    child: isToggle ? Icon(Icons.check_circle, color: kSignInButtonColor,size: 35.0,
-                    key: UniqueKey()) : Icon(Icons.remove_circle_outline, color: kDashboardIconColor,size: 35.0,
+                    child: isToggle ? 
+                                    Icon(
+                                        Icons.check_circle, 
+                                              color: kSignInButtonColor,
+                                              size: 35.0,
+                    key: UniqueKey()) : Icon(
+                                          Icons.remove_circle_outline, 
+                                          color: kDashboardIconColor,
+                                          size: 35.0,
                     key: UniqueKey()),
                     ),
                   )
@@ -41,7 +58,6 @@ class ToggleIconButton extends StatelessWidget {
             Icon(Icons.close, color: kDashboardIconColor,size: 35.0,),
           ],
         )
-      
     );
   }
 }

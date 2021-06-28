@@ -34,7 +34,7 @@ class TextInputField extends StatelessWidget {
                     onChanged: onChange,
                     obscureText: hideText,
                     decoration: InputDecoration(
-                    fillColor: Colors.white,
+                    fillColor: kWhite,
                     filled: true,
                     enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(2.0),

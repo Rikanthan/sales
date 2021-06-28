@@ -54,7 +54,13 @@ class _SellCardState extends State<NewLayout> {
                         setState(() {
                           _isGoToBack = true;
                         });
-                          Navigator.push(context, MaterialPageRoute(builder: (_)=> SellSettings() ));
+                          Navigator.push(
+                                      context, 
+                                      MaterialPageRoute(
+                                                builder: (_)=> 
+                                                            SellSettings() 
+                                                            )
+                                                          );
                         }
                       ),
                     Padding(
@@ -128,10 +134,28 @@ class _SellCardState extends State<NewLayout> {
                                             Padding(
                                                 padding: const EdgeInsets.only(right: 12.0),
                                                 child: Checkbox(
-                                                  activeColor: MaterialStateColor.resolveWith((states) => _isSelected ? Colors.white : kAppBarColor),
-                                                  hoverColor: MaterialStateColor.resolveWith((states) => _isSelected ? kSignInButtonColor : kAppBarColor),
-                                                  overlayColor: MaterialStateColor.resolveWith((states) => _isSelected ? kSignInButtonColor : kAppBarColor),
-                                                  fillColor: MaterialStateColor.resolveWith((states) => _isSelected ? kSignInButtonColor : kDashboardSearchBarFillColor),
+                                                  activeColor: MaterialStateColor
+                                                                        .resolveWith(
+                                                                                (states) 
+                                                                                    => _isSelected ? kWhite : 
+                                                                                                    kAppBarColor
+                                                                                                    ),
+                                                  hoverColor: MaterialStateColor.
+                                                                          resolveWith(
+                                                                                  (states) 
+                                                                                    => _isSelected ? kSignInButtonColor : 
+                                                                                            kAppBarColor
+                                                                                            ),
+                                                  overlayColor: MaterialStateColor.
+                                                                          resolveWith(
+                                                                                    (states) => _isSelected ? kSignInButtonColor :
+                                                                                           kAppBarColor
+                                                                                           ),
+                                                  fillColor: MaterialStateColor.
+                                                                          resolveWith(
+                                                                                    (states) => _isSelected ? kSignInButtonColor : 
+                                                                                      kDashboardSearchBarFillColor
+                                                                                      ),
                                                   value: _isSelected,
                                                   onChanged: (newValue){
                                                     setState(() {
@@ -250,4 +274,3 @@ class _SellCardState extends State<NewLayout> {
     );
   }
 }
-

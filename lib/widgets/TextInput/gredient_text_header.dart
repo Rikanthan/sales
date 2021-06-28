@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/constants/colors.dart';
 class GredientTableHeader extends StatelessWidget {
   GredientTableHeader({
     @required this.text,
@@ -33,7 +34,7 @@ class GredientTableHeader extends StatelessWidget {
                     ),
                     boxShadow:[
                       BoxShadow(
-                        color: Colors.white.withOpacity(0.2),
+                        color: kWhite.withOpacity(0.2),
                         spreadRadius: -1,
                         blurRadius: 2,
                       ),
@@ -53,7 +54,7 @@ class GredientTableHeader extends StatelessWidget {
                               child: Text(
                                 text,
                                 style:TextStyle(
-                                  color: Colors.white,
+                                  color: kWhite,
                                   fontSize: 14,
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w700,
@@ -70,7 +71,7 @@ class GredientTableHeader extends StatelessWidget {
                             Icon(
                               Icons.arrow_drop_down,
                               size: 14,
-                              color: Colors.white,
+                              color: kWhite,
                               )
                           ],
                         )
@@ -80,7 +81,7 @@ class GredientTableHeader extends StatelessWidget {
                         Text(
                           text,
                           style:TextStyle(
-                            color: Colors.white,
+                            color: kWhite,
                             fontSize: 14,
                             fontFamily: 'Roboto',
                             fontWeight: FontWeight.w700
@@ -93,7 +94,7 @@ class GredientTableHeader extends StatelessWidget {
            : Container(
                   decoration: BoxDecoration(
                     border: Border(
-                      left: BorderSide(color: Colors.white,width: isLeftborder? 1: 0),
+                      left: BorderSide(color: kWhite,width: isLeftborder? 1: 0),
                       right:BorderSide(color: Color(0xFF525252),width:1),
                       ),
                     gradient: LinearGradient(
@@ -103,7 +104,7 @@ class GredientTableHeader extends StatelessWidget {
                     ),
                     boxShadow:[
                       BoxShadow(
-                        color: Colors.white.withOpacity(0.2),
+                        color: kWhite.withOpacity(0.2),
                         spreadRadius: -1,
                         blurRadius: 2,
                       ),
@@ -122,7 +123,7 @@ class GredientTableHeader extends StatelessWidget {
                               child: Text(
                                 text,
                                 style:TextStyle(
-                                  color: Colors.white,
+                                  color: kWhite,
                                   fontSize: 14,
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w700,
@@ -139,7 +140,7 @@ class GredientTableHeader extends StatelessWidget {
                             Icon(
                               Icons.arrow_drop_down,
                               size: 14,
-                              color: Colors.white,
+                              color: kWhite,
                               )
                           ],
                         )
@@ -149,7 +150,7 @@ class GredientTableHeader extends StatelessWidget {
                         Text(
                           text,
                           style:TextStyle(
-                            color: Colors.white,
+                            color: kWhite,
                             fontSize: 14,
                             fontFamily: 'Roboto',
                             fontWeight: FontWeight.w700

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/constants/colors.dart';
 class SettingsCell extends StatelessWidget {
   const SettingsCell({
     Key key,
@@ -22,7 +23,7 @@ class SettingsCell extends StatelessWidget {
                           text,
                           style: TextStyle(
                             fontSize: 14,
-                            color:Color(0xFF333333),
+                            color:kBlackOpacity,
                             fontFamily: 'Lato',
                             fontWeight: FontWeight.w700,
                             height: textSpan ? 1.2 : 1.0 

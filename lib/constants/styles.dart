@@ -22,7 +22,7 @@ const k15WhiteNormal = TextStyle(
             fontWeight: FontWeight.normal
               );
 
-const kMediumTextNormalStyle = TextStyle(
+const k15BlackNormal = TextStyle(
             fontFamily: 'Lato',
             fontSize: 15,
             color: kSignInTextColor,
@@ -192,7 +192,7 @@ const k14Black = TextStyle(
 const k14Black2 = TextStyle(
                           fontFamily: 'Lato',
                           fontSize: 14,
-                          color:Color(0xff333333)
+                          color:kBlackOpacity
                           );
 
 const k32Black = TextStyle(
@@ -239,7 +239,7 @@ const k14BlackDark = TextStyle(
 const k14Grey2 = TextStyle(
                           fontFamily: 'Roboto',
                           fontSize: 14,
-                          color: Color(0xFF686868)
+                          color: kGrey
                           );   
 
 const k18White = TextStyle(
@@ -328,5 +328,4 @@ const k30Black = TextStyle(
                           fontWeight: FontWeight.w700,
                           color:kAppBarColor
                           ); 
-
- //const k       
+    

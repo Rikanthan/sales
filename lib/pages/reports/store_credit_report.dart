@@ -56,7 +56,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                                   ),
                                 Text(
                                   'Rs0.00',
-                                  style:kMediumTextNormalStyle
+                                  style:k15BlackNormal
                                   )
                               ],
                             ),
@@ -77,7 +77,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                                     ),
                                     Text(
                                   'Rs0.00',
-                                  style: kMediumTextNormalStyle
+                                  style: k15BlackNormal
                                   )
                                 ],
                               ),
@@ -102,7 +102,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                                   ),
                                    Text(
                                   'Rs0.00',
-                                  style: kMediumTextNormalStyle
+                                  style: k15BlackNormal
                                   )
                               ],
                             ),
@@ -121,7 +121,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                        Row(
                          children: [
                            Container(
-                             color:Colors.white,
+                             color:kWhite,
                              height: 52,
                              width:231,
                              child: Padding(
@@ -138,7 +138,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                              ),
                            ),
                            Container(
-                              color:Colors.white,
+                              color:kWhite,
                              height: 52,
                              width:232,
                              child: Padding(
@@ -155,7 +155,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                              ),
                            ),
                            Container(
-                              color:Colors.white,
+                              color:kWhite,
                              height: 52,
                              width:232,
                              child: Padding(
@@ -172,7 +172,7 @@ class _StoreCreditReportState extends State<StoreCreditReport> {
                              ),
                            ),
                            Container(
-                              color:Colors.white,
+                              color:kWhite,
                              height: 52,
                              width:232,
                              child: Padding(

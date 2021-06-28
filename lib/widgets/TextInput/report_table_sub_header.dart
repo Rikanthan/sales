@@ -16,7 +16,7 @@ final bool bottomBorder;
                       border:Border(
                         right:BorderSide( color: kTableBorderColor),
                         bottom:BorderSide( 
-                          color:bottomBorder? kTableBorderColor: Colors.white,
+                          color:bottomBorder? kTableBorderColor: kWhite,
                           width: bottomBorder?1.0 :0
                         )
                       )

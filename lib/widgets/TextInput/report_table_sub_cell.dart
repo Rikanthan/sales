@@ -25,17 +25,23 @@ class ReportTableSideCell extends StatelessWidget {
                       color: Color(0xFFfafafa),
                       border: Border(
                         right:BorderSide(
-                           color: rightBorder?kTableBorderColor:Colors.white,
+                           color: rightBorder ? 
+                                kTableBorderColor:kWhite,
                            width: rightBorder? 1.0:0.0
                            ),
                         bottom:BorderSide(
-                           color: bottomBorder?kTableBorderColor:Colors.white,
+                           color: bottomBorder?kTableBorderColor:kWhite,
                            width: bottomBorder? 1.0:0.0
                            ),
                         )
                       ),
                       child: Padding(
-                        padding:  EdgeInsets.only(left: paddingLeft,top:1,bottom: 1,right:paddingRight),
+                        padding:  EdgeInsets.only(
+                                    left: paddingLeft,
+                                    top:1,
+                                    bottom: 1,
+                                    right:paddingRight
+                                    ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [

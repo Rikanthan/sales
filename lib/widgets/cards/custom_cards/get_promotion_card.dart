@@ -31,7 +31,7 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
   Widget build(BuildContext context) {
     return Container(
       width: 696,
-      color: Colors.white,
+      color: kWhite,
       //height: 241,
       child: Padding(
         padding: const EdgeInsets.all(32.0),
@@ -73,9 +73,11 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
                     width: 56,
                     height: 44,
                      decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: kWhite,
                                border: Border.all(
-                                 color:   _discountPromotion == DiscountPromotion.percentage ? kSignInButtonColor : kInputBorderColor ,
+                                 color:   _discountPromotion == DiscountPromotion.percentage ? 
+                                                      kSignInButtonColor : 
+                                                      kInputBorderColor ,
                                  width: 2,
                                ),
                               borderRadius: BorderRadius.only(
@@ -87,7 +89,7 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("%",style: kMediumTextNormalStyle,),
+                              Text("%",style: k15BlackNormal,),
                             ],
                           ),
                   ),
@@ -103,9 +105,10 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
                     width: 56,
                     height: 44,
                      decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: kWhite,
                                border: Border.all(
-                                 color: _discountPromotion == DiscountPromotion.rs ?  kSignInButtonColor : kInputBorderColor,
+                                 color: _discountPromotion == DiscountPromotion.rs ?  
+                                                    kSignInButtonColor : kInputBorderColor,
                                  width: 2,
                                ),
                               borderRadius: BorderRadius.only(
@@ -117,7 +120,7 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("Rs",style: kMediumTextNormalStyle,),
+                              Text("Rs",style: k15BlackNormal,),
                             ],
                           ),
                   ),
@@ -128,7 +131,8 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
                 TextInput(
                   darkMode: false,
                   hideText: false,
-                  hintText: _discountPromotion == DiscountPromotion.rs ? 'Rs0.00' : '0 %',
+                  hintText: _discountPromotion == DiscountPromotion.rs 
+                                        ? 'Rs0.00' : '0 %',
                   paddingTop: 0,
                   height: 46,
                   width: 178,
@@ -149,9 +153,11 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
                     width: 84,
                     height: 44,
                      decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: kWhite,
                                border: Border.all(
-                                 color:  _productPromotion == ProductPromotion.all ? kSignInButtonColor : kInputBorderColor,
+                                 color:  _productPromotion == ProductPromotion.all 
+                                              ? kSignInButtonColor : 
+                                              kInputBorderColor,
                                  width: 2,
                                ),
                               borderRadius: BorderRadius.only(
@@ -163,7 +169,7 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("All",style: kMediumTextNormalStyle,),
+                              Text("All",style: k15BlackNormal,),
                             ],
                           ),
                     ),
@@ -178,9 +184,10 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
                     width: 84,
                     height: 44,
                      decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: kWhite,
                                border: Border.all(
-                                 color:   _productPromotion == ProductPromotion.specific ? kSignInButtonColor : kInputBorderColor,
+                                 color:   _productPromotion == ProductPromotion.specific ? 
+                                                    kSignInButtonColor : kInputBorderColor,
                                  width: 2,
                                ),
                               borderRadius: BorderRadius.only(
@@ -192,7 +199,7 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("Specific",style: kMediumTextNormalStyle,),
+                              Text("Specific",style: k15BlackNormal,),
                             ],
                           ),
                   ),
@@ -213,7 +220,10 @@ class _GetPromotionCardState extends State<GetPromotionCard> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 95, bottom: 5),
-                  child: Text('Filter products by tag,type,brand,supplier or SKU',style: k15BlackDark,),
+                  child: Text(
+                      'Filter products by tag,type,brand,supplier or SKU',
+                      style: k15BlackDark,
+                      ),
                 ),
               ],
             ),

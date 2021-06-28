@@ -77,7 +77,7 @@ class _OrderStockState extends State<OrderStock> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('Add, products to this purchase order to keep track of inbound inventory.',style: kMediumTextNormalStyle,),
+                      Text('Add, products to this purchase order to keep track of inbound inventory.',style: k15BlackNormal,),
                       GestureDetector(
                         child: Text(
                           'Need help?',
@@ -131,7 +131,7 @@ class _OrderStockState extends State<OrderStock> {
                       width: 232,
                       child: Text(
                         'Adding details for this order\nhelps you stay on top of all\nyour orders and means your\nstaff can easily identify\nincoming items.',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                     ),
                     Column(
@@ -158,7 +158,7 @@ class _OrderStockState extends State<OrderStock> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text('Supplier Invoice Number ',style: k15BlackDark,),
-                            Text('(Optional)',style: kMediumTextNormalStyle,),
+                            Text('(Optional)',style: k15BlackNormal,),
                           ],
                         ),
                         TextInput(
@@ -177,10 +177,10 @@ class _OrderStockState extends State<OrderStock> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text('Order Number  ',style: k15BlackDark,),
-                            Text('This is to help you identify this order',style: kMediumTextNormalStyle,),
+                            Text('This is to help you identify this order',style: k15BlackNormal,),
                           ],
                         ),
-                        Text('and must be unique',style: kMediumTextNormalStyle,),
+                        Text('and must be unique',style: k15BlackNormal,),
                         TextInput(
                                 darkMode: false,
                                 hideText: false,
@@ -198,7 +198,7 @@ class _OrderStockState extends State<OrderStock> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text('Note ',style: k15BlackDark,),
-                            Text('(Optional)',style: kMediumTextNormalStyle,),
+                            Text('(Optional)',style: k15BlackNormal,),
                           ],
                         ),
                         TextInputMaxLines(
@@ -256,7 +256,7 @@ class _OrderStockState extends State<OrderStock> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text('Delivery Date ',style: k15BlackDark,),
-                            Text('(Optional)',style: kMediumTextNormalStyle,),
+                            Text('(Optional)',style: k15BlackNormal,),
                           ],
                         ),
                         SizedBox(height: 5,),
@@ -267,7 +267,7 @@ class _OrderStockState extends State<OrderStock> {
                         Container(
                           height: 216,
                           width:338,
-                          color:Colors.white,
+                          color:kWhite,
                           child: Padding(
                             padding: const EdgeInsets.all(24.0),
                             child: Column(
@@ -335,7 +335,7 @@ class _OrderStockState extends State<OrderStock> {
                       width: 232,
                       child: Text(
                         'Choose products to add to\nthis order, or choose a CSV\nfile of products to import.',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                       ), 
                       GestureDetector(
@@ -348,7 +348,7 @@ class _OrderStockState extends State<OrderStock> {
                           width: 348,
                           height: 163,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: kWhite,
                              border: Border.all(
                                color: _productClicked == ProductClicked.chooseProducts ?  kSignInButtonColor : kInputBorderColor,
                                width: 2,
@@ -375,8 +375,8 @@ class _OrderStockState extends State<OrderStock> {
                                     color: kAppBarColor,
                                     ),
                                 ),
-                                Text('Search,scan, or use reorder points to add',style: kMediumTextNormalStyle,),
-                                Text('products',style: kMediumTextNormalStyle,),
+                                Text('Search,scan, or use reorder points to add',style: k15BlackNormal,),
+                                Text('products',style: k15BlackNormal,),
                               ],
                             ),
                           ),
@@ -392,7 +392,7 @@ class _OrderStockState extends State<OrderStock> {
                           width: 348,
                           height: 163,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: kWhite,
                              border: Border.all(
                                color:  _productClicked == ProductClicked.importViaCSV ?  kSignInButtonColor : kInputBorderColor,
                                width: 2,
@@ -419,7 +419,7 @@ class _OrderStockState extends State<OrderStock> {
                                     color: kAppBarColor,
                                     ),
                                 ),
-                                Text('Import products by uploading a CSV file.',style: kMediumTextNormalStyle,),
+                                Text('Import products by uploading a CSV file.',style: k15BlackNormal,),
                               ],
                             ),
                           ),
@@ -493,7 +493,7 @@ class _OrderStockState extends State<OrderStock> {
                 Padding(
                   padding: const EdgeInsets.only(left:280.0,right: 48),
                   child: Container(
-                    color: Colors.white,
+                    color: kWhite,
                     width: 696,
                     height: 66,
                     child: Padding(
@@ -520,7 +520,7 @@ class _OrderStockState extends State<OrderStock> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Add products to this order.',style: kMediumTextNormalStyle,),
+                          Text('Add products to this order.',style: k15BlackNormal,),
                           CustomButton(
                           buttonText: 'Add Products from Reorder Points', 
                           onPress: (){},
@@ -573,7 +573,7 @@ class _OrderStockState extends State<OrderStock> {
                         SizedBox(
                           width: 12,
                         ),
-                        Text('No file chosen',style: kMediumTextNormalStyle,)
+                        Text('No file chosen',style: k15BlackNormal,)
                      ],
                    ),
                  )

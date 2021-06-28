@@ -13,7 +13,7 @@ class PayGreenButton extends StatelessWidget {
                          child: Text(
                             'Pay',
                             style:TextStyle(
-                              color: Colors.white,
+                              color: kWhite,
                               fontFamily: 'Lato',
                               fontSize: 20,
                               fontWeight: FontWeight.bold
@@ -23,7 +23,7 @@ class PayGreenButton extends StatelessWidget {
                         Text(
                           '3 items',
                           style:TextStyle(
-                            color: Colors.white,
+                            color: kWhite,
                             fontFamily: 'Lato',
                             fontSize: 14,
                             fontWeight: FontWeight.bold
@@ -36,7 +36,7 @@ class PayGreenButton extends StatelessWidget {
                             Text(
                               'Rs409.70',
                               style:TextStyle(
-                                color: Colors.white,
+                                color: kWhite,
                                 fontFamily: 'Lato',
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold
@@ -48,9 +48,25 @@ class PayGreenButton extends StatelessWidget {
                    ),
                     onPressed: (){},
                    style:ButtonStyle(
-                      backgroundColor: MaterialStateColor.resolveWith((states) => kSignInButtonColor ),
-                      padding:  MaterialStateProperty.resolveWith((states) => EdgeInsets.only(left:32,right: 32,top:26,bottom: 26)),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                      backgroundColor: MaterialStateColor
+                                              .resolveWith(
+                                                        (states) => kSignInButtonColor 
+                                                            ),
+                      padding:  MaterialStateProperty
+                                                .resolveWith(
+                                                          (states) => 
+                                                                    EdgeInsets.only(
+                                                                              left:32,
+                                                                              right: 32,
+                                                                              top:26,
+                                                                              bottom: 26
+                                                                              )
+                                                                            ),
+                      shape: MaterialStateProperty
+                                              .all(
+                                                RoundedRectangleBorder(
+                                                          borderRadius: BorderRadius.circular(4)
+                                                            ),
                     ),                
                   )
                   )

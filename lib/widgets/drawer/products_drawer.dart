@@ -47,7 +47,7 @@ class ProductDrawer extends StatelessWidget {
           MainDrawer(isDarkMode: false, mainDrawerClick: MainDrawerClick.products),
           Container(
             width:145,
-            color: Colors.white,
+            color: kWhite,
             child: Column(
               children: <Widget>[
                 Expanded(

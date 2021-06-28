@@ -48,7 +48,7 @@ class GeneralEditProduct extends StatelessWidget {
                       width: 232,
                       child: Text(
                         'Change general information\nfor this product.',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                     ),
                     Column(
@@ -107,7 +107,10 @@ class GeneralEditProduct extends StatelessWidget {
                           children: [
                             Text('Tags',style: k15BlackDark,),
                             SizedBox(width: 8,),
-                            Text('Describe the product using relevant keywords for easy filtering.',style: kMediumTextNormalStyle,)
+                            Text(
+                              'Describe the product using relevant keywords for easy filtering.',
+                              style: k15BlackNormal
+                              ,)
                           ],
                         ),
                       ),
@@ -119,7 +122,7 @@ class GeneralEditProduct extends StatelessWidget {
                           width: 0.7,
                           color:  kBlackOpacity.withOpacity(0.2),
                                 ),
-                          color:Colors.white
+                          color:kWhite
                               ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -151,7 +154,11 @@ class GeneralEditProduct extends StatelessWidget {
                           children: [
                             Text('Product Type',style: k15BlackDark,),
                             SizedBox(width: 8,),
-                            Text('Categorise your products with types that can be used to filter sales and inventory reports.',style: kMediumTextNormalStyle,)
+                            Text(
+                              'Categorise your products with types that can be used to'
+                              'filter sales and inventory reports.'
+                              ,style: k15BlackNormal,
+                              )
                           ],
                         ),
                       ),
@@ -162,7 +169,11 @@ class GeneralEditProduct extends StatelessWidget {
                                   paddingAll: 12,
                                   onPressed: productTypeOnClick,
                                   dropdownValue: productType,
-                                  dropdownList: ['Choose a product type','Add new product type','Fashion'],
+                                  dropdownList: [
+                                    'Choose a product type',
+                                    'Add new product type',
+                                    'Fashion'
+                                    ],
                                 ),
                         SizedBox(
                           height: 20,
@@ -182,7 +193,7 @@ class GeneralEditProduct extends StatelessWidget {
                           ),
                           Text(
                             'Make this product active and available\nfor sale in-store',
-                            style:kMediumTextNormalStyle
+                            style:k15BlackNormal
                             ),
                           Padding(
                             padding: const EdgeInsets.only(top:20.0,bottom: 5),
@@ -193,7 +204,7 @@ class GeneralEditProduct extends StatelessWidget {
                           ),
                           Text(
                             'Drag to rearrange. Drop an image outside of the upload area to delete.',
-                            style:kMediumTextNormalStyle
+                            style:k15BlackNormal
                             ),
                             SizedBox(
                               height: 5,

@@ -15,7 +15,12 @@ class HomeHeaderText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding:  EdgeInsets.only(top:topPadding, bottom: topPadding,left: leftPadding,right: leftPadding),
+        padding:  EdgeInsets.only(
+                      top:topPadding, 
+                      bottom: topPadding,
+                      left: leftPadding,
+                      right: leftPadding
+                      ),
         child: Column(
           children: [
             Text(

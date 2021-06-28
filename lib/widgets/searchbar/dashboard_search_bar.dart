@@ -35,7 +35,7 @@ class DashboardSearchBar extends StatelessWidget {
                               fontFamily: 'Roboto',
                               color: kDashboardMidBarColor, 
                             ),
-                            fillColor: darkMode?kDashboardSearchBarFillColor:Colors.white,
+                            fillColor: darkMode ? kDashboardSearchBarFillColor  : kWhite,
                             filled: true,
                             prefixIcon: Padding(
                               padding: const EdgeInsets.only(
@@ -48,12 +48,21 @@ class DashboardSearchBar extends StatelessWidget {
                               )
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(4)),
-                              borderSide: BorderSide(width:2.0, color: Colors.blue[400]),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(4)
+                                ),
+                              borderSide: BorderSide(
+                                            width:2.0, 
+                                            color: Colors.blue[400]
+                                            ),
                             ),      
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.all(Radius.circular(4)),
-                              borderSide: BorderSide(width:2.0, color: darkMode ? kDashboardIconColor.withOpacity(0.2) : kInputBorderColor),
+                              borderSide: BorderSide(
+                                      width:2.0, 
+                                      color: darkMode ? kDashboardIconColor.withOpacity(0.2) 
+                                              : kInputBorderColor
+                                              ),
                             ),
                           ),
                         ),

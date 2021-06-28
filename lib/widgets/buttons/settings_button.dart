@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/constants/colors.dart';
 class SettingsButton extends StatelessWidget {
   const SettingsButton({
     @required this.buttonText,
@@ -17,14 +18,16 @@ class SettingsButton extends StatelessWidget {
        height: 35,
        decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFb0b0b0), width: 0.7, style: BorderStyle.solid
+                              color:kCustomGrey, 
+                              width: 0.7, 
+                              style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.all(
                                  Radius.circular(5),
                                 ),
                               
         gradient: LinearGradient(
-                        colors: [Color(0xFFF6F6F6) , Color(0xFFdddddd) ],
+                        colors: [kCustomWhite2 , kCustomWhite4 ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
                     ),
@@ -33,7 +36,7 @@ class SettingsButton extends StatelessWidget {
      child: Text(
         buttonText,
         style:TextStyle(
-          color: Color(0xFF686868),
+          color: kGrey,
           fontFamily: 'Lato',
           fontSize: 14,
           fontWeight: FontWeight.w700
@@ -41,10 +44,15 @@ class SettingsButton extends StatelessWidget {
       ),
       onPressed: onPress,
      style:ButtonStyle(
-        backgroundColor: MaterialStateColor.resolveWith((states) => Colors.transparent ),
+        backgroundColor: MaterialStateColor
+                                .resolveWith(
+                                      (states) => 
+                                              Colors.transparent 
+                                                ),
         padding:  MaterialStateProperty
-                    .resolveWith((states) 
-                            => EdgeInsets.only(
+                    .resolveWith(
+                      (states) 
+                                => EdgeInsets.only(
                                               left:leftPadding,
                                               right:leftPadding,
                                               top:topPadding,

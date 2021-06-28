@@ -15,13 +15,18 @@ class _ActiveProductsState extends State<ActiveProducts> {
   Widget build(BuildContext context) {
     return Container(
             child: Padding(
-              padding: const EdgeInsets.only(left:31,top:8.0,bottom: 8.0, right: 8.0),
+              padding: const EdgeInsets.only(
+                                            left:31,
+                                            top:8.0,
+                                            bottom: 8.0,
+                                             right: 8.0
+                                             ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     width: 645,
-                    height: _details?277:155,
+                    height: _details  ? 277 : 155,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -47,7 +52,7 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                       width:_inventory ? 4.0 : 0,
                                       )
                                   ),
-                                  color: Colors.white,
+                                  color: kWhite,
                                 ),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -59,7 +64,8 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                                     fontFamily: 'Lato',
                                                     fontSize: 15,
                                                     fontWeight: FontWeight.w400,
-                                                    color: !_inventory ? kAppBarColor : kSignInButtonColor,
+                                                    color: !_inventory ? kAppBarColor : 
+                                                                kSignInButtonColor,
                                                      ),
                                                   ),
                                       onPressed: ()
@@ -84,11 +90,13 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                 decoration:BoxDecoration(
                                   border: Border(
                                     bottom: BorderSide(
-                                      color: _price ? kSignInButtonColor : kInputBorderColor,
-                                      width:_price ?4.0 : 0.0,
+                                      color: _price ? kSignInButtonColor : 
+                                                        kInputBorderColor,
+                                      width:_price ?    4.0 
+                                                  : 0.0,
                                       )
                                   ),
-                                  color: Colors.white,
+                                  color: kWhite,
                                 ),
                                 child: Row(
                                   children: [
@@ -99,7 +107,8 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                                     fontFamily: 'Lato',
                                                     fontSize: 15,
                                                     fontWeight: FontWeight.w400,
-                                                    color: !_price ? kAppBarColor : kSignInButtonColor,
+                                                    color: !_price ? kAppBarColor : 
+                                                              kSignInButtonColor,
                                                      ),
                                         ),
                                       onPressed: ()
@@ -124,11 +133,13 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                 decoration:BoxDecoration(
                                   border: Border(
                                     bottom: BorderSide(
-                                      color: _details ? kSignInButtonColor : kInputBorderColor,
-                                      width:_details ? 4.0 : 0.0,
+                                      color: _details ? kSignInButtonColor : 
+                                                  kInputBorderColor,
+                                      width:_details ? 4.0 : 
+                                                  0.0,
                                       )
                                   ),
-                                  color: Colors.white,
+                                  color: kWhite,
                                 ),
                                 child: Row(
                                   children: [
@@ -139,7 +150,8 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                           fontFamily: 'Lato',
                                           fontSize: 15,
                                           fontWeight: FontWeight.w400,
-                                          color: !_details ? kAppBarColor : kSignInButtonColor,
+                                          color: !_details ? kAppBarColor : 
+                                                  kSignInButtonColor,
                                             ),
                                         ),
                                       onPressed: ()
@@ -173,18 +185,41 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Padding(
-                                          padding: const EdgeInsets.only(top:24,bottom:4.0),
-                                          child: Text('Type',style: k15BlackDark,),
+                                          padding: const EdgeInsets.only(
+                                                                      top:24,
+                                                                      bottom:4.0
+                                                                      ),
+                                          child: Text(
+                                                        'Type'
+                                                        ,style: k15BlackDark,
+                                                        ),
                                         ),
-                                        Text('-',style: k15BlackDark,),
+                                        Text('-',
+                                                style: k15BlackDark,
+                                                ),
                                         Padding(
-                                          padding: const EdgeInsets.only(top:16.0,bottom: 4.0),
-                                          child: Text('Description',style: k15BlackDark,),
+                                          padding: const EdgeInsets.only(
+                                                              top:16.0,
+                                                              bottom: 4.0
+                                                              ),
+                                          child: Text(
+                                                      'Description',
+                                                      style: k15BlackDark,
+                                                      ),
                                         ),
-                                        Text('-',style: k15BlackDark,),
+                                        Text(
+                                            '-',
+                                            style: k15BlackDark,
+                                            ),
                                         Padding(
-                                          padding: const EdgeInsets.only(top:16.0,bottom: 4.0),
-                                          child: Text('Tags',style: k15BlackDark,),
+                                          padding: const EdgeInsets.only(
+                                                                    top:16.0,
+                                                                    bottom: 4.0
+                                                                    ),
+                                          child: Text(
+                                                    'Tags'
+                                                    ,style: k15BlackDark,
+                                                    ),
                                         ),
                                         Text('-',style: k15BlackDark,),
                                         ],
@@ -192,9 +227,12 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                     ),
                                   Container(
                                     width: 310,
-                                    //height: 90,
                                     child: Padding(
-                                      padding: const EdgeInsets.only(left:12.0,right: 12.0,bottom:12.0),
+                                      padding: const EdgeInsets.only(
+                                                                    left:12.0,
+                                                                    right: 12.0,
+                                                                    bottom:12.0
+                                                                  ),
                                       child: Column(
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -202,8 +240,14 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                           Row(
                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Text('Supplier',style: k15BlackDark,),
-                                              Text('Supplier Price',style: k15BlackDark,),
+                                              Text(
+                                                'Supplier',
+                                                style: k15BlackDark,
+                                                ),
+                                              Text(
+                                                'Supplier Price',
+                                                style: k15BlackDark,
+                                                ),
                                             ],
                                           ),
                                           Padding(
@@ -363,7 +407,12 @@ class _ActiveProductsState extends State<ActiveProducts> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left:21.0,top:13,right: 21.0,bottom: 13.0),
+                            padding: const EdgeInsets.only(
+                                                        left:21.0,
+                                                        top:13,
+                                                        right: 21.0,
+                                                        bottom: 13.0
+                                                        ),
                             child: TextButton.icon(
                               onPressed: (){},
                                icon: Icon(
@@ -383,7 +432,12 @@ class _ActiveProductsState extends State<ActiveProducts> {
                                 ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left:21.0,top:13,right: 21.0,bottom: 13.0),
+                            padding: const EdgeInsets.only(
+                                                          left:21.0,
+                                                          top:13,
+                                                          right: 21.0,
+                                                          bottom: 13.0
+                                                          ),
                             child: TextButton.icon(
                               onPressed: (){},
                                icon: Icon(
@@ -404,10 +458,8 @@ class _ActiveProductsState extends State<ActiveProducts> {
                           )
                         ]
                       ),
-
                     ),
                   )
-                  
                 ],
               ),
             )

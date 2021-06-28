@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales/constants/colors.dart';
 
 class RegisterCell extends StatelessWidget {
   RegisterCell({
@@ -26,7 +27,7 @@ class RegisterCell extends StatelessWidget {
                 right:BorderSide(color: Color(0xFFd8d8d8),width: 1),
                 bottom: BorderSide(color: Color(0xFFdcdcdc),width:1),
                   ),
-                color:Colors.white
+                color:kWhite
                 ),
                 child:Padding(
                   padding: const EdgeInsets.only(top:5.0,bottom: 5,left: 9,right: 9),
@@ -38,7 +39,7 @@ class RegisterCell extends StatelessWidget {
                         style:TextStyle(
                           fontSize: 14,
                           fontFamily:'Roboto',
-                          color: isTextBlue ? Color(0xFF0066CC) : Color(0xFF333333),
+                          color: isTextBlue ? kLightBlue : kBlackOpacity,
                           fontWeight: isTextBold? FontWeight.w700 : FontWeight.normal
                           )
                       ),

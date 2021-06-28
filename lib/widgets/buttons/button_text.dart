@@ -31,15 +31,25 @@ class ButtonText extends StatelessWidget {
       ),
       onPressed: onPress,
      style:ButtonStyle(
-        backgroundColor: MaterialStateColor.resolveWith((states) => buttonColor ),
-        padding:  MaterialStateProperty.resolveWith((states) => EdgeInsets.only(
-                                                                                left:leftPadding,
-                                                                                right:leftPadding,
-                                                                                top:topPadding,
-                                                                                bottom:topPadding
-                                                                                )
-                                                                              ),
-        shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+        backgroundColor: MaterialStateColor.
+                                      resolveWith(
+                                                (states) => 
+                                                    buttonColor
+                                                     ),
+        padding:  MaterialStateProperty
+                                      .resolveWith(
+                                        (states) => EdgeInsets.only(
+                                                              left:leftPadding,
+                                                              right:leftPadding,
+                                                              top:topPadding,
+                                                              bottom:topPadding
+                                                              )
+                                                            ),
+        shape: MaterialStateProperty
+                                  .all(
+                           RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4)
+                                ),
       ),                
     )
               )

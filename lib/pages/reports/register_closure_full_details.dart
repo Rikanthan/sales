@@ -29,13 +29,18 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
       drawer: SetupDrawer(setupClicked:SetupClicked.outlets),
       body:SingleChildScrollView(
         child: Container(
-          color:Colors.white,
+          color:kWhite,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DashboardMidBar(),
               Padding(
-                padding: const EdgeInsets.only(top:20.0,bottom: 20.0,left:30.0 ,right: 30.0),
+                padding: const EdgeInsets.only(
+                                  top:20.0,
+                                  bottom: 20.0,
+                                  left:30.0,
+                                  right: 30.0
+                                  ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -47,7 +52,12 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                           GestureDetector(
                             onTap:  (){
                                 Navigator.push(
-                                  context, MaterialPageRoute(builder: (_)=> RetailDashboard()));
+                                  context, 
+                                  MaterialPageRoute(
+                                    builder: (_)=> 
+                                             RetailDashboard()
+                                             )
+                                            );
                               },
                             child: Text(
                               'Dashboard',
@@ -55,10 +65,10 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                                 fontFamily: 'Lato',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color:Color(0xFF0066CC),
+                                color:kLightBlue,
                                 decoration: TextDecoration.none,
                                 decorationStyle: TextDecorationStyle.solid,
-                                decorationColor: Color(0xFF0066CC)
+                                decorationColor: kLightBlue
                                 ),
                             ),
                           ),
@@ -70,7 +80,7 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -79,7 +89,11 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                           GestureDetector(
                             onTap: (){
                                 Navigator.push(
-                                  context, MaterialPageRoute(builder: (_)=> RegisterClosureSummary()));
+                                  context, MaterialPageRoute(
+                                                      builder: (_)  => 
+                                                      RegisterClosureSummary()
+                                                      )
+                                                  );
                               }, 
                             child: Text(
                               'Register Closures',
@@ -87,10 +101,10 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                                 fontFamily: 'Lato',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color:Color(0xFF0066CC),
+                                color:kLightBlue,
                                 decoration: TextDecoration.none,
                                 decorationStyle: TextDecorationStyle.solid,
-                                decorationColor: Color(0xFF0066CC)
+                                decorationColor: kLightBlue
                                 ),
                             ),
                           ),
@@ -102,7 +116,7 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -113,7 +127,7 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                         ],
@@ -142,7 +156,12 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                               buttonText: 'Back to Summary',
                               onPress: (){
                                 Navigator.push(
-                                  context, MaterialPageRoute(builder: (_)=> RegisterClosureSummary()));
+                                  context, 
+                                  MaterialPageRoute(
+                                                builder: (_)  => 
+                                                      RegisterClosureSummary()
+                                                      )
+                                                    );
                               }, 
                               topPadding: 3,
                               leftPadding: 10,
@@ -154,16 +173,16 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                       ),
                       decoration: BoxDecoration(
                     border: Border.all(
-                      color:Color(0xFFb0b0b0), width: 1, style: BorderStyle.solid
+                      color:kCustomGrey, width: 1, style: BorderStyle.solid
                       ),
                     gradient: LinearGradient(
-                         colors: [Color(0xFFededed) , Color(0xFFdbdbdb) ],
+                         colors: [ kCustomWhite7 ,  kCustomWhite8 ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
                     ),
                      boxShadow:[
                       BoxShadow(
-                        color: Colors.white.withOpacity(0.2),
+                        color: kWhite.withOpacity(0.2),
                         spreadRadius: -1,
                         blurRadius: 2,
                         offset: Offset.zero
@@ -193,21 +212,27 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                                     width: 130,
                                     height: 16,
                                     child: Text(
-                                    i==0 ? 'Register' : i==1 ? 'Sequence #' : i==2 ? 'Opened' :'Closed' ,
+                                    i==0 ? 'Register' :
+                                     i==1 ? 'Sequence #' : 
+                                     i==2 ? 'Opened' :
+                                     'Closed' ,
                                           style: TextStyle(
                                           fontFamily: 'Lato',
                                           fontSize: 14,
-                                          color: Color(0xFF333333),
+                                          color: kBlackOpacity,
                                           fontWeight: FontWeight.w700
                                           )
                                     ),
                                   ),
                                   Text(
-                                     i==0 ? 'Main Register' : i==1 ? '2'  : i==2 ? '14 Jun 21 10:16 am' : '21 Jun 21 11:03 am' ,
+                                     i==0 ? 'Main Register' :
+                                      i==1 ? '2'  : 
+                                      i==2 ? '14 Jun 21 10:16 am' : 
+                                      '21 Jun 21 11:03 am' ,
                                           style: TextStyle(
                                           fontFamily: 'Lato',
                                           fontSize: 14,
-                                          color: Color(0xFF333333),
+                                          color: kBlackOpacity,
                                           )
                                     ),
                                 ],
@@ -235,7 +260,7 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                                           style: TextStyle(
                                           fontFamily: 'Lato',
                                           fontSize: 14,
-                                          color: Color(0xFF333333),
+                                          color: kBlackOpacity,
                                           fontWeight: FontWeight.w700
                                           )
                                     ),
@@ -245,7 +270,7 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                                           style: TextStyle(
                                           fontFamily: 'Lato',
                                           fontSize: 14,
-                                          color: Color(0xFF333333),
+                                          color: kBlackOpacity,
                                           )
                                     ),
                                 ],
@@ -351,7 +376,9 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                         Container(
                           decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid
+                              color : kCustomWhite6, 
+                              width: 1, 
+                              style: BorderStyle.solid
                               ),
                               color: Color(0xFFffF7d6)
                           ),
@@ -366,7 +393,7 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                                   style: TextStyle(
                                     fontFamily: 'Lato',
                                     fontSize: 14,
-                                    color: Color(0xFF333333),
+                                    color: kBlackOpacity,
                                     fontWeight: FontWeight.w700
                                     )
                                   ),
@@ -377,7 +404,7 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                         Container(
                           decoration: BoxDecoration(
                             border: Border.all(
-                             color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid
+                             color : kCustomWhite6, width: 1, style: BorderStyle.solid
                               ),
                               color: Color(0xFFffF7d6)
                           ),
@@ -387,7 +414,11 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                         Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid)
+                              bottom: BorderSide(
+                                color : kCustomWhite6, 
+                                width: 1, 
+                                style: BorderStyle.solid
+                                )
                               ),
                               color: Color(0xFFffF7d6)
                           ),
@@ -403,7 +434,7 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                                   style: TextStyle(
                                     fontFamily: 'Lato',
                                     fontSize: 14,
-                                    color: Color(0xFF333333),
+                                    color: kBlackOpacity,
                                     )
                                   ),
                               ],
@@ -413,7 +444,7 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                         Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid)
+                              bottom: BorderSide(color : kCustomWhite6, width: 1, style: BorderStyle.solid)
                               ),
                               color: Color(0xFFffF7d6)
                           ),
@@ -429,7 +460,7 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                                   style: TextStyle(
                                     fontFamily: 'Lato',
                                     fontSize: 14,
-                                    color: Color(0xFF333333),
+                                    color: kBlackOpacity,
                                     )
                                   ),
                               ],
@@ -439,9 +470,10 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                         Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              left: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              right: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid)
+                              bottom: BorderSide(
+                                color : kCustomWhite6, width: 1, style: BorderStyle.solid),
+                              left: BorderSide(color : kCustomWhite6, width: 1, style: BorderStyle.solid),
+                              right: BorderSide(color : kCustomWhite6, width: 1, style: BorderStyle.solid)
                               ),
                               color: Color(0xFFffF7d6)
                           ),
@@ -456,7 +488,7 @@ class _RegisterClosureFullDetailsState extends State<RegisterClosureFullDetails>
                                   style: TextStyle(
                                     fontFamily: 'Lato',
                                     fontSize: 14,
-                                    color: Color(0xFF333333),
+                                    color: kBlackOpacity,
                                     fontWeight: FontWeight.w700
                                     )
                                   ),

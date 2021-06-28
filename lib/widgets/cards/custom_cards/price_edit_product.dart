@@ -34,7 +34,7 @@ class PriceEditProduct extends StatelessWidget {
                         SizedBox(width: 550,),
                         Padding(
                           padding: const EdgeInsets.only(top:20.0,bottom: 4.0),
-                          child: Text('Rs 18.00',style:kMediumTextNormalStyle),
+                          child: Text('Rs 18.00',style:k15BlackNormal),
                         ),
                       ],
                     ),
@@ -80,7 +80,7 @@ class PriceEditProduct extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text('Retail Price',style:k15BlackDark),
-                               Text('Excluding Tax',style:kMediumTextNormalStyle),
+                               Text('Excluding Tax',style:k15BlackNormal),
                             ],
                           ),
                           TextInput(

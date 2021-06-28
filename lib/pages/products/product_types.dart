@@ -121,7 +121,7 @@ class _PriceTypesState extends State<PriceTypes> {
                                         )
                                       ),
                                       Text("14",
-                                        style: kMediumTextNormalStyle
+                                        style: k15BlackNormal
                                         )                      
                                   ],
                                 ),

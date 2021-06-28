@@ -58,7 +58,6 @@ class DashboardAppBars extends StatelessWidget {
                 ),        
               ],
             ),
-           // DashboardMidBar()
       ],
     );
   }

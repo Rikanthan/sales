@@ -85,7 +85,7 @@ class SalesReportTable extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: kWhite,
                       border:Border(
                         right:BorderSide( color: kTableBorderColor),
                         bottom:BorderSide( color: kTableBorderColor)
@@ -106,7 +106,7 @@ class SalesReportTable extends StatelessWidget {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: kWhite,
                       border:Border(
                         right:BorderSide( color: kTableBorderColor),
                         bottom:BorderSide( color: kTableBorderColor)

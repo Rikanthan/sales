@@ -30,7 +30,7 @@ class _SalesTaxState extends State<SalesTax> {
       drawer: SetupDrawer(setupClicked:SetupClicked.outlets),
       body:SingleChildScrollView(
         child: Container(
-          color:Colors.white,
+          color:kWhite,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -51,10 +51,10 @@ class _SalesTaxState extends State<SalesTax> {
                               fontFamily: 'Lato',
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
-                              color:Color(0xFF0066CC),
+                              color:kLightBlue,
                               decoration: TextDecoration.none,
                               decorationStyle: TextDecorationStyle.solid,
-                              decorationColor: Color(0xFF0066CC)
+                              decorationColor: kLightBlue
                               ),
                           ),
                           SizedBox(
@@ -65,7 +65,7 @@ class _SalesTaxState extends State<SalesTax> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           SizedBox(
@@ -76,7 +76,7 @@ class _SalesTaxState extends State<SalesTax> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                         ],
@@ -123,16 +123,16 @@ class _SalesTaxState extends State<SalesTax> {
                       ),
                       decoration: BoxDecoration(
                     border: Border.all(
-                      color:Color(0xFFb0b0b0), width: 1, style: BorderStyle.solid
+                      color:kCustomGrey, width: 1, style: BorderStyle.solid
                       ),
                     gradient: LinearGradient(
-                         colors: [Color(0xFFededed) , Color(0xFFdbdbdb) ],
+                         colors: [ kCustomWhite7 ,  kCustomWhite8 ],
                         begin: const FractionalOffset(0.0, 0.0),
                         end: const FractionalOffset(0.0, 1.0),
                     ),
                      boxShadow:[
                       BoxShadow(
-                        color: Colors.white.withOpacity(0.2),
+                        color: kWhite.withOpacity(0.2),
                         spreadRadius: -1,
                         blurRadius: 2,
                         offset: Offset.zero
@@ -180,14 +180,21 @@ class _SalesTaxState extends State<SalesTax> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid
+                              color : kCustomWhite6, 
+                              width: 1, 
+                              style: BorderStyle.solid
                               ),
-                              color:Colors.white
+                              color:kWhite
                           ),
                           width: 595.43,
                           height: 32,
                           child:Padding(
-                            padding: const EdgeInsets.only(top:7.0,bottom: 7.0,left: 9.0,right: 9.0),
+                            padding: const EdgeInsets.only(
+                                            top:7.0,
+                                            bottom: 7.0,
+                                            left: 9.0,
+                                            right: 9.0
+                                            ),
                             child: Row(
                               children: [
                                 Text(
@@ -196,7 +203,7 @@ class _SalesTaxState extends State<SalesTax> {
                                     fontFamily: 'Lato',
                                     fontSize: 14,
                                     fontWeight: FontWeight.w700,
-                                    color: Color(0xFF333333),
+                                    color: kBlackOpacity,
                                     )
                                   ),
                               ],
@@ -206,15 +213,28 @@ class _SalesTaxState extends State<SalesTax> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              right: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
+                              bottom: BorderSide(
+                                  color : kCustomWhite6, 
+                                  width: 1, 
+                                  style: BorderStyle.solid
+                                  ),
+                              right: BorderSide(
+                                      color : kCustomWhite6, 
+                                      width: 1, 
+                                      style: BorderStyle.solid
+                                      ),
                               ),
-                              color:Colors.white
+                              color:kWhite
                           ),
                           width: 178,
                           height: 32,
                           child:Padding(
-                            padding: const EdgeInsets.only(top:7.0,bottom: 7.0,left: 9.0,right: 9.0),
+                            padding: const EdgeInsets.only(
+                                                top:7.0,
+                                                bottom: 7.0,
+                                                left: 9.0,
+                                                right: 9.0
+                                                ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
@@ -223,7 +243,7 @@ class _SalesTaxState extends State<SalesTax> {
                                   style: TextStyle(
                                     fontFamily: 'Lato',
                                     fontSize: 14,
-                                    color: Color(0xFF333333),
+                                    color: kBlackOpacity,
                                     )
                                   ),
                               ],
@@ -233,10 +253,18 @@ class _SalesTaxState extends State<SalesTax> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              right: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
+                              bottom: BorderSide(
+                                              color : kCustomWhite6, 
+                                              width: 1, 
+                                              style: BorderStyle.solid
+                                              ),
+                              right: BorderSide(
+                                              color : kCustomWhite6, 
+                                              width: 1, 
+                                              style: BorderStyle.solid
+                                              ),
                               ),
-                              color:Colors.white
+                              color:kWhite
                           ),
                           width: 178,
                           height: 32,
@@ -251,7 +279,7 @@ class _SalesTaxState extends State<SalesTax> {
                           fontSize: 23.52,
                           fontFamily: 'Lato',
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFF333333),
+                          color: kBlackOpacity,
                         ),
                       ),
                     ),
@@ -279,14 +307,21 @@ class _SalesTaxState extends State<SalesTax> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid
+                              color : kCustomWhite6,
+                               width: 1, 
+                               style: BorderStyle.solid
                               ),
-                              color:Colors.white
+                              color:kWhite
                           ),
                           width: 430,
                           height: 32,
                           child:Padding(
-                            padding: const EdgeInsets.only(top:7.0,bottom: 7.0,left: 9.0,right: 9.0),
+                            padding: const EdgeInsets.only(
+                                                      top:7.0,
+                                                      bottom: 7.0,
+                                                      left: 9.0,
+                                                      right: 9.0
+                                                      ),
                             child: Row(
                               children: [
                                 GestureDetector(
@@ -300,7 +335,7 @@ class _SalesTaxState extends State<SalesTax> {
                                       fontFamily: 'Lato',
                                       fontSize: 14,
                                       fontWeight: FontWeight.w700,
-                                      color: Color(0xFF0066cc),
+                                      color: kLightBlue,
                                       )
                                     ),
                                 ),
@@ -311,15 +346,28 @@ class _SalesTaxState extends State<SalesTax> {
                          Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              right: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
+                              bottom: BorderSide(
+                                            color : kCustomWhite6, 
+                                            width: 1, 
+                                            style: BorderStyle.solid
+                                            ),
+                              right: BorderSide(
+                                            color : kCustomWhite6, 
+                                            width: 1, 
+                                            style: BorderStyle.solid
+                                            ),
                               ),
-                              color:Colors.white
+                              color:kWhite
                           ),
                           width: 340,
                           height: 32,
                           child:Padding(
-                            padding: const EdgeInsets.only(top:7.0,bottom: 7.0,left: 9.0,right: 9.0),
+                            padding: const EdgeInsets.only(
+                                                        top:7.0,
+                                                        bottom: 7.0,
+                                                        left: 9.0,
+                                                        right: 9.0
+                                                        ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
@@ -328,7 +376,7 @@ class _SalesTaxState extends State<SalesTax> {
                                   style: TextStyle(
                                     fontFamily: 'Lato',
                                     fontSize: 14,
-                                    color: Color(0xFF333333),
+                                    color: kBlackOpacity,
                                     )
                                   ),
                               ],
@@ -338,31 +386,46 @@ class _SalesTaxState extends State<SalesTax> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              bottom: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
-                              right: BorderSide(color:Color(0xFFd8d8d8), width: 1, style: BorderStyle.solid),
+                              bottom: BorderSide(
+                                              color : kCustomWhite6, 
+                                              width: 1, 
+                                              style: BorderStyle.solid
+                                              ),
+                              right: BorderSide(
+                                              color : kCustomWhite6, 
+                                              width: 1, 
+                                              style: BorderStyle.solid
+                                              ),
                               ),
-                              color:Colors.white
+                              color:kWhite
                           ),
                           width: 190,
                           height: 32,
                           child:Padding(
-                            padding: const EdgeInsets.only(top:7.0,bottom: 7.0,left: 9.0,right: 9.0),
+                            padding: const EdgeInsets.only(
+                                                          top:7.0,
+                                                          bottom: 7.0,
+                                                          left: 9.0,
+                                                          right: 9.0
+                                                          ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 GestureDetector(
                                   onTap:(){
-                                    Navigator.push(context, MaterialPageRoute(
-                                      builder: (_) => EditOutlet()
-                                      )
-                                    );
+                                    Navigator.push(
+                                          context, 
+                                          MaterialPageRoute(
+                                                        builder: (_) => EditOutlet()
+                                                              )
+                                                            );
                                   },
                                   child: Text(
                                     'Edit Outlet',
                                     style: TextStyle(
                                       fontFamily: 'Lato',
                                       fontSize: 14,
-                                      color: Color(0xFF0066cc),
+                                      color: kLightBlue,
                                       )
                                     ),
                                 ),

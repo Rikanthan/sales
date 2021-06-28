@@ -61,7 +61,7 @@ class _StoreCreditState extends State<StoreCredit> {
                             width: 232,
                             child: Text(
                               'Enable Store Credit',
-                              style: kMediumTextNormalStyle,
+                              style: k15BlackNormal,
                               ),
                           )
                         ],
@@ -80,7 +80,13 @@ class _StoreCreditState extends State<StoreCredit> {
                                   isSwitch = value;
                                   if(value)
                                   {
-                                    Navigator.push(context, MaterialPageRoute(builder: (_)=> EnableStoreCredit()));
+                                    Navigator.push(
+                                      context, 
+                                      MaterialPageRoute(
+                                        builder: (_)=> 
+                                                  EnableStoreCredit()
+                                                  )
+                                                );
                                   }
                                 });
                               }
@@ -88,13 +94,15 @@ class _StoreCreditState extends State<StoreCredit> {
                           SizedBox(height:20),
                           Text(
                             'Enable issuing store credit in my store'
-                                ,style: kMediumTextNormalStyle,
+                                ,style: k15BlackNormal,
                                 ),
-                          Padding(
-                            padding: const EdgeInsets.only(top:4.0),
-                            child: Text('Disabling store credit will mean your can no longer issue store credit or pay by store credit',style: kMediumTextNormalStyle,),
+                        Padding(
+                          padding: const EdgeInsets.only(top:4.0),
+                          child: Text(
+                              'Disabling store credit will mean your can no longer issue store credit or pay by store credit',
+                              style: k15BlackNormal,
+                              ),
                           )
-
                         ],
                       )
                     ],

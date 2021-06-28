@@ -50,13 +50,21 @@ class _BrandsState extends State<Brands> {
                   greenOnTap: (){
                     showDialog(
                       context: context, 
-                      builder: (_) => AddBrands(header: 'Add Brand', brand: '')
+                      builder: (_) => AddBrands(
+                                            header: 'Add Brand', 
+                                            brand: ''
+                                            )
                       );
-                  }
+                    }
                   ),
               
               Padding(
-                padding: const EdgeInsets.only(top:24.0,bottom:24.0,right:48.0,left: 48.0),
+                padding: const EdgeInsets.only(
+                                            top:24.0,
+                                            bottom:24.0,
+                                            right:48.0,
+                                            left: 48.0
+                                            ),
                 child: Container(
                   child:Column(
                     children: [
@@ -117,7 +125,6 @@ class _BrandsState extends State<Brands> {
                             isThisProduct: false, 
                             isSelected: false
                             ),
-                            
                         ],
                       ),
                       Padding(
@@ -153,8 +160,10 @@ class _BrandsState extends State<Brands> {
                         number: '4', width: 600, 
                         textClick: (){},
                         viewClick: (){
-                           Navigator.push(context, MaterialPageRoute(
-                            builder: (_)=> Products())
+                           Navigator.push(
+                                context, 
+                                MaterialPageRoute(
+                                            builder: (_)=> Products())
                           );
                         },
                         editClick: (){
@@ -174,8 +183,10 @@ class _BrandsState extends State<Brands> {
                         number: '3', width: 600, 
                         textClick: (){},
                         viewClick: (){
-                           Navigator.push(context, MaterialPageRoute(
-                            builder: (_)=> Products())
+                           Navigator.push(
+                             context, 
+                             MaterialPageRoute(
+                                          builder: (_)=> Products())
                           );
                         },
                         editClick: (){

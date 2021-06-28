@@ -57,18 +57,26 @@ class _EditRegisterState extends State<EditRegister> {
       drawer: SetupDrawer(setupClicked:SetupClicked.outlets ),
       body:SingleChildScrollView(
         child: Container(
-          color:Colors.white,
+          color:kWhite,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DashboardMidBar(),
               Padding(
-                padding: const EdgeInsets.only(top:20.0,bottom: 20.0,left:30.0 ,right: 30.0),
+                padding: const EdgeInsets.only(
+                                        top:20.0,
+                                        bottom: 20.0,
+                                        left:30.0 ,
+                                        right: 30.0
+                                        ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top:15.0,bottom: 10.0),
+                      padding: const EdgeInsets.only(
+                                                top:15.0,
+                                                bottom: 10.0
+                                                ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -78,10 +86,10 @@ class _EditRegisterState extends State<EditRegister> {
                               fontFamily: 'Lato',
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
-                              color:Color(0xFF0066CC),
+                              color:kLightBlue,
                               decoration: TextDecoration.none,
                               decorationStyle: TextDecorationStyle.solid,
-                              decorationColor: Color(0xFF0066CC)
+                              decorationColor: kLightBlue
                               ),
                           ),
                           SizedBox(
@@ -92,7 +100,7 @@ class _EditRegisterState extends State<EditRegister> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                           Text(
@@ -101,10 +109,10 @@ class _EditRegisterState extends State<EditRegister> {
                               fontFamily: 'Lato',
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
-                              color:Color(0xFF0066CC),
+                              color:kLightBlue,
                               decoration: TextDecoration.none,
                               decorationStyle: TextDecorationStyle.solid,
-                              decorationColor: Color(0xFF0066CC)
+                              decorationColor: kLightBlue
                               ),
                           ),
                           SizedBox(
@@ -118,7 +126,7 @@ class _EditRegisterState extends State<EditRegister> {
                             style: TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 14,
-                              color:Color(0xFF999999),
+                              color:kLightGrey,
                               ),
                           ),
                         ],
@@ -136,7 +144,11 @@ class _EditRegisterState extends State<EditRegister> {
                         ),
                       ),
                     ),
-                    SettingsGredientHeader(cellType: CellType.both ,width: 964 ,text: 'Details',),
+                    SettingsGredientHeader(
+                                  cellType: CellType.both ,
+                                  width: 964 ,
+                                  text: 'Details',
+                                  ),
                     Row(
                       children: [
                         Container(
@@ -144,7 +156,7 @@ class _EditRegisterState extends State<EditRegister> {
                           height:76,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(5),
@@ -159,7 +171,12 @@ class _EditRegisterState extends State<EditRegister> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                   SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Register name',),
+                                   SettingsCell(
+                                            height: 24,
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'Register name',
+                                            ),
                                     SettingTextInput(
                                       height: 28,
                                        width: 247,
@@ -176,7 +193,7 @@ class _EditRegisterState extends State<EditRegister> {
                           height:74,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(5),
@@ -189,7 +206,12 @@ class _EditRegisterState extends State<EditRegister> {
                                   children: [
                                     Row(
                                       children: [
-                                        SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Cash Management',),
+                                        SettingsCell(
+                                            height: 24, 
+                                            width: 150 , 
+                                            textSpan: false, 
+                                            text: 'Cash Management',
+                                            ),
                                         SettingDropDown(
                                             width: 245,
                                             height: 28,
@@ -215,13 +237,17 @@ class _EditRegisterState extends State<EditRegister> {
                     SizedBox(
                       height: 15,
                     ),
-                    SettingsGredientHeader(cellType: CellType.both ,width: 964 ,text: 'Receipt',),
+                    SettingsGredientHeader(
+                              cellType: CellType.both ,
+                              width: 964 ,
+                              text: 'Receipt',
+                              ),
                     Container(
                        width:962,
                         height:236,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(5),
@@ -233,7 +259,12 @@ class _EditRegisterState extends State<EditRegister> {
                               children: [
                                 Row(
                                   children: [
-                                     SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Receipt template',),
+                                     SettingsCell(
+                                                height: 24,
+                                                 width: 150 , 
+                                                 textSpan: false, 
+                                                 text: 'Receipt template',
+                                                 ),
                                      SettingDropDown(
                                         width: 245,
                                         height: 28,
@@ -255,7 +286,12 @@ class _EditRegisterState extends State<EditRegister> {
                                     ),
                                 Row(
                                   children: [
-                                    SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Number',),
+                                    SettingsCell(
+                                          height: 24, 
+                                          width: 150 , 
+                                          textSpan: false, 
+                                          text: 'Number',
+                                          ),
                                     SettingTextInput(
                                       height: 28,
                                        width: 73,
@@ -269,7 +305,12 @@ class _EditRegisterState extends State<EditRegister> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Prefix',),
+                                    SettingsCell(
+                                      height: 24, 
+                                      width: 150 , 
+                                      textSpan: false, 
+                                      text: 'Prefix',
+                                      ),
                                     SettingTextInput(
                                       height: 28,
                                        width: 73,
@@ -278,7 +319,11 @@ class _EditRegisterState extends State<EditRegister> {
                                   ],
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only( left:150.0 , top: 5.0 ,bottom: 5.0),
+                                  padding: const EdgeInsets.only( 
+                                                            left:150.0 , 
+                                                            top: 5.0 ,
+                                                            bottom: 5.0
+                                                            ),
                                   child: Row(
                                     children: [
                                       Text(
@@ -298,7 +343,12 @@ class _EditRegisterState extends State<EditRegister> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Suffix',),
+                                    SettingsCell(
+                                                height: 24, 
+                                                width: 150 , 
+                                                textSpan: false, 
+                                                text: 'Suffix',
+                                                ),
                                     SettingTextInput(
                                       height: 28,
                                        width: 73,
@@ -328,7 +378,11 @@ class _EditRegisterState extends State<EditRegister> {
                      SizedBox(
                         height: 20,
                         ),
-                    SettingsGredientHeader(cellType: CellType.both ,width: 964 ,text: 'At End of Sale',),
+                    SettingsGredientHeader(
+                                      cellType: CellType.both ,
+                                      width: 964 ,
+                                      text: 'At End of Sale',
+                                      ),
                     Row(
                       children: [
                         Container(
@@ -336,7 +390,7 @@ class _EditRegisterState extends State<EditRegister> {
                           height:168,
                                   decoration: BoxDecoration(
                             border: Border.all(
-                              color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                              color:kCustomWhite, width: 0.7, style: BorderStyle.solid
                               ),
                             borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(5),
@@ -392,7 +446,14 @@ class _EditRegisterState extends State<EditRegister> {
                                                     });
                                                   }
                                                 ),
-                                                Text('Yes',style: TextStyle(fontFamily: 'Lato',fontSize: 14, color: kAppBarColor),),
+                                                Text(
+                                                    'Yes',
+                                                    style: TextStyle(
+                                                          fontFamily: 'Lato',
+                                                          fontSize: 14, 
+                                                          color: kAppBarColor
+                                                          ),
+                                                        ),
                                                 SizedBox(width:20),
                                                  i == 0 ?    
                                                 Radio(
@@ -426,7 +487,14 @@ class _EditRegisterState extends State<EditRegister> {
                                                     });
                                                   }
                                                 ),
-                                                Text('No',style: TextStyle(fontFamily: 'Lato',fontSize: 14, color: kAppBarColor),),
+                                                Text(
+                                                  'No',
+                                                  style: TextStyle(
+                                                    fontFamily: 'Lato',
+                                                    fontSize: 14,
+                                                     color: kAppBarColor
+                                                     ),
+                                                  ),
                                             ],
                                           ),
                                         ),
@@ -439,7 +507,9 @@ class _EditRegisterState extends State<EditRegister> {
                                   height:168,
                                           decoration: BoxDecoration(
                                     border: Border.all(
-                                      color:Color(0xFFCCCCCC), width: 0.7, style: BorderStyle.solid
+                                      color:kCustomWhite,
+                                       width: 0.7, 
+                                       style: BorderStyle.solid
                                       ),
                                     borderRadius: BorderRadius.only(
                                           bottomRight: Radius.circular(5),
@@ -452,7 +522,12 @@ class _EditRegisterState extends State<EditRegister> {
                                           children: [
                                                 Row(
                                           children: [
-                                            SettingsCell(height: 24, width: 150 , textSpan: false, text: 'Ask for a note',),
+                                            SettingsCell(
+                                              height: 24, 
+                                              width: 150 , 
+                                              textSpan: false, 
+                                              text: 'Ask for a note',
+                                              ),
                                             SettingDropDown(
                                                 width: 245,
                                                 height: 28,
@@ -465,7 +540,11 @@ class _EditRegisterState extends State<EditRegister> {
                                                                 );
                                                               },
                                                 dropdownValue: _askForNote,
-                                                dropdownList: ['On Save/Layby/Account/Return','Never' , 'On All sales'],
+                                                dropdownList: [
+                                                            'On Save/Layby/Account/Return',
+                                                            'Never' , 
+                                                            'On All sales'
+                                                            ],
                                                 ),
                                           ],
                                         ),
@@ -505,7 +584,14 @@ class _EditRegisterState extends State<EditRegister> {
                                                             });
                                                           }
                                                         ),
-                                                        Text('Yes',style: TextStyle(fontFamily: 'Lato',fontSize: 14, color: kAppBarColor),),
+                                                        Text(
+                                                          'Yes',
+                                                          style: TextStyle(
+                                                            fontFamily: 'Lato',
+                                                            fontSize: 14,
+                                                             color: kAppBarColor
+                                                             ),
+                                                          ),
                                                         SizedBox(width:20),
                                                         i == 0 ?    
                                                         Radio(
@@ -529,7 +615,14 @@ class _EditRegisterState extends State<EditRegister> {
                                                             });
                                                           }
                                                         ),
-                                                        Text('No',style: TextStyle(fontFamily: 'Lato',fontSize: 14, color: kAppBarColor),),
+                                                        Text(
+                                                          'No'
+                                                          ,style: TextStyle(
+                                                            fontFamily: 'Lato',
+                                                            fontSize: 14, 
+                                                            color: kAppBarColor
+                                                            ),
+                                                        ),
                                                     ],
                                                   ),
                                                 ), 
@@ -539,7 +632,6 @@ class _EditRegisterState extends State<EditRegister> {
                                       ),
                                 ],
                               ),
-                              
                               Padding(
                                   padding: const EdgeInsets.only(top:10.0,bottom: 10.0),
                                   child: Divider(
@@ -571,8 +663,7 @@ class _EditRegisterState extends State<EditRegister> {
                         ),
                         
                       ],
-                    ),
-            
+                    ), 
         )
       )
     );

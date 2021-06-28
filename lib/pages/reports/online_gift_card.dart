@@ -23,7 +23,9 @@ class _OnlineGiftCardState extends State<OnlineGiftCard> {
         title:DashboardAppBars(),
         toolbarHeight: 50.0,
       ),
-      drawer: ReportDrawer(reportsClicked:ReportsClicked.giftcardReports ),
+      drawer: ReportDrawer(
+        reportsClicked : ReportsClicked.giftcardReports 
+        ),
       body:SingleChildScrollView(
         child: Container(
           color:kHomeBackgroundColor,
@@ -45,7 +47,7 @@ class _OnlineGiftCardState extends State<OnlineGiftCard> {
                     children: [
                       Text(
                         'Looks like gift cards are not enabled for your store,click ',
-                        style: kMediumTextNormalStyle
+                        style: k15BlackNormal
                       ),
                       GestureDetector(
                         onTap: (){},
@@ -56,7 +58,7 @@ class _OnlineGiftCardState extends State<OnlineGiftCard> {
                         ),
                        Text(
                         ' to enable it.',
-                        style: kMediumTextNormalStyle
+                        style: k15BlackNormal
                       ), 
                     ],
                   ),

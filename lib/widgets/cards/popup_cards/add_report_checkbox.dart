@@ -23,7 +23,7 @@ class AddReportCheckboxPopup extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
-                color: Colors.white,
+                color: kWhite,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(4),
                   topRight: Radius.circular(4)
@@ -39,7 +39,7 @@ class AddReportCheckboxPopup extends StatelessWidget {
                   height: 20,
                 ),
                 Container(
-                  color: Colors.white,
+                  color: kWhite,
                   width:218.203,
                   height: 242,
                   child: ListView(
@@ -109,9 +109,9 @@ class AddReportCheckboxPopup extends StatelessWidget {
                       width: 19.97,
                       decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
-                      color: Colors.white,
+                      color: kWhite,
                       border:Border.all(
-                          color: Colors.white,width: 1,
+                          color: kWhite,width: 1,
                         )
                       ),
                     ),

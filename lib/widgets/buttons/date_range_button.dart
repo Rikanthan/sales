@@ -29,7 +29,8 @@ class DateRangeButton extends StatelessWidget {
                                           borderRadius: BorderRadius.circular(2.0),
                                           side: BorderSide(
                                             width: 2,
-                                            color: ispreviousClicked?kAppBarColor:kInputBorderColor
+                                            color: ispreviousClicked  ? kAppBarColor 
+                                                     : kInputBorderColor
                                             )
                                           )
                                         ),
@@ -51,13 +52,19 @@ class DateRangeButton extends StatelessWidget {
                                           borderRadius: BorderRadius.circular(2.0),
                                           side: BorderSide(
                                             width: 2,
-                                            color: iscurrentdateClicked?kAppBarColor:kInputBorderColor
+                                            color: iscurrentdateClicked ? kAppBarColor  :
+                                                      kInputBorderColor
                                             )
                                           )
                                         ),
                                     ),
                                     child:  Padding(
-                                      padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left:20.0,right: 20.0),
+                                      padding: const EdgeInsets.only(
+                                                                  top:12.0,
+                                                                  bottom: 12.0,
+                                                                  left:20.0,
+                                                                  right: 20.0
+                                                                  ),
                                       child: Text(
                                         "20 May 2021",
                                           style: TextStyle(
@@ -76,13 +83,17 @@ class DateRangeButton extends StatelessWidget {
                                           borderRadius: BorderRadius.circular(2.0),
                                           side: BorderSide(
                                             width: 2,
-                                            color: isnextClicked?kAppBarColor:kInputBorderColor
+                                            color: isnextClicked  ? kAppBarColor
+                                                  : kInputBorderColor
                                             )
                                           )
                                         ),
                                     ),
                                     child:  Padding(
-                                      padding: const EdgeInsets.only(top:12.0,bottom: 12.0),
+                                      padding: const EdgeInsets.only(
+                                                                    top:12.0,
+                                                                    bottom: 12.0
+                                                                    ),
                                        child: Icon(
                                         Icons.keyboard_arrow_right,
                                         color:kAppBarColor,

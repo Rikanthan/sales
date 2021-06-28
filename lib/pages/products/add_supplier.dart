@@ -41,7 +41,10 @@ class _AddSupplierState extends State<AddSupplier> {
             children: [
               DashboardMidBar(),
               Padding(
-                padding: const EdgeInsets.only(top:24.0,bottom: 24.0),
+                padding: const EdgeInsets.only(
+                                  top:24.0,
+                                    bottom: 24.0
+                                    ),
                 child: Row(
                   children: [
                     GestureDetector(
@@ -54,10 +57,21 @@ class _AddSupplierState extends State<AddSupplier> {
                         setState(() {
                           isSwitch = false;
                         });
-                        Navigator.push(context, MaterialPageRoute(builder: (_)=> Suppliers()));
+                        Navigator.push(
+                                context, 
+                                MaterialPageRoute(
+                                  builder: (_)=> 
+                                          Suppliers()
+                                          )
+                                      );
                       }
                     ),
-                    Text( widget.isEdit ?'Edit Supplier ${widget.header}' : 'Add Supplier',style: k32Black,)
+                    Text( 
+                      widget.isEdit ?
+                               'Edit Supplier ${widget.header}' 
+                                : 'Add Supplier',
+                                style: k32Black,
+                                )
                   ],
                 ),
               ),
@@ -65,7 +79,10 @@ class _AddSupplierState extends State<AddSupplier> {
                 color: kInputBorderColor,
                 height: 93,
                 child: Padding(
-                  padding: const EdgeInsets.only(left:48.0,right: 48.0),
+                  padding: const EdgeInsets.only(
+                                          left:48.0,
+                                          right: 48.0
+                                          ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -73,7 +90,7 @@ class _AddSupplierState extends State<AddSupplier> {
                       Text(
                         widget.isEdit ? 'Edit supplier\'s details.' :
                         'Create a new supplier',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                         Spacer(),
                       CustomButton(
@@ -94,7 +111,6 @@ class _AddSupplierState extends State<AddSupplier> {
                         topPadding: 20, 
                         leftPadding: 30
                         ),
-                      
                     ],
                   ),
                 ),
@@ -122,7 +138,7 @@ class _AddSupplierState extends State<AddSupplier> {
                       width: 232,
                       child: Text(
                         'How your supplier is identified\nand described in Vend. Yor can\nalso choose to set a default\nmarkup, making setting up\nproducts easier',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                     ),
                     Column(
@@ -221,7 +237,7 @@ class _AddSupplierState extends State<AddSupplier> {
                       width: 232,
                       child: Text(
                         'The official name and contact\ndetails for your supplier',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                       ), 
                      Column(
@@ -527,6 +543,3 @@ class _AddSupplierState extends State<AddSupplier> {
     );
   }
 }
-
-          
-  

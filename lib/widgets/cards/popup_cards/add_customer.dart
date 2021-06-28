@@ -25,12 +25,12 @@ class AddCustomer extends StatelessWidget {
                         Container(
                           decoration: BoxDecoration(
                               shape: BoxShape.rectangle,
-                              color: Colors.white,
+                              color: kWhite,
                               borderRadius: BorderRadius.all(
                                 Radius.circular(4),
                                             ),
                               border: Border.all(
-                                  color: Colors.white,width: 1,
+                                  color: kWhite,width: 1,
                                 )
                             ),
                           width: 306,
@@ -51,7 +51,7 @@ class AddCustomer extends StatelessWidget {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(top:15.0, bottom: 15.0),
-                                  child: Text("You haven't added a customer to this sale\nyet. You can search for an existing\ncustomer, add a new one, or just continue\nto pay.",style: kMediumTextNormalStyle,),
+                                  child: Text("You haven't added a customer to this sale\nyet. You can search for an existing\ncustomer, add a new one, or just continue\nto pay.",style: k15BlackNormal,),
                                 ),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,9 +79,9 @@ class AddCustomer extends StatelessWidget {
                                 width: 19.97,
                                 decoration: BoxDecoration(
                                 shape: BoxShape.rectangle,
-                                color: Colors.white,
+                                color: kWhite,
                                 border:Border.all(
-                                    color: Colors.white,width: 1,
+                                    color: kWhite,width: 1,
                                   )
                                 ),
                               ),

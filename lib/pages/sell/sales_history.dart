@@ -176,7 +176,19 @@ class _SalesHistoryState extends State<SalesHistory> {
                                               },
                                 dropdownValue: status,
                                 dropdownList: [
-                                            "All Sales","Layby","On Account","Parked","Delivery, unfulfilled","Pickup, unfulfilled","Completed","Layby, completed","On Account, completed","Delivery, completed","Pickup, completed","Voided"],
+                                            "All Sales",
+                                            "Layby",
+                                            "On Account",
+                                            "Parked",
+                                            "Delivery, unfulfilled",
+                                            "Pickup, unfulfilled",
+                                            "Completed",
+                                            "Layby, completed",
+                                            "On Account, completed",
+                                            "Delivery, completed",
+                                            "Pickup, completed",
+                                            "Voided"
+                                            ],
                               ),
                             ]
                           ),
@@ -311,7 +323,7 @@ class _SalesHistoryState extends State<SalesHistory> {
                                             ),
                                         ),
                                         child:  Padding(
-                                          padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left:12.0,right: 12.0),
+                                          padding: const EdgeInsets.all(12.0),
                                           child: Row(
                                             children: [
                                               Icon(
@@ -405,6 +417,3 @@ class _SalesHistoryState extends State<SalesHistory> {
     );
   }
 }
-
-
-

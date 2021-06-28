@@ -25,7 +25,7 @@ class TextInput extends StatelessWidget {
     return  Padding(
       padding:  EdgeInsets.only(top:paddingTop),
       child: Container(
-        color: darkMode ? kDashboardSearchBarFillColor : Colors.white,
+        color: darkMode ? kDashboardSearchBarFillColor : kWhite,
         height: height,
         width: width,
         child: TextFormField(
@@ -33,12 +33,13 @@ class TextInput extends StatelessWidget {
                         onChanged: onChange,
                         obscureText: hideText,
                         decoration: InputDecoration(
-                        fillColor: darkMode ? kDashboardSearchBarFillColor : Colors.white,
+                        fillColor: darkMode ? kDashboardSearchBarFillColor : kWhite,
                         filled: true,
                          hintText:hintText,
                             hintStyle: TextStyle(
                                   fontFamily: 'Lato',
-                                  color: darkMode ? kDashboardIconColor : Colors.blue[700].withOpacity(0.7),
+                                  color: darkMode ? kDashboardIconColor 
+                                        : Colors.blue[700].withOpacity(0.7),
                                   fontSize: 15
                                   ),
                         enabledBorder: OutlineInputBorder(

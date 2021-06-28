@@ -20,12 +20,12 @@ class CustomerGroups extends StatelessWidget {
       ),
       drawer: CustomerDrawer(customerClicked: Customers.group),
       body:Container(
-        color:Colors.white,
+        color:kWhite,
         child:Column(
           children: [
             DashboardMidBar(),
             CustomHeader(
-              backgroundColor:Colors.white,
+              backgroundColor:kWhite,
               text: 'Customer Groups',
               isDarkMode: false,
               ),

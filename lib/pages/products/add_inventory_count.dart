@@ -56,7 +56,13 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                         setState(() {
                           isSwitch = false;
                         });
-                        Navigator.push(context, MaterialPageRoute(builder: (_)=> Promotions()));
+                        Navigator.push(
+                          context,
+                           MaterialPageRoute(
+                             builder: (_)=>
+                              Promotions()
+                              )
+                            );
                       }
                     ),
                     Text('Add Inventory Count',style: k32Black,)
@@ -72,7 +78,9 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('Schedule a full or partial inventory count to maintain accurate inventory levels.',style: kMediumTextNormalStyle,),
+                      Text('Schedule a full or partial inventory count to maintain accurate inventory levels.',
+                      style: k15BlackNormal,
+                      ),
                         Spacer(),
                       CustomButton(
                         buttonText: 'Save & Exit', 
@@ -100,7 +108,10 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
           children: [
            SizedBox(height:64),
               Padding(
-                padding: const EdgeInsets.only(left:48.0,bottom: 24.0),
+                padding: const EdgeInsets.only(
+                  left:48.0,
+                  bottom: 24.0
+                  ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -110,7 +121,9 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left:48.0),
+                padding: const EdgeInsets.only(
+                  left:48.0
+                  ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,7 +132,7 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                       width: 232,
                       child: Text(
                         'Start an inventory count now or\nschedule one for the future.',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                     ),
                     Column(
@@ -213,7 +226,7 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                       width: 272,
                       child: Text(
                         'You can include inactive products,\nwhich are not available for sale but\nmay still be in stock.',
-                        style: kMediumTextNormalStyle,
+                        style: k15BlackNormal,
                         ),
                       ), 
                       Column(
@@ -231,9 +244,10 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                                   width: 328,
                                   height: 131,
                                   decoration: BoxDecoration(
-                                    color: Colors.white,
+                                    color: kWhite,
                                      border: Border.all(
-                                       color: _chooseCountType == ChooseCountType.partial ?  kSignInButtonColor : kInputBorderColor,
+                                       color: _chooseCountType == ChooseCountType.partial ?  
+                                                kSignInButtonColor : kInputBorderColor,
                                        width: 2,
                                      ),
                                     borderRadius: BorderRadius.only(
@@ -242,7 +256,12 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                                     ) 
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsets.only(top:12.0 ,bottom:12.0 ,left:20.0,right: 20.0),
+                                    padding: const EdgeInsets.only(
+                                                              top:12.0 ,
+                                                              bottom:12.0 ,
+                                                              left:20.0,
+                                                              right: 20.0
+                                                              ),
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       mainAxisAlignment: MainAxisAlignment.start,
@@ -258,8 +277,14 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                                             color: kAppBarColor,
                                             ),
                                         ),
-                                        Text('Specify the products to include in this',style: kMediumTextNormalStyle,),
-                                        Text('inventory count.',style: kMediumTextNormalStyle,),
+                                        Text(
+                                          'Specify the products to include in this',
+                                          style: k15BlackNormal,
+                                          ),
+                                        Text(
+                                          'inventory count.',
+                                          style: k15BlackNormal,
+                                          ),
                                       ],
                                     ),
                                   ),
@@ -275,9 +300,10 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                                   width: 330,
                                   height: 131,
                                   decoration: BoxDecoration(
-                                    color: Colors.white,
+                                    color: kWhite,
                                     border: Border.all(
-                                      color:  _chooseCountType == ChooseCountType.full ?  kSignInButtonColor : kInputBorderColor,
+                                      color:  _chooseCountType == ChooseCountType.full ?  
+                                              kSignInButtonColor : kInputBorderColor,
                                       width: 2,
                                     ),
                                     borderRadius: BorderRadius.only(
@@ -302,8 +328,14 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                                             color: kAppBarColor,
                                             ),
                                         ),
-                                        Text('Include all the products in this',style: kMediumTextNormalStyle,),
-                                        Text('inventory count.',style: kMediumTextNormalStyle,),
+                                        Text(
+                                          'Include all the products in this',
+                                          style: k15BlackNormal,
+                                          ),
+                                        Text(
+                                          'inventory count.',
+                                          style: k15BlackNormal,
+                                          ),
                                       ],
                                     ),
                                   ),
@@ -337,7 +369,7 @@ class _AddInventoryCountState extends State<AddInventoryCount> {
                                     SizedBox(
                                       width: 12,
                                     ),
-                                    Text('Include inactive products',style: kMediumTextNormalStyle,),
+                                    Text('Include inactive products',style: k15BlackNormal,),
                                 ],
                               ),
                                if( _chooseCountType != ChooseCountType.partial) 
